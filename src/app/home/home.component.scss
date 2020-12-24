@@ -1,10 +1,16 @@
 .landing {
   margin-top: 66px;
-  //background: ;
-  height: 90vh;
-
+  background: url("/assets/image/index_pic_01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  padding-top: 45vh;
   h1{
-    margin-top: 40vh;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 62px;
+    color: #FFFFFF;
   }
   .learn_more{
     font-size: 20px;
