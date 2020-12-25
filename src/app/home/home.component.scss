@@ -3,19 +3,41 @@
   background: url("/assets/image/index_pic_01.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
-  padding-top: 45vh;
-  h1{
+  height: 768px;
+  box-sizing: border-box;
+  padding-top: 346px;
+  
+  h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 42px;
     line-height: 62px;
     color: #FFFFFF;
   }
-  .learn_more{
+  
+  .learn_more {
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 1px;
     color: #F3A024;
+  }
+}
+
+.about_ponddy {
+  padding-top: 64px;
+  
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #2D3942;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: #2D3942;
   }
 }
