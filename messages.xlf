@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8e9c43e7b7de3ff399b05a9389ea456257c5aecc" datatype="html">
+        <source>Ponddy® HSK Smart Learning to Tackle the Chinese Proficiency Test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39d7df21b658d1db07a6baf7e13ee926b0be0b6b" datatype="html">
+        <source> Home </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="b601783fd96813876a91a85e6a521245676e2ad0" datatype="html">
+        <source> Ponddy </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="396d0713261eb7c9334f055f8263a940ee4b7d9c" datatype="html">
+        <source> Tests </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+        <note priority="1" from="meaning">test</note>
+      </trans-unit>
+      <trans-unit id="8a7770b3884515da923b031762eeecb95b87b13a" datatype="html">
+        <source> Resource </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+        <note priority="1" from="meaning">test</note>
+      </trans-unit>
+      <trans-unit id="170661bcea85132fd0228455dff4a103d23b6d60" datatype="html">
+        <source> FAQ </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
