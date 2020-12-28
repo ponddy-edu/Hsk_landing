@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import {HomeModule} from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import {HomeModule} from './home/home.module';
     AppRoutingModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
