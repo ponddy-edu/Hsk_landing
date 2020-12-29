@@ -16,10 +16,19 @@
   }
   
   .learn_more {
+    display: flex;
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 1px;
+    font-weight: 500;
     color: #F3A024;
+    
+    img {
+      height: 32px;
+      width: 32px;
+      margin-left: 16px;
+      background: url("/assets/icon/btn_orange_hover.svg");
+    }
   }
   
   mdb-carousel {
@@ -35,18 +44,44 @@
       left: 0;
       right: 0;
     }
+    
+    ::ng-deep.carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: 42%;
+      /* left: 0; */
+      align-items: flex-end;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-right: 3%;
+      margin-left: 15%;
+      list-style: none;
+      flex-direction: column;
+      
+      li {
+        opacity: 1;
+        
+        &.active {
+          background-color: #93E2FA;
+        }
+      }
+    }
   }
 }
 
 .about_ponddy {
   padding-top: 64px;
-  
+  background: #EBF2F5;
   h1 {
     font-size: 36px;
     line-height: 48px;
     text-align: center;
     letter-spacing: 0.5px;
     color: #2D3942;
+    font-weight: 700;
+    margin-bottom: 40px;
   }
   
   p {
@@ -54,6 +89,8 @@
     line-height: 36px;
     letter-spacing: 1px;
     color: #2D3942;
+    font-weight: 400;
+  
   }
 }
 
