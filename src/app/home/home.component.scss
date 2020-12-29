@@ -127,33 +127,53 @@
   img.main {
     width: 100%;
   }
-  img.icon{
+  
+  img.icon {
     margin-bottom: 20px;
   }
+  
   .intro_text {
     padding: 48px 80px;
+    
     .learn_more {
       display: flex;
       font-size: 20px;
       line-height: 36px;
       letter-spacing: 1px;
       font-weight: 500;
-      color: #3B9FBE;
       cursor: pointer;
       margin-top: 16px;
       align-items: center;
+      
+      &.blue_text {
+        color: #3B9FBE;
+        &:hover {
+          color: #6ACFED;
+          img {
+            content: url("/assets/image/icon/btn_blue_hover.svg");
+          }
+        }
+      }
+      
+      &.green_text {
+        color: #26B586;
+        &:hover {
+          color: #2CC895;
+    
+          img {
+            content: url("/assets/image/icon/btn_green_hover.svg");
+          }
+        }
+      }
+      
       img {
         height: 32px;
         width: 32px;
         margin-left: 16px;
-        fill:red;
+        fill: red;
       }
-      &:hover{
-        color: #6ACFED;
-        img{
-          content: url("/assets/image/icon/btn_blue_hover.svg");
-        }
-      }
+      
+    
     }
   }
   
@@ -171,4 +191,29 @@
     margin: auto 0;
     letter-spacing: 1px;
   }
+}
+
+.course {
+  padding-bottom: 64px;
+  
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #2D3942;
+    padding-bottom: 12px;
+    font-weight: 700;
+  }
+  
+  .carousel-cell {
+    padding: 0 30px;
+    border-right: 1px solid #D5D7D9;;
+    
+    img {
+      height: auto;
+    }
+  }
+  
+  
 }

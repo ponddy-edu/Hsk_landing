@@ -4,6 +4,7 @@ import {HomeComponent} from './home.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ShareModule} from '../../components/share.module';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
+import {IvyCarouselModule} from "angular-responsive-carousel";
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
 ];
@@ -16,6 +17,7 @@ const routes: Routes = [
     ShareModule,
     CarouselModule,
     WavesModule,
+    IvyCarouselModule,
     RouterModule.forChild(routes)],
   exports: [RouterModule, HomeComponent]
 })
