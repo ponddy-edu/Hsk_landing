@@ -72,8 +72,9 @@
 }
 
 .about_ponddy {
-  padding-top: 64px;
+  padding: 64px 0;
   background: #EBF2F5;
+  
   h1 {
     font-size: 36px;
     line-height: 48px;
@@ -90,7 +91,84 @@
     letter-spacing: 1px;
     color: #2D3942;
     font-weight: 400;
+    
+  }
+  
+  .learn_more {
+    display: flex;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #F3A024;
+    
+    img {
+      height: 32px;
+      width: 32px;
+      margin-left: 16px;
+      background: url("/assets/icon/btn_orange_hover.svg");
+    }
+  }
+  
+  ::ng-deep .carousel-inner {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .carousel .carousel-control-next-icon {
   
   }
 }
 
+.hsk_intro {
+  padding: 64px 0 100px;
+  
+  img.main {
+    width: 100%;
+  }
+  img.icon{
+    margin-bottom: 20px;
+  }
+  .intro_text {
+    padding: 48px 80px;
+    .learn_more {
+      display: flex;
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      color: #3B9FBE;
+      cursor: pointer;
+      margin-top: 16px;
+      align-items: center;
+      img {
+        height: 32px;
+        width: 32px;
+        margin-left: 16px;
+        fill:red;
+      }
+      &:hover{
+        color: #6ACFED;
+        img{
+          content: url("/assets/image/icon/btn_blue_hover.svg");
+        }
+      }
+    }
+  }
+  
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 500;
+    letter-spacing: 0.5px
+  }
+  
+  p {
+    font-size: 24px;
+    line-height: 40px;
+    /* or 167% */
+    margin: auto 0;
+    letter-spacing: 1px;
+  }
+}
