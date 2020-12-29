@@ -1,0 +1,105 @@
+footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px;
+  margin: 0;
+  background: #3b9fbe;
+}
+
+
+.product-logo {
+  margin: 20px 32px;
+  max-width: 26vw;
+}
+
+footer {
+  font-size: 16px;
+  padding-top: 48px;
+  padding-bottom: 16px
+}
+
+footer .title {
+  font-weight: 500;
+}
+
+footer p {
+  margin-bottom: 8px;
+  margin-top: 32px;
+  color: #fff;
+}
+
+footer .logo-setion {
+  padding-bottom: 64px;
+}
+
+footer .navigation {
+  margin: 15px auto;
+}
+
+footer .navigation ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+
+footer .navigation ul li {
+  padding: 0 25px;
+}
+
+footer .navigation ul li a {
+  font-size: 16px;
+  line-height: 2.19;
+}
+
+footer .copyright {
+  font-size: 14px;
+
+  line-height: 2.19;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+
+
+footer .title {
+  font-weight: 500;
+}
+
+footer a {
+  color: #FFF !important;
+  cursor: pointer;
+  line-height: 30px;
+}
+
+footer a:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+footer .icon {
+  margin: 0 8px;
+  cursor: pointer;
+}
