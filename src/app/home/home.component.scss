@@ -1,8 +1,8 @@
 .landing {
   margin-top: 66px;
-  background: url("/assets/image/index_pic_01.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  //background: url("/assets/image/index_pic_01.png");
+  //background-repeat: no-repeat;
+  //background-size: cover;
   height: 768px;
   box-sizing: border-box;
   //padding-top: 346px;
@@ -20,6 +20,21 @@
     line-height: 36px;
     letter-spacing: 1px;
     color: #F3A024;
+  }
+  
+  mdb-carousel {
+    .carousel, ::ng-deep .carousel-inner {
+      height: 768px;
+    }
+    
+    mdb-carousel-item .container {
+      position: absolute;
+      top: 346px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
   }
 }
 
@@ -41,3 +56,4 @@
     color: #2D3942;
   }
 }
+
