@@ -195,9 +195,10 @@
       <h1 i18n>HSK Course</h1>
     </div>
     <div class="row">
-      <carousel [cellWidth]="360" [dots]="false">
+      <carousel #course_carousel [cellWidth]="360" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
           <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png">
+          <h2>HSK 1 & 2</h2>
         </div>
         <div class="carousel-cell">
           <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_02.png">
@@ -209,6 +210,13 @@
           <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_04.png">
         </div>
       </carousel>
+    </div>
+    <div class="row">
+      <div class="arrow">
+        <img class="left" src="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
+        <img class="right" src="/assets/image/icon/btn_normal_right.svg" (click)="courseNext()">
+      </div>
+
     </div>
   </div>
 </section>

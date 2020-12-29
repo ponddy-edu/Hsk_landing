@@ -147,8 +147,10 @@
       
       &.blue_text {
         color: #3B9FBE;
+        
         &:hover {
           color: #6ACFED;
+          
           img {
             content: url("/assets/image/icon/btn_blue_hover.svg");
           }
@@ -157,9 +159,10 @@
       
       &.green_text {
         color: #26B586;
+        
         &:hover {
           color: #2CC895;
-    
+          
           img {
             content: url("/assets/image/icon/btn_green_hover.svg");
           }
@@ -173,7 +176,7 @@
         fill: red;
       }
       
-    
+      
     }
   }
   
@@ -215,5 +218,24 @@
     }
   }
   
+  .arrow {
+    img {
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+    }
+    
+    .left {
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_left.svg");
+      }
+    }
+    .right {
+      margin-left: 32px;
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_right.svg");
+      }
+    }
+  }
   
 }

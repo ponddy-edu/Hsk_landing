@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {CarouselComponent} from 'angular-responsive-carousel';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  @ViewChild('course_carousel')
+    // @ts-ignore
+  courseCarousel: CarouselComponent;
+
   constructor() {
   }
 
@@ -14,4 +19,11 @@ export class HomeComponent implements OnInit {
     console.log(123)
   }
 
+  coursePrev(): void {
+    this.courseCarousel.prev()
+  }
+
+  courseNext(): void {
+    this.courseCarousel.next()
+  }
 }
