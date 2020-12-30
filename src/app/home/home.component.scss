@@ -133,7 +133,7 @@
   }
   
   .intro_text {
-    padding: 48px 80px;
+    padding: 48px 76px;
     
     .learn_more {
       display: flex;
@@ -208,7 +208,9 @@
     padding-bottom: 12px;
     font-weight: 900;
   }
+  carousel{
   
+  }
   .carousel-cell {
     padding: 0 30px;
     border-right: 1px solid #D5D7D9;;
@@ -234,6 +236,7 @@
   }
   
   .arrow {
+    padding-left: 38px;
     img {
       height: 50px;
       width: 50px;
