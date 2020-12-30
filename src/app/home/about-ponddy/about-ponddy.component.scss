@@ -30,12 +30,16 @@
     cursor: pointer;
     margin-top: 16px;
     align-items: center;
-    p{ margin: 0}
+    
+    p {
+      margin: 0
+    }
+    
     &.blue_text {
       color: #3B9FBE !important;
       
       &:hover {
-        color: #6ACFED!important;
+        color: #6ACFED !important;
         
         img {
           content: url("/assets/image/icon/btn_blue_hover.svg");
@@ -44,10 +48,10 @@
     }
     
     &.green_text {
-      color: #26B586!important;
+      color: #26B586 !important;
       
       &:hover {
-        color: #2CC895!important;
+        color: #2CC895 !important;
         
         img {
           content: url("/assets/image/icon/btn_green_hover.svg");
@@ -63,6 +67,34 @@
     }
     
     
+  }
+  
+  .carousel-cell {
+    
+    img {
+      //height: auto;
+      width: 100%;
+    }
+    
+  }
+  
+  .arrow {
+    display: flex;
+    align-items: center;
+    .left {
+      cursor: pointer;
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_left.svg");
+      }
+    }
+  
+    .right {
+      cursor: pointer;
+  
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_right.svg");
+      }
+    }
   }
   
   ::ng-deep .carousel-inner {

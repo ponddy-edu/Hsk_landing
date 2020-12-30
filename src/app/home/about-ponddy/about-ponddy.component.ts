@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {CarouselComponent} from 'angular-responsive-carousel';
 
 @Component({
   selector: 'app-home-about',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-ponddy.component.scss']
 })
 export class AboutPonddyComponent implements OnInit {
+  @ViewChild('course_carousel')
+  courseComponent: CarouselComponent = {} as CarouselComponent
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  coursePrev(): void {
+    this.courseComponent.prev()
+  }
+
+  courseNext(): void {
+    this.courseComponent.next()
+  }
 }

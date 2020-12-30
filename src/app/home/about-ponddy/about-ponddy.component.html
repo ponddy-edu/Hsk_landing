@@ -30,17 +30,39 @@
     </div>
 
     <div class="row justify-content-center">
-      <mdb-carousel class="carousel slide carousel-fade" [animation]="'slide'">
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png" alt="First slide">
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png" alt="Second slide">
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png" alt="Third slide">
-        </mdb-carousel-item>
-      </mdb-carousel>
+      <!--      <mdb-carousel class="carousel slide carousel-fade" [animation]="'slide'">-->
+      <!--        <mdb-carousel-item>-->
+      <!--          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png" alt="First slide">-->
+      <!--        </mdb-carousel-item>-->
+      <!--        <mdb-carousel-item>-->
+      <!--          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png" alt="Second slide">-->
+      <!--        </mdb-carousel-item>-->
+      <!--        <mdb-carousel-item>-->
+      <!--          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png" alt="Third slide">-->
+      <!--        </mdb-carousel-item>-->
+      <!--      </mdb-carousel>-->
+      <div class="col-md-1 arrow">
+        <img class="left" src="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
+      </div>
+      <div class="col-md-10">
+        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
+          <div class="carousel-cell">
+            <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png"
+                 alt="Second slide">
+          </div>
+          <div class="carousel-cell">
+            <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png"
+                 alt="First slide">
+          </div>
+          <div class="carousel-cell">
+            <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png"
+                 alt="Third slide">
+          </div>
+        </carousel>
+      </div>
+      <div class="col-md-1 arrow">
+        <img class="right" src="/assets/image/icon/btn_normal_right.svg" (click)="courseNext()">
+      </div>
     </div>
   </div>
 </section>
