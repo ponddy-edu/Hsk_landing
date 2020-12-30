@@ -5,14 +5,16 @@
       </a>
 
       <div class="collapse navbar-collapse" id="navbarsExample07">
-        <ul class="pd-nav-item navbar-nav mr-auto text-center">
+        <ul *ngIf="!(isMobile|async)" class="pd-nav-item navbar-nav mr-auto text-center">
+
           <li class="nav-item nav-border-l nav-border-r">
             <a i18n="header" href="/" class="active nav-active text_menu" data="navbar">
               Home
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" class="nav-a text_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a i18n="header" class="nav-a text_menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
@@ -31,6 +33,7 @@
               FAQ
             </a>
           </li>
+
         </ul>
       </div>
     </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DeviceService} from '../../utils/device.service';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  isMobile: Observable<boolean>
 
-  constructor() { }
+  constructor(private deviceService: DeviceService) {
+    this.isMobile = deviceService.mobile
+  }
 
   ngOnInit(): void {
+    this.isMobile.subscribe(console.log)
   }
 
 }
