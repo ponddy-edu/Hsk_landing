@@ -1,4 +1,4 @@
-$font-weight:500;
+$font-weight:700;
 $font-size:16px;
 $line-height:22px;
 $line-height-secondary: 26px;
@@ -283,29 +283,7 @@ li {
 
 /*--------------字型----------------*/
 
-@font-face {
-  font-family: Ponddy-NotoRubik;
-  src: url("https://ponddychinese-resources.s3-us-west-2.amazonaws.com/fonts/PonddyEnglishFont/Ponddy-NotoRubik-Light.woff") format("woff");
-  font-weight: 300;
-}
 
-@font-face {
-  font-family: Ponddy-NotoRubik;
-  src: url("https://ponddychinese-resources.s3-us-west-2.amazonaws.com/fonts/PonddyEnglishFont/Ponddy-NotoRubik-Regular.woff") format("woff");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Ponddy-NotoRubik;
-  src: url("https://ponddychinese-resources.s3-us-west-2.amazonaws.com/fonts/PonddyEnglishFont/Ponddy-NotoRubik-Medium.woff") format("woff");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: Ponddy-NotoRubik;
-  src: url("https://ponddychinese-resources.s3-us-west-2.amazonaws.com/fonts/PonddyEnglishFont/Ponddy-NotoRubik-Bold.woff") format("woff");
-  font-weight: 700;
-}
 
 .pd_icon_lock {
   background-image: $pd_icon_lock_gray80;
