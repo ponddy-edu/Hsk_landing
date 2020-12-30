@@ -1,125 +1,48 @@
-.landing {
-  margin-top: 66px;
-  //background: url("/assets/image/index_pic_01.png");
-  //background-repeat: no-repeat;
-  //background-size: cover;
-  height: 768px;
-  box-sizing: border-box;
-  //padding-top: 346px;
+
+::ng-deep.learn_more {
+  display: flex;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  align-items: center;
   
-  h1 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 62px;
-    color: #FFFFFF;
-  }
-  
-  .learn_more {
-    display: flex;
-    font-size: 20px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: #F3A024;
+  &.blue_text {
+    color: #3B9FBE !important;
     
-    img {
-      height: 32px;
-      width: 32px;
-      margin-left: 16px;
-      background: url("/assets/icon/btn_orange_hover.svg");
-    }
-  }
-  
-  mdb-carousel {
-    .carousel, ::ng-deep .carousel-inner {
-      height: 768px;
-    }
-    
-    mdb-carousel-item .container {
-      position: absolute;
-      top: 346px;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-    }
-    
-    ::ng-deep.carousel-indicators {
-      position: absolute;
-      right: 0;
-      bottom: 42%;
-      /* left: 0; */
-      align-items: flex-end;
-      z-index: 15;
-      display: flex;
-      justify-content: center;
-      padding-left: 0;
-      margin-right: 3%;
-      margin-left: 15%;
-      list-style: none;
-      flex-direction: column;
+    &:hover {
+      color: #6ACFED!important;
       
-      li {
-        opacity: 1;
-        
-        &.active {
-          background-color: #93E2FA;
-        }
+      img {
+        content: url("/assets/image/icon/btn_blue_hover.svg");
       }
     }
   }
-}
-
-.about_ponddy {
-  padding: 64px 0;
-  background: #EBF2F5;
   
-  h1 {
-    font-size: 36px;
-    line-height: 48px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: #2D3942;
-    font-weight: 900;
-    margin-bottom: 40px;
-  }
-  
-  p {
-    font-size: 20px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    color: #2D3942;
-    font-weight: 400;
+  &.green_text {
+    color: #26B586!important;
     
-  }
-  
-  .learn_more {
-    display: flex;
-    font-size: 20px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: #F3A024;
-    
-    img {
-      height: 32px;
-      width: 32px;
-      margin-left: 16px;
-      background: url("/assets/icon/btn_orange_hover.svg");
+    &:hover {
+      color: #2CC895!important;
+      
+      img {
+        content: url("/assets/image/icon/btn_green_hover.svg");
+      }
     }
   }
   
-  ::ng-deep .carousel-inner {
-    width: 80%;
-    text-align: center;
-    margin: auto;
+  img {
+    height: 32px;
+    width: 32px;
+    margin-left: 16px;
+    fill: red;
   }
   
-  .carousel .carousel-control-next-icon {
   
-  }
 }
+
 
 .hsk_intro {
   padding: 64px 0 100px;
@@ -135,49 +58,7 @@
   .intro_text {
     padding: 48px 76px;
     
-    .learn_more {
-      display: flex;
-      font-size: 20px;
-      line-height: 36px;
-      letter-spacing: 1px;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 16px;
-      align-items: center;
-      
-      &.blue_text {
-        color: #3B9FBE;
-        
-        &:hover {
-          color: #6ACFED;
-          
-          img {
-            content: url("/assets/image/icon/btn_blue_hover.svg");
-          }
-        }
-      }
-      
-      &.green_text {
-        color: #26B586;
-        
-        &:hover {
-          color: #2CC895;
-          
-          img {
-            content: url("/assets/image/icon/btn_green_hover.svg");
-          }
-        }
-      }
-      
-      img {
-        height: 32px;
-        width: 32px;
-        margin-left: 16px;
-        fill: red;
-      }
-      
-      
-    }
+    
   }
   
   h1 {
@@ -208,9 +89,11 @@
     padding-bottom: 12px;
     font-weight: 900;
   }
-  carousel{
+  
+  carousel {
   
   }
+  
   .carousel-cell {
     padding: 0 30px;
     border-right: 1px solid #D5D7D9;;
@@ -227,16 +110,19 @@
       color: #2D3942;
       
     }
-    .level{
+    
+    .level {
       font-weight: normal;
     }
-    .ta{
+    
+    .ta {
       color: #F3A024;
     }
   }
   
   .arrow {
     padding-left: 38px;
+    
     img {
       height: 50px;
       width: 50px;

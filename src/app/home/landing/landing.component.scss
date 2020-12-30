@@ -1,0 +1,81 @@
+.landing {
+  margin-top: 66px;
+  //background: url("/assets/image/index_pic_01.png");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  height: 768px;
+  box-sizing: border-box;
+  //padding-top: 346px;
+  
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 62px;
+    color: #FFFFFF;
+  }
+  
+  .learn_more {
+    display: flex;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #F3A024;
+    
+    img {
+      height: 32px;
+      width: 32px;
+      margin-left: 16px;
+      background: url("/assets/icon/btn_orange_hover.svg");
+    }
+  }
+  
+  mdb-carousel {
+    .carousel, ::ng-deep .carousel-inner {
+      height: 768px;
+    }
+    
+    ::ng-deep.carousel-control-prev {
+      display: none;
+      
+    }
+    
+    ::ng-deep.carousel-control-next {
+      display: none;
+    }
+    
+    mdb-carousel-item .container {
+      position: absolute;
+      top: 346px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
+    
+    ::ng-deep.carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: 42%;
+      /* left: 0; */
+      align-items: flex-end;
+      z-index: 15;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      margin-right: 3%;
+      margin-left: 15%;
+      list-style: none;
+      flex-direction: column;
+      
+      li {
+        opacity: 1;
+        
+        &.active {
+          background-color: #93E2FA;
+        }
+      }
+    }
+  }
+}

@@ -5,12 +5,14 @@ import {RouterModule, Routes} from '@angular/router';
 import {ShareModule} from '../../components/share.module';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import {IvyCarouselModule} from "angular-responsive-carousel";
+import { LandingComponent } from './landing/landing.component';
+import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
 ];
 
 @NgModule({
-  declarations: [HomeComponent,
+  declarations: [HomeComponent, LandingComponent, AboutPonddyComponent,
   ],
   imports: [
     CommonModule,

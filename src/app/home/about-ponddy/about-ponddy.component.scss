@@ -1,0 +1,77 @@
+.about_ponddy {
+  padding: 64px 0;
+  background: #EBF2F5;
+  
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #2D3942;
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+  
+  p.description {
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: #2D3942;
+    font-weight: 400;
+    
+  }
+  
+  .learn_more {
+    display: flex;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+    align-items: center;
+    p{ margin: 0}
+    &.blue_text {
+      color: #3B9FBE !important;
+      
+      &:hover {
+        color: #6ACFED!important;
+        
+        img {
+          content: url("/assets/image/icon/btn_blue_hover.svg");
+        }
+      }
+    }
+    
+    &.green_text {
+      color: #26B586!important;
+      
+      &:hover {
+        color: #2CC895!important;
+        
+        img {
+          content: url("/assets/image/icon/btn_green_hover.svg");
+        }
+      }
+    }
+    
+    img {
+      height: 32px;
+      width: 32px;
+      margin-left: 16px;
+      fill: red;
+    }
+    
+    
+  }
+  
+  ::ng-deep .carousel-inner {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .carousel .carousel-control-next-icon {
+  
+  }
+}
