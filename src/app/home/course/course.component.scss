@@ -1,0 +1,68 @@
+.course {
+  padding-bottom: 64px;
+  
+  h1 {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #2D3942;
+    padding-bottom: 12px;
+    font-weight: 900;
+  }
+  
+  carousel {
+  
+  }
+  
+  .carousel-cell {
+    padding: 0 30px;
+    border-right: 1px solid #D5D7D9;;
+    
+    img {
+      height: auto;
+    }
+    
+    h2 {
+      margin-top: 24px;
+      font-size: 24px;
+      line-height: 36px;
+      //font-weight: ;
+      color: #2D3942;
+      
+    }
+    
+    .level {
+      font-weight: normal;
+    }
+    
+    .ta {
+      color: #F3A024;
+    }
+  }
+  
+  .arrow {
+    padding-left: 38px;
+    
+    img {
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+    }
+    
+    .left {
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_left.svg");
+      }
+    }
+    
+    .right {
+      margin-left: 32px;
+      
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_right.svg");
+      }
+    }
+  }
+  
+}

@@ -7,12 +7,13 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import {IvyCarouselModule} from "angular-responsive-carousel";
 import { LandingComponent } from './landing/landing.component';
 import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
+import { CourseComponent } from './course/course.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
 ];
 
 @NgModule({
-  declarations: [HomeComponent, LandingComponent, AboutPonddyComponent,
+  declarations: [HomeComponent, LandingComponent, AboutPonddyComponent, CourseComponent,
   ],
   imports: [
     CommonModule,
