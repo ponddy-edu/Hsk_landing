@@ -1,10 +1,14 @@
 <section class="course">
+  <div class="background">
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
   <div class="container">
     <div class="row text-center">
-      <h1 i18n>HSK Course</h1>
+      <h1 i18n class="title">HSK Course</h1>
     </div>
     <div class="row">
-      <carousel  #course_carousel [height]="500" [cellWidth]="360" [dots]="false" [arrows]="false">
+      <carousel #course_carousel [height]="500" [cellWidth]="360" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
           <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png">
           <h2 i18n>HSK 1 & 2</h2>
@@ -36,7 +40,14 @@
         <img class="left" src="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
         <img class="right" src="/assets/image/icon/btn_normal_right.svg" (click)="courseNext()">
       </div>
-
+    </div>
+    <div class="row text-center help">
+      <h1 i18n>Need help to nail the tests?</h1>
+    </div>
+    <div class="flex-center">
+    <button i18n class="btn_focus-primary">
+      Learn more
+    </button>
     </div>
   </div>
 </section>
