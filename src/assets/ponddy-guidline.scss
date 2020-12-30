@@ -188,7 +188,7 @@ $pd_icon_previous-gray80: url('https://ponddy-guildline.s3-us-west-2.amazonaws.c
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 10001;
 }
 
 
@@ -211,7 +211,6 @@ $pd_icon_previous-gray80: url('https://ponddy-guildline.s3-us-west-2.amazonaws.c
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 20px;
 }
 
 div {
