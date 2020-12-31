@@ -3,14 +3,14 @@
   //background: url("/assets/image/index_pic_01.png");
   //background-repeat: no-repeat;
   //background-size: cover;
-  height: 768px;
+  height:  calc(100vh - 65px);
   box-sizing: border-box;
   //padding-top: 346px;
   
   h1 {
     font-style: normal;
     font-weight: bold;
-    font-size: 42px;
+    font-size: 56px;
     line-height: 62px;
     color: #FFFFFF;
   }
@@ -33,7 +33,7 @@
   
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
-      height: 768px;
+      height: calc(100vh - 65px);
     }
     
     ::ng-deep.carousel-control-prev {
@@ -57,7 +57,7 @@
     ::ng-deep.carousel-indicators {
       position: absolute;
       right: 0;
-      bottom: 42%;
+      top: 45vh;
       /* left: 0; */
       align-items: flex-end;
       z-index: 15;
