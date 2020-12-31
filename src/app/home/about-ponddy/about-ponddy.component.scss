@@ -18,7 +18,17 @@
     letter-spacing: 1px;
     color: #2D3942;
     font-weight: 400;
-    
+    @media (max-width: 768px){
+      font-size: 16px;
+      line-height: 30px;
+      /* or 187% */
+  
+      letter-spacing: 0.5px;
+  
+      /* Gray 80% */
+  
+      color: #576168;
+    }
   }
   
   .learn_more {
@@ -42,7 +52,7 @@
         color: #6ACFED !important;
         
         img {
-          content: url("/assets/image/icon/btn_blue_hover.svg");
+          content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
         }
       }
     }
@@ -54,7 +64,7 @@
         color: #2CC895 !important;
         
         img {
-          content: url("/assets/image/icon/btn_green_hover.svg");
+          content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
         }
       }
     }
@@ -84,7 +94,7 @@
     .left {
       cursor: pointer;
       &:hover {
-        content: url("/assets/image/icon/btn_hover_left.svg");
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
       }
     }
   
@@ -92,7 +102,7 @@
       cursor: pointer;
   
       &:hover {
-        content: url("/assets/image/icon/btn_hover_right.svg");
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
       }
     }
   }

@@ -65,7 +65,7 @@
     
     .left {
       &:hover {
-        content: url("/assets/image/icon/btn_hover_left.svg");
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
       }
     }
     
@@ -73,7 +73,7 @@
       margin-left: 32px;
       
       &:hover {
-        content: url("/assets/image/icon/btn_hover_right.svg");
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
       }
     }
   }

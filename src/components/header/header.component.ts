@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isMobile.subscribe(console.log)
+    this.isMobile.subscribe()
   }
 
 }
