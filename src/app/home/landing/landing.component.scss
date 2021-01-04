@@ -3,10 +3,10 @@
   //background: url("/assets/image/index_pic_01.png");
   //background-repeat: no-repeat;
   //background-size: cover;
-  height:  calc(100vh - 65px);
+  height: calc(100vh - 65px);
   box-sizing: border-box;
   //padding-top: 346px;
-  
+
   h1 {
     font-style: normal;
     font-weight: bold;
@@ -14,51 +14,66 @@
     line-height: 62px;
     color: #FFFFFF;
   }
-  
+
   .learn_more {
     display: flex;
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 1px;
     font-weight: 700;
-    color: #F3A024;
-    
+    cursor: pointer;
+
+    &.orange_text {
+      color: #F3A024;
+
+      &:hover {
+        color: #ffd084 !important;
+
+        img {
+          content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
     img {
       height: 32px;
       width: 32px;
       margin-left: 16px;
-      background: url("/https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
     }
   }
-  
+
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
       height: calc(100vh - 65px);
     }
-    
+
     ::ng-deep.carousel-control-prev {
       display: none;
-      
+
     }
-    
+
     ::ng-deep.carousel-control-next {
       display: none;
     }
-    
+
     mdb-carousel-item .container {
       position: absolute;
-      top: 346px;
+      top: 48vh;
       margin-left: auto;
       margin-right: auto;
       left: 0;
       right: 0;
     }
-    
+
     ::ng-deep.carousel-indicators {
       position: absolute;
-      right: 0;
-      top: 45vh;
-      /* left: 0; */
+      //right: 0;
+      top: 0;
+      left: 94vw;
       align-items: flex-end;
       z-index: 15;
       display: flex;
@@ -68,10 +83,11 @@
       margin-left: 15%;
       list-style: none;
       flex-direction: column;
-      
+      width: 10px;
+      margin: 0;
       li {
         opacity: 1;
-        
+
         &.active {
           background-color: #93E2FA;
         }
