@@ -1,6 +1,11 @@
+
 .about_ponddy {
   padding: 64px 0;
   background: #EBF2F5;
+  @media (max-width: 767px) {
+    padding: 24px 0;
+    
+  }
   
   h1 {
     font-size: 36px;
@@ -10,74 +15,28 @@
     color: #2D3942;
     font-weight: 900;
     margin-bottom: 40px;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 16px;
+    }
   }
   
-  p.description {
+  .description {
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 1px;
     color: #2D3942;
     font-weight: 400;
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       font-size: 16px;
       line-height: 30px;
-      /* or 187% */
-  
       letter-spacing: 0.5px;
-  
-      /* Gray 80% */
-  
       color: #576168;
     }
   }
   
-  .learn_more {
-    display: flex;
-    font-size: 20px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 16px;
-    align-items: center;
-    
-    p {
-      margin: 0
-    }
-    
-    &.blue_text {
-      color: #3B9FBE !important;
-      
-      &:hover {
-        color: #6ACFED !important;
-        
-        img {
-          content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
-        }
-      }
-    }
-    
-    &.green_text {
-      color: #26B586 !important;
-      
-      &:hover {
-        color: #2CC895 !important;
-        
-        img {
-          content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
-        }
-      }
-    }
-    
-    img {
-      height: 32px;
-      width: 32px;
-      margin-left: 16px;
-      fill: red;
-    }
-    
-    
-  }
+  
   
   .carousel-cell {
     
@@ -91,16 +50,18 @@
   .arrow {
     display: flex;
     align-items: center;
+    
     .left {
       cursor: pointer;
+      
       &:hover {
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
       }
     }
-  
+    
     .right {
       cursor: pointer;
-  
+      
       &:hover {
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
       }

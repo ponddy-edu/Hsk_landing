@@ -8,7 +8,9 @@
   cursor: pointer;
   margin-top: 16px;
   align-items: center;
-  
+  p {
+    margin: 0
+  }
   &.blue_text {
     color: #3B9FBE !important;
     
@@ -32,17 +34,38 @@
       }
     }
   }
-  
+  &.orange_text {
+    color: #F3A024;
+    
+    &:hover {
+      color: #ffd084 !important;
+      
+      img {
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
+      }
+    }
+  }
   img {
     height: 32px;
     width: 32px;
     margin-left: 16px;
     fill: red;
   }
-  
-  
 }
+@media (max-width: 767px) {
 
+  ::ng-deep.learn_more {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    img {
+      height: 24px;
+      width: 24px;
+      margin-left: 10px;
+      fill: red;
+    }
+  }
+}
 
 
 
