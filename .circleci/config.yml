@@ -1,0 +1,44 @@
+version: 2
+jobs:
+  deploy:
+    working_directory: ~/repo
+    machine: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "ec:54:dc:81:b0:99:6c:af:14:f3:a0:f2:ac:21:98:47"
+      - run:
+          command: |
+            sudo apt-get install gettext-base jq
+            export PROJECT_NAME=$(jq -r '.name' < package.json)
+            docker build -f ./deploy/Dockerfile --build-arg PROJECT_NAME=$PROJECT_NAME . -t $PROJECT_NAME
+            docker save $PROJECT_NAME > $PROJECT_NAME.tar
+            scp -o "StrictHostKeyChecking no" $PROJECT_NAME.tar $USER@$HOST:/images/
+            export MSG="#${CIRCLE_BUILD_NUM} ${CIRCLE_PROJECT_REPONAME} ${CIRCLE_BRANCH} is updating"
+            curl -X POST \
+            -H 'Content-type: application/json' \
+            --data '{"text":"'"${MSG}"'"}' \
+            "${SLACK_WEBHOOK}"
+            envsubst '${CIRCLE_PROJECT_REPONAME}' < deploy/deploy.template.sh > deploy.sh
+            cat deploy.sh
+            ssh -o "StrictHostKeyChecking no" $USER@$HOST < deploy.sh
+
+            export MSG="#${CIRCLE_BUILD_NUM} ${CIRCLE_PROJECT_REPONAME} ${CIRCLE_BRANCH} is updated"
+            curl -X POST \
+            -H 'Content-type: application/json' \
+            --data '{"text":"'"${MSG}"'"}' \
+            "${SLACK_WEBHOOK}"
+
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - deploy:
+          context:
+            - slack
+          filters:
+            branches:
+              only:
+                - master
