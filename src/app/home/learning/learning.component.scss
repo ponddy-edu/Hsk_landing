@@ -1,6 +1,65 @@
+@import "src/assets/ponddy-guidline";
 .learning {
   background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/BKG_smartLearning+.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 618px;
+  @media (max-width: 767px) {
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/BKG_smartLearning.png");
+    height: 418px;
+    background-size: 100% auto;
+    background-position: center top;
+  }
+  
+  .container {
+    padding-top: 376px;
+    @media (max-width: 767px) {
+      padding-top: 208px;
+    }
+    
+    h1 {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: 0.5px;
+      color: #2D3942;
+      margin-bottom: 10px;
+      @media (max-width: 767px) {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+      }
+    }
+    
+    h2 {
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      color: #F3A024;
+      margin-bottom: 32px;
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .btn_focus-primary{
+      border: none;
+      background: #F3A024;
+      &:hover {
+        background: $orange_light;
+        color: $white_100;
+      }
+      &:active {
+        background: $orange_text;
+        color: $white_100;
+      }
+      &:disabled {
+        background: $gray10;
+        color: $gray50;
+      }
+    }
+  }
+  
+  
 }
