@@ -21,7 +21,7 @@
           Association of Schools and Colleges of the United States.
         </p>
         <div class="learn_more blue_text">
-          <p i18n="learn more|learn more">Read more</p>
+          <p i18n="learn more|learn more">Read More</p>
           <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_normal.svg">
         </div>
 
@@ -30,37 +30,22 @@
     </div>
 
     <div class="row justify-content-center">
-      <!--      <mdb-carousel class="carousel slide carousel-fade" [animation]="'slide'">-->
-      <!--        <mdb-carousel-item>-->
-      <!--          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png" alt="First slide">-->
-      <!--        </mdb-carousel-item>-->
-      <!--        <mdb-carousel-item>-->
-      <!--          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png" alt="Second slide">-->
-      <!--        </mdb-carousel-item>-->
-      <!--        <mdb-carousel-item>-->
-      <!--          <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png" alt="Third slide">-->
-      <!--        </mdb-carousel-item>-->
-      <!--      </mdb-carousel>-->
-      <div class="col-md-1 arrow">
+      <div *ngIf="!device.mobile.getValue()" class="col-md-1 arrow">
         <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
       <div class="col-md-10">
         <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
-          <div class="carousel-cell">
-            <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png"
-                 alt="Second slide">
-          </div>
-          <div class="carousel-cell">
-            <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png"
-                 alt="First slide">
-          </div>
-          <div class="carousel-cell">
-            <img class="d-block w-100" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png"
-                 alt="Third slide">
+          <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
+            <img class="d-block w-100" [src]="carouselImage"
+                  [alt]="'slide_'+i">
           </div>
         </carousel>
       </div>
-      <div class="col-md-1 arrow">
+      <div *ngIf="!device.mobile.getValue()" class="col-md-1 arrow">
+        <img class="right" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg" (click)="courseNext()">
+      </div>
+      <div class="col-10 justify-content-center arrow">
+        <img style="margin-right: 32px" class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
         <img class="right" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg" (click)="courseNext()">
       </div>
     </div>

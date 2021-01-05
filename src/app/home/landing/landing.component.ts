@@ -24,8 +24,6 @@ export class LandingComponent implements OnInit {
 
 
   constructor(private device: DeviceService) {
-    console.log('landing')
-    console.log(this.device.mobile)
     if (this.device.mobile.getValue()) {
       this.carouselImageList = imagmeListMobile
     } else {
