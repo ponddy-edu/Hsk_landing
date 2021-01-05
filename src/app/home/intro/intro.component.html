@@ -1,13 +1,13 @@
 <section class="hsk_intro">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-5 col-sm-12">
+      <div class="col-md-5 col-11">
         <img class="main" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/intro_pic_01.png">
       </div>
-      <div class="col-md-5 col-sm-12">
+      <div class="col-md-5 col-11">
         <div class="intro_text">
-          <img class="icon" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_01.svg">
-          <h1 i18n>Chinese Proficiency Test</h1>
+          <img [hidden]="isMobile" class="icon" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_01.svg">
+          <h1 i18n>Chinese Proficiency Test <img  [hidden]="!isMobile" class="icon" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_01.svg"></h1>
           <p>Things you should know before registration and tests</p>
           <div class="learn_more blue_text">
             <p>Read More</p>
@@ -16,11 +16,12 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-center" style="margin-top: 80px">
-      <div class="col-md-5 col-sm-12" >
+    <div class="row justify-content-center preparation" >
+      <div class="col-md-5 col-11" >
         <div class="intro_text" style="padding-left: 0">
-          <img class="icon" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_02.svg">
-          <h1 i18n>HSK Preparation</h1>
+          <img [hidden]="isMobile" class="icon" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_02.svg">
+          <h1 i18n>HSK Preparation <img [hidden]="!isMobile"
+                                        class="icon" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_02.svg"></h1>
           <p i18n>Get ready for HSK with the self-study packet and practice tests</p>
           <div class="learn_more green_text">
             <p i18n>Read More</p>
@@ -29,7 +30,7 @@
         </div>
 
       </div>
-      <div class="col-md-5 col-sm-12">
+      <div class="col-md-5 col-11">
         <img class="svg" class="main" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/intro_pic_02.png">
       </div>
     </div>

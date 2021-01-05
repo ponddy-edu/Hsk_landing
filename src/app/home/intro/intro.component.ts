@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DeviceService} from '../../../utils/device.service';
 
 @Component({
   selector: 'app-home-intro',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
+  isMobile = false
 
-  constructor() { }
+  constructor(public deviceService: DeviceService) {
+    this.isMobile = deviceService.mobile.getValue()
+    console.log(this.isMobile)
+  }
 
   ngOnInit(): void {
+
   }
 
 }
