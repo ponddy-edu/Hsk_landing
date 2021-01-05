@@ -1,6 +1,10 @@
 .course {
   padding-bottom: 64px;
-  
+  position: relative;
+  @media (max-width: 767px) {
+    padding-bottom: 36px;
+    
+  }
   h1.title {
     font-size: 36px;
     line-height: 48px;
@@ -9,6 +13,12 @@
     color: #2D3942;
     font-weight: 900;
     margin-bottom: 44px;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
   }
   
   .background {
@@ -32,6 +42,10 @@
     padding: 0 30px;
     border-right: 1px solid #D5D7D9;;
     
+    @media (max-width: 767px) {
+      padding: 0 24px;
+    }
+    
     img {
       height: auto;
     }
@@ -40,9 +54,11 @@
       margin-top: 24px;
       font-size: 24px;
       line-height: 36px;
-      //font-weight: ;
       color: #2D3942;
-      
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 36px
+      }
     }
     
     .level {
@@ -86,6 +102,11 @@
       letter-spacing: 1px;
       color: #F3A024;
       margin: 32px 0;
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 36px;
+        margin: 40px 0 24px;
+      }
     }
   }
   
@@ -93,33 +114,34 @@
     border: none;
   }
 }
+
 .container-left {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-@media (min-width:576px){
+@media (min-width: 576px) {
   .container-left {
     margin-left: 0;
     margin-right: calc(50vw - 270px);
   }
 }
 
-@media (min-width:768px){
+@media (min-width: 768px) {
   .container-left {
     margin-left: 0;
     margin-right: calc(50vw - 360px);
   }
 }
 
-@media (min-width:992px){
+@media (min-width: 992px) {
   .container-left {
     margin-left: 0;
     margin-right: calc(50vw - 480px);
   }
 }
 
-@media (min-width:1200px){
+@media (min-width: 1200px) {
   .container-left {
     margin-left: 0;
     margin-right: calc(50vw - 570px);
@@ -132,28 +154,28 @@
   padding-right: 15px;
 }
 
-@media (min-width:576px){
+@media (min-width: 576px) {
   .container-right {
     margin-left: calc(50vw - 270px);
     margin-right: 0;
   }
 }
 
-@media (min-width:768px){
+@media (min-width: 768px) {
   .container-right {
     margin-left: calc(50vw - 360px);
     margin-right: 0;
   }
 }
 
-@media (min-width:992px){
+@media (min-width: 992px) {
   .container-right {
     margin-left: calc(50vw - 480px);
     margin-right: 0;
   }
 }
 
-@media (min-width:1200px){
+@media (min-width: 1200px) {
   .container-right {
     margin-left: calc(50vw - 570px);
     margin-right: 0;
