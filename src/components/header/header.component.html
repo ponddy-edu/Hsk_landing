@@ -1,17 +1,10 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <a href="/" class="home-link ponddy-logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
-              aria-controls="navbarsExample07"
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-text">menu</span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarsExample07">
+    <div class="container" *ngIf="!(isMobile|async)">
+      <a href="/" class="home-link ponddy-logo"> </a>
+
+
+      <div class="collapse navbar-collapse">
         <ul *ngIf="!(isMobile|async)" class="pd-nav-item navbar-nav mr-auto text-center">
 
           <li class="nav-item nav-border-l nav-border-r">
@@ -20,7 +13,8 @@
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header"  routerLink="/ponddy" class="nav-a text_menu"  id="navbarDropdown" role="button" data-toggle="dropdown"
+            <a i18n="header" routerLink="/ponddy" class="nav-a text_menu" id="navbarDropdown" role="button"
+               data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
@@ -43,6 +37,55 @@
 
         </ul>
       </div>
+    </div>
+    <div class="container" *ngIf="isMobile|async">
+      <mat-expansion-panel *ngIf="isMobile|async" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <a href="/" class="home-link ponddy-logo">
+            </a>
+            <button class="navbar-toggler" type="button"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-text">menu</span>
+            </button>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul  class="pd-nav-item navbar-nav mr-auto text-center">
+
+          <li class="nav-item">
+            <a i18n="header" routerLink="/home" class="active nav-active text_menu" data="navbar">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a i18n="header" routerLink="/ponddy" class="nav-a text_menu" id="navbarDropdown" role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              Ponddy
+            </a>
+          </li>
+          <li class="nav-item">
+            <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
+              Tests
+            </a>
+          </li>
+          <li class="nav-item">
+            <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
+              Resource
+            </a>
+          </li>
+          <li class="nav-item">
+            <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
+              FAQ
+            </a>
+          </li>
+
+        </ul>
+
+      </mat-expansion-panel>
     </div>
   </nav>
 </header>
