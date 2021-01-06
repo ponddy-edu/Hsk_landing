@@ -1,4 +1,101 @@
-@import "src/assets/ponddy-guidline";
+$white_100: #ffffff;
+$white_trn80: rgba(255, 255, 255, 0.8);
+
+/* Gray */
+
+$gray100: #2D3942;
+$gray80: #576168;
+$gray50: #969CA0;
+$gray20: #D5D7D9;
+$gray10: #EAEBEC;
+$gray5: #F4F4F4;
+$gray2: #FBFBFB;
+$gray_trn80: rgba(45, 57, 66, 0.8);
+$gray_trn50: rgba(45, 57, 66, 0.5);
+$gray_trn20: rgba(45, 57, 66, 0.2);
+$gray_trn10: rgba(45, 57, 66, 0.1);
+$gray_trn5: rgba(45, 57, 66, 0.05);
+$gray_trn2: rgba(45, 57, 66, 0.02);
+
+/* Ponddy */
+
+$ponddy_dark-logo: #1B7892;
+$ponddy_text: #3B9FBE;
+$ponddy_base-logo: #6ACFED;
+$ponddy_light: #93E2FA;
+$ponddy_bg: #EBF2F5;
+$ponddy_bg2: #FBFCFC;
+
+/* Red */
+
+$red_dark: #7B0A0A;
+$red_text: #D64059;
+$red_base: #EA4B65;
+$red_light: #F86B82;
+$red_bg: #F5EBEB;
+$red_bg2: #FFFCFC;
+
+/* Orange */
+
+$orange_dark: #744B0E;
+$orange_text: #F3A024;
+$orange_base: #FFC05C;
+$orange_light: #FFD084;
+$orange_bg: #F5F0EB;
+$orange_bg2: #FCFAF8;
+
+/* Yellow */
+
+$yellow_dark: #715D1F;
+$yellow_text: #EAB604;
+$yellow_base: #FCC811;
+$yellow_light: #FFDB5C;
+$yellow_bg: #F5F2EB;
+$yellow_bg2: #FCFCF8;
+
+/* Green */
+
+$green_dark: #056243;
+$green_text: #26B586;
+$green_base: #2CC895;
+$green_light: #78D4B6;
+$green_bg: #EBF5F2;
+$green_bg2: #FAFFFD;
+
+/* Blue */
+
+$blue_dark: #05426D;
+$blue_text: #3585BD;
+$blue_base: #3F98D1;
+$blue_light: #6CAEE7;
+$blue_bg: #EBF1F5;
+$blue_bg2: #F7FBFC;
+
+/* Purple */
+
+$purple_dark: #431566;
+$purple_text: #6735BD;
+$purple_base: #893FD1;
+$purple_light: #B46CE7;
+$purple_bg: #EEEBF5;
+$purple_bg2: #FBFAFF;
+
+/* Lvevl */
+
+$level_unlevel: #787D7B;
+$level_6: #E54956;
+$level_5: #C638AD;
+$level_4: #511AE8;
+$level_3: #3E86F9;
+$level_2: #8BC7EF;
+$level_1: #02CCC2;
+$level_0: #71E67C;
+
+/* Pop-up 背景顏色*/
+
+$pd_cover: rgba(45, 57, 66, 0.5);
+
+
 .learning {
   background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/BKG_smartLearning+.png");
   background-repeat: no-repeat;
