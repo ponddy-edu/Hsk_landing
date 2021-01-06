@@ -9,7 +9,6 @@
     </div>
   </div>
   <div class="container-right">
-
     <div class="row">
       <carousel #course_carousel [height]="courseHeight" [cellWidth]="courseWidth" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
@@ -38,14 +37,15 @@
         </div>
       </carousel>
     </div>
-  </div>
-  <div class="container">
     <div class="row">
       <div class="arrow">
         <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
         <img class="right" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg" (click)="courseNext()">
       </div>
     </div>
+  </div>
+  <div class="container">
+
     <div class="row text-center help">
       <h1 i18n>Need help to nail the tests?</h1>
     </div>
