@@ -24,11 +24,16 @@ export class LandingComponent implements OnInit {
 
 
   constructor(public device: DeviceService) {
-    if (this.device.mobile.getValue()) {
-      this.carouselImageList = imagmeListMobile
-    } else {
-      this.carouselImageList = imageList
-    }
+    this.device.mobile.subscribe(isMobile => {
+      console.log(isMobile)
+      if (isMobile) {
+        this.carouselImageList = imagmeListMobile
+      } else {
+        this.carouselImageList = imageList
+
+      }
+    })
+
 
   }
 

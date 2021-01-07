@@ -10,6 +10,7 @@ import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
 import {CourseComponent} from './course/course.component';
 import {IntroComponent} from './intro/intro.component';
 import {LearningComponent} from './learning/learning.component';
+import {LazyLoadImageModule} from "ng-lazyload-image";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -24,7 +25,9 @@ const routes: Routes = [
     CarouselModule,
     WavesModule,
     IvyCarouselModule,
-    RouterModule.forChild(routes)],
+    RouterModule.forChild(routes),
+    LazyLoadImageModule
+  ],
   exports: [RouterModule, HomeComponent]
 })
 export class HomeModule {

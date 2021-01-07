@@ -12,25 +12,25 @@
     <div *ngIf="device.isBrowser" class="row">
       <carousel #course_carousel [height]="courseHeight" [cellWidth]="courseWidth" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png">
+          <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png'">
           <h2 i18n>HSK 1 & 2</h2>
           <p i18n class="level">Average Level: HSK 1~2</p>
           <h2 i18n class="ta">HSK for Adult </h2>
         </div>
         <div class="carousel-cell">
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_02.png">
+          <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_02.png'">
           <h2 i18n>HSK 3</h2>
           <p i18n class="level">Average Level: HSK 3</p>
           <h2 i18n class="ta">HSK for Adult </h2>
         </div>
         <div class="carousel-cell">
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_03.png">
+          <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_03.png'">
           <h2 i18n>HSK 4</h2>
           <p i18n class="level">Average Level: HSK 4</p>
           <h2 i18n class="ta">HSK for Adult </h2>
         </div>
         <div class="carousel-cell">
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_04.png">
+          <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_04.png'">
           <h2 i18n>HSK 3</h2>
           <p i18n class="level">Average Level: HSK 3</p>
           <h2 i18n class="ta">HSK for Student</h2>
@@ -39,9 +39,9 @@
     </div>
     <div class="row">
       <div class="arrow">
-        <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg"
+        <img class="left" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'"
              (click)="coursePrev()">
-        <img class="right" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg"
+        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'"
              (click)="courseNext()">
       </div>
     </div>

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 
 import {HomeModule} from './home/home.module';
+import {LAZYLOAD_IMAGE_HOOKS, LazyLoadImageModule, ScrollHooks} from "ng-lazyload-image";
 
 @NgModule({
   declarations: [
@@ -17,9 +18,10 @@ import {HomeModule} from './home/home.module';
     AppRoutingModule,
     MatMenuModule,
     HomeModule,
+    LazyLoadImageModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [{ provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

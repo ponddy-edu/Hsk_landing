@@ -11,7 +11,6 @@ export class IntroComponent implements OnInit {
 
   constructor(public deviceService: DeviceService) {
     this.isMobile = deviceService.mobile.getValue()
-    console.log(this.isMobile)
   }
 
   ngOnInit(): void {

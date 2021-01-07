@@ -34,7 +34,7 @@ export class DeviceService {
       this.mobile.next(true);
       console.log(true)
     } else {
-      this.mobile.next(true)
+      this.mobile.next(false)
     }
 
   }
