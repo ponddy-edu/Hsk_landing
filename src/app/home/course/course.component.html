@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="container-right">
-    <div class="row">
+    <div *ngIf="device.isBrowser" class="row">
       <carousel #course_carousel [height]="courseHeight" [cellWidth]="courseWidth" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
           <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png">
@@ -39,8 +39,10 @@
     </div>
     <div class="row">
       <div class="arrow">
-        <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
-        <img class="right" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg" (click)="courseNext()">
+        <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg"
+             (click)="coursePrev()">
+        <img class="right" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg"
+             (click)="courseNext()">
       </div>
     </div>
   </div>

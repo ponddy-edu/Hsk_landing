@@ -23,7 +23,7 @@ export class LandingComponent implements OnInit {
   carouselImageList: any[]
 
 
-  constructor(private device: DeviceService) {
+  constructor(public device: DeviceService) {
     if (this.device.mobile.getValue()) {
       this.carouselImageList = imagmeListMobile
     } else {

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {HomeModule} from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     MatMenuModule,
+    HomeModule,
     BrowserAnimationsModule,
   ],
   providers: [],
