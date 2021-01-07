@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8e9c43e7b7de3ff399b05a9389ea456257c5aecc" datatype="html">
+        <source>Ponddy® HSK Smart Learning to Tackle the Chinese Proficiency Test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e2dcf27db9c6a5e249960c576014aa40b3883360" datatype="html">
+        <source>Learn more</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bb1b9442440b9de5b35000a8cf7fa6d5e4a1aeea" datatype="html">
+        <source>Welcome To The First At-home Ponddy® HSK Online Test Center In The USA Earn Your Extra Cutting Edge While Staying Safe</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0fd4fa792e1d28a21ff04a7f05859aa87bad5001" datatype="html">
+        <source>Get Ready For The HSK Test With Ponddy® AI-Powered Interactive Platform &amp; Experienced Online Tutors.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="da4556b68be9f34ad8970a06ee016b89f5f2e002" datatype="html">
+        <source>Ponddy® Smart Learning To Help Your Kids Prepare For The Future Chinese Proficiency Test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d79d83ce8ca3e8ddd7dbf10869a9a291db0bbfef" datatype="html">
+        <source>Ponddy® Smart AI Platform To Help Your Students Master The Chinese Language </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/landing/landing.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2bb8e1f587ccb5beef58c80001dbf2732f6c15e2" datatype="html">
+        <source>Ponddy Education</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/about-ponddy/about-ponddy.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">about ponddy title</note>
+      </trans-unit>
+      <trans-unit id="447e7907821c1ae731bd61a65bce33133b264a14" datatype="html">
+        <source> Ponddy® is an advanced AI smart learning brand. Powered by innovative AKLS® AI technology, Ponddy’s smart learning solutions include intelligent platforms, customized resources, tailored curricula, on-line tutors, and at-home online testing services. Ponddy® Smart Learning is a new way to teach and learn Chinese or English more effectively: teachers could easily fix students’ learning gaps, and learners could have personalized learning experience, according to their own language levels, learning objectives, and backgrounds. Adopted by over 1000 schools from 84 countries around the world, Ponddy® is widely recognized by international official language testing and teaching institutions. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/about-ponddy/about-ponddy.component.html</context>
+          <context context-type="linenumber">7,17</context>
+        </context-group>
+        <note priority="1" from="description">about ponddy description</note>
+      </trans-unit>
+      <trans-unit id="de4fcecfb7ec9261f55723d2fe510c5ad3f68d77" datatype="html">
+        <source>Ponddy® HSK is the first online HSK test center in the U.S.A. that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests. Ponddy® courses are designed by our expert-teaching team and are fully accredited by ACS Western Association of Schools and Colleges of the United States. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/about-ponddy/about-ponddy.component.html</context>
+          <context context-type="linenumber">18,22</context>
+        </context-group>
+        <note priority="1" from="description">description</note>
+      </trans-unit>
+      <trans-unit id="95524b4dbe4ee4ed907202b83f952fae760f4ae4" datatype="html">
+        <source>Read More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/about-ponddy/about-ponddy.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">learn more</note>
+        <note priority="1" from="meaning">learn more</note>
+      </trans-unit>
+      <trans-unit id="3b0a37e24de45ba0e851384915d4d3890d34add1" datatype="html">
+        <source>HSK Course</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edeeba4c24c00589ddede77faa7de76e06fe6508" datatype="html">
+        <source>Need help to nail the tests?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="00fd95b84a6403a10161d05c6758c8ee8feab6c5" datatype="html">
+        <source> Learn more </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f8a7538f2194a0db7cef384ea4a26951a0fe5dc7" datatype="html">
+        <source>HSK 1 &amp; 2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8c227cff0e62a8284bb1a28173e708663ceeb80c" datatype="html">
+        <source>Average Level: HSK 1~2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3a524e3c0d60a7f0c3590e898bb33eca5d155d94" datatype="html">
+        <source>HSK for Adult </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="03ab5db970775ad6b191ca1e477a4aa97f1babe8" datatype="html">
+        <source>HSK 3</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1c82adc14a3cd0e846c96104d5242a5fe0567716" datatype="html">
+        <source>Average Level: HSK 3</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f19dafa36df2ce76233074396c1d2096d51ac339" datatype="html">
+        <source>HSK 4</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="11a4d47b071ae9bbd6e85d5b8fee72bc5cc447b3" datatype="html">
+        <source>Average Level: HSK 4</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ce27549087ea4906de9a426744e1d5acc0aef89a" datatype="html">
+        <source>HSK for Student</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/course/course.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3ef6248dde7c107d3cf3d8276d5dd95ce54a74a2" datatype="html">
+        <source>Chinese Proficiency Test <x id="TAG_IMG" ctype="image" equiv-text="&lt;img  [hidden]=&quot;!isMobile&quot; class=&quot;icon&quot; [lazyLoad]=&quot;&apos;https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_01.svg&apos;&quot;&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/intro/intro.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="61621af5ee2d082384320b6b7c8f13b2f9d5700f" datatype="html">
+        <source>HSK Preparation <x id="TAG_IMG" ctype="image" equiv-text="&lt;img [hidden]=&quot;!isMobile&quot;
+                                        class=&quot;icon&quot; [lazyLoad]=&quot;&apos;https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_02.svg&apos;&quot;&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/intro/intro.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9b5abb11fa7ee8724c4fe186f110fc13d9f15394" datatype="html">
+        <source>Get ready for HSK with the self-study packet and practice tests</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/intro/intro.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9b934c17e6025b2c09a858c80c3f58c0943cf6a8" datatype="html">
+        <source>Read More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/intro/intro.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/learning/learning.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3154dfe2bd09f36bca874f3ef28ad032cd50f596" datatype="html">
+        <source>Smart Learning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/learning/learning.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fcbb8af8daf84aa4cbae5190e8784ba033259b3f" datatype="html">
+        <source>Advance your Chinese skill with smart learning tools</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/learning/learning.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39d7df21b658d1db07a6baf7e13ee926b0be0b6b" datatype="html">
+        <source> Home </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="b601783fd96813876a91a85e6a521245676e2ad0" datatype="html">
+        <source> Ponddy </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="6f64507380db17647c1c2b49c0959e1e46948551" datatype="html">
+        <source> Tests </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="108a8a3d2d0aab05a1709756f15174b4f5d00092" datatype="html">
+        <source> Resource </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+      <trans-unit id="170661bcea85132fd0228455dff4a103d23b6d60" datatype="html">
+        <source> FAQ </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/components/header/header.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+        <note priority="1" from="description">header</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

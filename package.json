@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "i18n": "ng extract-i18n --output-path src/locale",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run hsk-landing:serve-ssr",
