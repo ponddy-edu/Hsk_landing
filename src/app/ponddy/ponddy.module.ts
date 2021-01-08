@@ -8,6 +8,7 @@ import { AboutHSKComponent } from './about-hsk/about-hsk.component';
 import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 import { ProductComponent } from './product/product.component';
 import {LazyLoadImageModule} from "ng-lazyload-image";
+import {IvyCarouselModule} from "angular-responsive-carousel";
 
 const routes: Routes = [
   {path: 'ponddy', component: PonddyComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
     CommonModule,
     ShareModule,
     LazyLoadImageModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    IvyCarouselModule
   ]
 })
 export class PonddyModule { }

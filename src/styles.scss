@@ -59,6 +59,32 @@ body { margin: 0;
     fill: red;
   }
 }
+.arrow {
+  display: flex;
+  align-items: center;
+  
+  .left {
+    cursor: pointer;
+    &:after{
+      display:none;
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+    }
+    &:hover {
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+    }
+  }
+  
+  .right {
+    cursor: pointer;
+    &:after{
+      display:none;
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+    }
+    &:hover {
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+    }
+  }
+}
 @media (max-width: 767px) {
   
   ::ng-deep.learn_more {

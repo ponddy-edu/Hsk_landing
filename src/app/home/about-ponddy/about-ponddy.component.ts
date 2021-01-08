@@ -20,7 +20,7 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/m
 })
 export class AboutPonddyComponent implements OnInit {
   @ViewChild('course_carousel')
-  courseComponent: CarouselComponent = {} as CarouselComponent
+  courseComponent: CarouselComponent;
 
 
   carouselImageList: any[]

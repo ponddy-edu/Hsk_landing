@@ -1,1 +1,65 @@
-<p>about-ponddy works!</p>
+<section class="hsk_section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-12 text-center">
+        <h1>Ponddy HSK</h1>
+        <p class="description">
+          Ponddy® is an advanced AI smart learning brand. Powered by innovative AKLS® AI technology,
+          Ponddy’s smart learning solutions include intelligent platforms, customized resources,
+          tailored curricula, on-line tutors, and at-home online testing services. Ponddy® Smart Learning
+          is a new way to teach and learn Chinese or English more effectively: teachers could easily fix students’
+          learning gaps, and learners could have personalized learning experience, according to their own language
+          levels, learning objectives, and backgrounds. Adopted by over 1000 schools from 84 countries around the world,
+          Ponddy® is widely recognized by international official language testing and teaching institutions.
+        </p>
+        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/ponddy_HSK_pic_web.svg'">
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="ponddy_section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-12 text-center">
+        <h1 i18n>Ponddy Education </h1>
+        <p i18n class="description">
+          Ponddy® is an advanced AI smart learning brand.  Powered by innovative AKLS® AI technology,
+          Ponddy’s smart learning solutions include intelligent platforms, customized resources,
+          tailored curricula, on-line tutors, and at-home online testing services. Ponddy® Smart
+          Learning is a new way to teach and learn Chinese or English more effectively:
+          teachers could easily fix students’ learning gaps, and learners could have personalized
+          learning experience, according to their own language levels, learning objectives, and backgrounds.
+          Adopted by over 1000 schools from 84 countries around the world, Ponddy® is widely recognized by
+          international official language testing and teaching institutions.
+        </p>
+        <div class="learn_more orange_text">
+          <p i18n>Read more</p>
+          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div *ngIf="!device.mobile.getValue()" class="col-md-1 arrow">
+        <img class="left"  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
+      </div>
+      <div *ngIf="device.isBrowser" class="col-md-9">
+        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
+          <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
+            <img class="d-block w-100" [lazyLoad]="carouselImage"
+                 [alt]="'slide_'+i">
+          </div>
+        </carousel>
+      </div>
+      <div *ngIf="!device.mobile.getValue()" class="col-md-1 arrow">
+        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+      </div>
+      <div *ngIf="device.mobile.getValue()" class="col-10 justify-content-center arrow">
+        <img style="margin-right: 32px" class="left" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'" (click)="coursePrev()">
+        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+      </div>
+    </div>
+  </div>
+
+</section>
