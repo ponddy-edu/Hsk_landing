@@ -6,85 +6,8 @@ body { margin: 0;
 @import "src/assets/font/PonddyNotoRubik";
 @import "src/assets/ponddy-guidline.scss";
 @import "src/assets/bootstrap-grid";
-.learn_more {
-  display: flex;
-  font-size: 20px;
-  line-height: 36px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 16px;
-  align-items: center;
-  p {
-    margin: 0
-  }
-  &.blue_text {
-    color: #3B9FBE !important;
-    
-    &:hover {
-      color: #6ACFED!important;
-      
-      img {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
-      }
-    }
-  }
-  
-  &.green_text {
-    color: #26B586!important;
-    
-    &:hover {
-      color: #2CC895!important;
-      
-      img {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
-      }
-    }
-  }
-  &.orange_text {
-    color: #F3A024;
-    
-    &:hover {
-      color: #ffd084 !important;
-      
-      img {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
-      }
-    }
-  }
-  img {
-    height: 32px;
-    width: 32px;
-    margin-left: 16px;
-    fill: red;
-  }
-}
-.arrow {
-  display: flex;
-  align-items: center;
-  
-  .left {
-    cursor: pointer;
-    &:after{
-      display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
-    }
-    &:hover {
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
-    }
-  }
-  
-  .right {
-    cursor: pointer;
-    &:after{
-      display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
-    }
-    &:hover {
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
-    }
-  }
-}
+@import "src/assets/common";
+
 @media (max-width: 767px) {
   
   ::ng-deep.learn_more {
