@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DeviceService} from '../../utils/device.service';
 import {BehaviorSubject, Observable} from 'rxjs';
 
@@ -9,6 +9,8 @@ import {BehaviorSubject, Observable} from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   isMobile: Observable<boolean>
+  @Input()
+  actvieMenu = 'home'
 
   constructor(private deviceService: DeviceService) {
     this.isMobile = deviceService.mobile

@@ -2,9 +2,13 @@
   margin-top: 60px;
   height: calc(100vh - 65px);
   box-sizing: border-box;
-  @media (max-width: 768px)  {
+  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 768px) {
     height: auto;
   }
+  
   h1 {
     font-style: normal;
     font-weight: bold;
@@ -17,64 +21,30 @@
     }
   }
   
+  .w-100 {
+    height: 100%;
   
-  mdb-carousel {
-    .carousel, ::ng-deep .carousel-inner {
-      height: calc(100vh - 65px);
-      @media (max-width: 768px)  {
-        height: auto;
-      }
+  }
+  .background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    .padding_space {
+      height: 33%;
+      width: 100%;
     }
-    
-    ::ng-deep.carousel-control-prev {
-      display: none;
-      
-    }
-    
-    ::ng-deep.carousel-control-next {
-      display: none;
-    }
-    
-    mdb-carousel-item .container {
-      position: absolute;
-      top: 48vh;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      @media (max-width: 768px) {
-        top: 24vh;
-      }
-    }
-    
-    ::ng-deep.carousel-indicators {
-      position: absolute;
-      //right: 0;
-      top: 0;
-      left: 94vw;
-      align-items: flex-end;
-      z-index: 15;
-      display: flex;
-      justify-content: center;
-      padding-left: 0;
-      margin-right: 3%;
-      margin-left: 15%;
-      list-style: none;
-      flex-direction: column;
-      width: 10px;
-      margin: 0;
-      
-      @media (max-width: 768px) {
-        display: none;
-      }
-      
-      li {
-        opacity: 1;
-        
-        &.active {
-          background-color: #93E2FA;
-        }
-      }
+    .mask_space{
+      height: 67%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  
     }
   }
+  
+  .container{
+    margin-top: 90px;
+  }
+  
+  
+  
 }

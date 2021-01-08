@@ -8,19 +8,19 @@
         <ul *ngIf="!(isMobile|async)" class="pd-nav-item navbar-nav mr-auto text-center">
 
           <li class="nav-item nav-border-l nav-border-r">
-            <a i18n="header" routerLink="/home" class="active nav-active text_menu" data="navbar">
+            <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'" class="text_menu" data="navbar">
               Home
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/ponddy" class="nav-a text_menu" id="navbarDropdown" role="button"
+            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu" role="button"
                data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
+            <a i18n="header" [class.active]="actvieMenu==='test'" href="#" data="navbar" class="nav-a text_menu">
               Tests
             </a>
           </li>
@@ -56,28 +56,28 @@
         <ul  class="pd-nav-item navbar-nav mr-auto text-center">
 
           <li class="nav-item">
-            <a i18n="header" routerLink="/home" class="active nav-active text_menu" data="navbar">
+            <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'" class="nav-active text_menu" data="navbar">
               Home
             </a>
           </li>
           <li class="nav-item">
-            <a i18n="header" routerLink="/ponddy" class="nav-a text_menu" id="navbarDropdown" role="button"
+            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu" id="navbarDropdown" role="button"
                data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
-          <li class="nav-item">
+          <li [class.active]="actvieMenu==='test'" class="nav-item">
             <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
               Tests
             </a>
           </li>
-          <li class="nav-item">
+          <li [class.active]="actvieMenu==='resource'" class="nav-item">
             <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
               Resource
             </a>
           </li>
-          <li class="nav-item">
+          <li [class.active]="actvieMenu==='faq'" class="nav-item">
             <a i18n="header" href="#" data="navbar" class="nav-a text_menu">
               FAQ
             </a>

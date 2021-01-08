@@ -6,7 +6,73 @@ body { margin: 0;
 @import "src/assets/font/PonddyNotoRubik";
 @import "src/assets/ponddy-guidline.scss";
 @import "src/assets/bootstrap-grid";
-
+.learn_more {
+  display: flex;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  align-items: center;
+  p {
+    margin: 0
+  }
+  &.blue_text {
+    color: #3B9FBE !important;
+    
+    &:hover {
+      color: #6ACFED!important;
+      
+      img {
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
+      }
+    }
+  }
+  
+  &.green_text {
+    color: #26B586!important;
+    
+    &:hover {
+      color: #2CC895!important;
+      
+      img {
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
+      }
+    }
+  }
+  &.orange_text {
+    color: #F3A024;
+    
+    &:hover {
+      color: #ffd084 !important;
+      
+      img {
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
+      }
+    }
+  }
+  img {
+    height: 32px;
+    width: 32px;
+    margin-left: 16px;
+    fill: red;
+  }
+}
+@media (max-width: 767px) {
+  
+  ::ng-deep.learn_more {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    img {
+      height: 24px;
+      width: 24px;
+      margin-left: 10px;
+      fill: red;
+    }
+  }
+}
 body {
   font-family: Ponddy-NotoRubik, 'Microsoft JhengHei', sans-serif !important;
 }
