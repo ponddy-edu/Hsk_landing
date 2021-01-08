@@ -20,6 +20,6 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!--<app-home></app-home>-->
+<app-home *ngIf="!device.isBrowser"></app-home>
 
 <router-outlet></router-outlet>
