@@ -1,6 +1,7 @@
 import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from "@angular/common";
 import {Meta} from "@angular/platform-browser";
+import {DeviceService} from "../utils/device.service";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ export class AppComponent implements OnInit {
   platform: string;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any,
-              private metaService: Meta) {
+              private metaService: Meta,
+              public device: DeviceService) {
   }
 
   public ngOnInit(): void {
