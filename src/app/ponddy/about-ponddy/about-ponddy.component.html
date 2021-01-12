@@ -24,7 +24,7 @@
       <div class="col-md-8 col-12 text-center">
         <h1 i18n>Ponddy Education </h1>
         <p i18n class="description">
-          Ponddy® is an advanced AI smart learning brand.  Powered by innovative AKLS® AI technology,
+          Ponddy® is an advanced AI smart learning brand. Powered by innovative AKLS® AI technology,
           Ponddy’s smart learning solutions include intelligent platforms, customized resources,
           tailored curricula, on-line tutors, and at-home online testing services. Ponddy® Smart
           Learning is a new way to teach and learn Chinese or English more effectively:
@@ -41,10 +41,11 @@
     </div>
     <div class="row justify-content-center">
       <div *ngIf="!device.mobile.getValue()" class="col-md-1 arrow">
-        <img class="left"  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
+        <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg"
+             (click)="coursePrev()">
       </div>
       <div *ngIf="device.isBrowser" class="col-md-9">
-        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false" [lightDOM]="true" cellsToShow="1">
+        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false" [lightDOM]="true">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
             <img class="d-block w-100" [src]="carouselImage"
                  [alt]="'slide_'+i">
@@ -52,11 +53,15 @@
         </carousel>
       </div>
       <div *ngIf="!device.mobile.getValue()" class="col-md-1 arrow">
-        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'"
+             (click)="courseNext()">
       </div>
       <div *ngIf="device.mobile.getValue()" class="col-10 justify-content-center arrow">
-        <img style="margin-right: 32px" class="left" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'" (click)="coursePrev()">
-        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img style="margin-right: 32px" class="left"
+             [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'"
+             (click)="coursePrev()">
+        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'"
+             (click)="courseNext()">
       </div>
     </div>
   </div>
