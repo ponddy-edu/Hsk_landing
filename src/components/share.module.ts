@@ -4,10 +4,11 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {RouterModule} from '@angular/router';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { LearnMoreComponent } from './learn-more/learn-more.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent,
+  declarations: [HeaderComponent, FooterComponent, LearnMoreComponent,
   ],
   imports: [
     CommonModule,
