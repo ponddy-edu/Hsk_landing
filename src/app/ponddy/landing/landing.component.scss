@@ -6,7 +6,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   @media (max-width: 768px) {
-    height: auto;
+    height: calc(100vh - 65px);
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/index_pic_phone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   h1 {
