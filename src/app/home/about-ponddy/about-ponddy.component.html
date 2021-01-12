@@ -36,7 +36,7 @@
       <div *ngIf="device.isBrowser" class="col-md-10">
         <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
-            <img class="d-block w-100" [lazyLoad]="carouselImage"
+            <img class="d-block w-100" [src]="carouselImage"
                   [alt]="'slide_'+i">
           </div>
         </carousel>

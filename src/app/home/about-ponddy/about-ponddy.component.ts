@@ -26,11 +26,14 @@ export class AboutPonddyComponent implements OnInit {
   carouselImageList: any[]
 
   constructor(public device: DeviceService) {
-    if (this.device.mobile.getValue()) {
-      this.carouselImageList = imagmeListMobile
-    } else {
-      this.carouselImageList = imageList
-    }
+
+    this.device.mobile.subscribe(isMobile => {
+      if (isMobile) {
+        this.carouselImageList = imagmeListMobile
+      } else {
+        this.carouselImageList = imageList
+      }
+    })
   }
 
   ngOnInit(): void {
