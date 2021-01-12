@@ -44,9 +44,9 @@
         <img class="left"  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
       <div *ngIf="device.isBrowser" class="col-md-9">
-        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
+        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false" [lightDOM]="true" cellsToShow="1">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
-            <img class="d-block w-100" [lazyLoad]="carouselImage"
+            <img class="d-block w-100" [src]="carouselImage"
                  [alt]="'slide_'+i">
           </div>
         </carousel>

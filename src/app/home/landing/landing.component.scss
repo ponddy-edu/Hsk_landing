@@ -1,11 +1,14 @@
 .landing {
   margin-top: 60px;
-  height: calc(100vh - 65px);
+  height: auto;
   min-height: 768px;
   box-sizing: border-box;
-  @media (max-width: 768px)  {
+  position: relative;
+  @media (max-width:1024px) {
     height: auto;
+    min-height: 0;
   }
+  
   h1 {
     font-style: normal;
     font-weight: bold;
@@ -18,29 +21,34 @@
     }
   }
   
-  .background{
+  .background {
     position: absolute;
-    height: calc(100vh - 65px);
+    height: 100%;
     width: 100%;
     z-index: 2;
     pointer-events: none;
+    
     .padding_space {
       height: 33%;
       width: 100%;
     }
-    .mask_space{
+    
+    .mask_space {
       height: 67%;
       width: 100%;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     }
   }
+  
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
-      height: calc(100vh - 65px);
+      height: auto;
       min-height: 768px;
-  
-      @media (max-width: 768px)  {
+      
+      @media (max-width: 1024px) {
         height: auto;
+        min-height: 0;
+  
       }
     }
     
