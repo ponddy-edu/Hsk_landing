@@ -20,6 +20,10 @@
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
       }
     }
+    &:after{
+      display:none;
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
+    }
   }
   
   &.green_text {
@@ -32,6 +36,10 @@
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
       }
     }
+    &:after{
+      display:none;
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
+    }
   }
   &.orange_text {
     color: #F3A024;
@@ -42,6 +50,10 @@
       img {
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
       }
+    }
+    &:after{
+      display:none;
+      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
     }
   }
   img {
