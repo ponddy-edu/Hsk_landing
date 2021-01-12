@@ -18,7 +18,22 @@
     }
   }
   
-  
+  .background{
+    position: absolute;
+    height: calc(100vh - 65px);
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
+    .padding_space {
+      height: 33%;
+      width: 100%;
+    }
+    .mask_space{
+      height: 67%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+  }
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
       height: calc(100vh - 65px);
