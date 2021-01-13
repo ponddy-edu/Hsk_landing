@@ -27,7 +27,7 @@ export class AboutPonddyComponent implements OnInit {
 
   constructor(public device: DeviceService) {
 
-    this.device.mobile.subscribe(isMobile => {
+    this.device.$mobile.subscribe(isMobile => {
       if (isMobile) {
         this.carouselImageList = imagmeListMobile
       } else {

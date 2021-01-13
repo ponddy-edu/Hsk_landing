@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   actvieMenu = 'home'
 
   constructor(private deviceService: DeviceService) {
-    this.isMobile = deviceService.mobile
+    this.isMobile = deviceService.$mobile
   }
 
   ngOnInit(): void {

@@ -24,7 +24,7 @@ export class AboutPonddyComponent implements OnInit {
   carouselImageList: any[]
 
   constructor(public device: DeviceService) {
-    if (this.device.mobile.getValue()) {
+    if (this.device.$mobile.getValue()) {
       this.carouselImageList = imagmeListMobile
     } else {
       this.carouselImageList = imageList

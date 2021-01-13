@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {DeviceService} from '../../../utils/device.service';
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, OnDestroy {
+  screenWidth = 900
+  widthSubscribe: Subscription
 
-  constructor() { }
+  constructor(public device: DeviceService) {
+    this.widthSubscribe = device.$screenWidth
+      .subscribe(width => this.screenWidth = width)
+  }
+
 
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.widthSubscribe.unsubscribe()
+  }
 }

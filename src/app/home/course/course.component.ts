@@ -15,7 +15,7 @@ export class CourseComponent implements OnInit {
   courseHeight: number
 
   constructor(public device: DeviceService) {
-    if (device.mobile.getValue()) {
+    if (device.$mobile.getValue()) {
       this.courseWidth = 330
       this.courseHeight = 500
     } else {

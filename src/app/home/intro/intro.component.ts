@@ -10,7 +10,7 @@ export class IntroComponent implements OnInit {
   isMobile = false
 
   constructor(public deviceService: DeviceService) {
-    this.isMobile = deviceService.mobile.getValue()
+    this.isMobile = deviceService.$mobile.getValue()
   }
 
   ngOnInit(): void {

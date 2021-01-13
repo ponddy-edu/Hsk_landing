@@ -1,10 +1,13 @@
 .product {
-  padding: 64px 0;
-  @media (max-width: 767px){
+  //padding: 64px 0;
+  position: relative;
+  @media (max-width: 767px) {
     padding: 64px 20px;
   }
+  
   h1 {
     margin-bottom: 50px;
+    margin-top: 64px;
   }
   
   .container {
@@ -33,22 +36,25 @@
       height: auto;
       margin-top: 0;
       border-radius: 0 0 12px 12px;
-  
+      
     }
+    
     mat-card-header {
       height: 206px;
       padding: 40px 0 24px 16px;
       border-bottom: 1px dashed #969CA0;
       @media (max-width: 767px) {
         padding: 20px 16px;
-  
+        
         img {
           height: auto;
         }
       }
+      
       ::ng-deep.mat-card-header-text {
         margin: 0 !important;
       }
+      
       img {
         height: 165px;
         width: 100%;
@@ -60,7 +66,7 @@
     
     mat-card-content {
       padding: 24px 16px;
-  
+      
       p.card_content {
         font-family: Ponddy-NotoRubik, sans-serif;
         font-weight: 400;
@@ -79,7 +85,6 @@
       margin-right: auto;
     }
     
-   
     
   }
   
@@ -93,7 +98,35 @@
       position: initial;
       width: 100%;
       border-radius: 12px 12px 0 0;
+      
+    }
+  }
   
+  .dashline {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    .row {
+      height: 100%;
+      
+      .col-12 {
+        border-left: 1px dashed rgba(45, 57, 66, 0.15);
+      }
+      .col-6 {
+        border-left: 1px dashed rgba(45, 57, 66, 0.15);
+        &:nth-last-child(1){
+          border-right: 1px dashed rgba(45, 57, 66, 0.15);
+        }
+      }
+      .col-3 {
+        border-left: 1px dashed rgba(45, 57, 66, 0.15);
+        &:nth-last-child(1){
+          border-right: 1px dashed rgba(45, 57, 66, 0.15);
+        }
+      }
     }
   }
 }

@@ -1,4 +1,34 @@
 <section class="product">
+  <div class="container dashline">
+    <div *ngIf="screenWidth<600" class="row">
+      <div class="col-12">
+
+      </div>
+    </div>
+    <div *ngIf="(screenWidth<900)&&(screenWidth>600)" class="row">
+      <div class="col-6">
+
+      </div>
+      <div class="col-6">
+
+      </div>
+    </div>
+    <div *ngIf="(screenWidth>900)" class="row">
+      <div class="col-3">
+
+      </div>
+      <div class="col-3">
+
+      </div>
+      <div class="col-3">
+
+      </div>
+      <div class="col-3">
+
+      </div>
+    </div>
+
+  </div>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 col-12 text-center">
@@ -9,14 +39,16 @@
   <div class="container product_item">
     <div class="row">
       <div class="col-12 col-md-11">
-        <img class="background_image" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/reader_pic_web.png'">
+        <img class="background_image"
+             [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/reader_pic_web.png'">
       </div>
       <div class="col-md-7 col-12"></div>
       <div class="col-md-5 col-12">
         <mat-card class="right">
           <mat-card-header>
             <mat-card-title></mat-card-title>
-            <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/reader_icon_web.png'" alt="Photo of a reader product">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/reader_icon_web.png'"
+                 alt="Photo of a reader product">
           </mat-card-header>
           <mat-card-content>
             <p i18n class="card_content">
@@ -28,7 +60,7 @@
             </p>
             <div class="learn_more blue_text">
               <p i18n="learn more|learn more">Learn More</p>
-              <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_normal.svg'">
+              <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_normal.svg'">
             </div>
           </mat-card-content>
 
@@ -39,17 +71,20 @@
   <div class="container product_item">
     <div class="row">
       <div class="col-12 col-md-11" style="margin-left: auto">
-        <img class="background_image" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/tutors_pic_web.png'">
+        <img class="background_image"
+             [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/tutors_pic_web.png'">
       </div>
       <div class="col-md-5 col-12">
         <mat-card class="left">
           <mat-card-header>
-            <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/tutors_icon_web.png'" alt="Photo of a tutor product">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/tutors_icon_web.png'"
+                 alt="Photo of a tutor product">
           </mat-card-header>
           <mat-card-content>
             <p i18n class="card_content">
               Ponddy Tutors is a ACS WASC approved online Chinese coures provider. We offer innovative online courses
-              that combines personalized online tutoring from native speakers with AI-based learning tools for a efficient
+              that combines personalized online tutoring from native speakers with AI-based learning tools for a
+              efficient
               and enjoyable learning experience. The courses come in all levels from beginning to advanced level for
               learners aged 9 and above.
             </p>
@@ -61,18 +96,21 @@
   <div class="container product_item">
     <div class="row">
       <div class="col-12 col-md-11">
-        <img class="background_image" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/smartTextbook_pic_web.png'">
+        <img class="background_image"
+             [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/smartTextbook_pic_web.png'">
       </div>
       <div class="col-md-7 col-12"></div>
       <div class="col-md-5 col-12">
         <mat-card class="right">
           <mat-card-header>
-            <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/smartTextbook_icon_web.png'" alt="Photo of a smartTextbook product">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/smartTextbook_icon_web.png'"
+                 alt="Photo of a smartTextbook product">
           </mat-card-header>
           <mat-card-content>
             <p i18n class="card_content">
               Ponddy Smart Textbooks is an online learning platform enabling teachers to create and
-              customize curricula by simply selecting thematic learning modules (Pondlets) which come with text, vocabulary,
+              customize curricula by simply selecting thematic learning modules (Pondlets) which come with text,
+              vocabulary,
               grammar, language scaffolding tools, and gamified exercises. Teachers and students can
               track progress with real-time analytics.
             </p>

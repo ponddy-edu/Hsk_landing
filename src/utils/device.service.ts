@@ -1,6 +1,6 @@
 import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import {BehaviorSubject, fromEvent} from 'rxjs';
-import {map, tap, throttleTime} from 'rxjs/operators';
+import {tap, throttleTime} from 'rxjs/operators';
 import {isPlatformBrowser} from '@angular/common';
 
 
@@ -8,8 +8,10 @@ import {isPlatformBrowser} from '@angular/common';
   providedIn: 'root'
 })
 export class DeviceService {
-  public mobile = new BehaviorSubject(false)
+  public $mobile = new BehaviorSubject<boolean>(false)
+  $screenWidth = new BehaviorSubject<number>(900);
   isBrowser: boolean;
+
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: any) {
@@ -18,25 +20,30 @@ export class DeviceService {
     if (isPlatformBrowser(this.platformId)) {
       this.isBrowser = true
       this.checkScreenSize()
+      this.updateSreenWidth()
       const screenSizeChanged$ = fromEvent(window, 'resize')
         .pipe(throttleTime(500),
-          tap(res => this.checkScreenSize()))
+          tap(res => this.checkScreenSize()),
+          tap(res => this.updateSreenWidth()))
       screenSizeChanged$.subscribe()
     } else {
       this.isBrowser = false
-      this.mobile.next(true);
+      this.$mobile.next(true);
     }
 
   }
 
   checkScreenSize(): void {
     if (window.screen.width <= 767) { // 768px portrait
-      this.mobile.next(true);
-      console.log(true)
+      this.$mobile.next(true);
     } else {
-      this.mobile.next(false)
+      this.$mobile.next(false)
     }
+  }
 
+  private updateSreenWidth() {
+    console.log(window.innerWidth)
+    this.$screenWidth.next(window.innerWidth);
   }
 }
 
