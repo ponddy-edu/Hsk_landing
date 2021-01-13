@@ -1,7 +1,7 @@
 <section class="about_ponddy">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-11 col-md-10">
+      <div class="col-11 col-md-9">
         <h1 i18n="about ponddy title">Ponddy Education</h1>
         <p i18n="about ponddy description" class="description">
           Ponddy® is an advanced AI smart learning brand.
@@ -33,7 +33,7 @@
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow left">
         <img  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
-      <div *ngIf="device.isBrowser" class="col-md-10">
+      <div *ngIf="device.isBrowser" class="col-md-9">
         <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
             <img class="d-block w-100" [src]="carouselImage"
