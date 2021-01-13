@@ -30,8 +30,8 @@
     </div>
 
     <div class="row justify-content-center">
-      <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow">
-        <img class="left"  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
+      <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow left">
+        <img  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
       <div *ngIf="device.isBrowser" class="col-md-10">
         <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
@@ -41,8 +41,8 @@
           </div>
         </carousel>
       </div>
-      <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow">
-        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+      <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow right">
+        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
       </div>
       <div *ngIf="device.$mobile.getValue()" class="col-10 justify-content-center arrow">
         <img style="margin-right: 32px" class="left" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'" (click)="coursePrev()">

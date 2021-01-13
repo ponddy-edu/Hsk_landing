@@ -46,7 +46,12 @@
     
   }
   
- 
+  .arrow.left{
+    justify-content: flex-end;
+  }
+  .arrow.right{
+    justify-content: flex-start;
+  }
   
   carousel {
     @media (max-width: 767px) {
