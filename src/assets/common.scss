@@ -20,7 +20,7 @@
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
       }
     }
-    &:after{
+    &::after{
       display:none;
       content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
     }
@@ -36,7 +36,7 @@
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
       }
     }
-    &:after{
+    &::after{
       display:none;
       content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
     }
@@ -51,7 +51,7 @@
         content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
       }
     }
-    &:after{
+    &::after{
       display:none;
       content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
     }

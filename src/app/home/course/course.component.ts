@@ -19,7 +19,7 @@ export class CourseComponent implements OnInit {
       this.courseWidth = 330
       this.courseHeight = 500
     } else {
-      this.courseHeight = 500
+      this.courseHeight = 415
       this.courseWidth = 300
     }
   }

@@ -99,8 +99,9 @@ $pd_cover: rgba(45, 57, 66, 0.5);
 .learning {
   background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/BKG_smartLearning+.png");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: center top;
+  
   height: 618px;
   @media (max-width: 767px) {
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/BKG_smartLearning.png");
