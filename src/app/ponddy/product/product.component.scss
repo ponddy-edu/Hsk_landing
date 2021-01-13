@@ -2,7 +2,7 @@
   //padding: 64px 0;
   position: relative;
   @media (max-width: 767px) {
-    padding: 64px 20px;
+    padding: 0 20px 32px;
   }
   
   h1 {
@@ -13,12 +13,16 @@
   .container {
     padding-left: 0;
     position: relative;
-    
+    @media (max-width: 767px) {
+      padding-left: var(--bs-gutter-x, 0.75rem);
+    }
   }
   
   .product_item {
     padding-bottom: 140px;
-    
+    @media screen and (max-width: 767px){
+      padding-bottom: 24px;
+    }
   }
   
   mat-card {
@@ -44,8 +48,8 @@
       padding: 40px 0 24px 16px;
       border-bottom: 1px dashed #969CA0;
       @media (max-width: 767px) {
-        padding: 20px 16px;
-        
+        padding: 20px 0;
+        height: auto;
         img {
           height: auto;
         }
@@ -66,7 +70,9 @@
     
     mat-card-content {
       padding: 24px 16px;
-      
+      @media screen and (max-width: 767px) {
+        padding: 24px 6px;
+      }
       p.card_content {
         font-family: Ponddy-NotoRubik, sans-serif;
         font-weight: 400;
