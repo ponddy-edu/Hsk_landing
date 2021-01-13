@@ -1,10 +1,10 @@
 .landing {
   margin-top: 60px;
-  height: auto;
+  height: calc(100vh - 65px);
   min-height: 768px;
   box-sizing: border-box;
   position: relative;
-  @media (max-width:1024px) {
+  @media (max-width: 1024px) {
     height: auto;
     min-height: 0;
   }
@@ -23,9 +23,9 @@
   
   .background {
     position: absolute;
-    height: 100%;
+    height: calc(100vh - 65px);
     width: 100%;
-    z-index: 2;
+    top: 0;
     pointer-events: none;
     
     .padding_space {
@@ -42,13 +42,13 @@
   
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
-      height: auto;
+      height: calc(100vh - 65px);
       min-height: 768px;
       
       @media (max-width: 1024px) {
         height: auto;
         min-height: 0;
-  
+        
       }
     }
     
