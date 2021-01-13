@@ -12,25 +12,33 @@
     <div *ngIf="device.isBrowser" class="row">
       <carousel #course_carousel [height]="courseHeight" [cellWidth]="courseWidth" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
-          <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png'">
+          <div class="image_box">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_01.png'">
+          </div>
           <h2 i18n>HSK 1 & 2</h2>
           <p i18n class="level">Average Level: HSK 1~2</p>
           <h2 i18n class="ta">HSK for Adult </h2>
         </div>
         <div class="carousel-cell">
-          <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_02.png'">
+          <div class="image_box">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_02.png'">
+          </div>
           <h2 i18n>HSK 3</h2>
           <p i18n class="level">Average Level: HSK 3</p>
           <h2 i18n class="ta">HSK for Adult </h2>
         </div>
         <div class="carousel-cell">
-          <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_03.png'">
+          <div class="image_box">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_03.png'">
+          </div>
           <h2 i18n>HSK 4</h2>
           <p i18n class="level">Average Level: HSK 4</p>
           <h2 i18n class="ta">HSK for Adult </h2>
         </div>
         <div class="carousel-cell">
-          <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_04.png'">
+          <div class="image_box">
+            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/course_pic_04.png'">
+          </div>
           <h2 i18n>HSK 3</h2>
           <p i18n class="level">Average Level: HSK 3</p>
           <h2 i18n class="ta">HSK for Student</h2>
