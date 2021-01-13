@@ -20,7 +20,14 @@
       line-height: 42px;
     }
   }
-  
+  .iconify{
+    position: absolute;
+    right: 0;
+    bottom: 96px;
+    left: 0;
+    z-index: 15;
+    text-align: center;
+  }
   .background {
     position: absolute;
     height: 100%;
@@ -69,7 +76,7 @@
     mdb-carousel-item {
       .container {
         position: absolute;
-        top: 48vh;
+        top: 43vh;
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -86,19 +93,11 @@
     
     ::ng-deep.carousel-indicators {
       position: absolute;
-      //right: 0;
-      top: 0;
-      left: 94vw;
-      align-items: flex-end;
+      bottom: 96px;
       z-index: 15;
       display: flex;
       justify-content: center;
-      padding-left: 0;
-      //margin-right: 3%;
-      //margin-left: 15%;
       list-style: none;
-      flex-direction: column;
-      width: 10px;
       margin: 0;
       
       @media (max-width: 768px) {
@@ -107,7 +106,8 @@
       
       li {
         opacity: 1;
-        
+        margin-right: 8px;
+        margin-left: 8px;
         &.active {
           background-color: #93E2FA;
         }
