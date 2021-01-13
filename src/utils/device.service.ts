@@ -22,7 +22,7 @@ export class DeviceService {
       this.checkScreenSize()
       this.updateSreenWidth()
       const screenSizeChanged$ = fromEvent(window, 'resize')
-        .pipe(throttleTime(500),
+        .pipe(throttleTime(300),
           tap(res => this.checkScreenSize()),
           tap(res => this.updateSreenWidth()))
       screenSizeChanged$.subscribe()
@@ -34,7 +34,7 @@ export class DeviceService {
   }
 
   checkScreenSize(): void {
-    if (window.screen.width <= 767) { // 768px portrait
+    if (window.innerWidth <= 767) { // 768px portrait
       this.$mobile.next(true);
     } else {
       this.$mobile.next(false)
@@ -42,7 +42,6 @@ export class DeviceService {
   }
 
   private updateSreenWidth() {
-    console.log(window.innerWidth)
     this.$screenWidth.next(window.innerWidth);
   }
 }

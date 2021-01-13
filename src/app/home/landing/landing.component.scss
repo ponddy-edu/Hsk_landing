@@ -1,6 +1,6 @@
 .landing {
   margin-top: 60px;
-  height: calc(100vh - 65px);
+  height: auto;
   min-height: 768px;
   box-sizing: border-box;
   position: relative;
@@ -23,7 +23,7 @@
   
   .background {
     position: absolute;
-    height: calc(100vh - 65px);
+    height: auto;
     width: 100%;
     top: 0;
     pointer-events: none;
@@ -42,7 +42,7 @@
   
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
-      height: calc(100vh - 65px);
+      height: auto;
       min-height: 768px;
       
       @media (max-width: 1024px) {
@@ -50,6 +50,10 @@
         min-height: 0;
         
       }
+    }
+    
+    .w-100 {
+      max-height: calc(100vh - 65px);
     }
     
     ::ng-deep.carousel-control-prev {
