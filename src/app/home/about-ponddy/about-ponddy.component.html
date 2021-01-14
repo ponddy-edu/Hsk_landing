@@ -22,7 +22,7 @@
         </p>
         <a class="learn_more blue_text" href="https://ponddy.ai/">
           <p i18n="learn more|learn more">Read More</p>
-          <img  [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_normal.svg'">
+          <img  [lazyLoad]="'/assets/image/icon/btn_blue_normal.svg'">
         </a>
 
 
@@ -31,7 +31,7 @@
 
     <div class="row justify-content-center">
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow left">
-        <img  src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg" (click)="coursePrev()">
+        <img  src="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
       <div *ngIf="device.isBrowser" class="col-md-9">
         <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
@@ -42,11 +42,11 @@
         </carousel>
       </div>
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow right">
-        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()">
       </div>
       <div *ngIf="device.$mobile.getValue()" class="col-10 justify-content-center arrow">
-        <img style="margin-right: 32px" class="left" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'" (click)="coursePrev()">
-        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img style="margin-right: 32px" class="left" [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'" (click)="coursePrev()">
+        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()">
       </div>
     </div>
   </div>

@@ -10,6 +10,9 @@
   p {
     margin: 0
   }
+  .iconify{
+    font-size: 38px;
+  }
   &.blue_text {
     color: #3B9FBE !important;
     
@@ -17,12 +20,13 @@
       color: #6ACFED!important;
       
       img {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
+        content: url("/assets/image/icon/btn_blue_hover.svg");
+  
       }
     }
     &::after{
       display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_blue_hover.svg");
+      content: url("/assets/image/icon/btn_blue_hover.svg");
     }
   }
   
@@ -33,12 +37,8 @@
       color: #2CC895!important;
       
       img {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
+        content: url("/assets/image/icon/btn_green_hover.svg");
       }
-    }
-    &::after{
-      display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_green_hover.svg");
     }
   }
   &.orange_text {
@@ -48,12 +48,9 @@
       color: #ffd084 !important;
       
       img {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
+        content: url("/assets/image/icon/btn_orange_hover.svg");
+  
       }
-    }
-    &::after{
-      display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg");
     }
   }
   img {
@@ -69,23 +66,15 @@
   
   .left {
     cursor: pointer;
-    &:after{
-      display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
-    }
     &:hover {
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+      content: url("/assets/image/icon/btn_hover_left.svg");
     }
   }
   
   .right {
     cursor: pointer;
-    &:after{
-      display:none;
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
-    }
     &:hover {
-      content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+      content: url("/assets/image/icon/btn_hover_right.svg");
     }
   }
 }

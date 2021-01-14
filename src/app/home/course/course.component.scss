@@ -94,11 +94,11 @@
     
     .left {
       &:hover {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+        content: url("/assets/image/icon/btn_hover_left.svg");
       }
       
       &::after {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+        content: url("/assets/image/icon/btn_hover_left.svg");
         display: none;
       }
     }
@@ -107,10 +107,10 @@
       margin-left: 32px;
       
       &:hover {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+        content: url("/assets/image/icon/btn_hover_right.svg");
       }
       &::after {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+        content: url("/assets/image/icon/btn_hover_right.svg");
   
         display: none;
       }

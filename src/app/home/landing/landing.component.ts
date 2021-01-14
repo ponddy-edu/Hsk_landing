@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DeviceService} from "../../../utils/device.service";
 import home from '@iconify/icons-mdi/home';
 import arrowDownCircle from '@iconify/icons-mdi/arrow-down-circle'
+import play from '@iconify/icons-mdi/play-circle'
 // import home from '@iconify/icons-mdi/arrow';
 const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_01.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_02.png',
@@ -24,6 +25,7 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/m
 export class LandingComponent implements OnInit {
   carouselImageList: any[]
   homeIcon = home;
+  playIcon = play;
   arrowDownCircle = arrowDownCircle
 
   constructor(public device: DeviceService) {

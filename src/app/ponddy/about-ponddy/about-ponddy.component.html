@@ -35,13 +35,13 @@
         </p>
         <div class="learn_more orange_text">
           <p i18n>Read more</p>
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_orange_hover.svg">
+          <img src="/assets/image/icon/btn_orange_hover.svg">
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow">
-        <img class="left" src="https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg"
+        <img class="left" src="/assets/image/icon/btn_normal_left.svg"
              (click)="coursePrev()">
       </div>
       <div *ngIf="device.isBrowser" class="col-md-9">
@@ -53,14 +53,14 @@
         </carousel>
       </div>
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow">
-        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'"
+        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'"
              (click)="courseNext()">
       </div>
       <div *ngIf="device.$mobile.getValue()" class="col-10 justify-content-center arrow">
         <img style="margin-right: 32px" class="left"
-             [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_left.svg'"
+             [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'"
              (click)="coursePrev()">
-        <img class="right" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_normal_right.svg'"
+        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'"
              (click)="courseNext()">
       </div>
     </div>
