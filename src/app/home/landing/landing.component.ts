@@ -43,4 +43,12 @@ export class LandingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  smoothScroll() {
+    console.log('scroll')
+    window.scroll({
+      top: window.innerHeight - 65,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 }

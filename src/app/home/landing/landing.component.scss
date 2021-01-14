@@ -20,14 +20,27 @@
       line-height: 42px;
     }
   }
-  .iconify{
+  .iconify_wrap{
     position: absolute;
     right: 0;
-    bottom: 96px;
-    left: 0;
+    bottom: 40px;
+    left: calc(50% - 16px);
     z-index: 15;
     text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: auto;
+    .iconify {
+      color: #FFFFFF;
+      font-size: 32px;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
+  
+  
   .background {
     position: absolute;
     height: 100%;
@@ -85,7 +98,8 @@
           top: 24vh;
         }
       }
-      img.d-block{
+      
+      img.d-block {
         height: auto;
         width: 100%;
       }
@@ -106,10 +120,15 @@
       
       li {
         opacity: 1;
-        margin-right: 8px;
-        margin-left: 8px;
+        //margin-right: 8px;
+        //margin-left: 8px;
+        height: 8px;
+        width: 8px;
+        border: 8px solid transparent !important;
+        background-color: rgba(255, 255, 255, 0.35);
+        
         &.active {
-          background-color: #93E2FA;
+          background-color: #FFFFFF;
         }
       }
     }
