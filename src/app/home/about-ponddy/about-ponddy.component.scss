@@ -48,9 +48,19 @@
   
   .arrow.left{
     justify-content: flex-end;
+    img{
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_left.svg");
+      }
+    }
   }
   .arrow.right{
     justify-content: flex-start;
+    img{
+      &:hover {
+        content: url("/assets/image/icon/btn_hover_right.svg");
+      }
+    }
   }
   
   carousel {

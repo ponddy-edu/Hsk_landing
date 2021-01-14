@@ -69,10 +69,12 @@
     &:hover {
       content: url("/assets/image/icon/btn_hover_left.svg");
     }
+   
   }
   
   .right {
     cursor: pointer;
+    
     &:hover {
       content: url("/assets/image/icon/btn_hover_right.svg");
     }
