@@ -20,7 +20,8 @@
       line-height: 42px;
     }
   }
-  .iconify_wrap{
+  
+  .iconify_wrap {
     position: absolute;
     right: 0;
     bottom: 40px;
@@ -31,9 +32,11 @@
     display: inline-block;
     width: 32px;
     height: auto;
+    
     .iconify {
       color: #FFFFFF;
       font-size: 32px;
+      
       &:hover {
         opacity: 0.6;
       }
@@ -95,7 +98,8 @@
         left: 0;
         right: 0;
         @media (max-width: 768px) {
-          top: 24vh;
+          bottom: 16vh;
+          top: auto;
         }
       }
       
