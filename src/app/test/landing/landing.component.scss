@@ -2,9 +2,16 @@
   margin-top: 60px;
   height: calc(100vh - 65px);
   box-sizing: border-box;
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  
+  &.test_chinese{
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png");
+    background-size: cover;
+  }
+  &.test_intro{
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");
+    background-size: cover;
+  }
+  
   @media (max-width: 768px) {
     height: calc(100vh - 65px);
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");

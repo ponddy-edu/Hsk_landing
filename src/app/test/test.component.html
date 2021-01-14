@@ -1,7 +1,7 @@
 <app-header [actvieMenu]="'test'"></app-header>
 
-<app-landing></app-landing>
-<app-tab></app-tab>
+<app-landing [tab]="tab"></app-landing>
+<app-tab (tabChange)="setTab($event)"></app-tab>
 <!--<app-about-ponddy></app-about-ponddy>-->
 <!--<app-product></app-product>-->
 
