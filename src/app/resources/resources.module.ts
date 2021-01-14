@@ -4,11 +4,9 @@ import {ResourcesComponent} from './resources.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ShareModule} from '../../components/share.module';
 import {LandingComponent} from './landing/landing.component';
-// import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
-// import {ProductComponent} from './product/product.component';
+import {TabsComponent} from './tabs/tabs.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
-import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 const routes: Routes = [
@@ -16,14 +14,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent],
+  declarations: [ResourcesComponent, LandingComponent,TabsComponent],
   imports: [
     CommonModule,
     ShareModule,
-    MatCardModule,
+    MatTabsModule,
     LazyLoadImageModule,
     RouterModule.forChild(routes),
-    IvyCarouselModule
   ]
 })
 export class ResourcesModule { }
