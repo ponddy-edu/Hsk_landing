@@ -195,7 +195,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="3ef6248dde7c107d3cf3d8276d5dd95ce54a74a2" datatype="html">
-        <source>Chinese Proficiency Test <x id="TAG_IMG" ctype="image" equiv-text="&lt;img  [hidden]=&quot;!isMobile&quot; class=&quot;icon&quot; [lazyLoad]=&quot;&apos;https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_01.svg&apos;&quot;&gt;"/></source>
+        <source>Chinese Proficiency Test <x id="TAG_IMG" ctype="image" equiv-text="&lt;img  [hidden]=&quot;!isMobile&quot; class=&quot;icon&quot; [lazyLoad]=&quot;&apos;/assets/image/icon/intro_icon_01.svg&apos;&quot;&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/intro/intro.component.html</context>
           <context context-type="linenumber">10</context>
@@ -203,7 +203,7 @@
       </trans-unit>
       <trans-unit id="61621af5ee2d082384320b6b7c8f13b2f9d5700f" datatype="html">
         <source>HSK Preparation <x id="TAG_IMG" ctype="image" equiv-text="&lt;img [hidden]=&quot;!isMobile&quot;
-                                        class=&quot;icon&quot; [lazyLoad]=&quot;&apos;https://hsk-landing.s3-us-west-2.amazonaws.com/icon/intro_icon_02.svg&apos;&quot;&gt;"/></source>
+                                        class=&quot;icon&quot; [lazyLoad]=&quot;&apos;/assets/image/icon/intro_icon_02.svg&apos;&quot;&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/intro/intro.component.html</context>
           <context context-type="linenumber">23,24</context>
