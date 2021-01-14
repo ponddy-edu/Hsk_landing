@@ -7,17 +7,20 @@ import {ShareModule} from '../../components/share.module';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {RouterModule, Routes} from '@angular/router';
 import {TestComponent} from './test.component';
+import { TabComponent } from './tab/tab.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const routes: Routes = [
   {path: 'test', component: TestComponent},
 ];
 
 @NgModule({
-  declarations: [TestComponent, LandingComponent, IntroChineseComponent, IntroTestComponent],
+  declarations: [TestComponent, LandingComponent, IntroChineseComponent, IntroTestComponent, TabComponent],
   imports: [
     CommonModule,
     ShareModule,
     LazyLoadImageModule,
+    MatTabsModule,
     RouterModule.forChild(routes),
   ]
 })
