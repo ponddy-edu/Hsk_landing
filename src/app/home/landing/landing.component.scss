@@ -1,12 +1,10 @@
 .landing {
   margin-top: 60px;
   height: auto;
-  min-height: 768px;
   box-sizing: border-box;
   position: relative;
   @media (max-width: 1024px) {
     height: auto;
-    min-height: 0;
   }
   
   h1 {
@@ -15,9 +13,17 @@
     font-size: 56px;
     line-height: 62px;
     color: #FFFFFF;
+    &.smaller_title{
+      font-size: 42px;
+      line-height: 52px;
+    }
     @media (max-width: 768px) {
       font-size: 32px;
       line-height: 42px;
+      &.smaller_title{
+        font-size: 28px;
+        line-height: 40px;
+      }
     }
   }
   
@@ -66,7 +72,6 @@
   mdb-carousel {
     .carousel, ::ng-deep .carousel-inner {
       height: auto;
-      min-height: 768px;
       
       @media (max-width: 1024px) {
         height: auto;
@@ -92,7 +97,8 @@
     mdb-carousel-item {
       .container {
         position: absolute;
-        top: 43vh;
+        //top: 43vh;
+        bottom: 25vh;
         margin-left: auto;
         margin-right: auto;
         left: 0;
