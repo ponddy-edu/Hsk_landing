@@ -14,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent,TabsComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabsComponent],
   imports: [
     CommonModule,
     ShareModule,
@@ -23,4 +23,5 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ]
 })
-export class ResourcesModule { }
+export class ResourcesModule {
+}

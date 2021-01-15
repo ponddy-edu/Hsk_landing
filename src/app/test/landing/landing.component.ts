@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-landing',
@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+  @Input()
+  tab: string
 
-  constructor() { }
+  backgrond = 'url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png")'
+  background2 = 'url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png")'
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
