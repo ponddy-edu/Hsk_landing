@@ -1,0 +1,29 @@
+<section class="resources">
+    <div class="resources__tab">
+        <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img [lazyLoad]="'assets/image/resources/course.svg'">
+                    <span>Course</span>
+                </ng-template>
+                test
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img [lazyLoad]="'assets/image/resources/preparation.svg'">
+                    <span>Preparation</span>
+                </ng-template>
+                Second test
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img [lazyLoad]="'assets/image/resources/smart-learning.svg'">
+                    <span>Smart Learning</span>
+                </ng-template>
+                Third test
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</section>

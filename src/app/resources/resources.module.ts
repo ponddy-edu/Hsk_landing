@@ -4,7 +4,7 @@ import {ResourcesComponent} from './resources.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ShareModule} from '../../components/share.module';
 import {LandingComponent} from './landing/landing.component';
-import {TabsComponent} from './tabs/tabs.component';
+import {TabComponent} from './tab/tab.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {MatTabsModule} from '@angular/material/tabs';
 
@@ -14,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabsComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent],
   imports: [
     CommonModule,
     ShareModule,

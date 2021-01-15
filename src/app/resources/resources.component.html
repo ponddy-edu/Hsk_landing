@@ -1,6 +1,5 @@
 <app-header [actvieMenu]="'resources'"></app-header>
 
-<app-landing></app-landing>
-<app-tabs></app-tabs>
-
+<app-landing [tab]="tab"></app-landing>
+<app-tab (tabChange)="setTab($event)"></app-tab>
 <app-footer></app-footer>
