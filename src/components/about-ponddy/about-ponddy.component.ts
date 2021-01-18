@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {CarouselComponent} from 'angular-responsive-carousel';
 import {DeviceService} from '../../utils/device.service';
 
@@ -13,12 +13,16 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/m
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_4_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_5_phone.png',
 ]
+
 @Component({
   selector: 'app-about-ponddy',
   templateUrl: './about-ponddy.component.html',
   styleUrls: ['./about-ponddy.component.scss']
 })
 export class AboutPonddyComponent implements OnInit {
+  @Input()
+  descriptionSection2 = true
+
   @ViewChild('course_carousel')
   courseComponent: CarouselComponent;
 
