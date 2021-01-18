@@ -15,7 +15,7 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/m
 ]
 
 @Component({
-  selector: 'app-about-ponddy',
+  selector: 'app-share-about-ponddy',
   templateUrl: './about-ponddy.component.html',
   styleUrls: ['./about-ponddy.component.scss']
 })
