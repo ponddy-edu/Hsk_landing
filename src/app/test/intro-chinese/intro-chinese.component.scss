@@ -1,0 +1,61 @@
+.container {
+  margin-bottom: 64px;
+  margin-top: 64px;
+
+  h1 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2D3942;
+    margin-bottom: 72px;
+  }
+
+  .card_area {
+    justify-content: center;
+    &:nth-child(n+3){
+      margin-top: 100px;
+    }
+    img {
+      width: 304px;
+      margin-bottom: 24px;
+    }
+    .left_img{
+      direction: rtl;
+    }
+    .right_img{
+      direction: ltr;
+    }
+  }
+
+  .text_area {
+    &.left{
+      padding-left: 8px;
+    }
+    &.right{
+      padding-right: 8px;
+    }
+    h2 {
+      text-align: left;
+      font-size: 30px;
+      line-height: 44px;
+      color: #2D3942;
+      width: fit-content;
+      border-bottom: 5px solid #93E2FA;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      font-weight: normal;
+      color: #576168;
+      text-align: left;
+    }
+  }
+
+}
+
+
