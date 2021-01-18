@@ -29,12 +29,12 @@
       </div>
     </div>
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center carousel_wrap">
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow left">
         <img  lazyLoad="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
-      <div *ngIf="device.isBrowser" class="col-md-9">
-        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
+      <div *ngIf="device.isBrowser" class="col-md-9 ">
+        <carousel height="101" #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
             <img class="d-block w-100" [src]="carouselImage"
                   [alt]="'slide_'+i">

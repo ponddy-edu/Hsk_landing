@@ -64,7 +64,12 @@
       }
     }
   }
-
+  .carousel_wrap{
+    padding-top: 64px;
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
   carousel {
     @media (max-width: 767px) {
       height: 100px !important;
