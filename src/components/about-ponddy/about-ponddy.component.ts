@@ -23,6 +23,8 @@ export class AboutPonddyComponent implements OnInit {
   @Input()
   descriptionSection2 = true
 
+  height = 101
+
   @ViewChild('course_carousel')
   courseComponent: CarouselComponent;
 
