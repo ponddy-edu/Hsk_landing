@@ -15,7 +15,7 @@
           84 countries around the world, Ponddy® is widely recognized
           by international official language testing and teaching institutions.
         </p>
-        <p i18n="description" class="description">Ponddy® HSK is the first online HSK test center in the U.S.A.
+        <p *ngIf="descriptionSection2" i18n="description" class="description">Ponddy® HSK is the first online HSK test center in the U.S.A.
           that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests.
           Ponddy® courses are designed by our expert-teaching team and are fully accredited by ACS Western
           Association of Schools and Colleges of the United States.
@@ -24,8 +24,6 @@
           <p i18n="learn more|learn more">Read More</p>
           <img  [lazyLoad]="'/assets/image/icon/btn_blue_normal.svg'">
         </a>
-
-
       </div>
     </div>
 
