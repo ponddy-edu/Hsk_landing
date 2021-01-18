@@ -4,11 +4,11 @@ import {PonddyComponent} from './ponddy.component';
 import {RouterModule, Routes} from '@angular/router';
 import {ShareModule} from '../../components/share.module';
 import {LandingComponent} from './landing/landing.component';
-import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
 import {ProductComponent} from './product/product.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {MatCardModule} from '@angular/material/card';
+import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
 
 const routes: Routes = [
   {path: 'ponddy', component: PonddyComponent},
@@ -16,6 +16,9 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [PonddyComponent, LandingComponent, AboutPonddyComponent, ProductComponent],
+  exports: [
+    AboutPonddyComponent
+  ],
   imports: [
     CommonModule,
     ShareModule,
