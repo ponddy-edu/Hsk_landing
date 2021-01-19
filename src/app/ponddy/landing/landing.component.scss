@@ -5,7 +5,7 @@
   background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png");
   background-size: cover;
   background-repeat: no-repeat;
-  @media (max-width: 768px) {
+  @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/index_pic_phone.png");
     background-size: cover;
@@ -18,7 +18,7 @@
     font-size: 56px;
     line-height: 62px;
     color: #FFFFFF;
-    @media (max-width: 768px) {
+    @media (max-width: 991.98px) {
       font-size: 32px;
       line-height: 42px;
     }

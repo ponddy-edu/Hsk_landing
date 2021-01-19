@@ -18,7 +18,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");
     background-size: cover;
@@ -32,7 +32,7 @@
     line-height: 62px;
     color: #FFFFFF;
     max-width: 680px;
-    @media (max-width: 768px) {
+    @media (max-width: 991.98px) {
       font-size: 32px;
       line-height: 42px;
     }
