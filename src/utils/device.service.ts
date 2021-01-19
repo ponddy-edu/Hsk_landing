@@ -28,7 +28,7 @@ export class DeviceService {
       screenSizeChanged$.subscribe()
     } else {
       this.isBrowser = false
-      this.$mobile.next(true);
+      this.$mobile.next(false);
     }
 
   }
