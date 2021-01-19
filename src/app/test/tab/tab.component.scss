@@ -5,23 +5,42 @@
   @media (max-width: 767px) {
     margin-top: -60px;
   }
+  
   .mat-tab-header {
     border-radius: 16px 16px 0px 0px;
     width: 541px;
     height: 120px;
     background-color: #ffffff;
-    .tab_blue{
+    
+    
+    
+    .tab_blue {
       color: #3B9FBE;
     }
+    
     @media (max-width: 767px) {
       width: 100%;
     }
+    
+    &[ng-reflect-selected-index="0"] {
+      .mat-ink-bar {
+        background-color: #3B9FBE !important;
+      }
+    }
+    
+    &[ng-reflect-selected-index="1"] {
+      .mat-ink-bar {
+        background-color: #FCC811 !important;
+      }
+    }
   }
-
+  
   .mat-tab-label {
     width: 100%;
     height: 120px;
-
+    &.mat-tab-label-active {
+      opacity: 1;
+    }
     .mat-tab-label-content {
       display: block;
       font-size: 16px;
@@ -29,15 +48,18 @@
       letter-spacing: 1px;
       opacity: 1;
       color: #969CA0;
-
+     
       img {
         margin-bottom: 9px;
       }
     }
   }
-
+  
   .mat-tab-body-wrapper {
     //width: 812px;
     text-align: center;
   }
+  
+  
 }
+
