@@ -1,0 +1,115 @@
+.bg_table {
+    background-color: #F4F0EB;
+}
+
+.table {
+    display: inline-block;
+    width: 812px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    &__title {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #2D3942;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        &__description {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: #576168;
+            margin-left: 10px;
+        }
+    }
+    &__shadow {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    &__adult {
+        width: 340px;
+        margin-bottom: 64px;
+    }
+    &__student {
+        width: 340px;
+        margin-left: 24px;
+        margin-bottom: 64px;
+    }
+    &__th {
+        display: flex;
+        border-radius: 12px 12px 0px 0px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        height: 66px;
+        &.orange_base {
+            background: #FFC05C;
+        }
+        &.ponddy_base {
+            background: #6ACFED;
+        }
+        & .level {
+            padding-right: 24px;
+            border-right: 1px #ffffff solid;
+            width: 166px;
+            line-height: 58px
+        }
+        & .sessions {
+            padding-left: 24px;
+        }
+    }
+    &__tr {
+        background-color: #ffffff;
+        display: flex;
+        text-align: left;
+        padding-left: 24px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        border-bottom: 1px dashed #D5D7D9;
+        &__no {
+            border-bottom: none;
+            border-radius: 0 0 12px 12px;
+        }
+    }
+    &__tb {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #2D3942;
+        width: 122px;
+        padding: 13px 0;
+        border-right: 1px solid #D5D7D9;
+        &.level {
+            width: 171px;
+        }
+        &__description {
+            display: flex;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: #576168;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 24px;
+            font-weight: 400;
+            // width: 80%;
+            img {
+                padding-right: 10px;
+            }
+            &__title {
+                font-weight: bold;
+            }
+            &.sessions {
+                width: 85px;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

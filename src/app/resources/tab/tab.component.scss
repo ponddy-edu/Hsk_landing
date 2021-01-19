@@ -25,32 +25,15 @@
                 position: absolute;
                 bottom: 50px;
             }
-            // .ng-star-inserted span {
-            //     position: absolute;
-            //     bottom: 17px;
-            //     left: 0;
-            //     right: 0;
-            // }
         }
     }
     .mat-tab-body-wrapper {
-        width: 812px;
         text-align: center;
     }
     .mat-tab-label-active {
         font-size: 16px;
         line-height: 24px;
-        /* identical to box height, or 150% */
         letter-spacing: 1px;
-        /* Ponddy text */
         color: #3B9FBE;
     }
-}
-
-[aria-label=primary] {
-    background-color: blue;
-}
-
-[aria-label=accent] {
-    background-color: aqua;
 }
