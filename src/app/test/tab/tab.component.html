@@ -1,27 +1,28 @@
 <section class="resources">
   <mat-tab-group animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
+
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
-          <img [lazyLoad]="'assets/image/resources/course.svg'">
+          <img [lazyLoad]="'/assets/image/icon/square_blue.png'">
         </div>
         <div>
           Chinese Tests
         </div>
       </ng-template>
-      First test
+      <app-intro-chinese></app-intro-chinese>
     </mat-tab>
 
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
-          <img [lazyLoad]="'assets/image/resources/preparation.svg'">
+          <img [lazyLoad]="'/assets/image/icon/square_orange.png'">
         </div>
         <div>
           Test Instructions
         </div>
       </ng-template>
-      Second test
+      <app-intro-test></app-intro-test>
     </mat-tab>
 
   </mat-tab-group>
