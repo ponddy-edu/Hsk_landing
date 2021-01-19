@@ -1,12 +1,18 @@
 ::ng-deep.mat-tab-group {
   margin-top: -120px;
   align-items: center;
-
+  
+  @media (max-width: 767px) {
+    margin-top: -60px;
+  }
   .mat-tab-header {
     border-radius: 16px 16px 0px 0px;
     width: 541px;
     height: 120px;
     background-color: #ffffff;
+    .tab_blue{
+      color: #3B9FBE;
+    }
     @media (max-width: 767px) {
       width: 100%;
     }

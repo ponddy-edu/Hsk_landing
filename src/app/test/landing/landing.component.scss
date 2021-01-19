@@ -6,10 +6,16 @@
   &.test_chinese{
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/pic_HSK_Test_index1.png");
     background-size: cover;
+    @media (max-width: 767px) {
+      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/mobile/index_01.png");
+    }
   }
   &.test_intro{
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");
     background-size: cover;
+    @media (max-width: 767px) {
+      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/mobile/index_01.png");
+    }
   }
 
   @media (max-width: 768px) {
@@ -35,7 +41,12 @@
   p {
     font-size: 18px;
     line-height: 27px;
-    color: #FFFFFF
+    color: #FFFFFF;
+    font-weight: bold;
+    @media (max-width: 767px) {
+      height: 24px;
+      left: 28px;
+    }
   }
 
   .w-100 {
@@ -60,7 +71,7 @@
   }
 
   .container {
-    margin-top: 90px;
+    padding-top: 90px;
   }
 
   & .resources__tabs {
