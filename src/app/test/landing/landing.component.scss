@@ -61,6 +61,10 @@
     .padding_space {
       height: 33%;
       width: 100%;
+      @media screen and (max-width: 991.98px){
+        height: 25%;
+  
+      }
     }
 
     .mask_space {

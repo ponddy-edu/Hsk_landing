@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
 body { margin: 0;
-  font-family: Ponddy-NotoRubik, sans-serif !important; }
+  font-family: Ponddy-NotoRubik, sans-serif !important;
+  overflow: hidden;
+  overflow-y: auto;}
 
 @import "src/assets/font/PonddyNotoRubik";
 @import "src/assets/ponddy-guidline.scss";
