@@ -1,10 +1,13 @@
 <section>
-  <mat-tab-group animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
+  <mat-tab-group animationDuration="0ms"
+                 (selectedIndexChange)="changeTab($event)"
+                 [class.test_chinese]="!tabIndex"
+                 [class.test_intro]="tabIndex">
 
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
-          <img [lazyLoad]="'/assets/image/icon/square_blue.png'">
+          <img [lazyLoad]="'/assets/image/test/icon_course_hover_p.svg'">
         </div>
         <div class="tab_blue">
           Chinese Tests
@@ -16,7 +19,7 @@
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
-          <img [lazyLoad]="'/assets/image/icon/square_orange.png'">
+          <img [lazyLoad]="'/assets/image/test/icon_praparation_normal_p.svg'">
         </div>
         <div>
           Test Instructions

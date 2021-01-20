@@ -10,6 +10,7 @@ export class TabComponent implements OnInit {
   @Output()
   $tabChange = new EventEmitter<number>()
 
+  tabIndex = 0
 
   constructor() {
   }
@@ -18,6 +19,7 @@ export class TabComponent implements OnInit {
   }
 
   changeTab(tabIndex: any) {
+    this.tabIndex = tabIndex
     this.$tabChange.emit(tabIndex)
   }
 }
