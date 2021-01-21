@@ -2,11 +2,24 @@
     background-color: #F4F0EB;
 }
 
+.bg_img {
+    background: url('/assets/image/resources/pic_BKG.png'), #FBF9F7;
+    display: flex;
+    justify-content: center;
+    .main {
+        width: 436px;
+        height: 436px;
+    }
+}
+
 .table {
     display: inline-block;
     width: 812px;
     box-sizing: border-box;
     border-radius: 12px;
+    @media (max-width: 768px) {
+        width: 100%!important;
+    }
     &__title {
         font-weight: 900;
         font-size: 20px;
@@ -35,6 +48,9 @@
         width: 340px;
         margin-left: 24px;
         margin-bottom: 64px;
+        @media (max-width: 768px) {
+            margin-left: auto;
+        }
     }
     &__th {
         display: flex;
@@ -58,10 +74,18 @@
             padding-right: 24px;
             border-right: 1px #ffffff solid;
             width: 166px;
-            line-height: 58px
+            line-height: 58px;
+            @media (max-width: 768px) {
+                width: 100%;
+                padding: 0;
+            }
         }
         & .sessions {
             padding-left: 24px;
+            @media (max-width: 768px) {
+                width: 100%;
+                padding: 0;
+            }
         }
     }
     &__tr {
@@ -86,8 +110,19 @@
         width: 122px;
         padding: 13px 0;
         border-right: 1px solid #D5D7D9;
+        @media (max-width: 768px) {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 24px;
+            width: 40%;
+            letter-spacing: 0.5px;
+        }
         &.level {
             width: 171px;
+            @media (max-width: 768px) {
+                width: 100%;
+                font-size: 16px;
+            }
         }
         &__description {
             display: flex;
@@ -100,8 +135,17 @@
             padding-left: 24px;
             font-weight: 400;
             // width: 80%;
+            @media (max-width: 768px) {
+                width: 80%;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+            }
             img {
                 padding-right: 10px;
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
             &__title {
                 font-weight: bold;
@@ -109,6 +153,12 @@
             &.sessions {
                 width: 85px;
                 justify-content: flex-end;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                }
             }
         }
     }
