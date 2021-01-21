@@ -163,3 +163,12 @@
         }
     }
 }
+
+.resources_course_img {
+    .content {
+        text-align: left;
+        &__left {
+            justify-content: left;
+        }
+    }
+}
