@@ -24,6 +24,10 @@ body { margin: 0;
       fill: red;
     }
   }
+  .carousel_section{
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
 }
 body {
   font-family: Ponddy-NotoRubik, 'Microsoft JhengHei', sans-serif !important;

@@ -2,6 +2,8 @@
 .about_ponddy {
   padding: 64px 0;
   background: #EBF2F5;
+  max-width: 99vw;
+  overflow-x: hidden;
   @media (max-width: 767px) {
     padding: 24px 0;
 
