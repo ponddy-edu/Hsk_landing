@@ -49,6 +49,10 @@
   }
 
   .text_area {
+    @media (min-width: 1400px) {
+      //max-width: 91%;
+    }
+  
     &.left{
       padding-right: 16px;
     }
