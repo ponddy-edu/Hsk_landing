@@ -6,11 +6,21 @@
   padding: 64px 0;
   background-color: #F4F0EB;
   
+  h1 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+  }
+  
   .table {
     display: inline-block;
     width: 688px;
     box-sizing: border-box;
     border-radius: 12px;
+    margin-bottom: 0;
     @media (max-width: 768px) {
       width: 100% !important;
     }
@@ -178,19 +188,63 @@
 
 .resources_course_img {
   padding: 80px 0;
-  background:  #FBF9F7;
+  background: #FBF9F7;
+  
   img.main {
     width: 436px;
     height: 436px;
     margin: 0 60px;
   }
   
-  .text_wrap {
-    text-align: left;
-    //width: ;
-    max-width: 520px;
-    &__left {
-      justify-content: left;
+  .course {
+    padding: 80px 0;
+    border-bottom: 1px dashed #D5D7D9;
+    
+    .text_wrap {
+      text-align: left;
+      //width: ;
+      max-width: 520px;
+      
+      img.course_order {
+        max-width: 260px;
+        max-height: 94px;
+      }
+      
+      .content_description {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #2D3942;
+        margin-bottom: 24px;
+      }
+      
+      .content_list_title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+      
+      ul.content_list {
+        padding-inline-start: 20px;
+        margin-bottom: 24px;
+       
+        
+        li {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 30px;
+          letter-spacing: 0.5px;
+          color: #2D3942;
+        }
+      }
+      
+      &__left {
+        justify-content: left;
+      }
     }
+    
   }
 }
