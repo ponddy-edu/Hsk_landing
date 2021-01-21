@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {CarouselComponent} from 'angular-responsive-carousel';
-import {DeviceService} from "../../../utils/device.service";
+import {DeviceService} from '../../utils/device.service';
 
 
 const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png',
@@ -13,12 +13,18 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/m
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_4_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_5_phone.png',
 ]
+
 @Component({
-  selector: 'app-home-about',
+  selector: 'app-share-about-ponddy',
   templateUrl: './about-ponddy.component.html',
   styleUrls: ['./about-ponddy.component.scss']
 })
 export class AboutPonddyComponent implements OnInit {
+  @Input()
+  descriptionSection2 = true
+
+  height = 101
+
   @ViewChild('course_carousel')
   courseComponent: CarouselComponent;
 

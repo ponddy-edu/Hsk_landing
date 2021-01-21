@@ -8,8 +8,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class TabComponent implements OnInit {
 
   @Output()
-  tabChange = new EventEmitter<number>()
+  $tabChange = new EventEmitter<number>()
 
+  tabIndex = 0
 
   constructor() {
   }
@@ -18,7 +19,7 @@ export class TabComponent implements OnInit {
   }
 
   changeTab(tabIndex: any) {
-    console.log(tabIndex)
-    this.tabChange.emit(tabIndex)
+    this.tabIndex = tabIndex
+    this.$tabChange.emit(tabIndex)
   }
 }

@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
+html, body { height: 100%;
+  max-width: 100vw;
+}
 body { margin: 0;
-  font-family: Ponddy-NotoRubik, sans-serif !important; }
+  font-family: Ponddy-NotoRubik, sans-serif !important;
+  }
 
 @import "src/assets/font/PonddyNotoRubik";
 @import "src/assets/ponddy-guidline.scss";
@@ -20,6 +23,10 @@ body { margin: 0;
       margin-left: 10px;
       fill: red;
     }
+  }
+  .carousel_section{
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 body {

@@ -2,11 +2,13 @@
 .about_ponddy {
   padding: 64px 0;
   background: #EBF2F5;
+  max-width: 99vw;
+  overflow-x: hidden;
   @media (max-width: 767px) {
     padding: 24px 0;
-    
+
   }
-  
+
   h1 {
     font-size: 36px;
     line-height: 48px;
@@ -21,34 +23,35 @@
       margin-bottom: 16px;
     }
   }
-  
+
   .description {
     font-size: 20px;
     line-height: 36px;
     letter-spacing: 1px;
     color: #2D3942;
     font-weight: 400;
-    @media (max-width: 768px) {
+    @media (max-width: 991.98px) {
       font-size: 16px;
       line-height: 30px;
       letter-spacing: 0.5px;
       color: #576168;
     }
   }
-  
-  
+
+
   .carousel-cell {
-    
+
     img {
       //height: auto;
       width: 100%;
     }
-    
+
   }
-  
+
   .arrow.left{
     justify-content: flex-end;
     img{
+      cursor: pointer;
       &:hover {
         content: url("/assets/image/icon/btn_hover_left.svg");
       }
@@ -57,26 +60,32 @@
   .arrow.right{
     justify-content: flex-start;
     img{
+      cursor: pointer;
       &:hover {
         content: url("/assets/image/icon/btn_hover_right.svg");
       }
     }
   }
-  
+  .carousel_wrap{
+    padding-top: 64px;
+    @media (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
   carousel {
     @media (max-width: 767px) {
       height: 100px !important;
       margin: 30px 0 20px;
     }
   }
-  
+
   ::ng-deep .carousel-inner {
     width: 80%;
     text-align: center;
     margin: auto;
   }
-  
+
   .carousel .carousel-control-next-icon {
-  
+
   }
 }

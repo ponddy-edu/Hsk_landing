@@ -1,4 +1,4 @@
-<section class="about_ponddy">
+<section class="about_ponddy carousel_section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-11 col-md-9">
@@ -15,7 +15,8 @@
           84 countries around the world, Ponddy® is widely recognized
           by international official language testing and teaching institutions.
         </p>
-        <p i18n="description" class="description">Ponddy® HSK is the first online HSK test center in the U.S.A.
+        <p *ngIf="descriptionSection2" i18n="description" class="description">
+          Ponddy® HSK is the first online HSK test center in the U.S.A.
           that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests.
           Ponddy® courses are designed by our expert-teaching team and are fully accredited by ACS Western
           Association of Schools and Colleges of the United States.
@@ -24,17 +25,15 @@
           <p i18n="learn more|learn more">Read More</p>
           <img  [lazyLoad]="'/assets/image/icon/btn_blue_normal.svg'">
         </a>
-
-
       </div>
     </div>
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center carousel_wrap">
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow left">
         <img  lazyLoad="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
-      <div *ngIf="device.isBrowser" class="col-md-9">
-        <carousel #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
+      <div *ngIf="device.isBrowser" class="col-md-9 ">
+        <carousel [height]="height" #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
             <img class="d-block w-100" [src]="carouselImage"
                   [alt]="'slide_'+i">

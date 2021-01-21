@@ -1,0 +1,33 @@
+::ng-deep.dashline {
+  position: absolute !important;
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  
+  .row {
+    height: 100%;
+    
+    .col-12 {
+      border-left: 1px dashed #EAEBEC;
+    }
+    
+    .col-6 {
+      border-left: 1px dashed #EAEBEC;
+      
+      &:nth-last-child(1) {
+        border-right: 1px dashed #EAEBEC;
+      }
+    }
+    
+    .col-3 {
+      border-left: 1px dashed #EAEBEC;
+      
+      &:nth-last-child(1) {
+        border-right: 1px dashed #EAEBEC;
+      }
+    }
+  }
+}

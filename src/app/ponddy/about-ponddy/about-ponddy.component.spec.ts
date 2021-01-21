@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutPonddyComponent } from './about-ponddy.component';
+import { AboutPonddyComponent } from '../../test/about-ponddy/about-ponddy.component';
 
 describe('AboutPonddyComponent', () => {
   let component: AboutPonddyComponent;
