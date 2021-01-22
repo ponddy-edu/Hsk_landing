@@ -706,6 +706,7 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $white_100;
+  border: none;
   &:hover {
     background: $orange_light;
     color: $white_100;
@@ -1081,6 +1082,7 @@ li {
     line-height: $line-height;
     border-radius: $radius;
     letter-spacing: $letter-spacing + 0.5;
+   
   }
   .btn_general-secondary,
   .btn_red-secondary,
