@@ -8,6 +8,7 @@ import {TabComponent} from './tab/tab.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {MatTabsModule} from '@angular/material/tabs';
 import { IntroCourseComponent } from './intro-course/intro-course.component';
+import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, IntroPreparationComponent],
   imports: [
     CommonModule,
     ShareModule,
