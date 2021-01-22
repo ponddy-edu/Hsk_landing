@@ -43,3 +43,27 @@
         margin-top: 90px;
     }
 }
+
+.landing__preparation {
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+    @media (max-width: 991.98px) {
+        height: calc(100vh - 65px);
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .title {
+        width: 680px;
+    }
+    h1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 62px;
+        color: #FFFFFF;
+        @media (max-width: 991.98px) {
+            font-size: 32px;
+            line-height: 42px;
+        }
+    }
+}
