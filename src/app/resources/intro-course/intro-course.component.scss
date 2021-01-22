@@ -215,7 +215,8 @@
     }
     @media (max-width: 991.98px) {
       padding: 24px 0;
-      &:nth-child(2n) {
+     
+      &.reverse{
         flex-direction: column-reverse;
       }
     }

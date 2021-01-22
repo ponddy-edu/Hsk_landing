@@ -41,6 +41,13 @@
   }
   
   h1 {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+    @media (max-width: 991.98px) {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
   }
 }
