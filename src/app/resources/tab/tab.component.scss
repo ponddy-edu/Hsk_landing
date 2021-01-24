@@ -1,51 +1,79 @@
 ::ng-deep.mat-tab-group {
-    margin-top: -120px;
-    align-items: center;
-    .mat-tab-header {
-        border-radius: 16px 16px 0px 0px;
-        width: 812px;
-        height: 120px;
-        background-color: #ffffff;
+  margin-top: -90px;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    margin-top: -60px;
+  }
+
+  //&.test_chinese {
+  //  .mat-ink-bar {
+  //    background-color: #3B9FBE !important;
+  //  }
+  //}
+  //
+  //&.test_intro {
+  //  .mat-ink-bar {
+  //    background-color: #FCC811 !important;
+  //  }
+  //}
+  mat-ink-bar{
+    display: none!important;
+  }
+  .mat-tab-header {
+    border-radius: 16px 16px 0px 0px;
+    width: 812px;
+    height: 90px;
+    background-color: #ffffff;
+
+
+    .tab_blue {
+      color: #3B9FBE;
     }
-    @media (max-width: 768px) {
-        .mat-tab-header {
-            width: 100%;
-        }
-        .mat-tab-body-wrapper {
-            width: 100%;
-        }
+
+    @media (max-width: 767px) {
+      width: 100%;
     }
-    .mat-tab-label {
-        width: 100%;
-        height: 120px;
-        .mat-tab-label-content {
-            width: 100%;
-            height: 100%;
-            span {
-                position: absolute;
-                bottom: 17px;
-                left: 0;
-                right: 0;
-                letter-spacing: 1px;
-                font-size: 16px;
-                @media (max-width: 768px) {
-                    letter-spacing: 0.4px;
-                    font-size: 14px;
-                }
-            }
-            img {
-                position: absolute;
-                bottom: 50px;
-            }
-        }
+
+    //&[ng-reflect-selected-index="0"] {
+    //  .mat-ink-bar {
+    //    background-color: #3B9FBE !important;
+    //  }
+    //}
+    //
+    //&[ng-reflect-selected-index="1"] {
+    //  .mat-ink-bar {
+    //    background-color: #FCC811 !important;
+    //  }
+    //}
+  }
+
+  .mat-tab-label {
+    width: 100%;
+    height: 90px;
+    padding: 9px 24px;
+    &.mat-tab-label-active {
+      opacity: 1;
     }
-    .mat-tab-body-wrapper {
-        text-align: center;
+
+    .mat-tab-label-content {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+      opacity: 1;
+      color: #969CA0;
+
+      img {
+        max-height: 48px;
+      }
     }
-    .mat-tab-label-active {
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 1px;
-        color: #3B9FBE;
-    }
+  }
+
+  .mat-tab-body-wrapper {
+    //width: 812px;
+    text-align: center;
+  }
+
+
 }
