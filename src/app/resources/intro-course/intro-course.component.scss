@@ -1,11 +1,11 @@
-::ng-deep.mat-tab-body-wrapper {
-  width: 100%;
-}
 
-.resources_course_courses {
+
+.intro_course {
   padding: 64px 0;
   background-color: #F4F0EB;
-
+  ::ng-deep.mat-tab-body-wrapper {
+    width: 100%;
+  }
   h1 {
     font-weight: 900;
     font-size: 36px;

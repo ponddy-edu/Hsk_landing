@@ -1,15 +1,17 @@
-.container{
-  margin-bottom: 64px;
-  margin-top: 64px;
-  height: 300px;
-
-  h1 {
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 48px;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #2D3942;
-    margin-bottom: 72px;
+.intro_test{
+  .container{
+    margin-bottom: 64px;
+    margin-top: 64px;
+    height: 300px;
+    
+    h1 {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 48px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #2D3942;
+      margin-bottom: 72px;
+    }
   }
 }

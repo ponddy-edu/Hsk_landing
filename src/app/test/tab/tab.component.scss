@@ -1,7 +1,9 @@
 ::ng-deep.mat-tab-group {
   margin-top: -90px;
   align-items: center;
-  
+  .mat-tab-body.mat-tab-body-active{
+    overflow-y: hidden;
+  }
   @media (max-width: 767px) {
     margin-top: -60px;
   }
@@ -35,17 +37,6 @@
       width: 100%;
     }
     
-    //&[ng-reflect-selected-index="0"] {
-    //  .mat-ink-bar {
-    //    background-color: #3B9FBE !important;
-    //  }
-    //}
-    //
-    //&[ng-reflect-selected-index="1"] {
-    //  .mat-ink-bar {
-    //    background-color: #FCC811 !important;
-    //  }
-    //}
   }
   
   .mat-tab-label {
