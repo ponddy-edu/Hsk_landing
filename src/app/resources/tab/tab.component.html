@@ -1,31 +1,31 @@
 <section class="resources">
-  <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <div>
-          <img [src]="'assets/image/resources/course.svg'">
-        </div>
-        <div class="tab_blue">
-          Course
-        </div>
-      </ng-template>
-      <app-intro-course></app-intro-course>
-    </mat-tab>
+    <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <div>
+                    <img [src]="'assets/image/resources/course.svg'">
+                </div>
+                <div class="tab_blue">
+                    Course
+                </div>
+            </ng-template>
+            <app-intro-course></app-intro-course>
+        </mat-tab>
 
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <img [src]="'assets/image/resources/preparation.svg'">
-        <div>Preparation</div>
-      </ng-template>
-      Second test
-    </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <img [src]="'assets/image/resources/preparation.svg'">
+                <div>Preparation</div>
+            </ng-template>
+            <app-intro-preparation></app-intro-preparation>
+        </mat-tab>
 
-    <mat-tab>
-      <ng-template mat-tab-label>
-        <img [src]="'assets/image/resources/smart-learning.svg'">
-        <div>Smart Learning</div>
-      </ng-template>
-      Third test
-    </mat-tab>
-  </mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <img [src]="'assets/image/resources/smart-learning.svg'">
+                <div>Smart Learning</div>
+            </ng-template>
+            Third test
+        </mat-tab>
+    </mat-tab-group>
 </section>
