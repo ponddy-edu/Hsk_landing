@@ -10,14 +10,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { IntroCourseComponent } from './intro-course/intro-course.component';
 import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-
+import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
 
 const routes: Routes = [
   {path: 'resources', component: ResourcesComponent},
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent],
   imports: [
     CommonModule,
     ShareModule,
