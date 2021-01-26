@@ -5,18 +5,7 @@
   @media (max-width: 767px) {
     margin-top: -60px;
   }
-  
-  //&.test_chinese {
-  //  .mat-ink-bar {
-  //    background-color: #3B9FBE !important;
-  //  }
-  //}
-  //
-  //&.test_intro {
-  //  .mat-ink-bar {
-  //    background-color: #FCC811 !important;
-  //  }
-  //}
+ 
   mat-ink-bar {
     display: none !important;
   }
@@ -42,6 +31,9 @@
     
     img {
       background-color: #969CA0;
+      max-height: 48px;
+      width: 48px;
+      height: 48px;
       
       &.icon_course {
         -webkit-mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
@@ -92,12 +84,6 @@
         line-height: 24px;
         letter-spacing: 0.4px;
         font-weight: normal;
-      }
-      
-      img {
-        max-height: 48px;
-        width: 48px;
-        height: 48px;
       }
     }
   }
