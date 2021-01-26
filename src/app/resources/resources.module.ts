@@ -11,13 +11,14 @@ import { IntroCourseComponent } from './intro-course/intro-course.component';
 import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
+import { SmartLearnComponent } from './smart-learn/smart-learn.component';
 
 const routes: Routes = [
   {path: 'resources', component: ResourcesComponent},
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, SmartLearnComponent],
   imports: [
     CommonModule,
     ShareModule,
