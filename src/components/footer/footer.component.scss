@@ -39,6 +39,11 @@ footer {
 
 footer .title {
   font-weight: 500;
+  @media (max-width: 767px) {
+   &.first{
+     margin: 0;
+   }
+  }
 }
 
 footer p {
@@ -80,18 +85,13 @@ footer .navigation ul li a {
 
 footer .copyright {
   font-size: 14px;
-
+  
   line-height: 2.19;
   text-align: center;
   color: #FFFFFF;
-
+  
 }
 
-
-
-footer .title {
-  font-weight: 500;
-}
 
 footer a {
   color: #FFF !important;
