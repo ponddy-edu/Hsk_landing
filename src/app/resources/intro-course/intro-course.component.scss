@@ -1,11 +1,15 @@
 
-
 .intro_course {
   padding: 64px 0;
   background-color: #F4F0EB;
+  @media (max-width: 991.98px) {
+    padding: 24px 16px 36px;
+  }
+  
   ::ng-deep.mat-tab-body-wrapper {
     width: 100%;
   }
+  
   h1 {
     font-weight: 900;
     font-size: 36px;
@@ -13,8 +17,15 @@
     text-align: center;
     letter-spacing: 0.5px;
     margin-bottom: 40px;
+    color: #2D3942;
+    @media (max-width: 991.98px) {
+      font-size: 24px;
+      line-height: 36px;
+      padding: 0 24px;
+      margin-bottom: 16px;
+    }
   }
-
+  
   .table {
     display: inline-block;
     width: 688px;
@@ -24,7 +35,7 @@
     @media (max-width: 768px) {
       width: 100% !important;
     }
-
+    
     &__title {
       font-weight: 900;
       font-size: 20px;
@@ -33,7 +44,9 @@
       color: #2D3942;
       margin-bottom: 20px;
       margin-top: 40px;
-
+      @media (max-width: 991.98px) {
+        margin: 32px 0 8px;
+      }
       &__description {
         font-weight: 700;
         font-size: 16px;
@@ -43,15 +56,15 @@
         margin-left: 10px;
       }
     }
-
+    
     &__shadow {
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
     }
-
+    
     &__adult {
       width: 340px;
     }
-
+    
     &__student {
       width: 340px;
       margin-left: 24px;
@@ -59,33 +72,44 @@
         margin-left: auto;
       }
     }
-
+    
     &__th {
       display: flex;
       border-radius: 12px 12px 0px 0px;
       justify-content: center;
       align-items: center;
-      font-weight: 900;
       font-size: 20px;
       line-height: 30px;
       text-align: center;
+      font-weight: 900;
       letter-spacing: 1px;
       color: #FFFFFF;
       height: 66px;
       padding: 11px 24px;
-      .table__tb{
+      @media (max-width: 991.98px) {
+        padding: 15px 12px;
+      }
+      
+      .table__tb {
         color: #ffffff;
         border-right: 1px solid #fff;
         width: 164px;
+        font-weight: 900;
+        @media (max-width: 991.98px) {
+          width: 100%;
+          font-size: 20px;
+          line-height: 30px;
+        }
       }
+      
       &.orange_base {
         background: #FFC05C;
       }
-
+      
       &.ponddy_base {
         background: #6ACFED;
       }
-
+      
       &.level {
         padding-right: 24px;
         border-right: 1px #ffffff solid;
@@ -96,7 +120,7 @@
           padding: 0;
         }
       }
-
+      
       & .sessions {
         padding-left: 24px;
         @media (max-width: 768px) {
@@ -105,20 +129,23 @@
         }
       }
     }
-
+    
     &__tr {
       background-color: #ffffff;
       display: flex;
       text-align: left;
       padding: 11px 24px;
       border-bottom: 1px dashed #D5D7D9;
-
+      @media (max-width: 991.98px) {
+        padding: 15px 12px;
+      }
+      
       &__no {
         border-bottom: none;
         border-radius: 0 0 12px 12px;
       }
     }
-
+    
     &__tb {
       font-weight: bold;
       font-size: 20px;
@@ -132,10 +159,12 @@
         font-weight: 700;
         font-size: 15px;
         line-height: 24px;
-        width: 40%;
+        width: 35%;
         letter-spacing: 0.5px;
+        padding: 0;
+        
       }
-
+      
       &.level {
         width: 171px;
         @media (max-width: 768px) {
@@ -143,7 +172,7 @@
           font-size: 16px;
         }
       }
-
+      
       &__description {
         display: flex;
         font-size: 20px;
@@ -160,19 +189,20 @@
           font-size: 16px;
           line-height: 24px;
           letter-spacing: 0.5px;
+          padding: 0px 12px;
         }
-
+        
         img {
           padding-right: 10px;
           @media (max-width: 768px) {
             display: none;
           }
         }
-
+        
         &__title {
           font-weight: bold;
         }
-
+        
         &.sessions {
           width: 85px;
           justify-content: flex-end;
@@ -195,7 +225,7 @@
   @media (max-width: 991.98px) {
     padding: 12px 16px;
   }
-
+  
   img.main {
     max-width: 436px;
     max-height: 436px;
@@ -203,40 +233,44 @@
     height: auto;
     //margin: 0 60px;
   }
-  hr{
+  
+  hr {
     border: 1px dashed #D5D7D9;
     margin: 0;
     width: 100vw;
     position: absolute;
     left: 0;
   }
+  
   .course {
     padding: 80px 0;
     border-bottom: 1px dashed #D5D7D9;
-    &:nth-last-child(1){
+    
+    &:nth-last-child(1) {
       border-bottom: none;
     }
+    
     @media (max-width: 991.98px) {
       padding: 24px 0;
-
-      &.reverse{
+      
+      &.reverse {
         flex-direction: column-reverse;
       }
     }
-
+    
     .text_wrap {
       text-align: left;
       //width: ;
       max-width: 520px;
-
+      
       img.course_order {
         max-width: 260px;
         max-height: 94px;
         @media (max-width: 991.98px) {
-         margin: 24px 0 8px;
+          margin: 24px 0 8px;
         }
       }
-
+      
       .content_description {
         font-weight: normal;
         font-size: 16px;
@@ -248,7 +282,7 @@
           margin-bottom: 16px;
         }
       }
-
+      
       .content_list_title {
         font-weight: bold;
         font-size: 20px;
@@ -256,15 +290,15 @@
         letter-spacing: 0.5px;
         margin-bottom: 8px;
       }
-
+      
       ul.content_list {
         padding-inline-start: 20px;
         margin-bottom: 24px;
         @media (max-width: 991.98px) {
           margin-bottom: 20px;
-
+          
         }
-
+        
         li {
           font-weight: normal;
           font-size: 16px;
@@ -273,11 +307,11 @@
           color: #2D3942;
         }
       }
-
+      
       &__left {
         justify-content: left;
       }
     }
-
+    
   }
 }

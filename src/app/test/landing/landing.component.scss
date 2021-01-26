@@ -8,6 +8,7 @@
     background-size: cover;
     @media (max-width: 767px) {
       background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/mobile/index_01.png");
+      background-size: cover;
     }
   }
   &.test_intro{

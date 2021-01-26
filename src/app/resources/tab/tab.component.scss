@@ -1,11 +1,11 @@
 ::ng-deep.mat-tab-group {
   margin-top: -90px;
   align-items: center;
-
+  
   @media (max-width: 767px) {
     margin-top: -60px;
   }
-
+  
   //&.test_chinese {
   //  .mat-ink-bar {
   //    background-color: #3B9FBE !important;
@@ -17,64 +17,96 @@
   //    background-color: #FCC811 !important;
   //  }
   //}
-  mat-ink-bar{
-    display: none!important;
+  mat-ink-bar {
+    display: none !important;
   }
+  
   .mat-tab-header {
     border-radius: 16px 16px 0px 0px;
     width: 812px;
     height: 90px;
     background-color: #ffffff;
-
-
-    .tab_blue {
-      color: #3B9FBE;
-    }
-
+    
+    
     @media (max-width: 767px) {
       width: 100%;
     }
-
-    //&[ng-reflect-selected-index="0"] {
-    //  .mat-ink-bar {
-    //    background-color: #3B9FBE !important;
-    //  }
-    //}
-    //
-    //&[ng-reflect-selected-index="1"] {
-    //  .mat-ink-bar {
-    //    background-color: #FCC811 !important;
-    //  }
-    //}
   }
-
+  
   .mat-tab-label {
     width: 100%;
     height: 90px;
     padding: 9px 24px;
-    &.mat-tab-label-active {
-      opacity: 1;
+    opacity: 1;
+    color: #969CA0;
+    
+    img {
+      background-color: #969CA0;
+      
+      &.icon_course {
+        -webkit-mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
+        mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
+      }
+      
+      &.icon_preparation {
+        -webkit-mask: url("/assets/image/resources/icon/icon_preparation_normal.svg") no-repeat center;
+        mask: url("/assets/image/resources/icon/icon_preparation_normal.svg") no-repeat center;
+      }
+      &.icon_smart{
+        -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
+        mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
+      }
+      @media (max-width: 991.98px) {
+        &.icon_course {
+          -webkit-mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
+        }
+  
+        &.icon_preparation {
+          -webkit-mask: url("/assets/image/resources/icon/icon_preparation_normal_p.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_preparation_normal_p.svg") no-repeat center;
+        }
+        &.icon_smart{
+          -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
+        }
+      }
     }
-
+    
+    &.mat-tab-label-active {
+      color: #3B9FBE;
+      
+      img {
+        background-color: #3B9FBE;
+      }
+    }
+    
     .mat-tab-label-content {
       display: block;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
       opacity: 1;
-      color: #969CA0;
-
+      @media (max-width: 991.98px) {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        font-weight: normal;
+      }
+      
       img {
         max-height: 48px;
+        width: 48px;
+        height: 48px;
       }
     }
   }
-
+  
   .mat-tab-body-wrapper {
     //width: 812px;
     width: 100%;
     text-align: center;
   }
-
-
+  
+  
 }
