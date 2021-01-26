@@ -117,17 +117,25 @@
 .preparation_mid {
     padding: 64px 0;
     background: url(/assets/image/resources/pic_BKG.png), #FBF9F7;
+    &__width {
+        width: 800px;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
     h1 {
         font-weight: 700;
         font-size: 30px;
         line-height: 44px;
         color: #2D3942;
-        margin-bottom: 60px;
         text-align: left;
-        span {
-            padding-bottom: 10px;
-            border-bottom: 6px solid #FCC811;
-        }
+    }
+    hr {
+        height: 6px;
+        width: 80px;
+        background: #FCC811;
+        margin: 10px 0 60px 0;
+        border: none;
     }
     &__item {
         display: flex;
@@ -153,6 +161,7 @@
             width: 236px;
             img {
                 margin: 0 0 36px 0;
+                width: 170px;
             }
             &__alt {
                 font-weight: 400;
