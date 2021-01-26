@@ -12,6 +12,7 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy
   'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_4_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_5_phone.png',
 ]
+
 @Component({
   selector: 'app-about-ponddy',
   templateUrl: './about-ponddy.component.html',
@@ -22,16 +23,21 @@ export class AboutPonddyComponent implements OnInit {
   courseComponent: CarouselComponent;
 
   carouselImageList: any[]
+  carouselHeight: number
 
   constructor(public device: DeviceService) {
     if (this.device.$mobile.getValue()) {
       this.carouselImageList = imagmeListMobile
+      this.carouselHeight = 72
     } else {
       this.carouselImageList = imageList
+      this.carouselHeight = 92
     }
   }
+
   ngOnInit(): void {
   }
+
   coursePrev(): void {
     this.courseComponent.prev()
   }

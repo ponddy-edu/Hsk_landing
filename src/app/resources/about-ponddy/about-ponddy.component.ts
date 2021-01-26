@@ -22,12 +22,15 @@ export class AboutPonddyComponent implements OnInit {
   courseComponent: CarouselComponent;
 
   carouselImageList: any[]
+  carouselHeight: number
 
   constructor(public device: DeviceService) {
     if (this.device.$mobile.getValue()) {
-      this.carouselImageList = imagmeListMobile
+      this.carouselImageList = imagmeListMobile;
+      this.carouselHeight = 72
     } else {
       this.carouselImageList = imageList
+      this.carouselHeight = 92
     }
   }
   ngOnInit(): void {
