@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="table">
+        <div *ngIf="web" class="table">
             <div class="table__th ponddy_base">
                 <div>HSK Self-study Resource</div>
             </div>
@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        <div class="table_mobile">
+        <div *ngIf="mobile" class="table_mobile">
             <div class="table_mobile__title">
                 <div>HSK Self-study Resource</div>
             </div>
@@ -266,7 +266,7 @@
                     <div class="preparation_mid__number">1</div>
                     <div class="preparation_mid__distribution__text">
                         Listen to the recordings in the “Main Content” and try to guess the main idea of the reading.
-                        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_01.svg'">
+                        <img [useSrcset]="true" [lazyLoad]="pic_01">
                     </div>
                 </div>
 
@@ -275,7 +275,7 @@
                         <div class="preparation_mid__number">2</div>
                         <div class="preparation_mid__distribution__text">
                             Click on unfamiliar words in the reading to know how the words are used in context with the help of the dictionary.
-                            <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_02.svg'">
+                            <img [useSrcset]="true" [lazyLoad]="pic_02">
                         </div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@
                     <div class="preparation_mid__number">1</div>
                     <div class="preparation_mid__distribution__text">
                         Use the filter function in “Main Content” to select level 3 words. Skim through the reading to find unfamiliar words. This allows you to quickly find level-appropriate words that you can learn and expand your vocabulary.
-                        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_03.svg'">
+                        <img [useSrcset]="true" [lazyLoad]="pic_03">
                     </div>
                 </div>
                 <div class="preparation_mid__distribution">
@@ -304,37 +304,62 @@
                     <div class="preparation_mid__distribution__text">
                         Click on a word or phrase to activate Ponds and expand your knowledge. You can quickly check for any possible key points you’ve missed.
                         <br> (When opening Ponds, please make sure to switch off words that are above your current level.)
-                        <div class="preparation_mid__item">
+                        <div *ngIf="web" class="preparation_mid__item">
                             <div class="preparation_mid__distribution__img">
-                                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_04.svg'">
+                                <img [useSrcset]="true" [lazyLoad]="pic_04">
                                 <div class="preparation_mid__distribution__img__alt">
                                     a. <span class="preparation_mid__distribution__img__alt__title">Word Pond</span>- allows you to find words or phrases that often appear together in different contexts. You can quickly identify unfamiliar word combinations
                                     and learn how to use them.
                                 </div>
                             </div>
                             <div class="preparation_mid__distribution__img">
-                                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_05.gif'">
+                                <img [useSrcset]="true" [lazyLoad]="pic_05">
                                 <div class="preparation_mid__distribution__img__alt">
                                     b. <span class="preparation_mid__distribution__img__alt__title">Character Pond</span>- you can find out how a character is used extensively to form other words or phrases. You can quickly identify unfamiliar words or
                                     phrases, form new phrases with ease, and learn how to use them.
                                 </div>
                             </div>
                             <div class="preparation_mid__distribution__img">
-                                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_06.gif'">
+                                <img [useSrcset]="true" [lazyLoad]="pic_06">
                                 <div class="preparation_mid__distribution__img__alt">
                                     c. <span class="preparation_mid__distribution__img__alt__title">Radical Pond</span>- you can see other frequently used characters with the same radical, find unfamiliar characters, improve your memory, and enhance your
                                     ability to recognize characters.
                                 </div>
                             </div>
                         </div>
-
+                        <carousel *ngIf="mobile" #course_carousel [height]="courseHeight" [cellWidth]="courseWidth" [dots]="false" [arrows]="false">
+                            <div class="preparation_mid__item">
+                                <div class="preparation_mid__distribution__img">
+                                    <img [useSrcset]="true" [lazyLoad]="pic_04">
+                                    <div class="preparation_mid__distribution__img__alt">
+                                        a. <span class="preparation_mid__distribution__img__alt__title">Word Pond</span>- allows you to find words or phrases that often appear together in different contexts. You can quickly identify unfamiliar word combinations
+                                        and learn how to use them.
+                                    </div>
+                                </div>
+                                <div class="preparation_mid__distribution__img">
+                                    <img [useSrcset]="true" [lazyLoad]="pic_05">
+                                    <div class="preparation_mid__distribution__img__alt">
+                                        b. <span class="preparation_mid__distribution__img__alt__title">Character Pond</span>- you can find out how a character is used extensively to form other words or phrases. You can quickly identify unfamiliar words
+                                        or phrases, form new phrases with ease, and learn how to use them.
+                                    </div>
+                                </div>
+                                <div class="preparation_mid__distribution__img">
+                                    <img [useSrcset]="true" [lazyLoad]="pic_06">
+                                    <div class="preparation_mid__distribution__img__alt">
+                                        c. <span class="preparation_mid__distribution__img__alt__title">Radical Pond</span>- you can see other frequently used characters with the same radical, find unfamiliar characters, improve your memory, and enhance
+                                        your ability to recognize characters.
+                                    </div>
+                                </div>
+                            </div>
+                        </carousel>
                     </div>
                 </div>
+
                 <div class="preparation_mid__distribution">
                     <div class="preparation_mid__number">3</div>
                     <div class="preparation_mid__distribution__text">
                         Click on “Exercises.” Then, use “Word Puzzle,” “Match the Pinyin,” and “Match the Meaning” to test your vocabulary learning result.
-                        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_07.svg'">
+                        <img [useSrcset]="true" [lazyLoad]="pic_07">
                     </div>
                 </div>
             </div>
@@ -355,21 +380,21 @@
                     <div class="preparation_mid__number">1</div>
                     <div class="preparation_mid__distribution__text">
                         Click on “Grammar” and use the filter function to display grammar points of level 3 and below.
-                        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_08.svg'">
+                        <img [useSrcset]="true" [lazyLoad]="pic_08">
                     </div>
                 </div>
                 <div class="preparation_mid__distribution">
                     <div class="preparation_mid__number">2</div>
                     <div class="preparation_mid__distribution__text">
                         Read the grammar explanations and the sample sentences (with recordings) carefully so that you can fully understand the usages.
-                        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_09.svg'">
+                        <img [useSrcset]="true" [lazyLoad]="pic_09">
                     </div>
                 </div>
                 <div class="preparation_mid__distribution">
                     <div class="preparation_mid__number">3</div>
                     <div class="preparation_mid__distribution__text">
                         Click on “Exercises” and check your learning results with “Drag to Fill.”
-                        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_10.svg'">
+                        <img [useSrcset]="true" [lazyLoad]="pic_10">
                     </div>
                 </div>
             </div>
