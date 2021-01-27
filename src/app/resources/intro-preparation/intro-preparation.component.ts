@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { collectExternalReferences } from '@angular/compiler';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {CarouselComponent} from "angular-responsive-carousel";
 import {DeviceService} from "../../../utils/device.service";
 
@@ -34,15 +35,16 @@ export class IntroPreparationComponent implements OnInit {
   courseCarousel: CarouselComponent;
   courseWidth: number
   courseHeight: number
+  @Output()
+  downloadChange = new EventEmitter<boolean>()
+
   constructor(public device: DeviceService) {
     if (device.$mobile.getValue()) {
-      console.log('mobile')
       this.courseWidth = 330
       this.courseHeight = 550
       this.mobile = true
       this.web = false
     } else {
-      console.log('web')
       this.courseHeight = 600
       this.courseWidth = 500
       this.mobile = false
@@ -50,7 +52,10 @@ export class IntroPreparationComponent implements OnInit {
     }
   }
   ngOnInit() {
+  }
 
+  changeDownload() {
+    this.downloadChange.emit(true)
   }
 
 }

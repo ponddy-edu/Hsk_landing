@@ -17,7 +17,7 @@
                 <img [src]="'assets/image/resources/preparation.svg'">
                 <div>Preparation</div>
             </ng-template>
-            <app-intro-preparation></app-intro-preparation>
+            <app-intro-preparation (downloadChange)="setDownload($event)"></app-intro-preparation>
         </mat-tab>
 
         <mat-tab>

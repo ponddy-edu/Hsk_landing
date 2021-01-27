@@ -1,7 +1,9 @@
 <app-header [actvieMenu]="'resources'"></app-header>
 
-<app-landing [tab]="tab"></app-landing>
-<app-tab (tabChange)="setTab($event)"></app-tab>
-<app-about-ponddy></app-about-ponddy>
+<app-download *ngIf="isDownloadPage"></app-download>
+
+<app-landing *ngIf="!isDownloadPage" [tab]="tab"></app-landing>
+<app-tab *ngIf="!isDownloadPage" (tabChange)="setTab($event)" (downloadChange)="setDownloadRe($event)"></app-tab>
+<app-about-ponddy *ngIf="!isDownloadPage"></app-about-ponddy>
 
 <app-footer></app-footer>
