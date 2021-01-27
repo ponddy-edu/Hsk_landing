@@ -11,7 +11,8 @@ import { IntroCourseComponent } from './intro-course/intro-course.component';
 import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
-import { LayoutModule } from '@angular/cdk/layout';
+import { DownloadComponent } from './download/download.component';
+
 
 
 const routes: Routes = [
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, DownloadComponent],
   imports: [
     CommonModule,
     ShareModule,
@@ -27,7 +28,6 @@ const routes: Routes = [
     LazyLoadImageModule,
     RouterModule.forChild(routes),
     IvyCarouselModule,
-    LayoutModule,
   ]
 })
 export class ResourcesModule {
