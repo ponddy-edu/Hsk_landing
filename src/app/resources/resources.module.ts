@@ -12,6 +12,8 @@ import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
 import { SmartLearnComponent } from './smart-learn/smart-learn.component';
+import { LayoutModule } from '@angular/cdk/layout';
+
 
 const routes: Routes = [
   {path: 'resources', component: ResourcesComponent},
@@ -26,6 +28,7 @@ const routes: Routes = [
     LazyLoadImageModule,
     RouterModule.forChild(routes),
     IvyCarouselModule,
+    LayoutModule,
   ]
 })
 export class ResourcesModule {
