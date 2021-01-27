@@ -165,6 +165,12 @@
                         display: inline-flex;
                         border-bottom: 1px solid #576168;
                         margin: 8px 0;
+                        a {
+                            color: #576168;
+                            &:hover {
+                                color: #6ACFED;
+                            }
+                        }
                     }
                 }
                 &__no {
