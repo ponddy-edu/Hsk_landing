@@ -38,10 +38,10 @@ export class IntroPreparationComponent implements OnInit {
   constructor(public device: DeviceService) {
     if (device.$mobile.getValue()) {
       this.courseWidth = 330
-      this.courseHeight = 600
+      this.courseHeight = 550
     } else {
       this.courseHeight = 600
-      this.courseWidth = 300
+      this.courseWidth = 500
     }
   }
   ngOnInit() {
