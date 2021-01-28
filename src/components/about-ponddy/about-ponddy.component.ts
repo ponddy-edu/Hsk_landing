@@ -23,6 +23,10 @@ export class AboutPonddyComponent implements OnInit {
   @Input()
   descriptionSection2 = true
 
+  @Input()
+  ColorBg = '#EBF2F5'
+
+
   height = 101
 
   @ViewChild('course_carousel')
