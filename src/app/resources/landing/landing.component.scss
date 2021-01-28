@@ -1,71 +1,70 @@
 .landing {
-    margin-top: 60px;
+  margin-top: 60px;
+  height: calc(100vh - 65px);
+  box-sizing: border-box;
+  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/index_pic_web.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
-    box-sizing: border-box;
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/index_pic_web.png");
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 62px;
+    color: #FFFFFF;
     @media (max-width: 991.98px) {
-        height: calc(100vh - 65px);
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/index_pic_phone.png");
-        background-size: cover;
-        background-repeat: no-repeat;
+      font-size: 32px;
+      line-height: 42px;
     }
-    h1 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 56px;
-        line-height: 62px;
-        color: #FFFFFF;
-        @media (max-width: 991.98px) {
-            font-size: 32px;
-            line-height: 42px;
-        }
+  }
+  .w-100 {
+    height: 100%;
+  }
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    .padding_space {
+      height: 33%;
+      width: 100%;
     }
-    .w-100 {
-        height: 100%;
+    .mask_space {
+      height: 67%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     }
-    .background {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        .padding_space {
-            height: 33%;
-            width: 100%;
-        }
-        .mask_space {
-            height: 67%;
-            width: 100%;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-        }
-    }
-    .container {
-        margin-top: 90px;
-    }
+  }
+  .container {
+    margin-top: 90px;
+  }
 }
 
 .landing__preparation {
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+  background-size: cover;
+  @media (max-width: 991.98px) {
+    height: calc(100vh - 65px);
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .title {
+    width: 680px;
+  }
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 62px;
+    color: #FFFFFF;
     @media (max-width: 991.98px) {
-        height: calc(100vh - 65px);
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
+      font-size: 32px;
+      line-height: 42px;
     }
-    .title {
-        width: 680px;
-    }
-    h1 {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 42px;
-        line-height: 62px;
-        color: #FFFFFF;
-        @media (max-width: 991.98px) {
-            font-size: 32px;
-            line-height: 42px;
-        }
-    }
+  }
 }

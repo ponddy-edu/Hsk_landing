@@ -147,7 +147,7 @@
     height: 240px;
     margin-top: 52px;
     @media (max-width: 767px) {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation-other_mobile.svg");
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/pic_11_phone.png");
         height: 386px;
         background-size: 100% 100%;
         background-position: center top;
@@ -172,6 +172,7 @@
                 line-height: 36px;
                 font-weight: 900;
                 letter-spacing: 0.5px;
+                padding: 0 20px;
             }
         }
         h2 {
