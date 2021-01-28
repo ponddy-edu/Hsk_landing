@@ -2,6 +2,9 @@
     padding: 64px 20px;
     background: #FFFFFF;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+    @media (max-width: 768px) {
+        padding: 24px 20px;
+    }
     h1 {
         font-style: normal;
         font-weight: 900;
@@ -11,6 +14,12 @@
         letter-spacing: 0.02em;
         color: #2D3942;
         margin-bottom: 40px;
+        @media (max-width: 768px) {
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+        }
     }
     &__title {
         width: 760px;
@@ -24,6 +33,12 @@
         color: #2D3942;
         &__title {
             color: #579EBB;
+        }
+        @media (max-width: 768px) {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
         }
     }
     &__annotation {
@@ -93,18 +108,20 @@
                     letter-spacing: 0.5px;
                 }
                 div {
+                    cursor: pointer;
                     border-bottom: 1px solid #576168;
                     font-size: 20px;
                     line-height: 30px;
                     letter-spacing: 1px;
                     color: #576168;
                     font-weight: 400;
-                    &:hover {
-                        border-bottom: 1px solid #6ACFED;
-                    }
                     a {
                         color: #576168;
-                        &:hover {
+                    }
+                    &:hover {
+                        border-bottom: 1px solid #6ACFED;
+                        color: #6ACFED;
+                        a {
                             color: #6ACFED;
                         }
                     }
@@ -190,6 +207,9 @@
 .preparation_mid {
     padding: 64px 20px;
     background: url(/assets/image/resources/pic_BKG.png), #FBF9F7;
+    @media (max-width: 768px) {
+        padding: 30px 20px;
+    }
     &__width {
         width: 800px;
         @media (max-width: 767px) {
@@ -202,6 +222,13 @@
         line-height: 44px;
         color: #2D3942;
         text-align: left;
+        @media (max-width: 767px) {
+            font-style: 400;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+        }
     }
     hr {
         height: 6px;
@@ -229,8 +256,18 @@
             color: #2D3942;
             margin: 0 24px;
             width: 690px;
+            p {
+                height: 120px;
+            }
             @media (max-width: 767px) {
                 width: 286px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: 0.5px;
+                p {
+                    height: auto;
+                }
             }
             .img_small {
                 width: 360px;
@@ -243,6 +280,7 @@
                 width: 690px;
                 @media (max-width: 767px) {
                     width: 320px;
+                    margin: 8px 0 36px -30px;
                 }
             }
         }
@@ -284,17 +322,21 @@
         line-height: 30px;
         letter-spacing: 1px;
         color: #3B9FBE;
+        @media (max-width: 767px) {
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
     }
-    
-    ::ng-deep .carousel-container {
+     ::ng-deep .carousel-container {
         margin: 36px 72px 80px -36px;
         width: 780px!important;
         @media (max-width: 767px) {
             width: 320px!important;
         }
     }
-    
-    ::ng-deep .carousel-cells {
+     ::ng-deep .carousel-cells {
         width: 300px!important;
         .preparation_mid__distribution__img {
             margin: 36px 36px 80px 0;
@@ -303,13 +345,13 @@
 }
 
 .other {
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation-other.svg");
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_11.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     height: 540px;
     @media (max-width: 767px) {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation-other_mobile.svg");
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/pic_11_phone.png");
         height: 386px;
         background-size: 100% auto;
         background-position: center top;
@@ -360,5 +402,3 @@
         display: flex;
     }
 }
-
-
