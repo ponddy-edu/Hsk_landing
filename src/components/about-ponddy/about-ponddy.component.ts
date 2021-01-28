@@ -26,9 +26,9 @@ export class AboutPonddyComponent implements OnInit {
   @Input()
   colorStyle = 'orange' //blue
 
-  ColorClass = ''
-  ButtonImage = ''
-  ColorBg = ''
+  colorClass = ''
+  buttonImage = ''
+  colorBg = ''
 
 
 
@@ -54,13 +54,13 @@ export class AboutPonddyComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.colorStyle)
     if(this.colorStyle === 'orange'){
-      this.ColorClass = 'orange_text'
-      this.ButtonImage = '/assets/image/icon/btn_orange_normal.svg'
-      this.ColorBg = '#F5F0EB'
+      this.colorClass = 'orange_text'
+      this.buttonImage = '/assets/image/icon/btn_orange_normal.svg'
+      this.colorBg = '#F5F0EB'
     } else {
-      this.ColorClass = 'blue_text'
-      this.ButtonImage = '/assets/image/icon/btn_blue_normal.svg'
-      this.ColorBg = '#EBF2F5'
+      this.colorClass = 'blue_text'
+      this.buttonImage = '/assets/image/icon/btn_blue_normal.svg'
+      this.colorBg = '#EBF2F5'
     }
   }
 
