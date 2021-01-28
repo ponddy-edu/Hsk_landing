@@ -10,11 +10,22 @@ export class TabComponent implements OnInit {
   @Output()
   tabChange = new EventEmitter<number>()
 
+  @Output()
+  downloadChange = new EventEmitter<boolean>()
+
+  isDownloadPage = false
+
+
 
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  setDownload(downloadIndex: any) {
+    this.isDownloadPage = downloadIndex
+    this.downloadChange.emit(downloadIndex)
   }
 
   changeTab(tabIndex: any) {

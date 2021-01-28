@@ -7,7 +7,7 @@
             <div class="preparation_top__title">
                 <p class="preparation_top__distribution">
                     Not sure how to prepare for the HSK test? Try
-                    <span class="preparation_top__distribution__title">Ponddy Reader</span> ! Choose the levels* and collections that meet your need and go over the Pondlets (interactive learning modules) following the tips below for an efficient self-review.
+                    <a href="#" class="preparation_top__distribution__title">Ponddy Reader</a> ! Choose the levels* and collections that meet your need and go over the Pondlets (interactive learning modules) following the tips below for an efficient self-review.
                 </p>
                 <p class="preparation_top__annotation">*The level display system in Ponddy Reader can be adjusted according to your needs</p>
             </div>
@@ -264,18 +264,18 @@
             <div class="col-12 text-center preparation_mid__item">
                 <div class="preparation_mid__distribution">
                     <div class="preparation_mid__number">1</div>
-                    <div class="preparation_mid__distribution__text">
+                    <div class="preparation_mid__distribution__text text_small">
                         Listen to the recordings in the “Main Content” and try to guess the main idea of the reading.
-                        <img [useSrcset]="true" [lazyLoad]="pic_01">
+                        <img class="img_small" [useSrcset]="true" [lazyLoad]="pic_01">
                     </div>
                 </div>
 
                 <div class="preparation_mid__item">
                     <div class="preparation_mid__distribution">
                         <div class="preparation_mid__number">2</div>
-                        <div class="preparation_mid__distribution__text">
+                        <div class="preparation_mid__distribution__text text_small">
                             Click on unfamiliar words in the reading to know how the words are used in context with the help of the dictionary.
-                            <img [useSrcset]="true" [lazyLoad]="pic_02">
+                            <img class="img_small" [useSrcset]="true" [lazyLoad]="pic_02">
                         </div>
                     </div>
                 </div>
@@ -302,8 +302,10 @@
                 <div class="preparation_mid__distribution">
                     <div class="preparation_mid__number">2</div>
                     <div class="preparation_mid__distribution__text">
-                        Click on a word or phrase to activate Ponds and expand your knowledge. You can quickly check for any possible key points you’ve missed.
-                        <br> (When opening Ponds, please make sure to switch off words that are above your current level.)
+                        <div class="text_width">
+                            Click on a word or phrase to activate Ponds and expand your knowledge. You can quickly check for any possible key points you’ve missed.
+                            <br> (When opening Ponds, please make sure to switch off words that are above your current level.)
+                        </div>
                         <div *ngIf="web" class="preparation_mid__item">
                             <div class="preparation_mid__distribution__img">
                                 <img [useSrcset]="true" [lazyLoad]="pic_04">
@@ -408,7 +410,7 @@
             <div class="col-11 col-md-12 justify-content-center text-center">
                 <h1 i18n class="title">Other Online Test Prep Resources</h1>
                 <h2 i18n class="">Chinese Tests Resource Center</h2>
-                <button i18n class="btn_focus-primary">Download</button>
+                <button (click)="changeDownload()" i18n class="btn_focus-primary">Download</button>
             </div>
         </div>
 

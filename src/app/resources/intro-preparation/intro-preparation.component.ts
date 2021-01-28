@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { collectExternalReferences } from '@angular/compiler';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {CarouselComponent} from "angular-responsive-carousel";
 import {DeviceService} from "../../../utils/device.service";
 
@@ -35,23 +35,27 @@ export class IntroPreparationComponent implements OnInit {
   courseCarousel: CarouselComponent;
   courseWidth: number
   courseHeight: number
+  @Output()
+  downloadChange = new EventEmitter<boolean>()
+
   constructor(public device: DeviceService) {
     if (device.$mobile.getValue()) {
       this.courseWidth = 330
-      this.courseHeight = 600
+      this.courseHeight = 550
+      this.mobile = true
+      this.web = false
     } else {
       this.courseHeight = 600
-      this.courseWidth = 300
+      this.courseWidth = 500
+      this.mobile = false
+      this.web = true
     }
   }
   ngOnInit() {
-
   }
 
-  // constructor(private breakpointObserver: BreakpointObserver) {}
-  // ngOnInit() {
-  //   const isSmallScreen = breakpointObserver.isMatched('(max-width: 768px)');
-  //   console.log(isSmallScreen);
-  // }
+  changeDownload() {
+    this.downloadChange.emit(true)
+  }
 
 }

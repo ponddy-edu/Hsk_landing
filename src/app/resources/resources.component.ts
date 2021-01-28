@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesComponent implements OnInit {
   public tab = 0
+  isDownloadPage = false
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +16,8 @@ export class ResourcesComponent implements OnInit {
 
   setTab(tabIndex: number) {
     this.tab = tabIndex
+  }
+  setDownloadRe(downloadIndex: any) {
+    this.isDownloadPage = downloadIndex
   }
 }

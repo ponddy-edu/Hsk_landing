@@ -17,8 +17,7 @@
                 <img class="icon_preparation">
                 <div>Preparation</div>
             </ng-template>
-<!--            <app-intro-preparation></app-intro-preparation>-->
-            <app-smart-learn></app-smart-learn>
+            <app-intro-preparation (downloadChange)="setDownload($event)"></app-intro-preparation>
         </mat-tab>
 
         <mat-tab>

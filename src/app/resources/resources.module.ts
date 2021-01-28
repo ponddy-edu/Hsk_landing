@@ -11,6 +11,8 @@ import { IntroCourseComponent } from './intro-course/intro-course.component';
 import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
+import { DownloadComponent } from './download/download.component';
+
 import { SmartLearnComponent } from './smart-learn/smart-learn.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -20,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, SmartLearnComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, DownloadComponent, SmartLearnComponent],
   imports: [
     CommonModule,
     ShareModule,
