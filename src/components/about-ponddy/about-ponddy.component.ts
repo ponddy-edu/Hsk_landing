@@ -24,7 +24,12 @@ export class AboutPonddyComponent implements OnInit {
   descriptionSection2 = true
 
   @Input()
-  ColorBg = '#EBF2F5'
+  colorStyle = 'orange' //blue
+
+  ColorClass = ''
+  ButtonImage = ''
+  ColorBg = ''
+
 
 
   height = 101
@@ -47,6 +52,16 @@ export class AboutPonddyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.colorStyle)
+    if(this.colorStyle === 'orange'){
+      this.ColorClass = 'orange_text'
+      this.ButtonImage = '/assets/image/icon/btn_orange_normal.svg'
+      this.ColorBg = '#F5F0EB'
+    } else {
+      this.ColorClass = 'blue_text'
+      this.ButtonImage = '/assets/image/icon/btn_blue_normal.svg'
+      this.ColorBg = '#EBF2F5'
+    }
   }
 
   coursePrev(): void {
