@@ -1,0 +1,57 @@
+.about_select {
+  padding: 64px 0;
+  @media (max-width: 991.98px) {
+    padding: 24px 0;
+  }
+  .select {
+    border-bottom: 1px solid rgba(45, 57, 66, 0.3);
+    padding-bottom: 36px;
+    @media (max-width: 991.98px) {
+      padding-bottom: 24px;
+    }
+    &__text {
+      background-color: white;
+      border-radius: 32px;
+      border: 1px solid #D5D7D9;
+      box-sizing: border-box;
+      width: 478px;
+      height: 42px;
+      @media (max-width: 991.98px) {
+        width: 320px;
+        height: 42px;
+      }
+      button {
+        background: #00000000;
+        border: none;
+      }
+      input {
+        border: none;
+      }
+      img {
+        padding: 11px 12px;
+      }
+    }
+    h1 {
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0.02em;
+      @media (max-width: 991.98px) {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+      }
+    }
+    h2 {
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #F3A024;
+      @media (max-width: 991.98px) {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+  }
+}
