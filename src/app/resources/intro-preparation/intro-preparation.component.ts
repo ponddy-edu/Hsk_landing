@@ -40,7 +40,7 @@ export class IntroPreparationComponent implements OnInit {
 
   constructor(public device: DeviceService) {
     if (device.$mobile.getValue()) {
-      this.courseWidth = 330
+      this.courseWidth = 236
       this.courseHeight = 550
       this.mobile = true
       this.web = false
