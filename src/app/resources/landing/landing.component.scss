@@ -46,9 +46,10 @@
 
 .landing__preparation {
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+    background-size: cover;
     @media (max-width: 991.98px) {
         height: calc(100vh - 65px);
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_phone.png");
         background-size: cover;
         background-repeat: no-repeat;
     }
