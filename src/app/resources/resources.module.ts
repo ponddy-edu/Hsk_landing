@@ -13,6 +13,8 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
 import { DownloadComponent } from './download/download.component';
 
+import { SmartLearnComponent } from './smart-learn/smart-learn.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 const routes: Routes = [
@@ -20,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, DownloadComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, DownloadComponent, SmartLearnComponent],
   imports: [
     CommonModule,
     ShareModule,
@@ -28,6 +30,7 @@ const routes: Routes = [
     LazyLoadImageModule,
     RouterModule.forChild(routes),
     IvyCarouselModule,
+    LayoutModule,
   ]
 })
 export class ResourcesModule {
