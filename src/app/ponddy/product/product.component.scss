@@ -4,7 +4,6 @@
   @media (max-width: 767px) {
     padding: 0 20px 32px;
   }
-  
   h1 {
     padding: 64px 0 50px;
     margin: 0;
@@ -13,10 +12,8 @@
       font-size: 24px;
       line-height: 36px;
       padding: 24px 0;
-  
     }
   }
-  
   .container {
     padding-left: 0;
     position: relative;
@@ -24,14 +21,12 @@
       padding-left: var(--bs-gutter-x, 0.75rem);
     }
   }
-  
   .product_item {
     padding-bottom: 140px;
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       padding-bottom: 24px;
     }
   }
-  
   mat-card {
     width: 450px;
     height: 690px;
@@ -47,9 +42,7 @@
       height: auto;
       margin-top: 0;
       border-radius: 0 0 12px 12px;
-      
     }
-    
     mat-card-header {
       height: 206px;
       padding: 40px 0 24px 16px;
@@ -61,11 +54,9 @@
           height: auto;
         }
       }
-      
-      ::ng-deep.mat-card-header-text {
+       ::ng-deep.mat-card-header-text {
         margin: 0 !important;
       }
-      
       img {
         height: 165px;
         width: 100%;
@@ -74,7 +65,6 @@
         }
       }
     }
-    
     mat-card-content {
       padding: 24px 16px;
       @media screen and (max-width: 767px) {
@@ -87,20 +77,20 @@
         line-height: 32px;
         letter-spacing: 1px;
         color: #576168;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+          line-height: 30px;
+          letter-spacing: 0.5px;
+        }
       }
     }
-    
     &.right {
       margin-left: auto;
     }
-    
     &.left {
       margin-right: auto;
     }
-    
-    
   }
-  
   img.background_image {
     border-radius: 12px;
     height: auto;
@@ -111,10 +101,6 @@
       position: initial;
       width: 100%;
       border-radius: 12px 12px 0 0;
-      
     }
   }
-  
-  
 }
-
