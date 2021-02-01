@@ -4,6 +4,5 @@
 
 <app-landing *ngIf="!isDownloadPage" [tab]="tab"></app-landing>
 <app-tab *ngIf="!isDownloadPage" (tabChange)="setTab($event)" (downloadChange)="setDownloadRe($event)"></app-tab>
-<app-about-ponddy *ngIf="!isDownloadPage"></app-about-ponddy>
-
+<app-share-about-ponddy *ngIf="!isDownloadPage" [descriptionSection2]="false" [colorStyle]="'orange'"></app-share-about-ponddy>
 <app-footer></app-footer>

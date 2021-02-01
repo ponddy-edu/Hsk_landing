@@ -23,6 +23,15 @@ export class AboutPonddyComponent implements OnInit {
   @Input()
   descriptionSection2 = true
 
+  @Input()
+  colorStyle = 'orange' //blue
+
+  colorClass = ''
+  buttonImage = ''
+  colorBg = ''
+
+
+
   height = 101
 
   @ViewChild('course_carousel')
@@ -43,6 +52,16 @@ export class AboutPonddyComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.colorStyle)
+    if(this.colorStyle === 'orange'){
+      this.colorClass = 'orange_text'
+      this.buttonImage = '/assets/image/icon/btn_orange_normal.svg'
+      this.colorBg = '#F5F0EB'
+    } else {
+      this.colorClass = 'blue_text'
+      this.buttonImage = '/assets/image/icon/btn_blue_normal.svg'
+      this.colorBg = '#EBF2F5'
+    }
   }
 
   coursePrev(): void {
