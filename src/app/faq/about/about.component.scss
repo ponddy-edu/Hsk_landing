@@ -43,7 +43,7 @@
         width: 478px;
         height: 42px;
         @media (max-width: 991.98px) {
-          width: 280px;
+          width: 275px;
         }
       }
       button {
@@ -67,11 +67,12 @@
     border-bottom: 1px solid rgba(45, 57, 66, 0.3);
     justify-content: center;
     @media (max-width: 991.98px) {
-      padding: 24px 0;
+      padding: 0 0 24px 0;
       display: block;
     }
     .tab_group {
       display: flex;
+      justify-content: center;
     }
     .tab_item {
       cursor: pointer;
@@ -92,6 +93,9 @@
       &:hover {
         background: #F3A024;
         color: #ffffff;
+        & img {
+          background-color: #ffffff;
+        }
       }
       .text {
         font-weight: bold;
@@ -105,114 +109,60 @@
           line-height: 18px;
           text-align: center;
           letter-spacing: 0.3px;
-          padding: 20px 13px 0px 13px;
+          padding: 20px 13px 4px 13px;
+          height: 75px;
         }
       }
       img {
         padding-bottom: 35px;
+        background-color: #F3A024;
+        max-height: 70px;
+        width: 70px;
+        height: 70px;
+        @media (max-width: 991.98px) {
+          width: 46px;
+          height: 46px;
+          padding-top: 20px;
+        }
       }
     }
     .item_test {
-      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Test Regist_web_01.svg");
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: 115px;
+      -webkit-mask: url("/assets/image/faq/icon_Test Regist_web_01.svg") no-repeat center;
+      mask: url("/assets/image/faq/icon_Test Regist_web_01.svg") no-repeat center;
       @media (max-width: 991.98px) {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_Test Regist_phone_01.svg");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 80px;
-      }
-      &:hover {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Test Regist_web_02.svg"), #F3A024;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 115px;
-        @media (max-width: 991.98px) {
-          background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_Test Regist_phone_02.svg"), #F3A024;
-          background-repeat: no-repeat;
-          background-position-x: center;
-          background-position-y: 80px;
-        }
+        -webkit-mask: url("/assets/image/faq/icon_Test Regist_phone_01.svg") no-repeat center;
+        mask: url("/assets/image/faq/icon_Test Regist_phone_01.svg") no-repeat center;
       }
     }
     .item_payments {
-      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Payments_web_01.svg");
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: 115px;
+      -webkit-mask: url("/assets/image/faq/icon_Payments_web_01.svg") no-repeat center;
+      mask: url("/assets/image/faq/icon_Payments_web_01.svg") no-repeat center;
       @media (max-width: 991.98px) {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_Payments_phone_01.svg");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 80px;
-      }
-      &:hover {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Payments_web_02.svg"), #F3A024;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 115px;
-        @media (max-width: 991.98px) {
-          background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_Payments_phone_02.svg"), #F3A024;
-          background-repeat: no-repeat;
-          background-position-x: center;
-          background-position-y: 80px;
-        }
+        -webkit-mask: url("/assets/image/faq/icon_Payments_phone_01.svg") no-repeat center;
+        mask: url("/assets/image/faq/icon_Payments_phone_01.svg") no-repeat center;
       }
     }
     .item_ponddy {
-      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_PonddyHSK_web_01.svg");
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: 115px;
+      -webkit-mask: url("/assets/image/faq/icon_PonddyHSK_web_01.svg") no-repeat center;
+      mask: url("/assets/image/faq/icon_PonddyHSK_web_01.svg") no-repeat center;
       @media (max-width: 991.98px) {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_PonddyHSK_phone_01.svg");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 80px;
-      }
-      &:hover {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_PonddyHSK_web_02.svg"), #F3A024;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 115px;
-        @media (max-width: 991.98px) {
-          background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_PonddyHSK_phone_02.svg"), #F3A024;
-          background-repeat: no-repeat;
-          background-position-x: center;
-          background-position-y: 80px;
-        }
+        -webkit-mask: url("/assets/image/faq/icon_PonddyHSK_phone_01.svg") no-repeat center;
+        mask: url("/assets/image/faq/icon_PonddyHSK_phone_01.svg") no-repeat center;
       }
     }
     .item_scores {
-      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_04_TestScores_web_01.svg");
-      background-repeat: no-repeat;
-      background-position-x: center;
-      background-position-y: 115px;
+      -webkit-mask: url("/assets/image/faq/icon_04_TestScores_web_01.svg") no-repeat center;
+      mask: url("/assets/image/faq/icon_04_TestScores_web_01.svg") no-repeat center;
       @media (max-width: 991.98px) {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_04_TestScores_phone_01.svg");
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 80px;
-      }
-      &:hover {
-        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_04_TestScores_web_02.svg"), #F3A024;
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: 115px;
-        @media (max-width: 991.98px) {
-          background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/icon_04_TestScores_phone_02.svg"), #F3A024;
-          background-repeat: no-repeat;
-          background-position-x: center;
-          background-position-y: 80px;
-        }
+        -webkit-mask: url("/assets/image/faq/icon_04_TestScores_phone_01.svg") no-repeat center;
+        mask: url("/assets/image/faq/icon_04_TestScores_phone_01.svg") no-repeat center;
       }
     }
   }
   .tab_content {
     padding-top: 60px;
     @media (max-width: 991.98px) {
-      padding-top: 24px;
+      padding: 24px 27px 0 27px;
     }
     .tab_wrap {
       display: flex;
