@@ -1,5 +1,5 @@
 .about_select {
-  padding: 64px 0;
+  padding: 60px 0 0 0;
   @media (max-width: 991.98px) {
     padding: 24px 0;
   }
@@ -9,32 +9,11 @@
     @media (max-width: 991.98px) {
       padding-bottom: 24px;
     }
-    &__text {
-      background-color: white;
-      border-radius: 32px;
-      border: 1px solid #D5D7D9;
-      box-sizing: border-box;
-      width: 478px;
-      height: 42px;
-      @media (max-width: 991.98px) {
-        width: 320px;
-        height: 42px;
-      }
-      button {
-        background: #00000000;
-        border: none;
-      }
-      input {
-        border: none;
-      }
-      img {
-        padding: 11px 12px;
-      }
-    }
     h1 {
       font-weight: 900;
       text-align: center;
       letter-spacing: 0.02em;
+      padding-bottom: 12px;
       @media (max-width: 991.98px) {
         font-size: 24px;
         line-height: 36px;
@@ -48,9 +27,31 @@
       text-align: center;
       letter-spacing: 0.5px;
       color: #F3A024;
+      margin: 0;
       @media (max-width: 991.98px) {
         font-size: 24px;
         line-height: 36px;
+      }
+    }
+    .input_wrap {
+      text-align: center;
+      input {
+        background-color: white;
+        border: 1px solid #D5D7D9;
+        border-radius: 0px 32px 32px 0px;
+        border-left: none;
+        width: 478px;
+        height: 42px;
+      }
+      button {
+        background: #ffffff;
+        height: 42px;
+        border: 1px solid #D5D7D9;
+        border-radius: 32px 0px 0px 32px;
+        border-right: none;
+      }
+      img {
+        padding: 11px 0 11px 5px;
       }
     }
   }
