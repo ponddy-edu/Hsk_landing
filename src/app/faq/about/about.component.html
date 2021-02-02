@@ -17,24 +17,32 @@
     <div class="row justify-content-center">
       <div class="col-11 col-md-10 tab">
         <div class="tab_group">
-          <div class="tab_item item_test">
-            <div class="text">Test Registration & Regulation</div>
-          </div>
-          <div class="tab_item item_payments">
-            <div class="text">Payments & Refunds</div>
-          </div>
+          <a href="faq/#item-test">
+            <div class="tab_item item_test">
+              <div class="text">Test Registration & Regulation</div>
+            </div>
+          </a>
+          <a href="faq/#item-payments">
+            <div class="tab_item item_payments">
+              <div class="text">Payments & Refunds</div>
+            </div>
+          </a>
         </div>
         <div class="tab_group">
-          <div class="tab_item item_ponddy">
-            <div class="text">Ponddy HSK Course</div>
-          </div>
-          <div class="tab_item item_scores">
-            <div class="text">Test Scores & Reports</div>
-          </div>
+          <a href="faq/#item-ponddy">
+            <div class="tab_item item_ponddy">
+              <div class="text">Ponddy HSK Course</div>
+            </div>
+          </a>
+          <a href="faq/#item-scores">
+            <div class="tab_item item_scores">
+              <div class="text">Test Scores & Reports</div>
+            </div>
+          </a>
         </div>
       </div>
       <!------------>
-      <div class="col-10 col-md-7 tab_content">
+      <div id="item-test" class="col-10 col-md-7 tab_content">
         <div class="tab_wrap">
           <div class="tab_item">
             <div class="item_img">
@@ -51,7 +59,7 @@
         </div>
       </div>
       <!------------>
-      <div class="col-10 col-md-7 tab_content">
+      <div id="item-payments" class="col-10 col-md-7 tab_content">
         <div class="tab_wrap">
           <div class="tab_item">
             <div class="item_img">
@@ -60,12 +68,12 @@
                 <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Payments_web_01.svg'">
               </div>
             </div>
-            <div class="item_url">
+            <div class="item_url web">
               <ul>
-                <li><a>Test Registration & Regulation</a></li>
-                <li class="active"><a class="active_a">Payments & Refunds</a></li>
-                <li><a>Ponddy HSK Course</a></li>
-                <li><a>Test Scores & Reports</a></li>
+                <li><a href="faq/#item-test">Test Registration & Regulation</a></li>
+                <li class="active"><a href="faq/#item-payments" class="active_a">Payments & Refunds</a></li>
+                <li><a href="faq/#item-ponddy">Ponddy HSK Course</a></li>
+                <li><a href="faq/#item-scores">Test Scores & Reports</a></li>
               </ul>
             </div>
           </div>
@@ -112,16 +120,23 @@
                 </li>
                 <li>
                   <h3>What equipment do I need to take online Chinese tests at home?</h3>
-                  <a href="#">See details</a>
+                  <a href="test">See details</a>
                 </li>
               </ol>
             </div>
           </div>
-
+          <div class="item_url mobile">
+            <ul>
+              <li><a href="faq/#item-test">Test Registration & Regulation</a></li>
+              <li class="active"><a href="faq/#item-payments" class="active_a">Payments & Refunds</a></li>
+              <li><a href="faq/#item-ponddy">Ponddy HSK Course</a></li>
+              <li><a href="faq/#item-scores">Test Scores & Reports</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <!------------>
-      <div class="col-10 col-md-7 tab_content">
+      <div id="item-ponddy" class="col-10 col-md-7 tab_content">
         <div class="tab_wrap">
           <div class="tab_item">
             <div class="item_img">
@@ -130,12 +145,12 @@
                 <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_PonddyHSK_web_01.svg'">
               </div>
             </div>
-            <div class="item_url">
+            <div class="item_url web">
               <ul>
-                <li><a>Test Registration & Regulation</a></li>
-                <li><a>Payments & Refunds</a></li>
-                <li class="active"><a class="active_a">Ponddy HSK Course</a></li>
-                <li><a>Test Scores & Reports</a></li>
+                <li><a href="faq/#item-test">Test Registration & Regulation</a></li>
+                <li><a href="faq/#item-payments">Payments & Refunds</a></li>
+                <li class="active"><a href="faq/#item-ponddy" class="active_a">Ponddy HSK Course</a></li>
+                <li><a href="faq/#item-scores">Test Scores & Reports</a></li>
               </ul>
             </div>
           </div>
@@ -165,24 +180,32 @@
               </ol>
             </div>
           </div>
+          <div class="item_url mobile">
+            <ul>
+              <li><a href="faq/#item-test">Test Registration & Regulation</a></li>
+              <li><a href="faq/#item-payments">Payments & Refunds</a></li>
+              <li class="active"><a href="faq/#item-ponddy" class="active_a">Ponddy HSK Course</a></li>
+              <li><a href="faq/#item-scores">Test Scores & Reports</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <!------------>
-      <div class="col-10 col-md-7 tab_content">
+      <div id="item-scores" class="col-10 col-md-7 tab_content">
         <div class="tab_wrap border_b_no">
           <div class="tab_item">
             <div class="item_img">
-              <div class="text">Ponddy HSK Course</div>
+              <div class="text">Test Scores & Reports</div>
               <div>
                 <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_04_TestScores_web_01.svg'">
               </div>
             </div>
-            <div class="item_url">
+            <div class="item_url web">
               <ul>
-                <li><a>Test Scores & Reports</a></li>
-                <li><a>Payments & Refunds</a></li>
-                <li><a>Ponddy HSK Course</a></li>
-                <li class="active"><a class="active_a">Test Scores & Reports</a></li>
+                <li><a href="faq/#item-test">Test Registration & Regulation</a></li>
+                <li><a href="faq/#item-payments">Payments & Refunds</a></li>
+                <li><a href="faq/#item-ponddy">Ponddy HSK Course</a></li>
+                <li class="active"><a href="faq/#item-scores" class="active_a">Test Scores & Reports</a></li>
               </ul>
             </div>
           </div>
@@ -225,6 +248,15 @@
                 </li>
               </ol>
             </div>
+          </div>
+
+          <div class="item_url mobile">
+            <ul>
+              <li><a href="faq/#item-test">Test Registration & Regulation</a></li>
+              <li><a href="faq/#item-payments">Payments & Refunds</a></li>
+              <li><a href="faq/#item-ponddy">Ponddy HSK Course</a></li>
+              <li class="active"><a href="faq/#item-scores" class="active_a">Test Scores & Reports</a></li>
+            </ul>
           </div>
         </div>
       </div>
