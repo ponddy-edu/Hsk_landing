@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ShareModule} from '../../components/share.module';
 import {LandingComponent} from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
+import {LazyLoadImageModule} from 'ng-lazyload-image';
 
 const routes: Routes = [
   {path: 'faq', component: FaqComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     ShareModule,
+    LazyLoadImageModule,
     RouterModule.forChild(routes),
   ]
 })
