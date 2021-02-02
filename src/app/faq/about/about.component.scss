@@ -42,6 +42,9 @@
         border-left: none;
         width: 478px;
         height: 42px;
+        @media (max-width: 991.98px) {
+          width: 280px;
+        }
       }
       button {
         background: #ffffff;
@@ -66,8 +69,14 @@
     @media (max-width: 991.98px) {
       padding: 24px 0;
     }
+    .tab_group {
+      display: flex;
+      @media (max-width: 991.98px) {
+        display: block;
+      }
+    }
     .tab_item {
-      background: #FFFFFF;
+      background: #ffffff;
       border: 1px solid #EAEBEC;
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
       border-radius: 12px;
@@ -75,17 +84,79 @@
       width: 220px;
       height: 220px;
       margin: 0px 15px;
+      color: #2D3942;
+      @media (max-width: 991.98px) {
+        width: 146px;
+        height: 146px;
+      }
+      &:hover {
+        background: #F3A024;
+        color: #ffffff;
+      }
       .text {
         font-weight: bold;
         font-size: 20px;
         line-height: 30px;
         text-align: center;
         letter-spacing: 0.5px;
-        color: #2D3942;
         padding: 35px 20px 20px 20px;
+        @media (max-width: 991.98px) {
+          font-size: 16px;
+          line-height: 18px;
+          text-align: center;
+          letter-spacing: 0.3px;
+        }
       }
       img {
         padding-bottom: 35px;
+      }
+    }
+    .item_test {
+      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Test Regist_web_01.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 115px;
+      &:hover {
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Test Regist_web_02.svg"), #F3A024;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 115px;
+      }
+    }
+    .item_ayments {
+      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Payments_web_01.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 115px;
+      &:hover {
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Payments_web_02.svg"), #F3A024;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 115px;
+      }
+    }
+    .item_ponddy {
+      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_PonddyHSK_web_01.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 115px;
+      &:hover {
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_PonddyHSK_web_02.svg"), #F3A024;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 115px;
+      }
+    }
+    .item_scores {
+      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_04_TestScores_web_01.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 115px;
+      &:hover {
+        background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_04_TestScores_web_02.svg"), #F3A024;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 115px;
       }
     }
   }
