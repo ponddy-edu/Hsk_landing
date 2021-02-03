@@ -41,7 +41,7 @@ export class AboutPonddyComponent implements OnInit {
   colorClass = ''
   buttonImage = ''
   colorBg = ''
-
+  colClass = ''
 
 
   height = 101
@@ -53,7 +53,20 @@ export class AboutPonddyComponent implements OnInit {
   carouselImageList: any[]
 
   constructor(public device: DeviceService) {
+  }
 
+  ngOnInit(): void {
+    if(this.colorStyle === 'orange'){
+      this.colorClass = 'orange_text'
+      this.buttonImage = '/assets/image/icon/btn_orange_normal.svg'
+      this.colorBg = '#F5F0EB'
+      this.colClass = 'col-md-7'
+    } else {
+      this.colorClass = 'blue_text'
+      this.buttonImage = '/assets/image/icon/btn_blue_normal.svg'
+      this.colorBg = '#EBF2F5'
+      this.colClass = 'col-md-9'
+    }
     this.device.$mobile.subscribe(isMobile => {
       if (isMobile) {
         if(this.colorStyle === 'orange'){
@@ -69,18 +82,6 @@ export class AboutPonddyComponent implements OnInit {
         }
       }
     })
-  }
-
-  ngOnInit(): void {
-    if(this.colorStyle === 'orange'){
-      this.colorClass = 'orange_text'
-      this.buttonImage = '/assets/image/icon/btn_orange_normal.svg'
-      this.colorBg = '#F5F0EB'
-    } else {
-      this.colorClass = 'blue_text'
-      this.buttonImage = '/assets/image/icon/btn_blue_normal.svg'
-      this.colorBg = '#EBF2F5'
-    }
   }
 
   coursePrev(): void {
