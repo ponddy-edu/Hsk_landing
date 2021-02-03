@@ -1,31 +1,32 @@
 <section class="resources">
-    <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <div>
-                    <img class="icon_course" >
-                </div>
-                <div>
-                    Course
-                </div>
-            </ng-template>
-            <app-intro-course></app-intro-course>
-        </mat-tab>
+  <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <div>
+          <img class="icon_course">
+        </div>
+        <div>
+          Course
+        </div>
+      </ng-template>
+      <app-intro-course></app-intro-course>
+    </mat-tab>
 
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <img class="icon_preparation">
-                <div>Preparation</div>
-            </ng-template>
-            <app-intro-preparation (downloadChange)="setDownload($event)"></app-intro-preparation>
-        </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img class="icon_preparation">
+        <div>Preparation</div>
+      </ng-template>
+      <app-intro-preparation (downloadChange)="setDownload($event)"></app-intro-preparation>
+    </mat-tab>
 
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <img class="icon_smart">
-                <div>Smart Learning</div>
-            </ng-template>
-            <app-smart-learn></app-smart-learn>
-        </mat-tab>
-    </mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <img class="icon_smart">
+        <div>Smart Learning</div>
+      </ng-template>
+      <!-- <app-smart-learn></app-smart-learn> -->
+      <app-intro-smart></app-intro-smart>
+    </mat-tab>
+  </mat-tab-group>
 </section>
