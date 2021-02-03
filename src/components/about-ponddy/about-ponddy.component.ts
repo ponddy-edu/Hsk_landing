@@ -3,16 +3,28 @@ import {CarouselComponent} from 'angular-responsive-carousel';
 import {DeviceService} from '../../utils/device.service';
 
 
-const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png',
+const imageListBlue = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png',
 ]
-const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_1_phone.png',
+const imagmeListMobileBlue = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_1_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_2_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_3_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_4_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_5_phone.png',
 ]
+
+const imageListOrange = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_1.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_2.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_3.png',
+]
+const imagmeListMobileOrange = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_1_phone.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_2_phone.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_3_phone.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_4_phone.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_5_phone.png',
+]
+
 
 @Component({
   selector: 'app-share-about-ponddy',
@@ -44,15 +56,22 @@ export class AboutPonddyComponent implements OnInit {
 
     this.device.$mobile.subscribe(isMobile => {
       if (isMobile) {
-        this.carouselImageList = imagmeListMobile
+        if(this.colorStyle === 'orange'){
+          this.carouselImageList = imagmeListMobileOrange
+        } else {
+          this.carouselImageList = imagmeListMobileBlue
+        }
       } else {
-        this.carouselImageList = imageList
+        if(this.colorStyle === 'orange'){
+          this.carouselImageList = imageListOrange
+        } else {
+          this.carouselImageList = imageListBlue
+        }
       }
     })
   }
 
   ngOnInit(): void {
-    console.log(this.colorStyle)
     if(this.colorStyle === 'orange'){
       this.colorClass = 'orange_text'
       this.buttonImage = '/assets/image/icon/btn_orange_normal.svg'
