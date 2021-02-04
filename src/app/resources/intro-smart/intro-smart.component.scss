@@ -12,6 +12,9 @@ section {
       height: 100%;
       .col-3 {
         border-left: 1px dashed #eaebec;
+        &:last-child {
+          border-right: 1px dashed #eaebec;
+        }
       }
     }
   }
