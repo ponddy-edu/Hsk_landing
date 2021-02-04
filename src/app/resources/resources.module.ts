@@ -15,6 +15,7 @@ import {DownloadComponent} from './download/download.component';
 
 import {SmartLearnComponent} from './smart-learn/smart-learn.component';
 import {LayoutModule} from '@angular/cdk/layout';
+import { IntroSmartComponent } from './intro-smart/intro-smart.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, DownloadComponent, SmartLearnComponent],
+  declarations: [ResourcesComponent, LandingComponent, TabComponent, IntroCourseComponent, AboutPonddyComponent, IntroPreparationComponent, DownloadComponent, SmartLearnComponent, IntroSmartComponent],
   imports: [
     CommonModule,
     ShareModule,

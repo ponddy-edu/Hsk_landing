@@ -21,6 +21,7 @@ export class ResourcesComponent implements OnInit {
     // this.activatedRoute.data.subscribe(res => console.log(res))
     this.activatedRoute.url.subscribe((res) => {
       const tabIndex = this.activatedRoute.snapshot.firstChild ? this.activatedRoute.snapshot.firstChild.data.tab : 0;
+      console.log(tabIndex)
       if (tabIndex < 3) {
         this.setTab(tabIndex)
       } else if (tabIndex === 3) {
