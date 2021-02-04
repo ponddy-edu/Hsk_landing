@@ -1,0 +1,270 @@
+<section class="about_select">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-11 col-md-9 select">
+        <h2>About</h2>
+        <h1>Frequently Asked Questions</h1>
+        <div class="input_wrap">
+          <button><img src="https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/select.svg"></button>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about_tab">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-11 col-md-9 tab">
+        <div class="tab_group">
+          <a pageScroll href="#item-test">
+            <div class="tab_item">
+              <div class="text test-font">Test Registration & Regulation</div>
+              <img class="item_test">
+            </div>
+
+          </a>
+          <a pageScroll href="#item-payments">
+            <div class="tab_item">
+              <div class="text">Payments & Refunds</div>
+              <img class="item_payments">
+            </div>
+          </a>
+        </div>
+        <div class="tab_group">
+          <a pageScroll href="#item-ponddy">
+            <div class="tab_item">
+              <div class="text">Ponddy HSK Course</div>
+              <img class="item_ponddy">
+            </div>
+          </a>
+          <a pageScroll href="#item-scores">
+            <div class="tab_item">
+              <div class="text">Test Scores & Reports</div>
+              <img class="item_scores">
+            </div>
+          </a>
+        </div>
+      </div>
+      <!------------>
+      <div id="item-test" class="col-12 col-md-7 tab_content">
+        <div class="tab_wrap">
+          <div class="tab_item">
+            <div class="item_img">
+              <div class="text">Test Registration & Regulation</div>
+              <div>
+                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Test Regist_web_01.svg'">
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>1. After the completion of registration, can I change the test date?</h3>
+            <p>After the registration and payment, test takers can apply to change the test date within the stipulated time, but cannot cancel the registered test.</p>
+          </div>
+        </div>
+      </div>
+      <!------------>
+      <div id="item-payments" class="col-12 col-md-7 tab_content">
+        <div class="tab_wrap">
+          <div class="tab_item">
+            <div class="item_img">
+              <div class="text">Payments & Refunds</div>
+              <div>
+                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_Payments_web_01.svg'">
+              </div>
+            </div>
+            <div class="item_url web">
+              <ul>
+                <li><a pageScroll href="#item-test">Test Registration & Regulation</a></li>
+                <li class="active"><a pageScroll href="#item-payments" class="active_a">Payments & Refunds</a></li>
+                <li><a pageScroll href="#item-ponddy">Ponddy HSK Course</a></li>
+                <li><a pageScroll href="#item-scores">Test Scores & Reports</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>The deadline and charges for changing the test date are as follows:</h3>
+            <ul>
+              <li>
+                <span class="title">
+                  27 days before the test (including the 27th day):
+                </span>
+                <span class="distribution">
+                  test takers can change the test date for free.
+                </span>
+              </li>
+              <br>
+              <li>
+                <span class="title">
+                  After 27 days but 10 days before the test (including the 10th day):
+                </span>
+                <span class="distribution">
+                  test takers need to pay an amount equal to 30% of the test fee before they can apply for the change during this period.
+                </span>
+              </li>
+              <br>
+              <li>
+                <span class="title">
+                  Within 10 days before the test (excluding the 10th day):
+                </span>
+                <span class="distribution">
+                  No application for changes of this kind will be accepted.
+                </span>
+              </li>
+              <br>
+            </ul>
+            <p>For test takers to take the internet-based test, the valid period for changing the test date for free is 27 days before the test, and other relevant rules are the same with the paper-based test.</p>
+            <div class="orange_text">Date changing can be applied ONCE for each registration.</div>
+            <br>
+            <div>
+              <ol class="item_ol">
+                <li>
+                  <h3>How much is charged for HSK and other tests?</h3>
+                  <img [useSrcset]="true" [lazyLoad]="form01">
+                  <img [useSrcset]="true" [lazyLoad]="form02">
+                </li>
+                <li>
+                  <h3>What equipment do I need to take online Chinese tests at home?</h3>
+                  <a href="test">See details</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="item_url mobile">
+            <ul>
+              <li><a pageScroll href="#item-test">Test Registration & Regulation</a></li>
+              <li class="active"><a pageScroll href="#item-payments" class="active_a">Payments & Refunds</a></li>
+              <li><a pageScroll href="#item-ponddy">Ponddy HSK Course</a></li>
+              <li><a pageScroll href="#item-scores">Test Scores & Reports</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!------------>
+      <div id="item-ponddy" class="col-12 col-md-7 tab_content">
+        <div class="tab_wrap">
+          <div class="tab_item">
+            <div class="item_img">
+              <div class="text">Ponddy HSK Course</div>
+              <div>
+                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_PonddyHSK_web_01.svg'">
+              </div>
+            </div>
+            <div class="item_url web">
+              <ul>
+                <li><a pageScroll href="#item-test">Test Registration & Regulation</a></li>
+                <li><a pageScroll href="#item-payments">Payments & Refunds</a></li>
+                <li class="active"><a pageScroll href="#item-ponddy" class="active_a">Ponddy HSK Course</a></li>
+                <li><a pageScroll href="#item-scores">Test Scores & Reports</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <ol class="item_ol">
+                <li class="border_b">
+                  <h3>What's the course format?</h3>
+                  <p>All classes will be 1-on-1 live online with Ponddy instructors. Teachers will conduct the class via Zoom and incorporate Ponddy's online interactive learning materials. </p>
+                </li>
+                <li class="border_b">
+                  <h3>What textbook do you use?</h3>
+                  <p>We use HSKL-aligned learning material available on Ponddy's AI platforms. No additional textbook purchase is needed.</p>
+                </li>
+                <li class="border_b">
+                  <h3>Will there be homework after class?</h3>
+                  <p>Yes. Students will be guided to use the AI platform, Ponddy Reader, to complete and submit homework. The platform contains learning tools such as exercises and readings. </p>
+                </li>
+                <li class="border_b">
+                  <h3>I'm looking for HSK course for my children. </h3>
+                  <p>Our HSK courses have both adult and teenager version. Please see [Resources -> Courses] for details.</p>
+                </li>
+                <li>
+                  <h3>What is the refund policy </h3>
+                  <p>Our goal is to help you excel in your learning goal and gain the skills needed to tackle HSK, after purchasing the course, you can still apply for a full refund within the first 2 sessions. </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="item_url mobile">
+            <ul>
+              <li><a pageScroll href="#item-test">Test Registration & Regulation</a></li>
+              <li><a pageScroll href="#item-payments">Payments & Refunds</a></li>
+              <li class="active"><a pageScroll href="#item-ponddy" class="active_a">Ponddy HSK Course</a></li>
+              <li><a pageScroll href="#item-scores">Test Scores & Reports</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!------------>
+      <div id="item-scores" class="col-12 col-md-7 tab_content">
+        <div class="tab_wrap border_b_no">
+          <div class="tab_item">
+            <div class="item_img">
+              <div class="text">Test Scores & Reports</div>
+              <div>
+                <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/icon_04_TestScores_web_01.svg'">
+              </div>
+            </div>
+            <div class="item_url web">
+              <ul>
+                <li><a pageScroll href="#item-test">Test Registration & Regulation</a></li>
+                <li><a pageScroll href="#item-payments">Payments & Refunds</a></li>
+                <li><a pageScroll href="#item-ponddy">Ponddy HSK Course</a></li>
+                <li class="active"><a pageScroll href="#item-scores" class="active_a">Test Scores & Reports</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <ol class="item_ol">
+                <li class="border_b">
+                  <h3>When will the scores be available?</h3>
+                  <p>HSK test results will be available the third Monday after the test. HSKK will be available 1 month after the test. </p>
+                </li>
+                <li class="border_b">
+                  <h3>Where can I check the score?</h3>
+                  <p>Ponddy HSK will send out the online score reports when the test results become available. Test takers can also inquire about the test result on the test website (www.chinesetest.cn) with admission ticket number and name.</p>
+                </li>
+                <li class="border_b">
+                  <h3>How long will the score report be valid for?</h3>
+                  <p>The test result is a long term available, but the score report to be used for the application to Chinese universities and colleges is valid within two years (from the test date). </p>
+                </li>
+                <li class="border_b">
+                  <h3>Can I order additional score reports? </h3>
+                  <p>For the purpose of helping test takers present their score reports of the Chinese test as proof of their Chinese proficiency for college application, graduation, recruitment, promotion, etc., it’s available for test-takers to apply for
+                    the delivery of additional score reports via the Chinese testing service website (www.chinesetest.cn). For details of the application forms and fees, please visit the Chinese testing service website (www.chinesetest.cn).</p>
+                </li>
+                <li>
+                  <h3>Can I modify the score report?</h3>
+                  <div>
+                    <ol class="item_ol_content" type="a">
+                      <li>
+                        <p>An application to modify the information is limited to the following situations:</p>
+                        <ol type="i">
+                          <li>Misspelling of the name</li>
+                          <li>The error of the nationality information</li>
+                          <li>The error of the gender information</li>
+                        </ol>
+                      </li>
+                      <li>Test takers must provide the relevant supporting certificates, such as his/her passport and identity card.</li>
+                      <li>The application shall be filed within the validity period of the test results report (i.e., within two years after the end of the test).</li>
+                    </ol>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="item_url mobile">
+            <ul>
+              <li><a pageScroll href="#item-test">Test Registration & Regulation</a></li>
+              <li><a pageScroll href="#item-payments">Payments & Refunds</a></li>
+              <li><a pageScroll href="#item-ponddy">Ponddy HSK Course</a></li>
+              <li class="active"><a pageScroll href="#item-scores" class="active_a">Test Scores & Reports</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

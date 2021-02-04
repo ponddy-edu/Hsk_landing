@@ -1,7 +1,7 @@
 <section class="about_ponddy carousel_section" [ngStyle]="{'background':colorBg}">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-11 col-md-9">
+      <div class="col-12" [ngClass]='colClass'>
         <h1 i18n="about ponddy title">Ponddy Education</h1>
         <p i18n="about ponddy description" class="description">
           Ponddy® is an advanced AI smart learning brand. Powered by innovative AKLS® AI technology, Ponddy’s smart learning solutions include intelligent platforms, customized resources, tailored curricula, on-line tutors, and at-home online testing services.
@@ -23,7 +23,7 @@
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow left">
         <img lazyLoad="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
       </div>
-      <div *ngIf="device.isBrowser" class="col-md-9 ">
+      <div *ngIf="device.isBrowser" class="col-md-8" [ngClass]='colClass'>
         <carousel [height]="height" #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
             <img class="d-block w-100" [src]="carouselImage" [alt]="'slide_'+i">
