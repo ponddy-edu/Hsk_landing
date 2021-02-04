@@ -7,18 +7,24 @@ import {LandingComponent} from './landing/landing.component';
 import {TabComponent} from './tab/tab.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {MatTabsModule} from '@angular/material/tabs';
-import { IntroCourseComponent } from './intro-course/intro-course.component';
-import { AboutPonddyComponent } from './about-ponddy/about-ponddy.component';
+import {IntroCourseComponent} from './intro-course/intro-course.component';
+import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { IntroPreparationComponent } from './intro-preparation/intro-preparation.component';
-import { DownloadComponent } from './download/download.component';
+import {IntroPreparationComponent} from './intro-preparation/intro-preparation.component';
+import {DownloadComponent} from './download/download.component';
 
-import { SmartLearnComponent } from './smart-learn/smart-learn.component';
-import { LayoutModule } from '@angular/cdk/layout';
+import {SmartLearnComponent} from './smart-learn/smart-learn.component';
+import {LayoutModule} from '@angular/cdk/layout';
 
 
 const routes: Routes = [
-  {path: 'resources', component: ResourcesComponent},
+  {
+    path: 'resources', component: ResourcesComponent,
+    children: [{path: 'course', component: ResourcesComponent, data: {tab: 0}},
+      {path: 'preparation', component: ResourcesComponent, data: {tab: 1}},
+      {path: 'smart', component: ResourcesComponent, data: {tab: 2}},
+      {path: 'download', component: ResourcesComponent, data: {tab: 3}}]
+  },
 ];
 
 @NgModule({

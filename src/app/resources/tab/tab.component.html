@@ -1,6 +1,6 @@
 <section class="resources">
-    <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
-        <mat-tab>
+    <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)"  [(selectedIndex)]="inputTab">
+        <mat-tab routerLink="./#course">
             <ng-template mat-tab-label>
                 <div>
                     <img class="icon_course" >
@@ -12,7 +12,7 @@
             <app-intro-course></app-intro-course>
         </mat-tab>
 
-        <mat-tab>
+        <mat-tab routerLink="./#course">
             <ng-template mat-tab-label>
                 <img class="icon_preparation">
                 <div>Preparation</div>
@@ -20,7 +20,7 @@
             <app-intro-preparation (downloadChange)="setDownload($event)"></app-intro-preparation>
         </mat-tab>
 
-        <mat-tab>
+        <mat-tab routerLink="./#course">
             <ng-template mat-tab-label>
                 <img class="icon_smart">
                 <div>Smart Learning</div>
