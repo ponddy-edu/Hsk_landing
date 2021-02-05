@@ -1,4 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-tab',
@@ -12,14 +14,26 @@ export class TabComponent implements OnInit {
 
   tabIndex = 0
 
-  constructor() {
+  @Input()
+  inputTab: number
+  @Output()
+  tabChange = new EventEmitter<number>()
+
+  constructor(private router: Router) {
+
   }
 
   ngOnInit(): void {
   }
 
   changeTab(tabIndex: any) {
-    this.tabIndex = tabIndex
-    this.$tabChange.emit(tabIndex)
+    switch (tabIndex) {
+      case 0:
+        this.router.navigate(['./tests/chinese']);
+        break
+      case 1:
+        this.router.navigate(['./tests/instructions']);
+        break
+    }
   }
 }

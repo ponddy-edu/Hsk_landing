@@ -1,9 +1,5 @@
 <section>
-  <mat-tab-group animationDuration="0ms"
-                 (selectedIndexChange)="changeTab($event)"
-                 [class.test_chinese]="!tabIndex"
-                 [class.test_intro]="tabIndex">
-
+  <mat-tab-group color=undefined animationDuration="0ms" [selectedIndex]="inputTab" (selectedIndexChange)="changeTab($event)">
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
@@ -17,12 +13,11 @@
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
-          <img class="icon_preparation" >
+          <img class="icon_preparation">
         </div>
         Test Instructions
       </ng-template>
       <app-intro-test></app-intro-test>
     </mat-tab>
-
   </mat-tab-group>
 </section>

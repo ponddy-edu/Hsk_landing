@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'home', loadChildren: './home/home.module#HomeModule'},
   {path: 'ponddy', loadChildren: './ponddy/ponddy.module#PonddyModule'},
   {path: 'resources', loadChildren: './resources/resources.module#ResourcesModule'},
-  {path: 'test', loadChildren: './test/test.module#TestModule'},
+  {path: 'tests', loadChildren: './test/test.module#TestModule'},
   {path: 'faq', loadChildren: './faq/faq.module#FaqModule'}
 
   // { path: 'detail/:id', component: HeroDetailComponent }
