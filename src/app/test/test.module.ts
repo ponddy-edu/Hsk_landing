@@ -11,8 +11,12 @@ import {TabComponent } from './tab/tab.component';
 import {MatTabsModule} from '@angular/material/tabs';
 
 const routes: Routes = [
-  {path: 'test', component: TestComponent},
+  {path: 'tests', component: TestComponent,
+  children: [{path: 'chinese', component: TestComponent, data: {tab: 0}},
+      {path: 'instructions', component: TestComponent, data: {tab: 1}}]
+  },
 ];
+
 
 @NgModule({
   declarations: [TestComponent, LandingComponent, IntroChineseComponent, IntroTestComponent, TabComponent],
