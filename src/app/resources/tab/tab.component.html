@@ -1,5 +1,5 @@
 <section class="resources">
-  <mat-tab-group color=undefined animationDuration="0ms" (selectedIndexChange)="changeTab($event)">
+  <mat-tab-group color=undefined animationDuration="0ms" [selectedIndex]="inputTab" (selectedIndexChange)="changeTab($event)">
     <mat-tab>
       <ng-template mat-tab-label>
         <div>
