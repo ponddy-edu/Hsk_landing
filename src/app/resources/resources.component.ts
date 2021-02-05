@@ -37,6 +37,9 @@ export class ResourcesComponent implements OnInit, OnDestroy{
 
   setTab(tabIndex: number) {
     this.tab = tabIndex
+    if (tabIndex != 3) {
+      this.isDownloadPage = false
+    }
   }
 
   setDownloadRe(downloadIndex: any) {
