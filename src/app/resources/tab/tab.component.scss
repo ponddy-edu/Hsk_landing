@@ -1,94 +1,96 @@
-::ng-deep.mat-tab-group {
-  margin-top: -90px;
-  align-items: center;
-  @media (max-width: 767px) {
-    margin-top: -60px;
-  }
-  mat-ink-bar {
-    display: none !important;
-  }
-  .mat-tab-header {
-    border-radius: 16px 16px 0px 0px;
-    width: 812px;
-    height: 90px;
-    background-color: #ffffff;
+.resources {
+  ::ng-deep.mat-tab-group {
+    margin-top: -90px;
+    align-items: center;
     @media (max-width: 767px) {
+      margin-top: -60px;
+    }
+    mat-ink-bar {
+      display: none !important;
+    }
+    .mat-tab-header {
+      border-radius: 16px 16px 0px 0px;
+      width: 812px;
+      height: 90px;
+      background-color: #ffffff;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 767px) {
+      .mat-tab-labels {
+        justify-content: center;
+      }
+    }
+    .mat-tab-label {
       width: 100%;
-    }
-  }
-  @media (max-width: 767px) {
-    .mat-tab-labels {
-      justify-content: center;
-    }
-  }
-  .mat-tab-label {
-    width: 100%;
-    @media (max-width: 767px) {
-      min-width: 110px;
-      width: auto;
-    }
-    height: 90px;
-    padding: 9px 16px;
-    opacity: 1;
-    color: #969CA0;
-    img {
-      background-color: #969CA0;
-      max-height: 48px;
-      width: 48px;
-      height: 48px;
-      &.icon_course {
-        -webkit-mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
-        mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
-      }
-      &.icon_preparation {
-        -webkit-mask: url("/assets/image/resources/icon/icon_preparation_normal.svg") no-repeat center;
-        mask: url("/assets/image/resources/icon/icon_preparation_normal.svg") no-repeat center;
-      }
-      &.icon_smart {
-        -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
-        mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
-      }
-      @media (max-width: 991.98px) {
-        &.icon_course {
-          -webkit-mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
-          mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
-        }
-        &.icon_preparation {
-          -webkit-mask: url("/assets/image/resources/icon/icon_preparation_normal_p.svg") no-repeat center;
-          mask: url("/assets/image/resources/icon/icon_preparation_normal_p.svg") no-repeat center;
-        }
-        &.icon_smart {
-          -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
-          mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
-        }
-      }
-    }
-    &.mat-tab-label-active {
-      color: #3B9FBE;
       @media (max-width: 767px) {
         min-width: 110px;
+        width: auto;
       }
-      img {
-        background-color: #3B9FBE;
-      }
-    }
-    .mat-tab-label-content {
-      display: block;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
+      height: 90px;
+      padding: 9px 16px;
       opacity: 1;
-      @media (max-width: 991.98px) {
-        font-size: 14px;
+      color: #969CA0;
+      img {
+        background-color: #969CA0;
+        max-height: 48px;
+        width: 48px;
+        height: 48px;
+        &.icon_course {
+          -webkit-mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_course_hover.svg") no-repeat center;
+        }
+        &.icon_preparation {
+          -webkit-mask: url("/assets/image/resources/icon/icon_preparation_normal.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_preparation_normal.svg") no-repeat center;
+        }
+        &.icon_smart {
+          -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
+        }
+        @media (max-width: 991.98px) {
+          &.icon_course {
+            -webkit-mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
+            mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
+          }
+          &.icon_preparation {
+            -webkit-mask: url("/assets/image/resources/icon/icon_preparation_normal_p.svg") no-repeat center;
+            mask: url("/assets/image/resources/icon/icon_preparation_normal_p.svg") no-repeat center;
+          }
+          &.icon_smart {
+            -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
+            mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
+          }
+        }
+      }
+      &.mat-tab-label-active {
+        color: #3B9FBE;
+        @media (max-width: 767px) {
+          min-width: 110px;
+        }
+        img {
+          background-color: #3B9FBE;
+        }
+      }
+      .mat-tab-label-content {
+        display: block;
+        font-size: 16px;
         line-height: 24px;
-        letter-spacing: 0.4px;
-        font-weight: normal;
+        letter-spacing: 1px;
+        opacity: 1;
+        @media (max-width: 991.98px) {
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.4px;
+          font-weight: normal;
+        }
       }
     }
-  }
-  .mat-tab-body-wrapper {
-    //width: 812px;
-    width: 100%;
-    text-align: center;
+    .mat-tab-body-wrapper {
+      //width: 812px;
+      width: 100%;
+      text-align: center;
+    }
   }
 }

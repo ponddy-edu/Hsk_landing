@@ -12,6 +12,9 @@ section {
       height: 100%;
       .col-3 {
         border-left: 1px dashed #eaebec;
+        &:last-child {
+          border-right: 1px dashed #eaebec;
+        }
       }
     }
   }
@@ -35,6 +38,12 @@ section {
     margin: 64px auto 40px auto;
     @media (max-width: 767px) {
       margin: 24px auto 30px auto;
+    }
+    &:last-child {
+      margin-bottom: 100px;
+      @media (max-width: 767px) {
+        margin-bottom: 36px;
+      }
     }
   }
   img {
