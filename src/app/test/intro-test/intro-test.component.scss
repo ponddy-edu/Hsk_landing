@@ -65,10 +65,15 @@
           padding-left: 0px;
           font-weight: 400;
           font-size: 14px;
-          line-height: 32px;
+          line-height: 31px;
           color: #2D3942;
-          border-bottom: 1px #2D3942 solid;
           border-radius: 0px;
+        }
+        span {
+          @media (max-width: 767px) {
+            border-bottom: 1px #2D3942 solid;
+            display: inline-block;
+          }
         }
         &:hover {
           background: #F3A024;
@@ -89,6 +94,11 @@
             color: #F3A024;
             border-radius: 0px;
             border-bottom: none;
+          }
+          span {
+            @media (max-width: 767px) {
+              border-bottom: none;
+            }
           }
         }
       }
