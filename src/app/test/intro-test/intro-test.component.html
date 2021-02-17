@@ -3,22 +3,22 @@
     <div class="row justify-content-center">
       <div class="col-11 col-md-3 test_ul web">
         <ul class="select_item">
-          <li [ngClass]='procedureClass' value="1" (click)="menu_item(1)">
+          <li [class.active]="activeClass=='procedureClass'" value="1" (click)="menu_item(1)">
             <span>
               Registration Procedure
             </span>
           </li>
-          <li [ngClass]='registrationClass' value="2" (click)="menu_item(2)">
+          <li [class.active]="activeClass=='registrationClass'" value="2" (click)="menu_item(2)">
             <span>
               Test Regulation
             </span>
           </li>
-          <li [ngClass]='scoreClass' value="3" (click)="menu_item(3)">
+          <li [class.active]="activeClass=='scoreClass'" value="3" (click)="menu_item(3)">
             <span>
             Score and Report
           </span>
           </li>
-          <li [ngClass]='disciplineClass' value="4" (click)="menu_item(4)">
+          <li [class.active]="activeClass=='disciplineClass'" value="4" (click)="menu_item(4)">
             <span>
               Test Discipline
             </span>
@@ -26,9 +26,9 @@
         </ul>
       </div>
 
-      <div  *ngIf="inlineTab=='registrationProcedure'" class="col-11 col-md-7 registration_procedure">
+      <div *ngIf="actvieItem == 'registrationProcedure'" class="col-11 col-md-7 registration_procedure">
         <div class="menu-group">
-          <h1 >Registration Procedure</h1>
+          <h1>Registration Procedure</h1>
         </div>
         <div class="content">
           <img [useSrcset]="true" [lazyLoad]="picRegistration">
@@ -36,16 +36,16 @@
           <div class="col-11 col-md-3 test_ul mobile">
             <hr>
             <ul class="select_item">
-              <li [ngClass]='procedureClass' value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
-              <li [ngClass]='registrationClass' value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
-              <li [ngClass]='scoreClass' value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
-              <li [ngClass]='disciplineClass' value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
+              <li [class.active]="activeClass=='procedureClass'" value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
+              <li [class.active]="activeClass=='registrationClass'" value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
+              <li [class.active]="activeClass=='scoreClass'" value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
+              <li [class.active]="activeClass=='disciplineClass'" value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div *ngIf="inlineTab=='testRegulation'" class="col-11 col-md-7 test_regulation">
+      <div *ngIf="actvieItem == 'testRegulation'" class="col-11 col-md-7 test_regulation">
         <div class="menu-group">
           <h1>Test Regulation</h1>
           <mat-accordion>
@@ -204,16 +204,16 @@
           </mat-accordion>
           <div class="col-11 col-md-3 test_ul mobile">
             <ul class="select_item">
-              <li [ngClass]='procedureClass' value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
-              <li [ngClass]='registrationClass' value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
-              <li [ngClass]='scoreClass' value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
-              <li [ngClass]='disciplineClass' value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
+              <li [class.active]="activeClass=='procedureClass'" value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
+              <li [class.active]="activeClass=='registrationClass'" value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
+              <li [class.active]="activeClass=='scoreClass'" value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
+              <li [class.active]="activeClass=='disciplineClass'" value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div *ngIf="inlineTab=='scoreReport'" class="col-11 col-md-7 score_report">
+      <div *ngIf="actvieItem == 'scoreReport'" class="col-11 col-md-7 score_report">
         <div class="menu-group">
           <h1>Score and Report</h1>
         </div>
@@ -282,16 +282,16 @@
           <div class="col-11 col-md-3 test_ul mobile">
             <hr>
             <ul class="select_item">
-              <li [ngClass]='procedureClass' value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
-              <li [ngClass]='registrationClass' value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
-              <li [ngClass]='scoreClass' value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
-              <li [ngClass]='disciplineClass' value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
+              <li [class.active]="activeClass=='procedureClass'" value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
+              <li [class.active]="activeClass=='registrationClass'" value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
+              <li [class.active]="activeClass=='scoreClass'" value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
+              <li [class.active]="activeClass=='disciplineClass'" value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div *ngIf="inlineTab=='testDiscipline'" class="col-11 col-md-7 test_discipline">
+      <div *ngIf="actvieItem == 'testDiscipline'" class="col-11 col-md-7 test_discipline">
         <div class="menu-group">
           <h1>Test Discipline</h1>
         </div>
@@ -332,10 +332,10 @@
           <div class="col-11 col-md-3 test_ul mobile">
             <hr>
             <ul class="select_item">
-              <li [ngClass]='procedureClass' value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
-              <li [ngClass]='registrationClass' value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
-              <li [ngClass]='scoreClass' value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
-              <li [ngClass]='disciplineClass' value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
+              <li [class.active]="activeClass=='procedureClass'" value="1" (click)="menu_item(1)"><span>Registration Procedure</span></li>
+              <li [class.active]="activeClass=='registrationClass'" value="2" (click)="menu_item(2)"><span>Test Regulation</span></li>
+              <li [class.active]="activeClass=='scoreClass'" value="3" (click)="menu_item(3)"><span>Score and Report</span></li>
+              <li [class.active]="activeClass=='disciplineClass'" value="4" (click)="menu_item(4)"><span>Test Discipline</span></li>
             </ul>
           </div>
 

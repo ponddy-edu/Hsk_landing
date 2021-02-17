@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-intro-test',
@@ -11,20 +11,10 @@ export class IntroTestComponent implements OnInit {
 
   panelOpenState = false;
 
-  inlineTab = 'registrationProcedure'
-  registrationProcedure = true;
-  testRegulation = false;
-  scoreReport = false;
-  testDiscipline = false;
+  actvieItem = "registrationProcedure"
+  activeClass = 'procedureClass'
 
-  procedureClass = "active";
-  registrationClass = "";
-  scoreClass = "";
-  disciplineClass = "";
-
-
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit(): void {
 
@@ -33,34 +23,21 @@ export class IntroTestComponent implements OnInit {
   menu_item(item_index: number) {
     switch (item_index) {
       case 1:
-        this.procedureClass = "active";
-        this.registrationClass = "";
-        this.scoreClass = "";
-        this.disciplineClass = "";
-        this.inlineTab = 'registrationProcedure'
+        this.actvieItem = 'registrationProcedure'
+        this.activeClass = 'procedureClass'
         break
       case 2:
-        this.procedureClass = "";
-        this.registrationClass = "active";
-        this.scoreClass = "";
-        this.disciplineClass = "";
-        this.inlineTab = 'testRegulation'
+        this.actvieItem = 'testRegulation'
+        this.activeClass = 'registrationClass'
         break
       case 3:
-        this.procedureClass = "";
-        this.registrationClass = "";
-        this.scoreClass = "active";
-        this.disciplineClass = "";
-        this.inlineTab = 'scoreReport'
+        this.actvieItem = 'scoreReport'
+        this.activeClass = 'scoreClass'
         break
       case 4:
-        this.procedureClass = "";
-        this.registrationClass = "";
-        this.scoreClass = "";
-        this.disciplineClass = "active";
-        this.inlineTab = 'testDiscipline'
+        this.actvieItem = 'testDiscipline'
+        this.activeClass = 'disciplineClass'
         break
     }
   }
-
 }
