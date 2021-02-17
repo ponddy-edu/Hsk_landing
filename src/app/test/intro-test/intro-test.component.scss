@@ -33,7 +33,7 @@
     }
   }
   hr {
-    margin: 24px 0;
+    margin: 24px 0 0 0;
     color: #D5D7D9;
   }
   .test_ul {
@@ -46,11 +46,11 @@
         padding-inline-start: 40px;
         width: auto;
         display: block;
-        background: #ffffff;
         padding: 24px 48px;
-        margin-top: 1px;
+        margin: 0;
       }
       li {
+        cursor: pointer;
         text-align: left;
         font-weight: 700;
         font-size: 16px;
@@ -73,6 +73,7 @@
           @media (max-width: 767px) {
             border-bottom: 1px #2D3942 solid;
             display: inline-block;
+            line-height: 24px;
           }
         }
         &:hover {
@@ -106,7 +107,8 @@
   }
   //---------------------------------
   h1 {
-    margin: 0 0 24px 0;
+    padding: 0 0 24px 0;
+    margin: 0;
   }
    ::ng-deepmat-expansion-panel {
     margin: 0 44px;
@@ -144,11 +146,14 @@
       background: #FFFFFF;
       border: 0.5px solid #EAEBEC;
       text-align: start;
+      @media (max-width: 767px) {
+        padding: 24px 15px 0 15px!important;
+      }
       img {
         padding: 40px 32px;
         width: 100%;
         @media (max-width: 767px) {
-          padding: 0px 15px;
+          padding: 0px 15px!important;
         }
       }
     }
@@ -156,9 +161,11 @@
   .test_regulation {
     @media (max-width: 767px) {
       text-align: start;
+      background: #ffffff;
     }
     h1 {
       text-align: center;
+      background-color: #FCFAF8;
       @media (max-width: 767px) {
         font-weight: 900;
         font-size: 24px;
@@ -335,7 +342,7 @@
       letter-spacing: 1px;
       color: #2D3942;
       @media (max-width: 767px) {
-        padding: 24px 20px 24px 20px!important;
+        padding: 24px 20px 0px 20px!important;
       }
       ol {
         padding-inline-start: 20px;
@@ -348,6 +355,10 @@
         font-size: 20px;
         line-height: 36px;
         letter-spacing: 1px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 32px;
+        }
       }
       .title_blur {
         font-weight: 700;
@@ -372,7 +383,7 @@
       border: 0.5px solid #EAEBEC;
       padding: 40px 28px 30px 42px;
       @media (max-width: 767px) {
-        padding: 30px 13px 24px 17px!important;
+        padding: 30px 13px 0px 17px!important;
       }
       ol {
         padding-inline-start: 20px;
