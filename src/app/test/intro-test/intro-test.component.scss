@@ -45,6 +45,10 @@
       @media (max-width: 767px) {
         padding-inline-start: 40px;
         width: auto;
+        display: block;
+        background: #ffffff;
+        padding: 24px 48px;
+        margin-top: 1px;
       }
       li {
         text-align: left;
