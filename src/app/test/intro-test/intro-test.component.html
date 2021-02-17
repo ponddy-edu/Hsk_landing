@@ -29,6 +29,174 @@
         </div>
       </div>
 
+      <div *ngIf="testRegulation" class="col-11 col-md-7 test_regulation">
+        <div class="menu-group">
+          <h1>Test Regulation</h1>
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="title">
+                    <h2>I. Equipment and test environment requirements</h2>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="content">
+                <div>
+                  <h2>Test environment:</h2>
+                  <p>
+                    The test should be taken in a closed room where no one will disturb you. It is forbidden to take the test in public areas such as parks, internet cafes, restaurants, etc. Computers and keyboards must be placed on a desk or table. No one else is allowed
+                    to enter or leave the room during the test. There must not be any prohibited items in the test room.
+                    <br> Before registering for the test, please confirm that your computer, software configuration, network, and room meet test requirements:
+                  </p>
+                </div>
+                <div>
+                  <h2>Computer:</h2>
+                  <p>
+                    ✣ Windows (7/10) operating system.
+                    <br> ✣ Mac system cannot be used
+                  </p>
+                </div>
+                <div>
+                  <h2>Software:</h2>
+                  <p>
+                    Download and operate HSKExamClient from the following website: https://test.chinesetest.cn:36165/client.html
+                  </p>
+                </div>
+                <div>
+                  <h2>Network:</h2>
+                  <p>
+                    Internet speed connection to HSKExamClient should be 150KB / s and above.
+                  </p>
+                </div>
+                <div>
+                  <h2>Camera:</h2>
+                  <p>
+                    HD (more than 300,000 pixels). The room should also be well-lit and the camera is unobstructed. HSK and HSKK candidates need to prepare another mobile with Zoom meeting apps for test supervising.
+                  </p>
+                </div>
+                <div>
+                  <h2>Headphones:</h2>
+                  <p>
+                    Clear with good sound insulation.
+                  </p>
+                </div>
+
+                <div class="content__alert">
+                  <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/icon_alert.svg'">
+                  <p>
+                    Please ensure that recording equipment must be tested before the registration. Result missing or lacking caused by equipment fault a make-up test or refund would not be acceptable.
+                  </p>
+                </div>
+
+                <div class="content__note">
+                  <div>
+                    <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/icon_alert.svg'">
+                    <h3>Please note: </h3>
+                  </div>
+                  <ol>
+                    <li>Paper cannot be used during the Online Chinese Test (Home Edition). </li>
+                    <li>Copying and recording any part of the test with electronic equipment is also prohibited.</li>
+                    <li>The test center may need to collect test-related information from you, including name, photo, ID, audio, and video records taken during the test. We will only use personal information permitted by law, for purposes such as maintaining
+                      test security.</li>
+                  </ol>
+                </div>
+
+                <div class="content__alert">
+                  <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/icon_alert.svg'">
+                  <p>
+                    Please enter the online meeting room (Zoom) one hour before the test to check the candidates’ identification and test environment.
+                  </p>
+                </div>
+              </div>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="title">
+                    <h2>II. Registration</h2>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="content">
+                <div>
+                  <h2>Candidates’ information</h2>
+                  <p>
+                    Please provide personal information according to the registration spreadsheet and provide an electronic photo followed the requirement below:
+                  </p>
+                  <ul>
+                    <li>a photo (6 months prior to the test date). Passport photo (landscape or life photo is not acceptable).</li>
+                    <li>a photo with a hat, turban, headband, or sunglasses is not acceptable(except for religious reasons).</li>
+                    <li>black-and-white or colored photos are both acceptable. (white background is preferred.</li>
+                  </ul>
+                </div>
+                <div class="content__note border_red">
+                  <div>
+                    <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/icon_alert.svg'">
+                    <h3>Note: </h3>
+                  </div>
+                  <ul>
+                    <li>All the information should be provided before the registration deadline.</li>
+                    <li>A photo will be used for test sign-up, face recognition, and authentication. Any recognition or authentication failure caused by the photo which candidates provided, no test fee refund will be counted.</li>
+                  </ul>
+                </div>
+              </div>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <div class="title">
+                    <h2>III. Preparation before the test</h2>
+                  </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="content">
+                <div>
+                  <ol>
+                    <li>
+                      Print your admission ticket 2 days before the test, and confirm the personal information ( name, nationality, gender, ID type, and ID number). Also please confirm the test information ( including the subject, starting time, test center, and notices).
+                    </li>
+                    <li>
+                      Admission time:
+                      <br> You can log in to the online meeting room 60 minutes before the test starts. Please log into the test client program 30 minutes (no later than 10 minutes) before the start time. Personal, equipment or network issues leading
+                      to lateness will not qualify as extenuating circumstances.
+                    </li>
+                    <li>
+                      Equipment and environment testing:
+                      <ol type="a">
+                        <li>Camera</li>
+                        <li>Headphones</li>
+                        <li>Network</li>
+                      </ol>
+                    </li>
+                    <li>
+                      Read and agree with the test regulations.
+                    </li>
+                    <li>
+                      Enter the test by typing in the admission ticket number and password, a countdown will begin.
+                    </li>
+                    <li>
+                      Candidates who are judged to be unqualified on the test day cannot take the test, no test fee will be counted.
+                    </li>
+                  </ol>
+                </div>
+
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <div class="col-11 col-md-3 test_ul mobile">
+            <hr>
+            <ul class="select_item">
+              <li [ngClass]='procedureClass' value="1" (click)="menu_item($event)">Registration Procedure</li>
+              <li [ngClass]='registrationClass' value="2" (click)="menu_item($event)">Test Regulation</li>
+              <li [ngClass]='scoreClass' value="3" (click)="menu_item($event)">Score and Report</li>
+              <li [ngClass]='disciplineClass' value="4" (click)="menu_item($event)">Test Discipline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
