@@ -1,18 +1,17 @@
-import {collectExternalReferences} from '@angular/compiler';
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { BehaviorSubject, Subscription } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-resources',
   templateUrl: './resources.component.html',
   styleUrls: ['./resources.component.scss']
 })
-export class ResourcesComponent implements OnInit, OnDestroy{
+export class ResourcesComponent implements OnInit, OnDestroy {
   public tab = 0
   isDownloadPage = false
-  routeSubscribe:Subscription
+  routeSubscribe: Subscription
+
   constructor(private activatedRoute: ActivatedRoute) {
 
   }
@@ -20,8 +19,7 @@ export class ResourcesComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     // this.activatedRoute.data.subscribe(res => console.log(res))
-    this.routeSubscribe = this.activatedRoute.url.
-    subscribe((res) => {
+    this.routeSubscribe = this.activatedRoute.url.subscribe((res) => {
       const tabIndex = this.activatedRoute.snapshot.firstChild ? this.activatedRoute.snapshot.firstChild.data.tab : 0;
       if (tabIndex < 3) {
         this.setTab(tabIndex)
@@ -37,7 +35,7 @@ export class ResourcesComponent implements OnInit, OnDestroy{
 
   setTab(tabIndex: number) {
     this.tab = tabIndex
-    if (tabIndex != 3) {
+    if (tabIndex !== 3) {
       this.isDownloadPage = false
     }
   }

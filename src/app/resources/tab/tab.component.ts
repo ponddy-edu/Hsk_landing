@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-tab',
@@ -9,14 +9,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class TabComponent implements OnInit {
   @Input()
   inputTab: number
-  @Output()
-  tabChange = new EventEmitter<number>()
-
-  @Output()
-  downloadChange = new EventEmitter<boolean>()
-
-  isDownloadPage = false
-
 
   constructor(private router: Router) {
 
@@ -32,7 +24,6 @@ export class TabComponent implements OnInit {
   }
 
   changeTab(tabIndex: any) {
-    // this.tabChange.emit(tabIndex)
     switch (tabIndex) {
       case 0:
         this.router.navigate(['./resources/course']);
