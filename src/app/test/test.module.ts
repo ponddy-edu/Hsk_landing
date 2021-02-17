@@ -9,6 +9,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {TestComponent} from './test.component';
 import {TabComponent } from './tab/tab.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 const routes: Routes = [
   {path: 'tests', component: TestComponent,
@@ -26,6 +27,7 @@ const routes: Routes = [
     LazyLoadImageModule,
     MatTabsModule,
     RouterModule.forChild(routes),
+    MatExpansionModule,
   ]
 })
 export class TestModule { }
