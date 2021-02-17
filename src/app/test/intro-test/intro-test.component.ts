@@ -1,4 +1,7 @@
+import { DOCUMENT } from '@angular/common';
+import { Inject } from '@angular/core';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { PageScrollService } from 'ngx-page-scroll-core';
 
 @Component({
   selector: 'app-intro-test',
@@ -14,7 +17,8 @@ export class IntroTestComponent implements OnInit {
   actvieItem = "registrationProcedure"
   activeClass = 'procedureClass'
 
-  constructor() { }
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+  }
 
   ngOnInit(): void {
 
@@ -39,5 +43,12 @@ export class IntroTestComponent implements OnInit {
         this.activeClass = 'disciplineClass'
         break
     }
+    setTimeout(()=>{
+      this.pageScrollService.scroll({
+        document: this.document,
+        scrollTarget: '#test-intro',
+        duration: 500,
+      });
+    },100)
   }
 }

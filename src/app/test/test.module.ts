@@ -10,6 +10,7 @@ import {TestComponent} from './test.component';
 import {TabComponent } from './tab/tab.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 const routes: Routes = [
   {path: 'tests', component: TestComponent,
@@ -28,6 +29,7 @@ const routes: Routes = [
     MatTabsModule,
     RouterModule.forChild(routes),
     MatExpansionModule,
+    NgxPageScrollModule,
   ]
 })
 export class TestModule { }
