@@ -197,6 +197,86 @@
           </div>
         </div>
       </div>
+
+      <div *ngIf="scoreReport" class="col-11 col-md-7 score_report">
+        <div class="menu-group">
+          <h1>Score and Report</h1>
+        </div>
+        <div class="title_bar">Info</div>
+        <div class="content">
+          <ol>
+            <li>
+              HSK test results will be available the third Monday after the test. HSKK will be available 1 month after the test. Ponddy HSK will send out the online score reports when the test results become available. Test takers can also inquire about the test result
+              on the test website (www.chinesetest.cn) with admission ticket number and name.
+            </li>
+            <li>
+              Score reports can be applied through the “extra score report” service online by test takers themselves in their personal information center and send to the individuals or institutions.
+            </li>
+            <li>
+              <div class="title">Validity period of the score report</div>
+              <div>
+                The test result is a long term available, but the score report to be used for the application to Chinese universities and colleges is valid within two years (from the test date).
+              </div>
+            </li>
+            <li>
+              <div class="title">Additional services concerning score report</div>
+              <ol type="a">
+                <li>
+                  <div class="title_blur">Delivery of an additional score report</div>
+                  <div>
+                    For the purpose of helping test takers present their score reports of the Chinese test as proof of their Chinese proficiency for college application, graduation, recruitment, promotion, etc., it’s available for test-takers to apply for the delivery of
+                    additional score reports via the Chinese testing service website (www.chinesetest.cn). For details of the application forms and fees, please visit the Chinese testing service website (www.chinesetest.cn).
+                  </div>
+                </li>
+                <li>
+                  <div class="title_blur">Modification of the score report</div>
+                  <div>
+                    The HSK score report serves as an important proof of test-takers’ Chinese proficiency. In view that some test takers may fail to carefully check the information as required during their registration online or at the test center or fail to carefully check
+                    the registration confirmation or the test admission ticket after the completion of the test registration, which may lead to a discrepancy between the personal information on the score report and the real information, the Chinese testing
+                    service website (www.chinesetest.cn), in order to ensure the normal use of the report, allows test takers to apply for the modification of the score report.
+                  </div>
+                </li>
+              </ol>
+            </li>
+          </ol>
+
+          <div style="display: flex;">
+            <div class="title" style="padding-right: 10px;">●</div>
+            <div class="title">Requirements for test-takers’ application to modify the score report:</div>
+          </div>
+
+          <ul>
+            <li>
+              <div>
+                An application to modify the information is limited to the following situations:
+              </div>
+              <ul>
+                <li>Misspelling of the name</li>
+                <li>The error of the nationality information</li>
+                <li>The error of the gender information</li>
+              </ul>
+            </li>
+            <li>
+              Test takers must provide the relevant supporting certificates, such as his/her passport and identity card.
+            </li>
+            <li>
+              The application shall be filed within the validity period of the test results report (i.e., within two years after the end of the test).
+            </li>
+          </ul>
+
+          <div class="col-11 col-md-3 test_ul mobile">
+            <hr>
+            <ul class="select_item">
+              <li [ngClass]='procedureClass' value="1" (click)="menu_item($event)">Registration Procedure</li>
+              <li [ngClass]='registrationClass' value="2" (click)="menu_item($event)">Test Regulation</li>
+              <li [ngClass]='scoreClass' value="3" (click)="menu_item($event)">Score and Report</li>
+              <li [ngClass]='disciplineClass' value="4" (click)="menu_item($event)">Test Discipline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </section>
