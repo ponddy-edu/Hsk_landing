@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-intro-test',
@@ -11,23 +11,20 @@ export class IntroTestComponent implements OnInit {
 
   panelOpenState = false;
 
+  inlineTab = 'registrationProcedure'
   registrationProcedure = true;
   testRegulation = false;
   scoreReport = false;
   testDiscipline = false;
 
-  activeClass = "";
   procedureClass = "active";
   registrationClass = "";
   scoreClass = "";
   disciplineClass = "";
 
 
-
-  actvieItem ="Registration Procedure"
-
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
 
@@ -40,40 +37,28 @@ export class IntroTestComponent implements OnInit {
         this.registrationClass = "";
         this.scoreClass = "";
         this.disciplineClass = "";
-        this.registrationProcedure = true;
-        this.testRegulation = false;
-        this.scoreReport = false;
-        this.testDiscipline = false;
+        this.inlineTab = 'registrationProcedure'
         break
       case 2:
         this.procedureClass = "";
         this.registrationClass = "active";
         this.scoreClass = "";
         this.disciplineClass = "";
-        this.registrationProcedure = false;
-        this.testRegulation = true;
-        this.scoreReport = false;
-        this.testDiscipline = false;
+        this.inlineTab = 'testRegulation'
         break
       case 3:
         this.procedureClass = "";
         this.registrationClass = "";
         this.scoreClass = "active";
         this.disciplineClass = "";
-        this.registrationProcedure = false;
-        this.testRegulation = false;
-        this.scoreReport = true;
-        this.testDiscipline = false;
+        this.inlineTab = 'scoreReport'
         break
       case 4:
         this.procedureClass = "";
         this.registrationClass = "";
         this.scoreClass = "";
         this.disciplineClass = "active";
-        this.registrationProcedure = false;
-        this.testRegulation = false;
-        this.scoreReport = false;
-        this.testDiscipline = true;
+        this.inlineTab = 'testDiscipline'
         break
     }
   }

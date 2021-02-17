@@ -26,9 +26,9 @@
         </ul>
       </div>
 
-      <div *ngIf="registrationProcedure" class="col-11 col-md-7 registration_procedure">
+      <div  *ngIf="inlineTab=='registrationProcedure'" class="col-11 col-md-7 registration_procedure">
         <div class="menu-group">
-          <h1>Registration Procedure</h1>
+          <h1 >Registration Procedure</h1>
         </div>
         <div class="content">
           <img [useSrcset]="true" [lazyLoad]="picRegistration">
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div *ngIf="testRegulation" class="col-11 col-md-7 test_regulation">
+      <div *ngIf="inlineTab=='testRegulation'" class="col-11 col-md-7 test_regulation">
         <div class="menu-group">
           <h1>Test Regulation</h1>
           <mat-accordion>
@@ -213,7 +213,7 @@
         </div>
       </div>
 
-      <div *ngIf="scoreReport" class="col-11 col-md-7 score_report">
+      <div *ngIf="inlineTab=='scoreReport'" class="col-11 col-md-7 score_report">
         <div class="menu-group">
           <h1>Score and Report</h1>
         </div>
@@ -291,7 +291,7 @@
         </div>
       </div>
 
-      <div *ngIf="testDiscipline" class="col-11 col-md-7 test_discipline">
+      <div *ngIf="inlineTab=='testDiscipline'" class="col-11 col-md-7 test_discipline">
         <div class="menu-group">
           <h1>Test Discipline</h1>
         </div>
