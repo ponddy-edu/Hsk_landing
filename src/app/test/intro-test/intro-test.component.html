@@ -1,5 +1,34 @@
 <section class="intro_test">
-  <div class="container">
-    <h1>Coming soon</h1>
+  <div class="container" style="display: flex;">
+    <div class="row justify-content-center">
+      <div class="col-11 col-md-3 test_ul web">
+        <ul class="select_item">
+          <li [ngClass]='procedureClass' value="1" (click)="menu_item($event)">Registration Procedure</li>
+          <li [ngClass]='registrationClass' value="2" (click)="menu_item($event)">Test Regulation</li>
+          <li [ngClass]='scoreClass' value="3" (click)="menu_item($event)">Score and Report</li>
+          <li [ngClass]='disciplineClass' value="4" (click)="menu_item($event)">Test Discipline</li>
+        </ul>
+      </div>
+
+      <div *ngIf="registrationProcedure" class="col-11 col-md-7 registration_procedure">
+        <div class="menu-group">
+          <h1>Registration Procedure</h1>
+        </div>
+        <div class="content">
+          <img [useSrcset]="true" [lazyLoad]="picRegistration">
+
+          <div class="col-11 col-md-3 test_ul mobile">
+            <hr>
+            <ul class="select_item">
+              <li [ngClass]='procedureClass' value="1" (click)="menu_item($event)">Registration Procedure</li>
+              <li [ngClass]='registrationClass' value="2" (click)="menu_item($event)">Test Regulation</li>
+              <li [ngClass]='scoreClass' value="3" (click)="menu_item($event)">Score and Report</li>
+              <li [ngClass]='disciplineClass' value="4" (click)="menu_item($event)">Test Discipline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
