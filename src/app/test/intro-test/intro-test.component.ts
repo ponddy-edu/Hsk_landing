@@ -33,9 +33,8 @@ export class IntroTestComponent implements OnInit {
 
   }
 
-  menu_item(event: any) {
-    console.log(event.target.value);
-    switch (event.target.value) {
+  menu_item(item_index: number) {
+    switch (item_index) {
       case 1:
         this.procedureClass = "active";
         this.registrationClass = "";
