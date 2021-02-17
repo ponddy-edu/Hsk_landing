@@ -130,6 +130,15 @@
   }
   //---------------------------------
   .registration_procedure {
+    h1 {
+      text-align: center;
+      @media (max-width: 767px) {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+      }
+    }
     padding: 0 55px;
     .content {
       background: #FFFFFF;
@@ -147,6 +156,15 @@
   .test_regulation {
     @media (max-width: 767px) {
       text-align: start;
+    }
+    h1 {
+      text-align: center;
+      @media (max-width: 767px) {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+      }
     }
     .menu-group {
       .title {
@@ -288,6 +306,12 @@
     padding: 0 55px;
     h1 {
       text-align: center;
+      @media (max-width: 767px) {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+      }
     }
     .title_bar {
       background: #FFFFFF;
@@ -297,6 +321,9 @@
       line-height: 35px;
       color: #2D3942;
       padding: 20px 0 20px 24px;
+      @media (max-width: 767px) {
+        font-size: 26px;
+      }
     }
     .content {
       background: #FBFBFB;
