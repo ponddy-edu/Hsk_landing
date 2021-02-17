@@ -22,7 +22,7 @@ const routes: Routes = [
       }
     }
     },
-  {path: 'ponddy', loadChildren: './ponddy/ponddy.module#PonddyModule', data: {
+  {path: 'ponddy', loadChildren: () => import('./ponddy/ponddy.module').then(m => m.PonddyModule), data: {
       seo: {
         title: 'Ponddy® HSK - About Ponddy',
         metaTags: [
@@ -34,7 +34,8 @@ const routes: Routes = [
         ]
       }
     }},
-  {path: 'resources', loadChildren: './resources/resources.module#ResourcesModule',
+  {
+    path: 'resources', loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule),
     data: {
       seo: {
         title: 'Ponddy® HSK - Resources',
@@ -47,7 +48,7 @@ const routes: Routes = [
         ]
       }
     }},
-  {path: 'tests', loadChildren: './test/test.module#TestModule',
+  {path: 'tests', loadChildren: () => import('./test/test.module').then(m => m.TestModule),
     data: {
       seo: {
         title: 'Ponddy® HSK - Tests',
@@ -60,7 +61,7 @@ const routes: Routes = [
         ]
       }
     }},
-  {path: 'faq', loadChildren: './faq/faq.module#FaqModule',
+  {path: 'faq', loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule),
     data: {
       seo: {
         title: 'Ponddy® HSK - FAQ',
