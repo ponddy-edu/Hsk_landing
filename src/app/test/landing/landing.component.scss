@@ -6,22 +6,15 @@
     background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/pic_HSK_Test_index1.png");
     background-size: cover;
     @media (max-width: 767px) {
-      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/mobile/index_01.png");
-      background-size: cover;
+      background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/mobile/index_01.png");
     }
   }
   &.test_intro {
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");
+    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/index_pic_web.png");
     background-size: cover;
     @media (max-width: 767px) {
-      background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/mobile/index_01.png");
+      background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/mobile/index_pic_phone.png");
     }
-  }
-  @media (max-width: 991.98px) {
-    height: calc(100vh - 65px);
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png");
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   h1 {
     font-style: normal;
