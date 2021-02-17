@@ -276,6 +276,56 @@
         </div>
       </div>
 
+      <div *ngIf="testDiscipline" class="col-11 col-md-7 test_discipline">
+        <div class="menu-group">
+          <h1>Test Discipline</h1>
+        </div>
+        <div class="content">
+          <ol>
+            <li>
+              The test should be conducted in a safe and enclosed room independently without any interference. The room should be quiet and well-lighted. Places as parks, internet cafes, restaurants, and other open places are forbidden.
+            </li>
+            <li>
+              Computer/laptop, keyboard and mouse, and other testing articles should be ON the table, and all prohibited items of examinations are not allowed in the testing room.
+            </li>
+            <li>
+              Other personnel is not allowed for entry during the test.
+            </li>
+            <li>
+              Any entry, exit nor walking around the room are forbidden after your entrance (after opening the online Chinese test system’s interface) till your exit from the test, otherwise the test will be considered a failure.
+            </li>
+            <li>
+              Any switching out of the online Chinese test system’s interface is forbidden after your entrance (after opening the online Chinese test system’s interface) till your exit from the test. Otherwise the test will be considered a failure.
+            </li>
+            <li>
+              Utilization of any unauthorized materials, including mobile devices, handwritten notes or textbooks are forbidden during the test.
+            </li>
+            <li>
+              Communications with any other person are forbidden during the test.
+            </li>
+            <li>
+              Remain in the center of your camera without any blocking and keep your camera on during the whole test, and make sure the shooting is clear and no choppy.
+            </li>
+            <li>
+              No hat, headscarf, headband, sunglasses, jewelry, tie clip nor other accessories are allowed in the test (Special religious needs please state and apply at your test registration).
+            </li>
+            <li>
+              All rules and regulations of “Measures for Disciplinary Violations in the Chinese Tests” are applied to Online Chinese Test (Home Edition). CTI and test centers maintain the right to pursue after the test.
+            </li>
+          </ol>
+
+          <div class="col-11 col-md-3 test_ul mobile">
+            <hr>
+            <ul class="select_item">
+              <li [ngClass]='procedureClass' value="1" (click)="menu_item($event)">Registration Procedure</li>
+              <li [ngClass]='registrationClass' value="2" (click)="menu_item($event)">Test Regulation</li>
+              <li [ngClass]='scoreClass' value="3" (click)="menu_item($event)">Score and Report</li>
+              <li [ngClass]='disciplineClass' value="4" (click)="menu_item($event)">Test Discipline</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </div>
