@@ -16,7 +16,7 @@
 }
 
 .intro_test {
-  padding: 74px 0 24px 0;
+  padding: 74px 0 74px 0;
   background-color: #FCFAF8;
   @media (max-width: 767px) {
     padding: 24px 0 24px 0;
@@ -153,7 +153,7 @@
         padding: 24px 15px 0 15px!important;
       }
       img {
-        padding: 40px 32px;
+        padding: 40px 32px 100px 32px;
         width: 100%;
         @media (max-width: 767px) {
           padding: 0px 15px!important;
