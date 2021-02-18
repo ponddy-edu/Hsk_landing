@@ -29,6 +29,9 @@ body { margin: 0;
     overflow-x: hidden;
   }
 }
+button:focus {
+  outline: 1px dotted;
+}
 body {
   font-family: Ponddy-NotoRubik, 'Microsoft JhengHei', sans-serif !important;
 }

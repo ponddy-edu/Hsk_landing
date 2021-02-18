@@ -8,6 +8,7 @@ import {LearnMoreComponent} from './learn-more/learn-more.component';
 import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     MatExpansionModule,
     LazyLoadImageModule,
     IvyCarouselModule,
-
+    MatMenuModule,
   ],
   exports: [HeaderComponent, FooterComponent, AboutPonddyComponent]
 })

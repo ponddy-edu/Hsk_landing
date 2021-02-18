@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DeviceService} from '../../utils/device.service';
 import {BehaviorSubject, Observable} from 'rxjs';
+import {MatMenuTrigger} from '@angular/material/menu';
 
 @Component({
   selector: 'app-header',
@@ -20,4 +21,7 @@ export class HeaderComponent implements OnInit {
     this.isMobile.subscribe()
   }
 
+  mouseEnter(menuTrigger: MatMenuTrigger) {
+    menuTrigger.openMenu()
+  }
 }
