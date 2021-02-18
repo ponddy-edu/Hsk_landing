@@ -15,17 +15,17 @@ import {DownloadComponent} from './download/download.component';
 
 import {SmartLearnComponent} from './smart-learn/smart-learn.component';
 import {LayoutModule} from '@angular/cdk/layout';
-import { IntroSmartComponent } from './intro-smart/intro-smart.component';
+import {IntroSmartComponent} from './intro-smart/intro-smart.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: ResourcesComponent,
-    children: [{path: 'course', component: ResourcesComponent, data: {tab: 0}},
-      {path: 'preparation', component: ResourcesComponent, data: {tab: 1}},
-      {path: 'smart', component: ResourcesComponent, data: {tab: 2}},
-      {path: 'download', component: ResourcesComponent, data: {tab: 3}}]
+    path: '', redirectTo: 'course', pathMatch: 'full'
   },
+  {path: 'course', component: ResourcesComponent, data: {tab: 0}},
+  {path: 'preparation', component: ResourcesComponent, data: {tab: 1}},
+  {path: 'smart', component: ResourcesComponent, data: {tab: 2}},
+  {path: 'download', component: ResourcesComponent, data: {tab: 3}}
 ];
 
 @NgModule({
