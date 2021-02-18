@@ -26,8 +26,10 @@
             </a>
             <mat-menu #menu="matMenu">
               <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTrigger, button)">
-                <button mat-menu-item>Chinese Tests</button>
-                <button mat-menu-item>Test Instructions</button>
+                <button mat-menu-item class="pd-menu-item" routerLink="/tests/chinese">
+                  <a>Chinese Tests</a></button>
+                <button mat-menu-item class="pd-menu-item" routerLink="/tests/instructions">
+                  <a>Test Instructions</a></button>
               </span>
             </mat-menu>
           </li>
@@ -41,10 +43,18 @@
             </a>
             <mat-menu #menuRsource="matMenu">
               <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTriggerResource, buttonResource)">
-                <button mat-menu-item>Course</button>
-                <button mat-menu-item>Preparation</button>
-                <button mat-menu-item>AI Chinese Tools</button>
-                <button mat-menu-item>Test Prep Resources</button>
+                <button mat-menu-item class="pd-menu-item" routerLink="/resources/course">
+                  <a>Course</a>
+                </button>
+                <button mat-menu-item class="pd-menu-item" routerLink="/resources/preparation">
+                  <a>Preparation</a>
+                </button>
+                <button mat-menu-item class="pd-menu-item"  routerLink="/resources/smart">
+                  <a>AI Chinese Tools</a>
+                </button>
+                <button mat-menu-item class="pd-menu-item" routerLink="/resources/download">
+                  <a>Test Prep Resources</a>
+                </button>
 
 
               </span>

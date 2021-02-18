@@ -37,8 +37,10 @@
       background: #F5F0EB;
     }
   }
-
-
+  
+  carousel{
+    z-index: 2;
+  }
   .carousel-cell {
     padding: 0 24px 0 16px;
     border-right: 1px solid #D5D7D9;;

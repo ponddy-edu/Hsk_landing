@@ -57,6 +57,13 @@
 
 ::ng-deep.cdk-overlay-pane {
   margin-top: 12px;
+  
+  .mat-menu-panel {
+    min-width: 300px;
+  }
+  .mat-menu-content:not(:empty){
+    padding: 0!important;
+  }
 }
 
 .mat-menu-item {
@@ -64,6 +71,37 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1px;
+  min-width: 300px;
+  height: 58px;
+}
+
+.pd-menu-item {
+  &:hover {
+    background: #FBFCFC;
+    a {
+      color: #6ACFED !important;
+    }
+  }
+  &:focus{
+    background: inherit;
+  }
+  a {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .5px;
+    transition: color .5s ease-in-out;
+    text-decoration: none;
+    color: #576167 !important;
+    font-weight: 700;
+    height: 48px;
+    font-family: Ponddy-NotoRubik;
+    
+    &.active {
+      color: #3b9fbe !important;
+      border: none !important;
+    }
+  }
 }
 
 mat-expansion-panel {
