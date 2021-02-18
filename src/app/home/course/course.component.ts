@@ -13,6 +13,10 @@ export class CourseComponent implements OnInit {
   courseCarousel: CarouselComponent;
   courseWidth: number
   courseHeight: number
+  disableClass = 'left'
+
+  @ViewChild('course_carousel')
+  courseComponent: CarouselComponent;
 
   constructor(public device: DeviceService) {
     if (device.$mobile.getValue()) {
@@ -28,11 +32,25 @@ export class CourseComponent implements OnInit {
   }
 
   coursePrev(): void {
-    this.courseCarousel.prev()
+    let disableImg = this.courseComponent.counter.split('/')
+    this.courseComponent.prev()
+    if (Number.parseInt(disableImg[0]) === 2) {
+      this.disableClass = "left"
+    } else {
+      this.disableClass = ''
+
+    }
   }
 
   courseNext(): void {
-    this.courseCarousel.next()
+    let disableImg = this.courseComponent.counter.split('/')
+    this.courseComponent.next()
+    if (Number.parseInt(disableImg[0]) === Number.parseInt(disableImg[1])-3) {
+      this.disableClass = "right"
+    } else {
+      this.disableClass = ''
+
+    }
   }
 
 }
