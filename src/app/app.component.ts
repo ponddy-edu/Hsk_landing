@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.platform = isPlatformBrowser(this.platformId) ? 'Browser' : 'Server';
     this.router.events.pipe(
-      tap(res => console.log(res)),
       filter(e => e instanceof NavigationEnd),
       map(e => this.activatedRoute),
       map((route) => {
@@ -40,7 +39,6 @@ export class AppComponent implements OnInit {
     ).subscribe((data: any) => {
       const seoData = data.seo;
       console.log(data)
-      console.log(this.activatedRoute.snapshot.firstChild?.data)
       this.seoService.updateTitle(seoData.title);
       this.seoService.updateMetaTags(seoData.metaTags);
       // this.metaService.updateTag()
