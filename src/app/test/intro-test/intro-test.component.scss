@@ -59,6 +59,7 @@
         list-style-type: none;
         padding-left: 20px;
         margin: 1px 0;
+        color: #2D3942;
         @media (max-width: 767px) {
           list-style-type: inherit;
           padding-left: 0px;
@@ -68,7 +69,6 @@
           border-radius: 0px;
         }
         span {
-          color: #2D3942;
           @media (max-width: 767px) {
             border-bottom: 1px #2D3942 solid;
             display: inline-block;
