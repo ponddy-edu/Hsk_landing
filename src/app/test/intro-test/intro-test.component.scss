@@ -119,6 +119,9 @@
       background: #FFFFFF;
       box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
     }
+    &:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+      background: #ffffff;
+    }
     .mat-expansion-panel-header {
       padding: 20px 24px 20px 24px;
       height: auto;
