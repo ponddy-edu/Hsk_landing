@@ -16,7 +16,6 @@ export class AppComponent implements OnInit {
   platform: string;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any,
-              private metaService: Meta,
               public device: DeviceService,
               private router: Router,
               private seoService: SeoService,
@@ -25,6 +24,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.platform = isPlatformBrowser(this.platformId) ? 'Browser' : 'Server';
+    this.seoService.initMetaData()
     this.router.events.pipe(
       filter(e => e instanceof NavigationEnd),
       map(e => this.activatedRoute),
