@@ -18,18 +18,35 @@
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" (mouseenter)="mouseEnter(menuTrigger)" [class.active]="actvieMenu==='test'" href="#" data="navbar" class="nav-a text_menu">
+            <a i18n="header" #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"
+               (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)"
+               [class.active]="actvieMenu==='test'" href="#" data="navbar" class="nav-a text_menu">
               Tests
             </a>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item>Chinese Tests</button>
-              <button mat-menu-item>Test Instructions</button>
+            <mat-menu #menu="matMenu" >
+              <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTrigger, button)">
+                <button mat-menu-item>Chinese Tests</button>
+                <button mat-menu-item>Test Instructions</button>
+              </span>
             </mat-menu>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/resources/course" [class.active]="actvieMenu==='resources'" data="navbar" class="nav-a text_menu">
+            <a i18n="header"
+               #buttonResource #menuTriggerResource="matMenuTrigger" [matMenuTriggerFor]="menuRsource"
+               (mouseenter)="buttonEnter(menuTriggerResource)" (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)"
+               [class.active]="actvieMenu==='resources'" data="navbar" class="nav-a text_menu">
               Resources
             </a>
+            <mat-menu #menuRsource="matMenu" >
+              <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTriggerResource, buttonResource)">
+                <button mat-menu-item>Course</button>
+                <button mat-menu-item>Preparation</button>
+                <button mat-menu-item>AI Chinese Tools</button>
+                <button mat-menu-item>Test Prep Resources</button>
+
+
+              </span>
+            </mat-menu>
           </li>
           <li class="nav-item">
             <a i18n="header" routerLink="/faq"  [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
