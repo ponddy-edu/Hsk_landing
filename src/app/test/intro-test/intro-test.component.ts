@@ -1,7 +1,7 @@
-import { DOCUMENT } from '@angular/common';
-import { Inject } from '@angular/core';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { PageScrollService } from 'ngx-page-scroll-core';
+import {DOCUMENT} from '@angular/common';
+import {Inject} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {PageScrollService} from 'ngx-page-scroll-core';
 
 @Component({
   selector: 'app-intro-test',
@@ -14,7 +14,7 @@ export class IntroTestComponent implements OnInit {
 
   panelOpenState = false;
 
-  actvieItem = "registrationProcedure"
+  actvieItem = 'registrationProcedure'
   activeClass = 'procedureClass'
 
   constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
@@ -24,8 +24,8 @@ export class IntroTestComponent implements OnInit {
 
   }
 
-  menu_item(item_index: number) {
-    switch (item_index) {
+  menu_item(itemIndex: number) {
+    switch (itemIndex) {
       case 1:
         this.actvieItem = 'registrationProcedure'
         this.activeClass = 'procedureClass'
@@ -43,12 +43,12 @@ export class IntroTestComponent implements OnInit {
         this.activeClass = 'disciplineClass'
         break
     }
-    setTimeout(()=>{
+    setTimeout(() => {
       this.pageScrollService.scroll({
         document: this.document,
         scrollTarget: '#test-intro',
         duration: 500,
       });
-    },100)
+    }, 100)
   }
 }
