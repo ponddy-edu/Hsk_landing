@@ -44,23 +44,39 @@
   }
   .arrow.left {
     justify-content: flex-end;
-    img {
+    .course_img-left {
       cursor: pointer;
-      // -webkit-mask: url(/assets/image/icon/btn_normal_left.svg) no-repeat center;
-      // mask: url(/assets/image/icon/btn_normal_left.svg) no-repeat center;
+      background-image: url(/assets/image/icon/btn_normal_left.svg);
+      width: 42px;
+      height: 42px;
       &:hover {
-        // -webkit-mask: url(https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg) no-repeat center;
-        // mask: url(https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg) no-repeat center;
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+        background-image: url(/assets/image/icon/btn_hover_left.svg);
+      }
+    }
+    .disable {
+      background-image: url(/assets/image/icon/btn_disable_left.svg);
+      &:hover {
+        cursor: inherit;
+        background-image: url(/assets/image/icon/btn_disable_left.svg);
       }
     }
   }
   .arrow.right {
     justify-content: flex-start;
-    img {
+    .course_img-right {
       cursor: pointer;
+      background-image: url(/assets/image/icon/btn_normal_right.svg);
+      width: 42px;
+      height: 42px;
       &:hover {
-        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+        background-image: url(/assets/image/icon/btn_hover_right.svg);
+      }
+    }
+    .disable {
+      background-image: url(/assets/image/icon/btn_disable_right.svg);
+      &:hover {
+        cursor: inherit;
+        background-image: url(/assets/image/icon/btn_disable_right.svg);
       }
     }
   }

@@ -42,7 +42,7 @@ export class AboutPonddyComponent implements OnInit {
   buttonImage = ''
   colorBg = ''
   colClass = ''
-
+  disableClass = 'left'
 
   height = 101
 
@@ -82,13 +82,28 @@ export class AboutPonddyComponent implements OnInit {
         }
       }
     })
+
   }
 
   coursePrev(): void {
+    let disableImg = this.courseComponent.counter.split('/')
     this.courseComponent.prev()
+    if (Number.parseInt(disableImg[0]) === 2) {
+      this.disableClass = "left"
+    } else {
+      this.disableClass = ''
+
+    }
   }
 
   courseNext(): void {
+    let disableImg = this.courseComponent.counter.split('/')
     this.courseComponent.next()
+    if (Number.parseInt(disableImg[0]) === Number.parseInt(disableImg[1])-1) {
+      this.disableClass = "right"
+    } else {
+      this.disableClass = ''
+
+    }
   }
 }

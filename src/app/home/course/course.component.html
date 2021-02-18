@@ -47,10 +47,8 @@
     </div>
     <div class="row">
       <div class="arrow">
-        <img class="left" [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'"
-             (click)="coursePrev()">
-        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'"
-             (click)="courseNext()">
+        <span class="course_img-right left" [class.disable]="disableClass=='left'" (click)="coursePrev()"></span>
+        <span class="course_img-right right" [class.disable]="disableClass=='right'" (click)="courseNext()"></span>
       </div>
     </div>
   </div>
