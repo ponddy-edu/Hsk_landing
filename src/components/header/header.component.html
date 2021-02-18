@@ -18,8 +18,10 @@
               Ponddy
             </a>
           </li>
-          <li class="nav-item nav-border-r ">
-            <a i18n="header" #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"
+          <li class="nav-item nav-border-r">
+            <a i18n="header"
+               routerLink="/tests/chinese"
+               #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"
                (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)"
                [class.active]="actvieMenu==='test'" href="#" data="navbar" class="nav-a text_menu">
               Tests
@@ -35,6 +37,7 @@
           </li>
           <li class="nav-item nav-border-r ">
             <a i18n="header"
+               routerLink="/resources/course"
                #buttonResource #menuTriggerResource="matMenuTrigger" [matMenuTriggerFor]="menuRsource"
                (mouseenter)="buttonEnter(menuTriggerResource)"
                (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)"
