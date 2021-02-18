@@ -84,6 +84,7 @@
   }
   &:focus{
     background: inherit;
+    outline: unset;
   }
   a {
     cursor: pointer;
@@ -100,6 +101,10 @@
     &.active {
       color: #3b9fbe !important;
       border: none !important;
+    }
+    &:after {
+      content: url("/assets/image/icon/arrow.png");
+      float: right;
     }
   }
 }
