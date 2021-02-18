@@ -9,8 +9,8 @@ import { PageScrollService } from 'ngx-page-scroll-core';
   styleUrls: ['./intro-test.component.scss']
 })
 export class IntroTestComponent implements OnInit {
-  picRegistration = `https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/mobile/pic_Registration+Procedure_phone.svg 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/pic_Registration+Procedure_web.svg 1100w`
+  picRegistration = `https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/pic_Registration+Procedure_phone.png 767w,
+  https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/pic_Registration+Procedure_web.png 1100w`
 
   panelOpenState = false;
 
