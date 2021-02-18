@@ -60,9 +60,11 @@
   
   .mat-menu-panel {
     min-width: 300px;
+    border-radius: 6px;
   }
-  .mat-menu-content:not(:empty){
-    padding: 0!important;
+  
+  .mat-menu-content:not(:empty) {
+    padding: 0 !important;
   }
 }
 
@@ -75,17 +77,30 @@
   height: 58px;
 }
 
+.pd-nav-item {
+  a:focus {
+    outline: unset;
+  }
+}
+
 .pd-menu-item {
+  border-bottom: 1px solid #EAEBEC;
+  &:nth-last-child(1){
+    border-bottom: none;
+  }
   &:hover {
     background: #FBFCFC;
+    
     a {
       color: #6ACFED !important;
     }
   }
-  &:focus{
-    background: inherit;
+  
+  &:focus {
     outline: unset;
+    background: inherit;
   }
+  
   a {
     cursor: pointer;
     font-size: 16px;
@@ -102,6 +117,7 @@
       color: #3b9fbe !important;
       border: none !important;
     }
+    
     &:after {
       content: url("/assets/image/icon/arrow.png");
       float: right;
