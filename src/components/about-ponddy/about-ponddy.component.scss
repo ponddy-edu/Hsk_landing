@@ -46,12 +46,22 @@
     justify-content: flex-end;
     img {
       cursor: pointer;
+      // -webkit-mask: url(/assets/image/icon/btn_normal_left.svg) no-repeat center;
+      // mask: url(/assets/image/icon/btn_normal_left.svg) no-repeat center;
+      &:hover {
+        // -webkit-mask: url(https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg) no-repeat center;
+        // mask: url(https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg) no-repeat center;
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_left.svg");
+      }
     }
   }
   .arrow.right {
     justify-content: flex-start;
     img {
       cursor: pointer;
+      &:hover {
+        content: url("https://hsk-landing.s3-us-west-2.amazonaws.com/icon/btn_hover_right.svg");
+      }
     }
   }
   .carousel_wrap {

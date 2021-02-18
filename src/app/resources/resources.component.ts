@@ -20,7 +20,7 @@ export class ResourcesComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // this.activatedRoute.data.subscribe(res => console.log(res))
     this.routeSubscribe = this.activatedRoute.url.subscribe((res) => {
-      const tabIndex = this.activatedRoute.snapshot.firstChild ? this.activatedRoute.snapshot.firstChild.data.tab : 0;
+      const tabIndex = this.activatedRoute.snapshot.data ? this.activatedRoute.snapshot.data.tab : 0;
       if (tabIndex < 3) {
         this.setTab(tabIndex)
       } else if (tabIndex === 3) {

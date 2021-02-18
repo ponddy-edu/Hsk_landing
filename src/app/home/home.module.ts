@@ -12,7 +12,7 @@ import {LearningComponent} from './learning/learning.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
 ];
 
 @NgModule({

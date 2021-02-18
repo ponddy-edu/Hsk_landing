@@ -9,7 +9,7 @@ import {LazyLoadImageModule} from 'ng-lazyload-image';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 const routes: Routes = [
-  {path: 'faq', component: FaqComponent},
+  {path: '', component: FaqComponent},
 ];
 @NgModule({
   declarations: [FaqComponent, LandingComponent, AboutComponent],

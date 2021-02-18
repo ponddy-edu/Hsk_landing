@@ -2,6 +2,9 @@ import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from "@angular/common";
 import {Meta} from "@angular/platform-browser";
 import {DeviceService} from "../utils/device.service";
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
+import {filter, map, mergeMap, tap} from 'rxjs/operators';
+import {SeoService} from '../utils/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -13,27 +16,31 @@ export class AppComponent implements OnInit {
   platform: string;
 
   constructor(@Inject(PLATFORM_ID) private platformId: any,
-              private metaService: Meta,
-              public device: DeviceService) {
+              public device: DeviceService,
+              private router: Router,
+              private seoService: SeoService,
+              private activatedRoute: ActivatedRoute) {
   }
 
   public ngOnInit(): void {
     this.platform = isPlatformBrowser(this.platformId) ? 'Browser' : 'Server';
-    console.log(this.platform)
-    this.metaService.addTags([
-      {
-        name: 'keywords',
-        content: 'learning, education, ai, chinese, mandarin, tutors, reader, ponddy, in few minutes, quickly learn, study, self-study, online'
-      },
-      {
-        name: 'description',
-        content: 'Ponddy Reader instantly transforms authentic materials into online Chinese lessons. With a library of 800+ smart lessons (pondlets) and AI-assisted learning tools, Ponddy Reader is perfect for both teaching and self-learning.'
-      },
-      {name: 'robots', content: 'index, follow'},
-      {name: 'copyright', content: 'Ponddy Education Inc'},
-      {name: 'author', content: 'Ponddy Education Inc'},
-      {name: 'classification', content: 'learning, chinese'}
-    ]);
-
+    this.seoService.initMetaData()
+    this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd),
+      map(e => this.activatedRoute),
+      map((route) => {
+        while (route.firstChild) {
+          route = route.firstChild;
+        }
+        return route;
+      }),
+      filter((route) => route.outlet === 'primary'),
+      mergeMap((route) => route.data),
+    ).subscribe((data: any) => {
+      const seoData = data.seo;
+      this.seoService.updateTitle(seoData.title);
+      this.seoService.updateMetaTags(seoData.metaTags);
+      // this.metaService.updateTag()
+    });
   }
 }

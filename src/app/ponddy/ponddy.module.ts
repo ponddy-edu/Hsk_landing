@@ -11,7 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {AboutPonddyComponent} from './about-ponddy/about-ponddy.component';
 
 const routes: Routes = [
-  {path: 'ponddy', component: PonddyComponent},
+  {path: '', component: PonddyComponent},
 ];
 
 @NgModule({
