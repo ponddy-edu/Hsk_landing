@@ -1,4 +1,4 @@
-FROM node:14.15.5 as builder
+FROM node as builder
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
