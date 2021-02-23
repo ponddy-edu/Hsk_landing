@@ -1,0 +1,41 @@
+.target {
+  .main_img_wrap {
+    padding: 0;
+    
+    .main_img {
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+  }
+  
+  
+  .square {
+    padding: 95px 55px;
+    
+    h2 {
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #2D3942;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #2D3942
+    }
+    
+    .next_arrow {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+    }
+  }
+  
+  
+}
+

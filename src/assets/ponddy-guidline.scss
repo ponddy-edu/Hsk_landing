@@ -1,16 +1,16 @@
-$font-weight:700;
-$font-size:16px;
-$line-height:22px;
+$font-weight: 700;
+$font-size: 16px;
+$line-height: 22px;
 $line-height-secondary: 26px;
 $line-height-primary: 24px;
-$padding:9px 24px;
-$padding_12:12px;
-$padding_24:24px;
-$min-width:160px;
-$radius:24px;
-$align-items:center;
-$text-align:center;
-$letter-spacing:0.5px;
+$padding: 9px 24px;
+$padding_12: 12px;
+$padding_24: 24px;
+$min-width: 160px;
+$radius: 24px;
+$align-items: center;
+$text-align: center;
+$letter-spacing: 0.5px;
 
 /*---- color_style ----*/
 
@@ -114,6 +114,23 @@ $level_0: #71E67C;
 
 $pd_cover: rgba(45, 57, 66, 0.5);
 
+/* background color */
+.green_bg {
+  background-color: $green_bg;
+}
+
+.white_bg {
+  background-color: #FFFFFF;
+}
+
+.blue_bg {
+  background-color: $blue_bg;
+}
+
+.orange_bg {
+  background-color: $orange_bg;
+}
+
 /* icon */
 
 // lock
@@ -194,7 +211,6 @@ $pd_icon_previous-gray80: url('https://ponddy-guildline.s3-us-west-2.amazonaws.c
 }
 
 
-
 .navbar .ponddy-logo {
   margin-right: 77px;
 }
@@ -209,8 +225,8 @@ $pd_icon_previous-gray80: url('https://ponddy-guildline.s3-us-west-2.amazonaws.c
   align-self: center;
 }
 
-.navbar>.container,
-.navbar>.container-fluid {
+.navbar > .container,
+.navbar > .container-fluid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -231,7 +247,7 @@ div {
 
 .mr-auto,
 .mx-auto {
-  margin-right: auto!important;
+  margin-right: auto !important;
 }
 
 .navbar-nav {
@@ -270,19 +286,18 @@ li {
 @media (max-width: 991.98px) {
   
   .content {
-    padding-top: 50px!important;
+    padding-top: 50px !important;
   }
   a {
-    margin-right: 0px!important;
+    margin-right: 0px !important;
   }
   #text_fields {
-    display: inline-block!important;
+    display: inline-block !important;
   }
 }
 
 
 /*--------------字型----------------*/
-
 
 
 .pd_icon_lock {
@@ -580,6 +595,7 @@ li {
     height: 24px;
     margin-bottom: -10px;
   }
+  
   &__back {
     margin-left: 8px;
     background-repeat: no-repeat;
@@ -603,12 +619,15 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $white_100;
+  
   &:hover {
     background: $ponddy_light;
   }
+  
   &:active {
     background: $ponddy_text;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -627,14 +646,17 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $ponddy-text;
+  
   &:hover {
     background: $ponddy_bg;
     color: $ponddy_base-logo;
   }
+  
   &:active {
     background: $white_100;
     color: $ponddy_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -655,13 +677,16 @@ li {
   text-decoration: none;
   align-items: $align-items;
   text-align: $text-align;
-  color: $white_100!important;
+  color: $white_100 !important;
+  
   &:hover {
     background: $ponddy_light;
   }
+  
   &:active {
     background: $ponddy_text;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -680,14 +705,17 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $ponddy-text;
+  
   &:hover {
     background: $ponddy_bg;
     color: $ponddy_base-logo;
   }
+  
   &:active {
     background: $white_100;
     color: $ponddy_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -707,14 +735,17 @@ li {
   text-align: $text-align;
   color: $white_100;
   border: none;
+  
   &:hover {
     background: $orange_light;
     color: $white_100;
   }
+  
   &:active {
     background: $orange_text;
     color: $white_100;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -733,16 +764,19 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $orange_text;
+  
   &:hover {
     background: #FFF6E6;
     color: $orange_base;
     border: 2px solid $orange_light;
   }
+  
   &:active {
     background: $white_100;
     color: $orange_text;
     border: 2px solid $orange_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -761,14 +795,17 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $white_100;
+  
   &:hover {
     background: $red_light;
     color: $white_100;
   }
+  
   &:active {
     background: $red_text;
     color: $white_100;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -787,16 +824,19 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $red_text;
+  
   &:hover {
     background: #F9E2E6;
     color: $red_base;
-    border: 2px solid$red_light;
+    border: 2px solid $red_light;
   }
+  
   &:active {
     background: $white_100;
     color: $red_text;
     border: 2px solid $red_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -815,14 +855,17 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $white_100;
+  
   &:hover {
     background: $green_light;
     color: $white_100;
   }
+  
   &:active {
     background: $green_text;
     color: $white_100;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -841,16 +884,19 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $green_text;
+  
   &:hover {
     background: #E7F5F0;
     color: $green_base;
     border: 2px solid $green_light;
   }
+  
   &:active {
     background: $white_100;
     color: $green_text;
     border: 2px solid $green_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -869,14 +915,17 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $white_100;
+  
   &:hover {
     background: $purple_light;
     color: $white_100;
   }
+  
   &:active {
     background: $purple_text;
     color: $white_100;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -895,16 +944,19 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $purple_text;
+  
   &:hover {
     background: #EDE3F8;
     color: $purple_base;
     border: 2px solid $purple_light;
   }
+  
   &:active {
     background: $white_100;
     color: $purple_text;
     border: 2px solid $purple_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -923,14 +975,17 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $white_100;
+  
   &:hover {
     background: $blue_light;
     color: $white_100;
   }
+  
   &:active {
     background: $blue_text;
     color: $white_100;
   }
+  
   &:disabled {
     background: $gray10;
     color: $gray50;
@@ -949,16 +1004,19 @@ li {
   align-items: $align-items;
   text-align: $text-align;
   color: $blue_text;
+  
   &:hover {
     background: #E4EFF9;
     color: $blue_base;
     border: 2px solid $blue_light;
   }
+  
   &:active {
     background: $white_100;
     color: $blue_text;
     border: 2px solid $blue_text;
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -971,9 +1029,11 @@ li {
   display: inline-block;
   text-align: center;
   color: $ponddy_base-logo;
+  
   & .text_textlink {
     border-bottom: 1px $ponddy_base-logo solid;
   }
+  
   &:hover {
     & .text_textlink {
       color: $ponddy_light;
@@ -981,10 +1041,12 @@ li {
       letter-spacing: 0.5px;
       text-decoration-line: none;
     }
+    
     & .pd_icon_edit-ponddy-base {
       background-image: $pd_icon_edit-ponddy-light;
     }
   }
+  
   &:active {
     & .text_textlink {
       background: $white_100;
@@ -992,10 +1054,12 @@ li {
       border-bottom: 1px $ponddy_text solid;
       text-decoration-line: none;
     }
+    
     & .pd_icon_edit-ponddy-base {
       background-image: $pd_icon_edit-ponddy-text;
     }
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -1007,9 +1071,11 @@ li {
   display: inline-block;
   text-align: center;
   color: $gray50;
+  
   & .text_textlink {
     border-bottom: 1px $gray50 solid;
   }
+  
   &:hover {
     & .text_textlink {
       color: $ponddy_light;
@@ -1017,10 +1083,12 @@ li {
       letter-spacing: 0.5px;
       text-decoration-line: none;
     }
+    
     & .pd_icon_edit-gray50 {
       background-image: $pd_icon_edit-ponddy-base;
     }
   }
+  
   &:active {
     & .text_textlink {
       background: $white_100;
@@ -1028,10 +1096,12 @@ li {
       border-bottom: 1px $gray80 solid;
       text-decoration-line: none;
     }
+    
     & .pd_icon_edit-gray50 {
       background-image: $pd_icon_edit-gray80;
     }
   }
+  
   &:disabled {
     background: $white_100;
     color: $gray50;
@@ -1046,22 +1116,24 @@ li {
   margin: 0 8px;
   transition: color .15s ease-in-out;
   text-decoration: none;
-  color: #576167!important;
+  color: #576167 !important;
   font-size: $font-size;
   font-weight: $font-weight;
   font-family: Ponddy-NotoRubik;
   font-weight: $font-weight;
+  
   &:hover {
-    color: $ponddy_base-logo!important;
+    color: $ponddy_base-logo !important;
     border-bottom: solid 3px $ponddy_base-logo;
   }
 }
 
 .pd-nav-item .active {
-  color: $ponddy_text!important;
+  color: $ponddy_text !important;
   border-bottom: solid 3px $ponddy_text;
+  
   &:hover {
-    color: $ponddy_text!important;
+    color: $ponddy_text !important;
     border-bottom: solid 3px $ponddy_text;
   }
 }
@@ -1082,7 +1154,7 @@ li {
     line-height: $line-height;
     border-radius: $radius;
     letter-spacing: $letter-spacing + 0.5;
-   
+    
   }
   .btn_general-secondary,
   .btn_red-secondary,
@@ -1246,7 +1318,7 @@ h6 {
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height + 2;
-  color: $gray100!important;
+  color: $gray100 !important;
   letter-spacing: $letter-spacing + 0.5;
 }
 
@@ -1278,6 +1350,7 @@ input:focus {
   & .title {
     color: $gray80;
   }
+  
   & input {
     border: 1px solid $gray20;
     border-radius: $radius - 20;
@@ -1286,29 +1359,37 @@ input:focus {
     height: 56px;
     color: $gray80;
   }
+  
   & .input_solid {
     margin-top: 4px;
     border-radius: $radius - 20;
   }
+  
   & input:hover {
     background: $gray2;
+    
     .title {
       color: $gray50;
     }
   }
+  
   & input:active {
     background: $gray2;
     border: 1px solid $ponddy_base-logo;
   }
+  
   & .input_solid:active {
     border: 2px solid $ponddy_light;
   }
+  
   & .filled {
     border: 1px solid $ponddy_base-logo;
   }
+  
   & input.error {
     border: 1px solid $red_base;
   }
+  
   & .error_text {
     margin-left: 16px;
     color: $red_base;
@@ -1372,18 +1453,22 @@ input:focus {
   & input[type="radio"] {
     display: none;
   }
+  
   & label {
     display: block;
     position: relative;
     padding: 5px 5px 10px 35px;
     cursor: pointer;
+    
     &:hover {
       color: $ponddy_light;
+      
       &:before {
         border: 2px solid $ponddy_light;
       }
     }
   }
+  
   & label:before {
     content: '';
     position: absolute;
@@ -1399,6 +1484,7 @@ input:focus {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
   }
+  
   & label:after {
     content: '';
     background: $white_100;
@@ -1415,12 +1501,14 @@ input:focus {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
   }
-  & input[type="radio"]:checked+label:before {
+  
+  & input[type="radio"]:checked + label:before {
     background-color: $ponddy_text;
     border: 2px solid $ponddy_text;
     border-radius: 13px;
   }
-  & input[type="radio"]:checked+label:after {
+  
+  & input[type="radio"]:checked + label:after {
     opacity: 1;
     filter: alpha(opacity=100);
     width: 8px;
@@ -1438,14 +1526,16 @@ input:focus {
     height: 0;
     width: 0;
   }
-  & input[type='checkbox']+label {
+  
+  & input[type='checkbox'] + label {
     position: relative;
     display: flex;
     align-items: center;
     color: $gray80;
     transition: color 250ms cubic-bezier(.4, .0, .23, 1);
   }
-  & input[type='checkbox']+label ins {
+  
+  & input[type='checkbox'] + label ins {
     position: absolute;
     display: block;
     bottom: 0;
@@ -1456,14 +1546,16 @@ input:focus {
     text-decoration: none;
     transition: height 300ms cubic-bezier(.4, .0, .23, 1);
   }
-  & input[type='checkbox']+label ins i {
+  
+  & input[type='checkbox'] + label ins i {
     position: absolute;
     left: .8px;
     bottom: 0;
     font-style: normal;
     color: $gray80;
   }
-  & input[type='checkbox']+label span {
+  
+  & input[type='checkbox'] + label span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1475,26 +1567,32 @@ input:focus {
     border-radius: 2px;
     cursor: pointer;
     transition: all 250ms cubic-bezier(.4, .0, .23, 1);
+    
     &:hover {
       border: 2px solid $ponddy_light;
     }
   }
-  & input[type='checkbox']+label:hover {
+  
+  & input[type='checkbox'] + label:hover {
     color: $ponddy_light;
   }
-  & input[type='checkbox']+label:hover span,
-  .pd_checkBox input[type='checkbox']:focus+label span {
+  
+  & input[type='checkbox'] + label:hover span,
+  .pd_checkBox input[type='checkbox']:focus + label span {
     background: rgba(255, 255, 255, .1);
   }
-  & input[type='checkbox']:checked+label ins {
+  
+  & input[type='checkbox']:checked + label ins {
     height: 100%;
   }
-  & input[type='checkbox']:checked+label span {
+  
+  & input[type='checkbox']:checked + label span {
     border: 2px solid $ponddy_text;
     background-color: $ponddy_text;
     animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
   }
-  & input[type='checkbox']:checked+label span:before {
+  
+  & input[type='checkbox']:checked + label span:before {
     content: "";
     position: absolute;
     top: 9px;
