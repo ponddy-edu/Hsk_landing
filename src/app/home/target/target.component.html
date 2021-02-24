@@ -25,8 +25,6 @@
             </div>
             <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
           </div>
-
-
         </div>
       </carousel>
       <div *ngIf="!mobile" class="col-md-3 square green_bg" routerLink="/resources/course">
@@ -46,7 +44,7 @@
         <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
       </div>
     </div>
-    <div class="row">
+    <div class="row mobile-column-reverse">
       <div *ngIf="!mobile" class="col-md-3 square orange_bg" routerLink="/resources/download">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_TestPrepResources.svg">
@@ -63,6 +61,28 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
       </div>
+      <carousel *ngIf="mobile" [freeScroll]="true" #course_carousel  [height]="300" [cellWidth]="260" [dots]="false" [arrows]="false">
+        <div class="carousel-cell">
+          <div class="square orange_bg" routerLink="/resources/download">
+            <div>
+              <img class="icon_course" lazyLoad="/assets/image/home/icon_TestPrepResources.svg">
+              <h2>Test Prep Resources</h2>
+              <p>Check out the downloadable test prep materials before taking the test.</p>
+            </div>
+            <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="square white_bg" routerLink="/resources/smart">
+            <div>
+              <img class="icon_course" lazyLoad="/assets/image/home/icon_AIChineseTools.svg">
+              <h2>AI Chinese Tools</h2>
+              <p>Practice makes perfect, check out Ponddy's exclusive AI widgets for effective Chinese practice.</p>
+            </div>
+            <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
+          </div>
+        </div>
+      </carousel>
       <div class="col-md-6 col-12 main_img_wrap">
         <img class="main_img" useSrcset="true" [lazyLoad]="picTest">
       </div>
@@ -71,6 +91,30 @@
       <div class="col-md-6 col-12 main_img_wrap">
         <img class="main_img" useSrcset="true" [lazyLoad]="picPractice">
       </div>
+      <carousel *ngIf="mobile" [freeScroll]="true" #course_carousel  [height]="300" [cellWidth]="260" [dots]="false" [arrows]="false">
+        <div class="carousel-cell">
+          <div class="square blue_bg" routerLink="/tests/chinese">
+            <div>
+              <img class="icon_course" lazyLoad="/assets/image/home/icon_ChineseTests.svg">
+              <h2>Chinese Tests</h2>
+              <p>Introductions about different
+                Chinese proficiency tests - HSK, HSKK, YCT, and BCT
+              </p>
+            </div>
+            <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="square white_bg" routerLink="/tests/instructions">
+            <div>
+              <img class="icon_course" lazyLoad="/assets/image/home/icon_TestInstructions.svg">
+              <h2>Test Instructions</h2>
+              <p>Ready to take your test? Here are the things you should know about registration and test-taking.</p>
+            </div>
+            <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
+          </div>
+        </div>
+      </carousel>
       <div *ngIf="!mobile" class="col-md-3 square blue_bg" routerLink="/tests/chinese">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_ChineseTests.svg">
