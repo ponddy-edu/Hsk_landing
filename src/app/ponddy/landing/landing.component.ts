@@ -13,7 +13,6 @@ export class LandingComponent implements OnInit {
   }
 
   smoothScroll() {
-    console.log('scroll')
     window.scroll({
       top: window.innerHeight - 65,
       left: 0,

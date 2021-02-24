@@ -1,4 +1,7 @@
 <section *ngIf="tab===0" class="landing test_chinese">
+  <div class="iconify_wrap" (click)="smoothScroll()">
+    <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>
+  </div>
   <div class="view w-100">
     <div class="background">
       <div class="padding_space"></div>
@@ -17,6 +20,9 @@
   </div>
 </section>
 <section *ngIf="tab===1" class="landing test_intro">
+  <div class="iconify_wrap" (click)="smoothScroll()">
+    <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>
+  </div>
   <div class="view w-100">
     <div class="background">
       <div class="padding_space"></div>

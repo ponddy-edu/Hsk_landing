@@ -2,12 +2,13 @@
   margin-top: 60px;
   height: calc(100vh - 65px);
   box-sizing: border-box;
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/index_pic_web.png");
+  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/index_pic_web.png");
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
   @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/index_pic_phone.png");
+    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -22,6 +23,25 @@
       font-size: 30px;
       line-height: 38px;
       text-align: left;
+    }
+  }
+  .iconify_wrap {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    left: calc(50% - 16px);
+    z-index: 15;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    .iconify {
+      color: #FFFFFF;
+      font-size: 32px;
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
   .w-100 {
