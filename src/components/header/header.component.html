@@ -23,7 +23,7 @@
                routerLink="/tests/chinese"
                #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"
                (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)"
-               [class.active]="actvieMenu==='test'" href="#" data="navbar" class="nav-a text_menu">
+               [class.active]="actvieMenu==='tests'" href="#" data="navbar" class="nav-a text_menu">
               Tests
             </a>
             <mat-menu #menu="matMenu">
@@ -89,30 +89,31 @@
         </mat-expansion-panel-header>
         <ul class="pd-nav-item navbar-nav mr-auto text-center">
 
-          <li class="nav-item">
-            <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'" class="nav-active text_menu"
+          <li class="nav-item"  routerLink="/home">
+            <a i18n="header" [class.active]="actvieMenu==='home'" class="nav-active text_menu"
                data="navbar">
               Home
             </a>
           </li>
-          <li class="nav-item">
-            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu">
+          <li class="nav-item" routerLink="/ponddy">
+            <a i18n="header"  [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu">
               Ponddy
             </a>
           </li>
-          <li class="nav-item">
-            <a [class.active]="actvieMenu==='test'" i18n="header" routerLink="/tests/chinese" data="navbar"
+          <li class="nav-item" routerLink="/tests/chinese">
+            <a [class.active]="actvieMenu==='tests'" i18n="header"  data="navbar"
                class="nav-a text_menu">
               Tests
             </a>
           </li>
-          <li [class.active]="actvieMenu==='resource'" routerLink="/resources/course" class="nav-item">
-            <a i18n="header" class="nav-a text_menu">
+          <li  class="nav-item" routerLink="/resources/course">
+            <a [class.active]="actvieMenu==='resources'"  i18n="header" class="nav-a text_menu">
               Resource
             </a>
           </li>
-          <li [class.active]="actvieMenu==='faq'" routerLink="/faq" class="nav-item">
-            <a i18n="header"  data="navbar" class="nav-a text_menu">
+          <li class="nav-item" routerLink="/faq">
+            <a i18n="header" [class.active]="actvieMenu==='faq'"
+               data="navbar" class="nav-a text_menu">
               FAQ
             </a>
           </li>
