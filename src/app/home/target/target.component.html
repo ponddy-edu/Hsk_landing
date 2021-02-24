@@ -1,10 +1,35 @@
 <section class="target">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 main_img_wrap">
-        <img class="main_img" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_StudySmart.png'">
+      <div class="col-md-6 col-12 main_img_wrap">
+        <img class="main_img" [useSrcset]="true"
+             [lazyLoad]="picStudySmart">
       </div>
-      <div class="col-md-3 square green_bg" routerLink="/resources/course">
+      <carousel *ngIf="mobile" [freeScroll]="true" #course_carousel  [height]="300" [cellWidth]="260" [dots]="false" [arrows]="false">
+        <div class="carousel-cell">
+          <div class="square green_bg" routerLink="/resources/course">
+            <div>
+              <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Course.svg">
+              <h2>HSK Course</h2>
+              <p> Nail HSK effortlessly with Ponddy HSK Courses.</p>
+            </div>
+            <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <div class="square white_bg" routerLink="/resources/preparation">
+            <div>
+              <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Self_Study.svg">
+              <h2>HSK Self Study</h2>
+              <p> Tackle the test on your own with the powerful self-study packet.</p>
+            </div>
+            <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
+          </div>
+
+
+        </div>
+      </carousel>
+      <div *ngIf="!mobile" class="col-md-3 square green_bg" routerLink="/resources/course">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Course.svg">
           <h2>HSK Course</h2>
@@ -12,7 +37,7 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
       </div>
-      <div class="col-md-3 square white_bg" routerLink="/resources/preparation">
+      <div *ngIf="!mobile" class="col-md-3 square white_bg" routerLink="/resources/preparation">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Self_Study.svg">
           <h2>HSK Self Study</h2>
@@ -22,7 +47,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 square orange_bg" routerLink="/resources/download">
+      <div *ngIf="!mobile" class="col-md-3 square orange_bg" routerLink="/resources/download">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_TestPrepResources.svg">
           <h2>Test Prep Resources</h2>
@@ -30,7 +55,7 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
       </div>
-      <div class="col-md-3 square white_bg" routerLink="/resources/smart">
+      <div *ngIf="!mobile" class="col-md-3 square white_bg" routerLink="/resources/smart">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_AIChineseTools.svg">
           <h2>AI Chinese Tools</h2>
@@ -38,15 +63,15 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
       </div>
-      <div class="col-md-6 main_img_wrap">
-        <img class="main_img" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_TestYourAbility.png'">
+      <div class="col-md-6 col-12 main_img_wrap">
+        <img class="main_img" useSrcset="true" [lazyLoad]="picTest">
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 main_img_wrap">
-        <img class="main_img" [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_PracticeWithEase.png'">
+      <div class="col-md-6 col-12 main_img_wrap">
+        <img class="main_img" useSrcset="true" [lazyLoad]="picPractice">
       </div>
-      <div class="col-md-3 square blue_bg" routerLink="/tests/chinese">
+      <div *ngIf="!mobile" class="col-md-3 square blue_bg" routerLink="/tests/chinese">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_ChineseTests.svg">
           <h2>Chinese Tests</h2>
@@ -56,7 +81,7 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
       </div>
-      <div class="col-md-3 square white_bg" routerLink="/tests/instructions">
+      <div *ngIf="!mobile" class="col-md-3 square white_bg" routerLink="/tests/instructions">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_TestInstructions.svg">
           <h2>Test Instructions</h2>
