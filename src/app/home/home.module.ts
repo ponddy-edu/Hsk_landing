@@ -11,13 +11,14 @@ import {IntroComponent} from './intro/intro.component';
 import {LearningComponent} from './learning/learning.component';
 import {LazyLoadImageModule} from 'ng-lazyload-image';
 import { TargetComponent } from './target/target.component';
+import { AiPonddyComponent } from './ai-ponddy/ai-ponddy.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
 ];
 
 @NgModule({
-  declarations: [HomeComponent, LandingComponent, CourseComponent, IntroComponent, LearningComponent, TargetComponent,
+  declarations: [HomeComponent, LandingComponent, CourseComponent, IntroComponent, LearningComponent, TargetComponent, AiPonddyComponent,
   ],
   imports: [
     CommonModule,
