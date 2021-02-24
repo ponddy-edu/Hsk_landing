@@ -84,12 +84,12 @@
         </div>
       </carousel>
       <div class="col-md-6 col-12 main_img_wrap">
-        <img class="main_img" useSrcset="true" [lazyLoad]="picTest">
+        <img class="main_img" [useSrcset]="true" [lazyLoad]="picTest">
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 col-12 main_img_wrap">
-        <img class="main_img" useSrcset="true" [lazyLoad]="picPractice">
+        <img class="main_img" [useSrcset]="true" [lazyLoad]="picPractice">
       </div>
       <carousel *ngIf="mobile" [freeScroll]="true" #course_carousel  [height]="300" [cellWidth]="260" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
