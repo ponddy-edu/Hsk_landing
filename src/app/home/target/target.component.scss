@@ -1,4 +1,7 @@
 .target {
+  @media (max-width: 992px) {
+    padding-bottom: 24px;
+  }
   .main_img_wrap {
     padding: 0;
     @media (max-width: 992px) {
