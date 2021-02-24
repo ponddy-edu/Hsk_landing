@@ -62,9 +62,11 @@
     }
   }
   .container {
-    //padding-top: 90px;
-    position: absolute;
-    bottom: 150px;
+    padding-top: 90px;
+    @media (max-width: 992px) {
+      position: absolute;
+      bottom: 150px;
+    }
   }
 }
 
