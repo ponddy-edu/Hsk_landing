@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ai-ponddy.component.scss']
 })
 export class AiPonddyComponent implements OnInit {
-  picList = `https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_AISmartLearning_p.png 767w,
-   https://hsk-landing.s3-us-west-2.amazonaws.com/home/AISmartLearning.png 1100w`
+  picList = `/assets/image/home/pic_AISmartLearning_p_new.png 767w,
+   /assets/image/home/pic_AISmartLearning_new.png 1100w`
   constructor() { }
 
   ngOnInit(): void {
