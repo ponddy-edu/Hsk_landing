@@ -2,10 +2,11 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-12 main_img_wrap">
-        <img class="main_img" [useSrcset]="true"
-             [lazyLoad]="picStudySmart">
+        <img class="main_img"
+             [lazyLoad]="picStudySmart"
+             [useSrcset]="true" >
       </div>
-      <carousel *ngIf="mobile" #course_carousel  [height]="260" [cellWidth]="260" [dots]="false" [arrows]="false">
+      <carousel *ngIf="mobile" #course_carousel [freeScroll]="true"  [height]="260" [cellWidth]="260" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
           <div class="square green_bg" routerLink="/resources/course">
             <div>

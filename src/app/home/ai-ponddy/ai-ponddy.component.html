@@ -1,3 +1,6 @@
 <section class="ai_ponddy">
-  <img [useSrcset]="true" [lazyLoad]="picList">
+  <img [lazyLoad]="(device.$mobile | async)?
+  '/assets/image/home/pic_AISmartLearning_p_new.png':
+  '/assets/image/home/pic_AISmartLearning_new.png'"
+  >
 </section>
