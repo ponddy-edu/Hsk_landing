@@ -43,18 +43,20 @@
   }
   
   .iconify_wrap {
-    position: absolute;
-    right: 0;
-    bottom: 100px;
-    left: calc(50% - 16px);
+    //position: absolute;
+    //right: 0;
+    //bottom: 100px;
+    //left: calc(50% - 16px);
     z-index: 15;
     text-align: center;
     cursor: pointer;
     width: 32px;
     height: 32px;
     display: none;
+    margin: 36px auto 0;
+  
     @media (max-width: 992px) {
-      display: inline-block;
+      display: block;
     }
     
     .iconify {
@@ -95,7 +97,7 @@
     padding-top: 90px;
     @media (max-width: 992px) {
       position: absolute;
-      bottom: 150px;
+      bottom: 90px;
     }
   }
   

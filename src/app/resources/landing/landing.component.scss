@@ -2,12 +2,12 @@
   margin-top: 60px;
   height: calc(100vh - 65px);
   box-sizing: border-box;
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/index_pic_web.png");
+  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/index_pic_web.png");
   background-size: cover;
   background-repeat: no-repeat;
   @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/index_pic_phone.png");
+    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -23,18 +23,20 @@
     }
   }
   .iconify_wrap {
-    position: absolute;
-    right: 0;
-    bottom: 100px;
-    left: calc(50% - 16px);
+    //position: absolute;
+    //right: 0;
+    //bottom: 100px;
+    //left: calc(50% - 16px);
     z-index: 15;
     text-align: center;
     cursor: pointer;
     width: 32px;
     height: 32px;
     display: none;
+    margin: 36px auto 0;
+    
     @media (max-width: 992px) {
-      display: inline-block;
+      display: block;
     }
     .iconify {
       color: #FFFFFF;
@@ -65,17 +67,17 @@
     padding-top: 90px;
     @media (max-width: 992px) {
       position: absolute;
-      bottom: 150px;
+      bottom: 90px;
     }
   }
 }
 
 .landing__preparation {
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
+  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
   background-size: cover;
   @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_phone.png");
+    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -93,11 +95,11 @@
 }
 
 .landing__smart {
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/index_pic_web.png");
+  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/index_pic_web.png");
   background-size: cover;
   @media (max-width: 991.98px) {
     height: calc(100vh - 65px);
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/index_pic_phone.png");
+    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
