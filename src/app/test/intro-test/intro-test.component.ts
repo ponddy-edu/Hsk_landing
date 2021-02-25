@@ -2,6 +2,7 @@ import {DOCUMENT} from '@angular/common';
 import {Inject} from '@angular/core';
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {PageScrollService} from 'ngx-page-scroll-core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-intro-test',
@@ -17,11 +18,23 @@ export class IntroTestComponent implements OnInit {
   actvieItem = 'registrationProcedure'
   activeClass = 'procedureClass'
 
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+  constructor(private pageScrollService: PageScrollService,
+              @Inject(DOCUMENT) private document: any,
+              private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-
+    this.activatedRoute.params.subscribe(params => {
+      const id = params.id;
+      if (id !== '2') {
+        return
+      }
+      console.log(id)
+      setTimeout(() => {
+        this.actvieItem = 'testRegulation'
+        this.menu_item(id)
+      }, 300)
+    });
   }
 
   menu_item(itemIndex: number) {

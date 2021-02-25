@@ -15,7 +15,7 @@ import {NgxPageScrollModule} from 'ngx-page-scroll';
 const routes: Routes = [
   {path: '', redirectTo: 'chinese', pathMatch: 'full'},
   {path: 'chinese', component: TestComponent, data: {tab: 0}},
-  {path: 'instructions', component: TestComponent, data: {tab: 1}}
+  {path: 'instructions/:id', component: TestComponent, data: {tab: 1}}
 ];
 
 

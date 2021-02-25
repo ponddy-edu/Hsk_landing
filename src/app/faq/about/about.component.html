@@ -21,7 +21,6 @@
               <div class="text test-font">Test Registration & Regulation</div>
               <img class="item_test">
             </div>
-
           </a>
           <a pageScroll href="#item-payments">
             <div class="tab_item">
@@ -57,8 +56,16 @@
             </div>
           </div>
           <div>
-            <h3>1. After the completion of registration, can I change the test date?</h3>
-            <p>After the registration and payment, test takers can apply to change the test date within the stipulated time, but cannot cancel the registered test.</p>
+            <ol  class="item_ol">
+              <li>
+                <h3>After the completion of registration, can I change the test date?</h3>
+                <p>After the registration and payment, test takers can apply to change the test date within the stipulated time, but cannot cancel the registered test.</p>
+              </li>
+              <li>
+                <h3>What equipment do I need to take online Chinese tests at home?</h3>
+                <a [routerLink]="['/tests/instructions', 2]">See details</a>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
@@ -121,10 +128,6 @@
                   <h3>How much is charged for HSK and other tests?</h3>
                   <img [useSrcset]="true" [lazyLoad]="form01">
                   <img [useSrcset]="true" [lazyLoad]="form02">
-                </li>
-                <li>
-                  <h3>What equipment do I need to take online Chinese tests at home?</h3>
-                  <a href="test">See details</a>
                 </li>
               </ol>
             </div>
