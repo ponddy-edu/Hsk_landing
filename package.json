@@ -33,6 +33,7 @@
         "angular-bootstrap-md": "^10.1.1",
         "angular-responsive-carousel": "^2.0.2",
         "express": "^4.15.2",
+        "google-spreadsheet": "^3.1.15",
         "ng-lazyload-image": "^9.1.0",
         "ngx-page-scroll": "^7.0.3",
         "ngx-page-scroll-core": "^7.0.3",
