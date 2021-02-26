@@ -11,6 +11,7 @@ import {LazyLoadImageModule} from 'ng-lazyload-image';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     IvyCarouselModule,
     MatMenuModule,
     MatDialogModule,
+    ReactiveFormsModule,
   ],
   entryComponents: [
     LoginComponent
