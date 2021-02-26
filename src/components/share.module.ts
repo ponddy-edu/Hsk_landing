@@ -12,7 +12,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { RecaptchaModule } from "ng-recaptcha";
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, LearnMoreComponent, AboutPonddyComponent,LoginComponent
@@ -26,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatMenuModule,
     MatDialogModule,
     ReactiveFormsModule,
+    RecaptchaModule
   ],
   entryComponents: [
     LoginComponent

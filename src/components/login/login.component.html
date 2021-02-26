@@ -87,8 +87,8 @@
             </div>
           </div>
           <div justify-content-center>
-            <!-- <re-captcha #captchaLogin style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
-            </re-captcha> -->
+            <re-captcha #captchaLogin style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
+            </re-captcha>
           </div>
           <button class="btn_general-primary" [disabled]="formLogin.invalid||isLoading" (click)="login()">
             <img *ngIf="isLoading" src="assets/image/loading_spinner.gif"/>Login</button>
@@ -195,9 +195,9 @@
           </div>
           <input *ngFor="let i of [0,1,2,3];let recordIndex = index" [autofocus]="i==0" (paste)="onPaste($event,recordIndex)" (keyup)="onDigitInput($event,recordIndex)" [value]="code[recordIndex]?code[recordIndex]:''" [name]="'code'+ recordIndex" [id]="'code'+ recordIndex"
             maxlength="1">
-          <!-- <re-captcha #captchaCode style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
+          <re-captcha #captchaCode style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
 
-          </re-captcha> -->
+          </re-captcha>
           <p class="resend">Did not get a verification mail?
             <a [class.disabled]="resendTimeLock>0" (click)="resendCode()">Send it again.</a></p>
           <div *ngIf="resendTimeLock>0" style="margin-bottom: -16px" class="resend_time" justify-content-center>
