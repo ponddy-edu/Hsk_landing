@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  appUrl: 'http://hsk.ponddy.com/'
+  appUrl: 'http://hsk.ponddy.com/',
+  clientId: "fe020207-6e96-4c58-963fa34321042c26",
+  authApiUrl: "https://auth-dev.ponddy.com",
+  apiUrl: "https://auth-dev.ponddy.com/api",
+  redirectUri: "https://reader-dev.ponddy.com/app/",
 };
 
 /*

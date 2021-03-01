@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,7 @@ import {LAZYLOAD_IMAGE_HOOKS, LazyLoadImageModule, ScrollHooks} from "ng-lazyloa
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
+    HttpClientModule,
     MatMenuModule,
     HomeModule,
     LazyLoadImageModule,

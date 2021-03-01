@@ -16,7 +16,6 @@
     <main>
       <div class="content">
         <form [formGroup]="formStart">
-          <!-- <form> -->
           <div class="error_message">
             <p *ngIf="isEmailExist">
               The email not exist please register
@@ -24,7 +23,6 @@
           </div>
           <p class="input_label">email address </p>
           <input formControlName="email" [(ngModel)]="email" name="email">
-          <!-- <input formControlName="email" name="email"> -->
           <button [disabled]="!email" class="btn_general-primary" (click)="clickContinue(email)">Continue</button>
           <p class="not_account">
             Don’t have a Ponddy account? <a (click)="$step.next('register')">Create one</a>
@@ -67,19 +65,20 @@
     <main>
       <div class="content">
         <form [formGroup]="formLogin">
-          <!-- <form> -->
           <p class="input_label">email address </p>
           <input [(ngModel)]="email" formControlName="email" name="email">
-          <!-- <input formControlName="email" name="email"> -->
           <p class="input_label">password </p>
           <input [(ngModel)]="password" formControlName="password" type="password" name="password" id="password">
-          <!-- <input formControlName="password" type="password" name="password" id="password"> -->
           <div margin-bottom="16px" *ngIf="error_message" class="error_message">
             <p>{{error_message}}</p>
           </div>
           <div class="assistant">
             <div class="remember_me">
-              <!-- <ion-checkbox formControlName="remember_me" [(ngModel)]="isRememberMe"></ion-checkbox> -->
+              <div class="pd_checkBox" formControlName="agree">
+                <input id='two' type='checkbox' />
+                <label for='two'> <span></span>
+                </label>
+              </div>
               <p>remember me</p>
             </div>
             <div class="forgot_password" (click)="forgotPassword()">
@@ -131,22 +130,23 @@
     <main>
       <div class="content">
         <form [formGroup]="formRegister" (ngSubmit)="register()">
-          <!-- <form (ngSubmit)="register()"> -->
           <p class="input_label">email address </p>
           <input formControlName="email" [(ngModel)]="email" name="email" required="" id="email_register">
-          <!-- <input formControlName="email" name="email" required="" id="email_register"> -->
-          <div *ngIf="formRegister.get('email').invalid" class="error_message">
-            <p>{{formRegister.get('email_error').value}}</p>
+          <div *ngIf="formRegister.get('email')?.invalid" class="error_message">
+            <p>{{formRegister.get('email_error')?.value}}</p>
           </div>
           <p class="input_label">password </p>
           <input [(ngModel)]="password" formControlName="password" type="password" id="password_register">
-          <!-- <input formControlName="password" type="password" id="password_register"> -->
-          <div *ngIf="formRegister.get('password').invalid" class="error_message">
-            <p>{{formRegister.get('password_error').value}}</p>
+          <div *ngIf="formRegister.get('password')?.invalid" class="error_message">
+            <p>{{formRegister.get('password_error')?.value}}</p>
           </div>
           <div class="assistant">
             <div class="remember_me">
-              <!-- <ion-checkbox formControlName="agree"></ion-checkbox> -->
+              <div class="pd_checkBox">
+                <input formControlName="agree" [(ngModel)]="agree" id='one' type='checkbox' />
+                <label for='one'> <span></span>
+                </label>
+              </div>
               <p> You agree to receive updates and offers from Ponddy Education. You may opt out anytime.</p>
             </div>
             <div class="remember_me" style="margin-top: 8px">
@@ -154,7 +154,7 @@
             </div>
           </div>
           <button class="btn_general-primary" type="submit" [disabled]="!formRegister.valid||isLoading">
-            <img *ngIf="isLoading" src="assets/image/loading_spinner.gif"/>
+            <img *ngIf="isLoading" src="assets/image/login/loading_spinner.gif"/>
             Register
           </button>
           <p class="not_account">
@@ -180,7 +180,7 @@
     <main>
       <div class="content">
         <!-- <form> -->
-        <form [formGroup]="formRegister">
+        <form [formGroup]="formVerification">
           <div class="verification_message">
             <p class="">We just sent a verification email to: </p>
             <p style="font-weight: bold">
@@ -193,7 +193,7 @@
           <div *ngIf="error_message" class="error_message" justify-content-center>
             <p>{{error_message}}</p>
           </div>
-          <input *ngFor="let i of [0,1,2,3];let recordIndex = index" [autofocus]="i==0" (paste)="onPaste($event,recordIndex)" (keyup)="onDigitInput($event,recordIndex)" [value]="code[recordIndex]?code[recordIndex]:''" [name]="'code'+ recordIndex" [id]="'code'+ recordIndex"
+          <input *ngFor="let i of [0,1,2,3];let recordIndex = index" [autofocus]="i==0" (paste)="onPaste($event)" (keyup)="onDigitInput($event,recordIndex)" [value]="code[recordIndex]?code[recordIndex]:''" [name]="'code'+ recordIndex" [id]="'code'+ recordIndex"
             maxlength="1">
           <re-captcha #captchaCode style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
 
@@ -229,7 +229,7 @@
     <main>
       <div class="content">
         <!-- <form> -->
-        <form [formGroup]="formRegister">
+        <form [formGroup]="formSuccess">
           <div class="successfully_message">
             <p class="">{{success_message}}</p>
           </div>
