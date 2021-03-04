@@ -1,7 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import {CarouselComponent} from 'angular-responsive-carousel';
-import { LoginComponent } from 'src/components/login/login.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +8,10 @@ import { LoginComponent } from 'src/components/login/login.component';
 export class HomeComponent implements OnInit {
 
 
-  constructor(public dialog: MatDialog) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.dialog.open(LoginComponent)
   }
 
 
