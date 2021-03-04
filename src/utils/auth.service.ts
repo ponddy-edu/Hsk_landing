@@ -16,7 +16,6 @@ export class AuthService {
     email = email.toLowerCase()
     const endpoint = '/api/auth/auth/exists'
     const url = environment.authApiUrl + endpoint
-
     const body = {
       "email": email,
     }
@@ -26,18 +25,22 @@ export class AuthService {
 
   public login(email: string, password: string, recaptcha_response: string) {
     email = email.toLowerCase()
-    const endpoint = '/v1/users/login';
-    const url = environment.apiUrl + endpoint;
+    const endpoint = '/api/auth/auth';
+    const url = environment.authApiUrl + endpoint;
     let body = {
       email: email,
       password: password,
+      app: "hsk",
       g_recaptcha_response: recaptcha_response
     };
+    console.log(password)
 
     return this.http.post(url, body)
       .pipe(tap((res:any) => {
         localStorage.setItem('token', res['token'])
+        // console.log(localStorage.setItem('token', res['token']))
       }))
+
     // const token = response["token"];
     // return response;
   }
@@ -50,7 +53,7 @@ export class AuthService {
       "email": email,
       "password": password,
       "client_id": environment.clientId,
-      "redirect_uri": environment.redirectUri,
+      "redirect_uri": environment.appUrl,
       "next": "/",
       "template": "WITH-CODE"
     }
@@ -62,7 +65,7 @@ export class AuthService {
   public verify(email: string, code: string, recaptcha_response: string) {
     email = email.toLowerCase()
     const endpoint = '/auth/auth/verify'
-    const url = environment.apiUrl + endpoint;
+    const url = environment.authApiUrl + endpoint;
     let body = {
       email: email,
       code: code
@@ -73,21 +76,22 @@ export class AuthService {
 
   socialLogin(socialClass:any) {
     let url
-    let language = localStorage.getItem('lang')
-    if (language === "zh") {
-      language = "zh-hans";
-    } else if (language === "zh-TW") {
-      language = "zh-hant";
-    } else if (language === 'th') {
-      language = 'en'
-    }
-    var backToPage = window.location.hash.split("#")[1];
+    // let language = localStorage.getItem('lang')
+    // if (language === "zh") {
+    //   language = "zh-hans";
+    // } else if (language === "zh-TW") {
+    //   language = "zh-hant";
+    // } else if (language === 'th') {
+    //   language = 'en'
+    // }
+    let language = 'en'
+    // var backToPage = window.location.hash.split("#")[1];
     switch (socialClass){
         case 'fb':
-            url = `${environment.authApiUrl}/${language}/auth/social/facebook?client_id=${environment.clientId}&token=${localStorage.getItem('token')}&redirect_uri=${environment.redirectUri}&next=${backToPage}`;
+            url = `${environment.authApiUrl}/${language}/auth/social/facebook?client_id=${environment.clientId}&token=${localStorage.getItem('token')}&redirect_uri=${environment.appUrl}`;
             break
         case 'google':
-            url = `${environment.authApiUrl}/${language}/auth/social/google-oauth2?client_id=${environment.clientId}&token=${localStorage.getItem('token')}&redirect_uri=${environment.redirectUri}&next=${backToPage}`;
+            url = `${environment.authApiUrl}/${language}/auth/social/google-oauth2?client_id=${environment.clientId}&token=${localStorage.getItem('token')}&redirect_uri=${environment.appUrl}`;
             break
     }
     window.open(`${url}`, '_self')
@@ -100,7 +104,7 @@ export class AuthService {
     const body = {
       "email": email,
       "client_id": environment.clientId,
-      "redirect_uri": environment.redirectUri,
+      "redirect_uri": environment.appUrl,
       "next": "/reader-dashboard",
       "g_recaptcha_response": recaptcha_response
     }
