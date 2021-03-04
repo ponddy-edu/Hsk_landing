@@ -17,6 +17,11 @@ export class IntroTestComponent implements OnInit {
 
   actvieItem = 'registrationProcedure'
   activeClass = 'procedureClass'
+  procedureClass = "active";
+  registrationClass = "";
+  scoreClass = "";
+  disciplineClass = "";
+
 
   constructor(private pageScrollService: PageScrollService,
               @Inject(DOCUMENT) private document: any,
@@ -40,20 +45,40 @@ export class IntroTestComponent implements OnInit {
   menu_item(itemIndex: number) {
     switch (itemIndex) {
       case 1:
-        this.actvieItem = 'registrationProcedure'
+        this.actvieItem = 'testRegulation'
         this.activeClass = 'procedureClass'
+        this.procedureClass = "active";
+        this.registrationClass = "";
+        this.scoreClass = "";
+        this.disciplineClass = "";
+
         break
       case 2:
-        this.actvieItem = 'testRegulation'
+        this.actvieItem = 'registrationProcedure'
         this.activeClass = 'registrationClass'
+        this.procedureClass = "";
+        this.registrationClass = "active";
+        this.scoreClass = "";
+        this.disciplineClass = "";
+
         break
       case 3:
         this.actvieItem = 'scoreReport'
         this.activeClass = 'scoreClass'
+        this.procedureClass = "";
+        this.registrationClass = "";
+        this.scoreClass = "active";
+        this.disciplineClass = "";
+
         break
       case 4:
         this.actvieItem = 'testDiscipline'
         this.activeClass = 'disciplineClass'
+        this.procedureClass = "";
+        this.registrationClass = "";
+        this.scoreClass = "";
+        this.disciplineClass = "active";
+
         break
     }
     setTimeout(() => {
