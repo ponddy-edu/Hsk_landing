@@ -13,13 +13,14 @@ export class SheetService {
   }
 
   addRow() {
-    const attributesMapping = {
-      name: 'test',
+    const postData = {
       email: 'Email Address',
-      pay: 'test'
+      date: 'test',
+      pay: 'test pay'
     };
+
     const url = 'https://script.google.com/macros/s/AKfycbygYHynmMz9aSUYniI6v3xpwXrA5qOY-yoXnJwTF1Xarb8JXYwpoJ3t3yvemoMZC6U/exec'
-    this.http.post(url, {attributesMapping})
+    this.http.post(url, postData)
       .subscribe(res => {
         console.log(res)
       })
