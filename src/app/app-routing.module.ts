@@ -73,7 +73,20 @@ const routes: Routes = [
           { property: 'og:url', content: environment.appUrl + 'faq' },
         ]
       }
-    }}
+    }},
+  {path: 'enrollTest', loadChildren: () => import('./enroll-test/enroll-test.module').then(m => m.EnrollTestModule), data: {
+      seo: {
+        title: 'Ponddy® HSK - Enroll Test',
+        metaTags: [
+          { name: 'description', content: 'Ponddy® HSK is the first online HSK test center in the U.S.A. that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests.'},
+          { property: 'og:title', content: 'Ponddy® HSK - Home' },
+          { property: 'og:description', content: 'Ponddy® HSK is the first online HSK test center in the U.S.A. that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests.' },
+          { property: 'og:image', content: environment.appUrl + 'assets/image/homepage.png' },
+          { property: 'og:url', content: environment.appUrl + 'home' },
+        ]
+      }
+    }
+  },
 
   // { path: 'detail/:id', component: HeroDetailComponent }
 ];
