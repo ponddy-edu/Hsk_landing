@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  appUrl: 'http://hsk.ponddy.com/',
-  clientId: "fe020207-6e96-4c58-963fa34321042c26",
+  appUrl: 'https://hsk.ponddy.com',
+  clientId: "b4df9839-3872-47b1-a4dc-01f30f981df9",
   authApiUrl: "https://auth.ponddy.com",
 };

@@ -304,6 +304,7 @@ this.$step.next('start')
   }
 
   onPaste(event:any) {
+    // @ts-ignore
     let clipboardData = event.clipboardData || window['clipboardData'];
     let clipText = clipboardData.getData('text')
 

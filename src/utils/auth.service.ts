@@ -38,7 +38,6 @@ export class AuthService {
     return this.http.post(url, body)
       .pipe(tap((res:any) => {
         localStorage.setItem('token', res['token'])
-        // console.log(localStorage.setItem('token', res['token']))
       }))
 
     // const token = response["token"];
@@ -64,11 +63,12 @@ export class AuthService {
 
   public verify(email: string, code: string, recaptcha_response: string) {
     email = email.toLowerCase()
-    const endpoint = '/auth/auth/verify'
+    const endpoint = '/api/auth/auth/verify'
     const url = environment.authApiUrl + endpoint;
     let body = {
       email: email,
-      code: code
+      code: code,
+      g_recaptcha_response: recaptcha_response
     };
     return this.http.post(url, body)
   }
@@ -76,24 +76,17 @@ export class AuthService {
 
   socialLogin(socialClass:any) {
     let url
-    // let language = localStorage.getItem('lang')
-    // if (language === "zh") {
-    //   language = "zh-hans";
-    // } else if (language === "zh-TW") {
-    //   language = "zh-hant";
-    // } else if (language === 'th') {
-    //   language = 'en'
-    // }
     let language = 'en'
     // var backToPage = window.location.hash.split("#")[1];
     switch (socialClass){
         case 'fb':
-            url = `${environment.authApiUrl}/${language}/auth/social/facebook?client_id=${environment.clientId}&token=${localStorage.getItem('token')}&redirect_uri=${environment.appUrl}`;
+            url = `${environment.authApiUrl}/${language}/auth/social/facebook?client_id=${environment.clientId}&token=null&redirect_uri=${environment.appUrl}`;
             break
         case 'google':
-            url = `${environment.authApiUrl}/${language}/auth/social/google-oauth2?client_id=${environment.clientId}&token=${localStorage.getItem('token')}&redirect_uri=${environment.appUrl}`;
+            url = `${environment.authApiUrl}/${language}/auth/social/google-oauth2?client_id=${environment.clientId}&token=null&redirect_uri=${environment.appUrl}`;
             break
     }
+    console.log(url)
     window.open(`${url}`, '_self')
   }
 
