@@ -4,7 +4,9 @@
 
   mat-horizontal-stepper {
     background-color: #fcfaf8;
-
+    ::ng-deep mat-step-header{
+      //pointer-events: none;
+    }
   }
 
   form {
@@ -98,6 +100,40 @@
             text-align: left;
             font-size: 20px;
             line-height: 36px;
+          }
+        }
+
+      }
+    }
+    .check_wrap{
+      display: inline-flex;
+      width: 296px;
+      mat-checkbox{
+        width: 296px;
+        //border: 2px solid #6ACFED;
+        line-height: 24px;
+        margin-left: 8px;
+      }
+    }
+    &.summary{
+      .form-field {
+        text-align: left;
+        display: table;
+        justify-content: space-between;
+        margin: auto;
+        .cell{
+          display: table-cell;
+          label{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 22px;
+            color: #2D3942;
+            text-align: left;
+            margin-bottom: 4px;
+          }
+          p{
+            color: #2D3942;
+            font-weight: normal;
           }
         }
 

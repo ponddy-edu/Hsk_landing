@@ -3,8 +3,8 @@
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-6 col-sm-8 col-11">
         <mat-horizontal-stepper #stepper labelPosition="bottom">
-          <mat-step [stepControl]="TestInfoFormGroup">
-            <form [formGroup]="TestInfoFormGroup">
+          <mat-step [stepControl]="testInfoFormGroup">
+            <form [formGroup]="testInfoFormGroup">
               <ng-template matStepLabel>Step 1</ng-template>
               <h2> Enrollment Form</h2>
               <div class="test_level">
@@ -25,15 +25,15 @@
                 </mat-select>
               </div>
               <div>
-                <button class="btn_focus-primary" [disabled]="TestInfoFormGroup.invalid || chooseTestLevel==0"
+                <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
                         matStepperNext>
                   Continue
                 </button>
               </div>
             </form>
           </mat-step>
-          <mat-step [stepControl]="UserInfoFormGroup">
-            <form [formGroup]="UserInfoFormGroup">
+          <mat-step [stepControl]="userInfoFormGroup">
+            <form [formGroup]="userInfoFormGroup">
               <ng-template matStepLabel>Step 2</ng-template>
               <h2>Enrollment Form</h2>
               <div class="form-field">
@@ -65,7 +65,7 @@
                 </mat-select>
               </div>
               <div style="margin-top: 46px">
-                <button class="btn_focus-primary" [disabled]="UserInfoFormGroup.invalid" matStepperNext>
+                <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
                   Continue
                 </button>
               </div>
@@ -76,7 +76,7 @@
           </mat-step>
           <mat-step>
             <ng-template matStepLabel>Step 3</ng-template>
-            <form [formGroup]="UserInfo2FormGroup">
+            <form [formGroup]="userInfo2FormGroup">
               <ng-template matStepLabel>Step 2</ng-template>
               <h2>Enrollment Form</h2>
               <div class="form-field">
@@ -118,7 +118,7 @@
                 </mat-select>
               </div>
               <div style="margin-top: 46px">
-                <button class="btn_focus-primary" [disabled]="UserInfoFormGroup.invalid" matStepperNext>
+                <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
                   Continue
                 </button>
               </div>
@@ -129,7 +129,32 @@
           </mat-step>
           <mat-step>
             <ng-template matStepLabel>Step 4</ng-template>
-            <p>You are now done.</p>
+            <form class="summary" [formGroup]="summaryFormGroup">
+              <h2>Summary</h2>
+              <div class="form-field">
+                <div class="cell">
+                  <label>HSK Level:</label>
+                  <p>HSK {{chooseTestLevel}}</p>
+                </div>
+                <div class="cell">
+                  <label>Nationality:</label>
+                  <p>{{userInfoFormGroup.get('nationality').value}}</p>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="cell">
+                  <label>Date if the test:</label>
+                  <p>{{testInfoFormGroup.get('date').value}}</p>
+                </div>
+                <div class="cell">
+                  <label>Mother tongue:</label>
+                  <p>{{userInfoFormGroup.get('tongue').value}}</p>
+                </div>
+              </div>
+              <mat-checkbox formControl="agree">
+                I have read and agree to registration agreement.
+              </mat-checkbox>
+            </form>
             <div>
               <button mat-button matStepperPrevious>Back</button>
               <button mat-button (click)="stepper.reset()">Reset</button>

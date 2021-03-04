@@ -10,6 +10,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule, MatLabel} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
+import {MatPseudoCheckboxModule} from "@angular/material/core";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 const routes: Routes = [
   {path: '', component: EnrollComponent},
@@ -26,6 +28,7 @@ const routes: Routes = [
     MatInputModule,
     MatSelectModule,
     RouterModule.forChild(routes),
+    MatCheckboxModule,
   ]
 })
 export class EnrollTestModule { }

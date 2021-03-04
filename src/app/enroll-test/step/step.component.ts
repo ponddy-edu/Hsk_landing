@@ -11,23 +11,23 @@ export class StepComponent implements OnInit {
   @ViewChild('stepper')
   private myStepper: MatStepper;
 
-  UserInfoFormGroup: FormGroup;
-  UserInfo2FormGroup: FormGroup;
-  TestInfoFormGroup: FormGroup;
-
+  userInfoFormGroup: FormGroup;
+  userInfo2FormGroup: FormGroup;
+  testInfoFormGroup: FormGroup;
+  summaryFormGroup: FormGroup;
   chooseTestLevel = 0
 
   constructor(private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
-    this.UserInfoFormGroup = this.formBuilder.group({
+    this.userInfoFormGroup = this.formBuilder.group({
       email: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
       nationality: new FormControl('', Validators.required),
       tongue: new FormControl('', Validators.required),
     });
-    this.UserInfo2FormGroup = this.formBuilder.group({
+    this.userInfo2FormGroup = this.formBuilder.group({
       birth: new FormControl('', Validators.required),
       belong: new FormControl(''),
       learn_time: new FormControl('', Validators.required),
@@ -35,11 +35,16 @@ export class StepComponent implements OnInit {
       know_us: new FormControl('', Validators.required),
     });
 
-    this.TestInfoFormGroup = this.formBuilder.group({
+    this.testInfoFormGroup = this.formBuilder.group({
       date: new FormControl('', Validators.required),
     });
+    this.summaryFormGroup = this.formBuilder.group({
+        agree: new FormControl('', Validators.required)
+      }
+    )
+
     setTimeout(() => {
-      // this.myStepper.selectedIndex = 1
+      this.myStepper.selectedIndex = 3
     }, 1000)
 
   }
