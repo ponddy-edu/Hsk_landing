@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  appUrl: 'http://hsk.ponddy.com/'
+  appUrl: 'http://hsk.ponddy.com/',
+  GAPI_CLIENT_ID: '216992628116-3c5j7d6qeufau4mvr7tp9m15bce28nvf.apps.googleusercontent.com'
 };
 
 /*
