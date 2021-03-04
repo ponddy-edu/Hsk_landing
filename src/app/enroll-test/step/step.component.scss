@@ -1,14 +1,114 @@
-.step{
+.step {
   margin-top: 60px;
   background-color: #fcfaf8;
 
-  mat-horizontal-stepper{
+  mat-horizontal-stepper {
     background-color: #fcfaf8;
 
   }
-  form{
+
+  form {
     background-color: #FFFFFF;
     padding: 36px 0;
     text-align: center;
+    min-width: 560px;
+    margin-bottom: 16px;
+    h2{
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 48px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #2D3942;
+      margin-bottom: 20px;
+    }
+    .test_level{
+      max-width: 296px;
+      margin: auto;
+      p{
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.8px;
+        color: #576168;
+        margin: 4px;
+      }
+      button{
+        padding: 13px 40px;
+        background: #FFFFFF;
+        border: 1px solid #D5D7D9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 16px;
+        &:nth-child(2n){
+          margin-right: 16px;
+        }
+        &.active{
+          background: #6ACFED;
+          color: #FFFFFF;
+          border: 1px solid #3B9FBE;
+        }
+      }
+    }
+    .form-field {
+      display: inline-grid;
+      width: 296px;
+      margin-bottom: 16px;
+      label{
+        font-size: 16px;
+        line-height: 22px;
+        color: #576168;
+        text-align: left;
+        margin-bottom: 4px;
+      }
+      input {
+        padding: 10px 12px;
+        background: #FFFFFF;
+        border: 1px solid #D5D7D9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        &[placeholder]{
+          font-size: 20px;
+          line-height: 36px;
+          letter-spacing: 1px;
+        }
+      }
+
+      mat-select{
+        padding: 10px 12px;
+        background: #FFFFFF;
+        border: 1px solid #D5D7D9;
+        box-sizing: border-box;
+        border-radius: 4px;
+        min-height: 56px;
+        ::ng-deep{
+          .mat-select-trigger{
+            height: 2.2rem;
+          }
+          .mat-select-placeholder{
+            font-size: 20px;
+            line-height: 36px;
+            letter-spacing: 1px;
+            color: #D5D7D9;
+          }
+          .mat-select-value{
+            text-align: left;
+            font-size: 20px;
+            line-height: 36px;
+          }
+        }
+
+      }
+    }
+  }
+  .hint-text{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #576168;
   }
 }

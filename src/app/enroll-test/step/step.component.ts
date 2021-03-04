@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {MatStepper} from "@angular/material/stepper";
 
 @Component({
   selector: 'app-step',
@@ -7,18 +8,40 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./step.component.scss']
 })
 export class StepComponent implements OnInit {
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  @ViewChild('stepper')
+  private myStepper: MatStepper;
 
-  constructor(private formBuilder: FormBuilder) {}
+  UserInfoFormGroup: FormGroup;
+  UserInfo2FormGroup: FormGroup;
+  TestInfoFormGroup: FormGroup;
+
+  chooseTestLevel = 0
+
+  constructor(private formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
-    this.firstFormGroup = this.formBuilder.group({
-      firstCtrl: ['', Validators.required]
+    this.UserInfoFormGroup = this.formBuilder.group({
+      email: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      nationality: new FormControl('', Validators.required),
+      tongue: new FormControl('', Validators.required),
     });
-    this.secondFormGroup = this.formBuilder.group({
-      secondCtrl: ['', Validators.required]
+    this.UserInfo2FormGroup = this.formBuilder.group({
+      birth: new FormControl('', Validators.required),
+      belong: new FormControl(''),
+      learn_time: new FormControl('', Validators.required),
+      reason: new FormControl('', Validators.required),
+      know_us: new FormControl('', Validators.required),
     });
+
+    this.TestInfoFormGroup = this.formBuilder.group({
+      date: new FormControl('', Validators.required),
+    });
+    setTimeout(() => {
+      // this.myStepper.selectedIndex = 1
+    }, 1000)
+
   }
 
 }

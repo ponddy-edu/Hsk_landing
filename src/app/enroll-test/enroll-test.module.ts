@@ -8,6 +8,8 @@ import { StepComponent } from './step/step.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule, MatLabel} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
 
 const routes: Routes = [
   {path: '', component: EnrollComponent},
@@ -21,6 +23,8 @@ const routes: Routes = [
     MatStepperModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
     RouterModule.forChild(routes),
   ]
 })
