@@ -27,7 +27,8 @@ const routes: Routes = [
     WavesModule,
     IvyCarouselModule,
     RouterModule.forChild(routes),
-    LazyLoadImageModule
+    LazyLoadImageModule,
+
   ],
   exports: [RouterModule, HomeComponent]
 })

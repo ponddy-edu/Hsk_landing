@@ -1,0 +1,249 @@
+<div class="scroll-content" [class.fade-out]="fade_out">
+  <div class="backdrop" (click)="dismiss()" test="backdropRedeemModal"></div>
+  <div *ngIf="$step.getValue()==='start'" class="wrapper">
+    <header>
+      <div justify-content-center>
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+      </div>
+      <div justify-content-center>
+        <h1>Log in to access content</h1>
+      </div>
+      <div justify-content-center>
+        <p>Let's sign in and explore the live Ponddy Library and loads of features!</p>
+      </div>
+
+    </header>
+    <main>
+      <div class="content">
+        <form [formGroup]="formStart">
+          <div class="error_message">
+            <p *ngIf="isEmailExist">
+              The email not exist please register
+            </p>
+          </div>
+          <p class="input_label">email address </p>
+          <input formControlName="email" [(ngModel)]="email" name="email">
+          <button [disabled]="!email" class="btn_general-primary" (click)="clickContinue(email)">Continue</button>
+          <p class="not_account">
+            Don’t have a Ponddy account? <a (click)="$step.next('register')">Create one</a>
+          </p>
+        </form>
+
+      </div>
+    </main>
+    <footer>
+      <hr>
+      <div justify-content-center>
+        <h1>or</h1>
+      </div>
+      <div class="socal_login desktop">
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')"><img src="/assets/image/login/icon_FB.png">Continue with Facebook</button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')"><img src="/assets/image/login/icon_google.png">Continue with Google</button>
+      </div>
+      <div class="socal_login mobile">
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')">Continue with<img src="assets/image/login/icon_FB.png"></button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')">Continue with<img src="assets/image/login/icon_google.png"></button>
+      </div>
+
+    </footer>
+    <div class="close" (click)="dismiss()" test="dismissUpgradeModal">
+      <button>✕</button>
+    </div>
+  </div>
+  <div [hidden]="$step.getValue()!=='login'" class="wrapper">
+    <header>
+      <div justify-content-center>
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+      </div>
+      <div justify-content-center>
+        <h1>Log in to access content</h1>
+      </div>
+      <div justify-content-center>
+        <p>Let's sign in and explore the live Ponddy Library and loads of features!</p>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <form [formGroup]="formLogin">
+          <p class="input_label">email address </p>
+          <input [(ngModel)]="email" formControlName="email" name="email">
+          <p class="input_label">password </p>
+          <input [(ngModel)]="password" formControlName="password" type="password" name="password" id="password">
+          <div margin-bottom="16px" *ngIf="error_message" class="error_message">
+            <p>{{error_message}}</p>
+          </div>
+          <div class="assistant">
+            <div class="remember_me">
+              <div class="pd_checkBox" formControlName="agree">
+                <input id='two' type='checkbox' />
+                <label for='two'> <span></span>
+                </label>
+              </div>
+              <p>remember me</p>
+            </div>
+            <div class="forgot_password" (click)="forgotPassword()">
+              <p>Forgot password</p>
+            </div>
+          </div>
+          <div justify-content-center>
+            <re-captcha #captchaLogin style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
+            </re-captcha>
+          </div>
+          <button class="btn_general-primary" [disabled]="formLogin.invalid||isLoading" (click)="login()">
+            <img *ngIf="isLoading" src="assets/image/loading_spinner.gif"/>Login</button>
+          <p class="not_account">
+            Don’t have a Ponddy account? <a (click)="$step.next('register')">Create one</a>
+          </p>
+
+        </form>
+
+      </div>
+    </main>
+    <footer>
+      <hr>
+      <div justify-content-center>
+        <h1>or</h1>
+      </div>
+      <div class="socal_login desktop">
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')"><img src="assets/image/login/icon_FB.png">Continue with Facebook</button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')"><img src="assets/image/login/icon_google.png">Continue with Google</button>
+      </div>
+      <div class="socal_login mobile">
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')">Continue with<img src="assets/image/login/icon_FB.png"></button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')">Continue with<img src="assets/image/login/icon_google.png"></button>
+      </div>
+
+    </footer>
+    <div class="close" (click)="dismiss()" test="dismissUpgradeModal">
+      <button>✕</button>
+    </div>
+  </div>
+  <div *ngIf="$step.getValue()==='register'" class="wrapper">
+    <header>
+      <div justify-content-center>
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+      </div>
+      <div justify-content-center>
+        <h1>Create your account</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <form [formGroup]="formRegister" (ngSubmit)="register()">
+          <p class="input_label">email address </p>
+          <input formControlName="email" [(ngModel)]="email" name="email" required="" id="email_register">
+          <div *ngIf="formRegister.get('email')?.invalid" class="error_message">
+            <p>{{formRegister.get('email_error')?.value}}</p>
+          </div>
+          <p class="input_label">password </p>
+          <input [(ngModel)]="password" formControlName="password" type="password" id="password_register">
+          <div *ngIf="formRegister.get('password')?.invalid" class="error_message">
+            <p>{{formRegister.get('password_error')?.value}}</p>
+          </div>
+          <div class="assistant">
+            <div class="remember_me">
+              <div class="pd_checkBox">
+                <input formControlName="agree" [(ngModel)]="agree" id='one' type='checkbox' />
+                <label for='one'> <span></span>
+                </label>
+              </div>
+              <p> You agree to receive updates and offers from Ponddy Education. You may opt out anytime.</p>
+            </div>
+            <div class="remember_me" style="margin-top: 8px">
+              <p>By creating an account, you agree to the Terms of Service and acknowledge our Privacy Policy.</p>
+            </div>
+          </div>
+          <button class="btn_general-primary" type="submit" [disabled]="!formRegister.valid||isLoading">
+            <img *ngIf="isLoading" src="assets/image/login/loading_spinner.gif"/>
+            Register
+          </button>
+          <p class="not_account">
+            Already have a Ponddy account? <a (click)="$step.next('login')">Login</a></p>
+        </form>
+
+      </div>
+    </main>
+
+    <div class="close" (click)="dismiss()" test="dismissUpgradeModal">
+      <button>✕</button>
+    </div>
+  </div>
+  <div *ngIf="$step.getValue()==='code'" class="wrapper identity">
+    <header>
+      <div justify-content-center>
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+      </div>
+      <div justify-content-center>
+        <h1>Verify your identity</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <!-- <form> -->
+        <form [formGroup]="formVerification">
+          <div class="verification_message">
+            <p class="">We just sent a verification email to: </p>
+            <p style="font-weight: bold">
+              {{email}}
+            </p>
+            <p>
+              Please enter the code to sign in.
+            </p>
+          </div>
+          <div *ngIf="error_message" class="error_message" justify-content-center>
+            <p>{{error_message}}</p>
+          </div>
+          <input *ngFor="let i of [0,1,2,3];let recordIndex = index" [autofocus]="i==0" (paste)="onPaste($event)" (keyup)="onDigitInput($event,recordIndex)" [value]="code[recordIndex]?code[recordIndex]:''" [name]="'code'+ recordIndex" [id]="'code'+ recordIndex"
+            maxlength="1">
+          <re-captcha #captchaCode style="margin-bottom: 16px;" siteKey="6Ldlp5IUAAAAAGHo3qu1fosvw2Oqjg-7v-zj0wQ7" size="invisible" (resolved)="resolved_recaptcha($event)">
+
+          </re-captcha>
+          <p class="resend">Did not get a verification mail?
+            <a [class.disabled]="resendTimeLock>0" (click)="resendCode()">Send it again.</a></p>
+          <div *ngIf="resendTimeLock>0" style="margin-bottom: -16px" class="resend_time" justify-content-center>
+            Resend in {{resendTimeLock}}s
+          </div>
+          <button [disabled]="this.code.length<4" style="width: 168px;margin: 25px 0 10px" class="btn_blue-primary" (click)="verifyCode()">Submit
+          </button>
+          <div justify-content-center>
+            <a class="back" (click)="this.$step.next('register')">back</a>
+          </div>
+        </form>
+
+      </div>
+    </main>
+
+    <div class="close" (click)="dismiss()" test="dismissUpgradeModal">
+      <button>✕</button>
+    </div>
+  </div>
+  <div *ngIf="$step.getValue()==='success'" class="wrapper identity">
+    <header>
+      <div justify-content-center>
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+      </div>
+      <div justify-content-center>
+        <h1>Verified</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <!-- <form> -->
+        <form [formGroup]="formSuccess">
+          <div class="successfully_message">
+            <p class="">{{success_message}}</p>
+          </div>
+
+          <div justify-content-center>
+            <img style="margin-top: 83px;width: 213px;" src="assets/image/login/icon_success.svg">
+          </div>
+        </form>
+
+      </div>
+    </main>
+
+    <div class="close" (click)="dismiss()" test="dismissUpgradeModal">
+      <button mat-dialog-close>✕</button>
+    </div>
+  </div>
+</div>
