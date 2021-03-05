@@ -1,6 +1,8 @@
 import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {MatStepper} from "@angular/material/stepper";
+import {Timestamp} from 'rxjs/internal-compatibility';
+import {SheetService} from '../../../utils/sheet.service';
 
 @Component({
   selector: 'app-step',
@@ -17,27 +19,27 @@ export class StepComponent implements OnInit {
   summaryFormGroup: FormGroup;
   chooseTestLevel = 0
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public sheetService: SheetService) {
   }
 
   ngOnInit() {
     this.userInfoFormGroup = this.formBuilder.group({
-      email: new FormControl('', Validators.required),
-      name: new FormControl('', Validators.required),
-      chinese_name: new FormControl('', Validators.required),
-      nationality: new FormControl('', Validators.required),
-      tongue: new FormControl('', Validators.required),
+      Email: new FormControl('', Validators.required),
+      Name: new FormControl('', Validators.required),
+      Chinese_Name: new FormControl('', Validators.required),
+      Nationality: new FormControl('', Validators.required),
+      Mother_Tongue: new FormControl('', Validators.required),
     });
     this.userInfo2FormGroup = this.formBuilder.group({
-      birth: new FormControl('', Validators.required),
-      belong: new FormControl(''),
-      learn_time: new FormControl('', Validators.required),
-      reason: new FormControl('', Validators.required),
-      know_us: new FormControl('', Validators.required),
+      Birth_Date: new FormControl('', Validators.required),
+      Belong_To: new FormControl(''),
+      Learning_For: new FormControl('', Validators.required),
+      Reason: new FormControl('', Validators.required),
+      Known_From: new FormControl('', Validators.required),
     });
 
     this.testInfoFormGroup = this.formBuilder.group({
-      test_level: new FormControl('', Validators.required),
+      Test_Date: new FormControl('', Validators.required),
     });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
@@ -54,9 +56,11 @@ export class StepComponent implements OnInit {
     const formData = {
       ...this.userInfoFormGroup.getRawValue(),
       ...this.userInfo2FormGroup.getRawValue(),
-      ...{test_level: this.chooseTestLevel}
-    }
+      ...{Test_Level: this.chooseTestLevel},
+      ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
 
+    }
+    this.sheetService.addRow(formData)
     console.log(formData)
   }
 }

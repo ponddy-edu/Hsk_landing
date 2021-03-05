@@ -7,7 +7,7 @@
             <form [formGroup]="testInfoFormGroup">
               <ng-template matStepLabel>Step 1</ng-template>
               <h2> Enrollment Form</h2>
-              <div class="test_level">
+              <div class="Test_Date">
                 <p>*Please select the level of HSK test </p>
                 <button [class.active]="chooseTestLevel==1" (click)="chooseTestLevel=1">HSK 1</button>
                 <button [class.active]="chooseTestLevel==2" (click)="chooseTestLevel=2">HSK 2</button>
@@ -18,7 +18,7 @@
               </div>
               <div class="form-field" style="margin-top: 20px">
                 <label>*Please select the date you’d like to participate.</label>
-                <mat-select placeholder="Please Select" formControlName="test_level" name="test_level">
+                <mat-select placeholder="Please Select" formControlName="Test_Date" name="Test_Date">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2 (disabled)</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -38,25 +38,25 @@
               <h2>Enrollment Form</h2>
               <div class="form-field">
                 <label>*Email</label>
-                <input formControlName="email" name="email"
+                <input formControlName="Email" name="Email"
                        type="email"
                        value="" placeholder="pageshih@ponddy-edu.com">
               </div>
               <div class="form-field">
                 <label>*Name</label>
-                <input formControlName="name" name="name"
+                <input formControlName="Name" name="Name"
                        type="text"
                        value="" placeholder="Page">
               </div>
               <div class="form-field">
                 <label>Chinese name</label>
-                <input formControlName="chinese_name" name="chinese_name"
+                <input formControlName="Chinese_Name" name="Chinese_Name"
                        type="text"
                        value="" placeholder="Chinese name">
               </div>
               <div class="form-field">
                 <label>*Nationality</label>
-                <mat-select placeholder="Please Select" formControlName="nationality" name="nationality">
+                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2 (disabled)</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -64,7 +64,7 @@
               </div>
               <div class="form-field">
                 <label>*Mother tongue</label>
-                <mat-select placeholder="Please Select" formControlName="tongue" name="tongue">
+                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2 (disabled)</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -87,13 +87,13 @@
               <h2>Enrollment Form</h2>
               <div class="form-field">
                 <label>*Birth date</label>
-                <input formControlName="birth" name="birth"
+                <input formControlName="Birth_Date" name="Birth_Date"
                        type="date"
                        value="" placeholder="pageshih@ponddy-edu.com">
               </div>
               <div class="form-field">
                 <label>Belong to</label>
-                <mat-select placeholder="Please Select" formControlName="belong" name="belong">
+                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -101,7 +101,7 @@
               </div>
               <div class="form-field">
                 <label>*How long have you been learning Chinese?</label>
-                <mat-select placeholder="Please Select" formControlName="learn_time" name="learn_time">
+                <mat-select placeholder="Please Select" formControlName="Learning_For" name="Learning_For">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -109,7 +109,7 @@
               </div>
               <div class="form-field">
                 <label>Why do you want to learn Chinese?</label>
-                <mat-select placeholder="Please Select" formControlName="reason" name="reason">
+                <mat-select placeholder="Please Select" formControlName="Reason" name="Reason">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2 (disabled)</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -117,7 +117,7 @@
               </div>
               <div class="form-field">
                 <label>How did you get to know us?</label>
-                <mat-select placeholder="Please Select" formControlName="know_us" name="know_us">
+                <mat-select placeholder="Please Select" formControlName="Known_From" name="Known_From">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -145,13 +145,13 @@
                 </div>
                 <div class="cell">
                   <label>Nationality:</label>
-                  <p>{{userInfoFormGroup.get('nationality')?.value}}</p>
+                  <p>{{userInfoFormGroup.get('Nationality')?.value}}</p>
                 </div>
               </div>
               <div class="form-field">
                 <div class="cell">
                   <label>Date if the test:</label>
-                  <p>{{testInfoFormGroup.get('test_level')?.value}}</p>
+                  <p>{{testInfoFormGroup.get('Test_Date')?.value}}</p>
                 </div>
                 <div class="cell">
                   <label>Mother tongue:</label>
@@ -161,41 +161,41 @@
               <div class="form-field">
                 <div class="cell">
                   <label>Email:</label>
-                  <p>{{userInfoFormGroup.get('email')?.value}}</p>
+                  <p>{{userInfoFormGroup.get('Email')?.value}}</p>
                 </div>
                 <div class="cell">
                   <label>Birth date:</label>
-                  <p>{{userInfoFormGroup.get('birth')?.value}}</p>
+                  <p>{{userInfoFormGroup.get('Birth_Date')?.value}}</p>
                 </div>
               </div>
               <div class="form-field">
                 <div class="cell">
                   <label>Name: </label>
-                  <p>{{userInfoFormGroup.get('name')?.value}}</p>
+                  <p>{{userInfoFormGroup.get('Name')?.value}}</p>
                 </div>
                 <div class="cell">
                   <label>Belong to:</label>
-                  <p>{{userInfo2FormGroup.get('belong')?.value}}</p>
+                  <p>{{userInfo2FormGroup.get('Belong_To')?.value}}</p>
                 </div>
               </div>
 
               <div class="form-field">
                 <div class="cell">
                   <label>How long have you been learning Chinese: </label>
-                  <p> {{userInfo2FormGroup.get('learn_time')?.value}}</p>
+                  <p> {{userInfo2FormGroup.get('Learning_For')?.value}}</p>
                 </div>
               </div>
 
               <div class="form-field">
                 <div class="cell">
                   <label>Why do you want to learn Chinese: </label>
-                  <p>{{userInfo2FormGroup.get('reason')?.value}}</p>
+                  <p>{{userInfo2FormGroup.get('Reason')?.value}}</p>
                 </div>
               </div>
               <div class="form-field">
                 <div class="cell">
                   <label>How did you get to know us:</label>
-                  <p>{{userInfo2FormGroup.get('know_us')?.value}}</p>
+                  <p>{{userInfo2FormGroup.get('Known_From')?.value}}</p>
                 </div>
               </div>
               <hr>
