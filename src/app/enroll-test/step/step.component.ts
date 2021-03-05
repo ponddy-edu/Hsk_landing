@@ -47,7 +47,7 @@ export class StepComponent implements OnInit {
     )
 
     setTimeout(() => {
-      this.myStepper.selectedIndex = 3
+      // this.myStepper.selectedIndex = 3
     }, 1000)
 
   }
@@ -58,9 +58,9 @@ export class StepComponent implements OnInit {
       ...this.userInfo2FormGroup.getRawValue(),
       ...{Test_Level: this.chooseTestLevel},
       ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
-
     }
     this.sheetService.addRow(formData)
     console.log(formData)
+
   }
 }

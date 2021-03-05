@@ -8,11 +8,36 @@
     ::ng-deep {
       mat-step-header {
         //pointer-events: none;
-  
+        
       }
+      
       .mat-horizontal-content-container {
         padding: 0;
       }
+      
+      mat-step-header .mat-step-icon-not-touched span,
+      mat-step-header .mat-step-icon span,
+      mat-step-header .mat-step-icon-not-touched .mat-icon,
+      mat-step-header .mat-step-icon .mat-icon {
+        display: none;
+      }
+      
+      .mat-step-header .mat-step-icon {
+        background-color: #F4F4F5;
+        
+        &.mat-step-icon-selected {
+          background-color: #78D4B6;
+        }
+        
+        &.mat-step-icon-state-done {
+          background-color: #78D4B6;
+        }
+        
+        &.mat-step-icon-state-edit {
+          background-color: #78D4B6;
+        }
+      }
+      
       
     }
   }
@@ -174,10 +199,11 @@
           }
         }
       }
-  
-      ::ng-deep.mat-checkbox-layout{
+      
+      ::ng-deep.mat-checkbox-layout {
         white-space: normal;
       }
+      
       hr {
         max-width: 350px;
         border: 1px solid #EAEBEC;

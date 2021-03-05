@@ -80,7 +80,7 @@
               <p>The following with * are required to be filled out.</p>
             </div>
           </mat-step>
-          <mat-step>
+          <mat-step [stepControl]="userInfo2FormGroup">
             <ng-template matStepLabel>Step 3</ng-template>
             <form [formGroup]="userInfo2FormGroup">
               <ng-template matStepLabel>Step 2</ng-template>
