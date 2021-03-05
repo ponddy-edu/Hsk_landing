@@ -56,11 +56,11 @@ export class AboutPonddyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.colorStyle === 'orange'){
+    if (this.colorStyle === 'orange') {
       this.colorClass = 'orange_text'
       this.buttonImage = '/assets/image/icon/btn_orange_normal.svg'
       this.colorBg = '#F5F0EB'
-      this.colClass = 'col-md-7'
+      this.colClass = 'col-md-8'
     } else {
       this.colorClass = 'blue_text'
       this.buttonImage = '/assets/image/icon/btn_blue_normal.svg'
@@ -69,13 +69,13 @@ export class AboutPonddyComponent implements OnInit {
     }
     this.device.$mobile.subscribe(isMobile => {
       if (isMobile) {
-        if(this.colorStyle === 'orange'){
+        if (this.colorStyle === 'orange') {
           this.carouselImageList = imagmeListMobileOrange
         } else {
           this.carouselImageList = imagmeListMobileBlue
         }
       } else {
-        if(this.colorStyle === 'orange'){
+        if (this.colorStyle === 'orange') {
           this.carouselImageList = imageListOrange
         } else {
           this.carouselImageList = imageListBlue
@@ -99,7 +99,7 @@ export class AboutPonddyComponent implements OnInit {
   courseNext(): void {
     let disableImg = this.courseComponent.counter.split('/')
     this.courseComponent.next()
-    if (Number.parseInt(disableImg[0]) === Number.parseInt(disableImg[1])-1) {
+    if (Number.parseInt(disableImg[0]) === Number.parseInt(disableImg[1]) - 1) {
       this.disableClass = "right"
     } else {
       this.disableClass = ''

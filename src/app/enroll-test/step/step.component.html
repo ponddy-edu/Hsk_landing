@@ -1,0 +1,168 @@
+<section class="step">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-6 col-sm-8 col-11">
+        <mat-horizontal-stepper #stepper labelPosition="bottom">
+          <mat-step [stepControl]="testInfoFormGroup">
+            <form [formGroup]="testInfoFormGroup">
+              <ng-template matStepLabel>Step 1</ng-template>
+              <h2> Enrollment Form</h2>
+              <div class="test_level">
+                <p>*Please select the level of HSK test </p>
+                <button [class.active]="chooseTestLevel==1" (click)="chooseTestLevel=1">HSK 1</button>
+                <button [class.active]="chooseTestLevel==2" (click)="chooseTestLevel=2">HSK 2</button>
+                <button [class.active]="chooseTestLevel==3" (click)="chooseTestLevel=3">HSK 3</button>
+                <button [class.active]="chooseTestLevel==4" (click)="chooseTestLevel=4">HSK 4</button>
+                <button [class.active]="chooseTestLevel==5" (click)="chooseTestLevel=5">HSK 5</button>
+                <button [class.active]="chooseTestLevel==6" (click)="chooseTestLevel=6">HSK 6</button>
+              </div>
+              <div class="form-field" style="margin-top: 20px">
+                <label>*Please select the date you’d like to participate.</label>
+                <mat-select placeholder="Please Select" formControlName="date" name="date">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2 (disabled)</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div>
+                <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
+                        matStepperNext>
+                  Continue
+                </button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="userInfoFormGroup">
+            <form [formGroup]="userInfoFormGroup">
+              <ng-template matStepLabel>Step 2</ng-template>
+              <h2>Enrollment Form</h2>
+              <div class="form-field">
+                <label>*Email</label>
+                <input formControlName="email" name="email"
+                       type="email"
+                       value="" placeholder="pageshih@ponddy-edu.com">
+              </div>
+              <div class="form-field">
+                <label>*Name</label>
+                <input formControlName="name" name="name"
+                       type="text"
+                       value="" placeholder="Page">
+              </div>
+              <div class="form-field">
+                <label>*Nationality</label>
+                <mat-select placeholder="Please Select" formControlName="nationality" name="nationality">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2 (disabled)</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div class="form-field">
+                <label>*Mother tongue</label>
+                <mat-select placeholder="Please Select" formControlName="tongue" name="tongue">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2 (disabled)</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div style="margin-top: 46px">
+                <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
+                  Continue
+                </button>
+              </div>
+            </form>
+            <div class="hint-text">
+              <p>The following with * are required to be filled out.</p>
+            </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Step 3</ng-template>
+            <form [formGroup]="userInfo2FormGroup">
+              <ng-template matStepLabel>Step 2</ng-template>
+              <h2>Enrollment Form</h2>
+              <div class="form-field">
+                <label>*Birth date</label>
+                <input formControlName="birth" name="birth"
+                       type="date"
+                       value="" placeholder="pageshih@ponddy-edu.com">
+              </div>
+              <div class="form-field">
+                <label>Belong to</label>
+                <mat-select placeholder="Please Select" formControlName="belong" name="belong">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div class="form-field">
+                <label>*How long have you been learning Chinese?</label>
+                <mat-select placeholder="Please Select" formControlName="learn_time" name="learn_time">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div class="form-field">
+                <label>Why do you want to learn Chinese?</label>
+                <mat-select placeholder="Please Select" formControlName="reason" name="reason">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2 (disabled)</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div class="form-field">
+                <label>How did you get to know us?</label>
+                <mat-select placeholder="Please Select" formControlName="know_us" name="know_us">
+                  <mat-option value="option1">Option 1</mat-option>
+                  <mat-option value="option2">Option 2</mat-option>
+                  <mat-option value="option3">Option 3</mat-option>
+                </mat-select>
+              </div>
+              <div style="margin-top: 46px">
+                <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
+                  Continue
+                </button>
+              </div>
+            </form>
+            <div class="hint-text">
+              <p>The following with * are required to be filled out.</p>
+            </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Step 4</ng-template>
+            <form class="summary" [formGroup]="summaryFormGroup">
+              <h2>Summary</h2>
+              <div class="form-field">
+                <div class="cell">
+                  <label>HSK Level:</label>
+                  <p>HSK {{chooseTestLevel}}</p>
+                </div>
+                <div class="cell">
+                  <label>Nationality:</label>
+                  <p>{{userInfoFormGroup.get('nationality')?.value}}</p>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="cell">
+                  <label>Date if the test:</label>
+                  <p>{{testInfoFormGroup.get('date')?.value}}</p>
+                </div>
+                <div class="cell">
+                  <label>Mother tongue:</label>
+                  <p>{{userInfoFormGroup.get('tongue')?.value}}</p>
+                </div>
+              </div>
+              <mat-checkbox formControl="agree">
+                I have read and agree to registration agreement.
+              </mat-checkbox>
+            </form>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </div>
+    </div>
+  </div>
+
+</section>
