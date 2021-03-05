@@ -24,6 +24,7 @@ export class StepComponent implements OnInit {
     this.userInfoFormGroup = this.formBuilder.group({
       email: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
+      chinese_name: new FormControl('', Validators.required),
       nationality: new FormControl('', Validators.required),
       tongue: new FormControl('', Validators.required),
     });

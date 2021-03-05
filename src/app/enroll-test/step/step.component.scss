@@ -1,21 +1,24 @@
 .step {
   margin-top: 60px;
   background-color: #fcfaf8;
-
+  
   mat-horizontal-stepper {
     background-color: #fcfaf8;
-    ::ng-deep mat-step-header{
+    
+    ::ng-deep mat-step-header {
       //pointer-events: none;
     }
   }
-
+  
   form {
     background-color: #FFFFFF;
     padding: 36px 0;
     text-align: center;
-    min-width: 560px;
+    width: 100%;
+    max-width: 560px;
     margin-bottom: 16px;
-    h2{
+    
+    h2 {
       font-weight: bold;
       font-size: 30px;
       line-height: 48px;
@@ -24,17 +27,20 @@
       color: #2D3942;
       margin-bottom: 20px;
     }
-    .test_level{
+    
+    .test_level {
       max-width: 296px;
       margin: auto;
-      p{
+      
+      p {
         font-size: 16px;
         line-height: 22px;
         letter-spacing: 0.8px;
         color: #576168;
         margin: 4px;
       }
-      button{
+      
+      button {
         padding: 13px 40px;
         background: #FFFFFF;
         border: 1px solid #D5D7D9;
@@ -45,85 +51,106 @@
         line-height: 30px;
         text-align: center;
         margin-bottom: 16px;
-        &:nth-child(2n){
+        
+        &:nth-child(2n) {
           margin-right: 16px;
         }
-        &.active{
+        
+        &.active {
           background: #6ACFED;
           color: #FFFFFF;
           border: 1px solid #3B9FBE;
         }
       }
     }
+    
     .form-field {
       display: inline-grid;
       width: 296px;
       margin-bottom: 16px;
-      label{
+      
+      label {
         font-size: 16px;
         line-height: 22px;
         color: #576168;
         text-align: left;
         margin-bottom: 4px;
       }
+      
       input {
         padding: 10px 12px;
         background: #FFFFFF;
         border: 1px solid #D5D7D9;
         box-sizing: border-box;
         border-radius: 4px;
-        &[placeholder]{
+        
+        &[placeholder] {
           font-size: 20px;
           line-height: 36px;
           letter-spacing: 1px;
         }
       }
-
-      mat-select{
+      
+      mat-select {
         padding: 10px 12px;
         background: #FFFFFF;
         border: 1px solid #D5D7D9;
         box-sizing: border-box;
         border-radius: 4px;
         min-height: 56px;
-        ::ng-deep{
-          .mat-select-trigger{
+        
+        ::ng-deep {
+          .mat-select-trigger {
             height: 2.2rem;
           }
-          .mat-select-placeholder{
+          
+          .mat-select-placeholder {
             font-size: 20px;
             line-height: 36px;
             letter-spacing: 1px;
             color: #D5D7D9;
           }
-          .mat-select-value{
+          
+          .mat-select-value {
             text-align: left;
             font-size: 20px;
             line-height: 36px;
           }
         }
-
+        
       }
     }
-    .check_wrap{
+    
+    .check_wrap {
       display: inline-flex;
       width: 296px;
-      mat-checkbox{
+      
+      mat-checkbox {
         width: 296px;
         //border: 2px solid #6ACFED;
         line-height: 24px;
         margin-left: 8px;
       }
     }
-    &.summary{
+    
+    &.summary {
       .form-field {
         text-align: left;
         display: table;
         justify-content: space-between;
         margin: auto;
-        .cell{
+        max-width: 350px;
+        width: 100%;
+        
+        .cell {
           display: table-cell;
-          label{
+          width: 40%;
+          
+          &:nth-child(1) {
+            width: 60%;
+          }
+          
+          label {
             font-weight: bold;
             font-size: 14px;
             line-height: 22px;
@@ -131,16 +158,24 @@
             text-align: left;
             margin-bottom: 4px;
           }
-          p{
+          
+          p {
             color: #2D3942;
             font-weight: normal;
           }
         }
-
+        
       }
+      
+      hr {
+        max-width: 350px;
+        border: 1px solid #EAEBEC;
+      }
+      
     }
   }
-  .hint-text{
+  
+  .hint-text {
     font-size: 14px;
     line-height: 20px;
     text-align: center;

@@ -49,6 +49,12 @@
                        value="" placeholder="Page">
               </div>
               <div class="form-field">
+                <label>Chinese name</label>
+                <input formControlName="chinese_name" name="chinese_name"
+                       type="text"
+                       value="" placeholder="Chinese name">
+              </div>
+              <div class="form-field">
                 <label>*Nationality</label>
                 <mat-select placeholder="Please Select" formControlName="nationality" name="nationality">
                   <mat-option value="option1">Option 1</mat-option>
@@ -131,6 +137,7 @@
             <ng-template matStepLabel>Step 4</ng-template>
             <form class="summary" [formGroup]="summaryFormGroup">
               <h2>Summary</h2>
+
               <div class="form-field">
                 <div class="cell">
                   <label>HSK Level:</label>
@@ -151,9 +158,57 @@
                   <p>{{userInfoFormGroup.get('tongue')?.value}}</p>
                 </div>
               </div>
+              <div class="form-field">
+                <div class="cell">
+                  <label>Email:</label>
+                  <p>{{userInfoFormGroup.get('email')?.value}}</p>
+                </div>
+                <div class="cell">
+                  <label>Birth date:</label>
+                  <p>{{userInfoFormGroup.get('birth')?.value}}</p>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="cell">
+                  <label>Name: </label>
+                  <p>{{userInfoFormGroup.get('name')?.value}}</p>
+                </div>
+                <div class="cell">
+                  <label>Belong to:</label>
+                  <p>{{userInfo2FormGroup.get('belong')?.value}}</p>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <div class="cell">
+                  <label>How long have you been learning Chinese: </label>
+                  <p> {{userInfo2FormGroup.get('learn_time')?.value}}</p>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <div class="cell">
+                  <label>Why do you want to learn Chinese: </label>
+                  <p>{{userInfo2FormGroup.get('reason')?.value}}</p>
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="cell">
+                  <label>How did you get to know us:</label>
+                  <p>{{userInfo2FormGroup.get('know_us')?.value}}</p>
+                </div>
+              </div>
+              <hr>
+
               <mat-checkbox formControl="agree">
                 I have read and agree to registration agreement.
               </mat-checkbox>
+
+              <div style="margin-top: 46px">
+                <button class="btn_focus-primary">
+                  Go to Payment
+                </button>
+              </div>
             </form>
             <div>
               <button mat-button matStepperPrevious>Back</button>
