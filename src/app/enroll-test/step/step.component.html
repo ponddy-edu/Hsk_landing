@@ -1,7 +1,7 @@
 <section class="step">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-6 col-md-6 col-sm-8 col-11">
+      <div class="col-lg-6 col-md-6 col-sm-8 col-12">
         <mat-horizontal-stepper #stepper labelPosition="bottom">
           <mat-step [stepControl]="testInfoFormGroup">
             <form [formGroup]="testInfoFormGroup">
@@ -18,7 +18,7 @@
               </div>
               <div class="form-field" style="margin-top: 20px">
                 <label>*Please select the date you’d like to participate.</label>
-                <mat-select placeholder="Please Select" formControlName="date" name="date">
+                <mat-select placeholder="Please Select" formControlName="test_level" name="test_level">
                   <mat-option value="option1">Option 1</mat-option>
                   <mat-option value="option2">Option 2 (disabled)</mat-option>
                   <mat-option value="option3">Option 3</mat-option>
@@ -151,7 +151,7 @@
               <div class="form-field">
                 <div class="cell">
                   <label>Date if the test:</label>
-                  <p>{{testInfoFormGroup.get('date')?.value}}</p>
+                  <p>{{testInfoFormGroup.get('test_level')?.value}}</p>
                 </div>
                 <div class="cell">
                   <label>Mother tongue:</label>
@@ -200,12 +200,12 @@
               </div>
               <hr>
 
-              <mat-checkbox formControl="agree">
+              <mat-checkbox formControlName="agree">
                 I have read and agree to registration agreement.
               </mat-checkbox>
 
               <div style="margin-top: 46px">
-                <button class="btn_focus-primary">
+                <button class="btn_focus-primary" [disabled]="summaryFormGroup.invalid" (click)="payment()">
                   Go to Payment
                 </button>
               </div>

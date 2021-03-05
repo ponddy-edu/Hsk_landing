@@ -5,8 +5,15 @@
   mat-horizontal-stepper {
     background-color: #fcfaf8;
     
-    ::ng-deep mat-step-header {
-      //pointer-events: none;
+    ::ng-deep {
+      mat-step-header {
+        //pointer-events: none;
+  
+      }
+      .mat-horizontal-content-container {
+        padding: 0;
+      }
+      
     }
   }
   
@@ -17,6 +24,7 @@
     width: 100%;
     max-width: 560px;
     margin-bottom: 16px;
+    padding: 16px 22px 24px 22px;
     
     h2 {
       font-weight: bold;
@@ -66,7 +74,8 @@
     
     .form-field {
       display: inline-grid;
-      width: 296px;
+      width: 100%;
+      max-width: 296px;
       margin-bottom: 16px;
       
       label {
@@ -164,9 +173,11 @@
             font-weight: normal;
           }
         }
-        
       }
-      
+  
+      ::ng-deep.mat-checkbox-layout{
+        white-space: normal;
+      }
       hr {
         max-width: 350px;
         border: 1px solid #EAEBEC;

@@ -37,7 +37,7 @@ export class StepComponent implements OnInit {
     });
 
     this.testInfoFormGroup = this.formBuilder.group({
-      date: new FormControl('', Validators.required),
+      test_level: new FormControl('', Validators.required),
     });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
@@ -50,4 +50,13 @@ export class StepComponent implements OnInit {
 
   }
 
+  payment() {
+    const formData = {
+      ...this.userInfoFormGroup.getRawValue(),
+      ...this.userInfo2FormGroup.getRawValue(),
+      ...{test_level: this.chooseTestLevel}
+    }
+
+    console.log(formData)
+  }
 }
