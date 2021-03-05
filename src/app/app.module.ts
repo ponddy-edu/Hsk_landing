@@ -9,7 +9,6 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import {HomeModule} from './home/home.module';
 import {LAZYLOAD_IMAGE_HOOKS, LazyLoadImageModule, ScrollHooks} from "ng-lazyload-image";
-import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
