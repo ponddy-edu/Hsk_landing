@@ -23,6 +23,7 @@ const imagmeListMobileOrange = ['https://hsk-landing.s3-us-west-2.amazonaws.com/
   'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_3_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_4_phone.png',
   'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_5_phone.png',
+  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_6_phone.png',
 ]
 
 

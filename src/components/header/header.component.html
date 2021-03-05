@@ -13,17 +13,13 @@
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu"
-               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
           <li class="nav-item nav-border-r">
-            <a i18n="header"
-               routerLink="/tests/chinese"
-               #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu"
-               (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)"
-               [class.active]="actvieMenu==='tests'" href="#" data="navbar" class="nav-a text_menu">
+            <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)" [class.active]="actvieMenu==='tests'" href="#" data="navbar"
+              class="nav-a text_menu">
               Tests
             </a>
             <mat-menu #menu="matMenu">
@@ -36,12 +32,8 @@
             </mat-menu>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header"
-               routerLink="/resources/course"
-               #buttonResource #menuTriggerResource="matMenuTrigger" [matMenuTriggerFor]="menuRsource"
-               (mouseenter)="buttonEnter(menuTriggerResource)"
-               (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)"
-               [class.active]="actvieMenu==='resources'" data="navbar" class="nav-a text_menu">
+            <a i18n="header" routerLink="/resources/course" #buttonResource #menuTriggerResource="matMenuTrigger" [matMenuTriggerFor]="menuRsource" (mouseenter)="buttonEnter(menuTriggerResource)" (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)" [class.active]="actvieMenu==='resources'"
+              data="navbar" class="nav-a text_menu">
               Resources
             </a>
             <mat-menu #menuRsource="matMenu">
@@ -64,17 +56,26 @@
             </mat-menu>
           </li>
           <li class="nav-item">
-            <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar"
-               class="nav-a text_menu">
+            <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
               FAQ
             </a>
           </li>
 
         </ul>
       </div>
+      <div [class.login]="loginActive==='Login'" class="loginNo">
+        <a class="text_menu" (click)="openLogin()">
+          <span>Log in</span>
+        </a>
+      </div>
+      <div [class.login]="loginActive==='Logout'" class="loginNo">
+        <a class="text_menu" (click)="Logout()">
+          <span>Log out</span>
+        </a>
+      </div>
     </div>
     <div class="container" *ngIf="isMobile|async">
-      <mat-expansion-panel *ngIf="isMobile|async" hideToggle>
+      <mat-expansion-panel #expansion *ngIf="isMobile|async" (expanded)="menuOpen" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <a href="/" class="home-link ponddy-logo">
@@ -89,38 +90,48 @@
         </mat-expansion-panel-header>
         <ul class="pd-nav-item navbar-nav mr-auto text-center">
 
-          <li class="nav-item"  routerLink="/home">
-            <a i18n="header" [class.active]="actvieMenu==='home'" class="nav-active text_menu"
-               data="navbar">
+          <li class="nav-item" routerLink="/home">
+            <a i18n="header" [class.active]="actvieMenu==='home'" class="nav-active text_menu" data="navbar">
               Home
             </a>
           </li>
           <li class="nav-item" routerLink="/ponddy">
-            <a i18n="header"  [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu">
+            <a i18n="header" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu">
               Ponddy
             </a>
           </li>
           <li class="nav-item" routerLink="/tests/chinese">
-            <a [class.active]="actvieMenu==='tests'" i18n="header"  data="navbar"
-               class="nav-a text_menu">
+            <a [class.active]="actvieMenu==='tests'" i18n="header" data="navbar" class="nav-a text_menu">
               Tests
             </a>
           </li>
-          <li  class="nav-item" routerLink="/resources/course">
-            <a [class.active]="actvieMenu==='resources'"  i18n="header" class="nav-a text_menu">
+          <li class="nav-item" routerLink="/resources/course">
+            <a [class.active]="actvieMenu==='resources'" i18n="header" class="nav-a text_menu">
               Resource
             </a>
           </li>
           <li class="nav-item" routerLink="/faq">
-            <a i18n="header" [class.active]="actvieMenu==='faq'"
-               data="navbar" class="nav-a text_menu">
+            <a i18n="header" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
               FAQ
             </a>
           </li>
-
+          <li class="mobile action nav-item">
+            <div [class.login]="loginActive==='Login'" class="loginNo">
+              <a class="text_menu " (click)="openLogin()">
+                <span>Log in</span>
+              </a>
+            </div>
+            <div [class.login]="loginActive==='Logout'" class="loginNo">
+              <a class="text_menu" (click)="Logout()">
+                <span>Log out</span>
+              </a>
+            </div>
+          </li>
         </ul>
+
 
       </mat-expansion-panel>
     </div>
+
   </nav>
 </header>
