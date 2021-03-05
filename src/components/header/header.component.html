@@ -68,9 +68,9 @@
           <span>Log in</span>
         </a>
       </div>
-      <div [class.login]="loginActive==='Dashboard'" class="loginNo">
+      <div [class.login]="loginActive==='Logout'" class="loginNo">
         <a class="text_menu">
-          <span>Dashboard</span>
+          <span>Log out</span>
         </a>
       </div>
     </div>
@@ -115,17 +115,21 @@
               FAQ
             </a>
           </li>
+          <li class="mobile action nav-item">
+            <div [class.login]="loginActive==='Login'" class="loginNo">
+              <a class="text_menu " (click)="openLogin()">
+                <span>Log in</span>
+              </a>
+            </div>
+            <div [class.login]="loginActive==='Logout'" class="loginNo">
+              <a class="text_menu">
+                <span>Log out</span>
+              </a>
+            </div>
+          </li>
         </ul>
-        <div [class.login]="loginActive==='Login'" class="loginNo">
-          <a class="text_menu " (click)="openLogin()">
-            <span>Log in</span>
-          </a>
-        </div>
-        <div [class.login]="loginActive==='Dashboard'" class="loginNo">
-          <a class="text_menu">
-            <span>Dashboard</span>
-          </a>
-        </div>
+
+
       </mat-expansion-panel>
     </div>
 

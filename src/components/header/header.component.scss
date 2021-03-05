@@ -126,11 +126,20 @@ mat-expansion-panel {
   margin-right: 0;
 }
 
-.mat-expansion-panel-content {
-  height: 94vh;
-}
-
 @media (max-width: 767px) {
+   ::ng-deep.mat-expansion-panel-content {
+    height: 150vw;
+    .mobile.action.nav-item {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      height: 70px;
+      box-shadow: 0 0 8px rgb(45 57 66 / 40%);
+      z-index: 10;
+      background-color: #fff;
+    }
+  }
   .navbar-nav {
     flex-direction: column;
     .nav-item {

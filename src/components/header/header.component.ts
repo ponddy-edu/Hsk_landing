@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
     this.isMobile.subscribe()
     const token = localStorage.getItem("token");
     if(token){
-      this.loginActive = 'Dashboard'
+      this.loginActive = 'Logout'
     } else {
       this.loginActive = 'Login'
     }
