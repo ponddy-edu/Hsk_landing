@@ -5,6 +5,7 @@ import {MatMenuTrigger} from '@angular/material/menu';
 import { LoginComponent } from '../login/login.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatExpansionPanel } from '@angular/material/expansion';
+import { AuthService } from 'src/utils/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +30,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private deviceService: DeviceService,
               private ren: Renderer2,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,
+              public authService: AuthService,) {
     this.isMobile = deviceService.$mobile
   }
 
@@ -94,6 +96,10 @@ export class HeaderComponent implements OnInit {
     this.dialog.open(LoginComponent,{maxWidth: "90vw",maxHeight:"150vw"})
     this.menuOpen = false;
     this.expansionComponent.close();
+  }
+
+  Logout() {
+    this.authService.logout();
   }
 
 }

@@ -33,7 +33,6 @@ export class AuthService {
       app: "hsk",
       g_recaptcha_response: recaptcha_response
     };
-    console.log(password)
 
     return this.http.post(url, body)
       .pipe(tap((res:any) => {
@@ -104,9 +103,19 @@ export class AuthService {
     return this.http.post(url, body)
   }
 
+  public logout(): void {
+    localStorage.clear();
+    setTimeout(function () {
+      document.location.href = `${environment.authApiUrl}/en/logout/?redirect_uri=${environment.appUrl}&client_id=${environment.clientId}`;
+    }, 500);
+  }
+
   forgotPassword(email:any) {
     email = email.toLowerCase()
     const url = environment.authApiUrl + '/' + localStorage.getItem('lang') + '/auth/forgot/?email=' + encodeURI(email)
     window.open(url, '_blank')
   }
+
+
+
 }
