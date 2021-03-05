@@ -138,17 +138,17 @@
                 </div>
                 <div class="cell">
                   <label>Nationality:</label>
-                  <p>{{userInfoFormGroup.get('nationality').value}}</p>
+                  <p>{{userInfoFormGroup.get('nationality')?.value}}</p>
                 </div>
               </div>
               <div class="form-field">
                 <div class="cell">
                   <label>Date if the test:</label>
-                  <p>{{testInfoFormGroup.get('date').value}}</p>
+                  <p>{{testInfoFormGroup.get('date')?.value}}</p>
                 </div>
                 <div class="cell">
                   <label>Mother tongue:</label>
-                  <p>{{userInfoFormGroup.get('tongue').value}}</p>
+                  <p>{{userInfoFormGroup.get('tongue')?.value}}</p>
                 </div>
               </div>
               <mat-checkbox formControl="agree">
