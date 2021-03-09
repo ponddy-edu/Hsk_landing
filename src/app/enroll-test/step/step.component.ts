@@ -11,7 +11,7 @@ import {SheetService} from '../../../utils/sheet.service';
 })
 export class StepComponent implements OnInit {
   @ViewChild('stepper')
-  private myStepper: MatStepper;
+  public myStepper: MatStepper;
 
   userInfoFormGroup: FormGroup;
   userInfo2FormGroup: FormGroup;
@@ -60,7 +60,6 @@ export class StepComponent implements OnInit {
       ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
     }
     this.sheetService.addRow(formData)
-    console.log(formData)
 
   }
 }

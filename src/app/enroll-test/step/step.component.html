@@ -19,16 +19,22 @@
               <div class="form-field" style="margin-top: 20px">
                 <label>*Please select the date you’d like to participate.</label>
                 <mat-select placeholder="Please Select" formControlName="Test_Date" name="Test_Date">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2 (disabled)</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
+                  <mat-option value="Mar. 17, 2021">Mar. 17, 2021</mat-option>
+                  <mat-option value="Mar. 29, 2021">Mar. 29, 2021</mat-option>
+                  <mat-option value="Mar. 30, 2021">Mar. 30, 2021</mat-option>
+                  <mat-option value="Apr. 1, 2021">Apr. 1, 2021</mat-option>
+                  <mat-option value="Apr. 5, 2021">Apr. 5, 2021</mat-option>
+                  <mat-option value="Apr. 22, 2021">Apr. 22, 2021</mat-option>
+
                 </mat-select>
+
               </div>
               <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
                         matStepperNext>
                   Continue
                 </button>
+
               </div>
             </form>
           </mat-step>
@@ -56,24 +62,28 @@
               </div>
               <div class="form-field">
                 <label>*Nationality</label>
-                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2 (disabled)</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
-                </mat-select>
+                <input formControlName="Nationality" name="Nationality" value="">
+<!--                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">-->
+<!--                  <mat-option value="option1">Option 1</mat-option>-->
+<!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
+<!--                  <mat-option value="option3">Option 3</mat-option>-->
+<!--                </mat-select>-->
               </div>
               <div class="form-field">
                 <label>*Mother tongue</label>
-                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2 (disabled)</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
-                </mat-select>
+                <input formControlName="Mother_Tongue" name="Mother_Tongue" value="">
+
+<!--                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">-->
+<!--                  <mat-option value="option1">Option 1</mat-option>-->
+<!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
+<!--                  <mat-option value="option3">Option 3</mat-option>-->
+<!--                </mat-select>-->
               </div>
-              <div style="margin-top: 46px">
+              <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
                   Continue
                 </button>
+                <p (click)="myStepper.selectedIndex = 0">Back</p>
               </div>
             </form>
             <div class="hint-text">
@@ -89,44 +99,54 @@
                 <label>*Birth date</label>
                 <input formControlName="Birth_Date" name="Birth_Date"
                        type="date"
-                       value="" placeholder="pageshih@ponddy-edu.com">
+                       value="">
               </div>
               <div class="form-field">
                 <label>Belong to</label>
-                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
-                </mat-select>
+                <input formControlName="Belong_To" name="Belong_To" value="">
+<!--                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">-->
+<!--                  <mat-option value="option1">Option 1</mat-option>-->
+<!--                  <mat-option value="option2">Option 2</mat-option>-->
+<!--                  <mat-option value="option3">Option 3</mat-option>-->
+<!--                </mat-select>-->
               </div>
               <div class="form-field">
                 <label>*How long have you been learning Chinese?</label>
                 <mat-select placeholder="Please Select" formControlName="Learning_For" name="Learning_For">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
+                  <mat-option value="6个月以下 &nbsp;Less than 6 months"> 6个月以下 &nbsp;Less than 6 months</mat-option>
+                  <mat-option value="6-12个月&nbsp;6-12 months"> 6-12个月&nbsp;6-12 months</mat-option>
+                  <mat-option value="1年&nbsp;One year">1年&nbsp;One year</mat-option>
+                  <mat-option value="2年&nbsp;Two years"> 2年&nbsp;Two years</mat-option>
+                  <mat-option value="3年&nbsp;Three years">3年&nbsp;Three years</mat-option>
+                  <mat-option value="4年&nbsp;Four years">4年&nbsp;Four years</mat-option>
+                  <mat-option value="5年&nbsp;Five years">5年&nbsp;Five years</mat-option>
+                  <mat-option value="5-10年&nbsp;5-10 years">5-10年&nbsp;5-10 years</mat-option>
+                  <mat-option value="10年以上&nbsp;More than 10 years">10年以上&nbsp;More than 10 years</mat-option>
                 </mat-select>
               </div>
               <div class="form-field">
                 <label>Why do you want to learn Chinese?</label>
                 <mat-select placeholder="Please Select" formControlName="Reason" name="Reason">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2 (disabled)</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
+                  <mat-option value="For research">For research</mat-option>
+                  <mat-option value="Just a hobbit">Just a hobbit</mat-option>
+                  <mat-option value="For work">For work</mat-option>
+                  <mat-option value="To study overseas">To study overseas</mat-option>
                 </mat-select>
               </div>
               <div class="form-field">
                 <label>How did you get to know us?</label>
                 <mat-select placeholder="Please Select" formControlName="Known_From" name="Known_From">
-                  <mat-option value="option1">Option 1</mat-option>
-                  <mat-option value="option2">Option 2</mat-option>
-                  <mat-option value="option3">Option 3</mat-option>
+                  <mat-option value="From internet">From internet</mat-option>
+                  <mat-option value="From teachers">From teachers</mat-option>
+                  <mat-option value="From schoolmates">From schoolmates</mat-option>
+                  <mat-option value="Others">Others</mat-option>
                 </mat-select>
               </div>
-              <div style="margin-top: 46px">
+              <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
                   Continue
                 </button>
+                <p (click)="myStepper.selectedIndex = 1">Back</p>
               </div>
             </form>
             <div class="hint-text">
