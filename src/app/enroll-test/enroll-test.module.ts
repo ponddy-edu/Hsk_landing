@@ -12,13 +12,14 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatPseudoCheckboxModule} from "@angular/material/core";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
   {path: '', component: EnrollComponent},
 ];
 
 @NgModule({
-  declarations: [EnrollComponent, StepComponent],
+  declarations: [EnrollComponent, StepComponent, LandingComponent],
   imports: [
     CommonModule,
     ShareModule,
