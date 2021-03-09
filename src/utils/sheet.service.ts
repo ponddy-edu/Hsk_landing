@@ -14,7 +14,20 @@ export class SheetService {
 
   addRow(postData: any) {
     const url = 'https://script.google.com/macros/s/AKfycbygYHynmMz9aSUYniI6v3xpwXrA5qOY-yoXnJwTF1Xarb8JXYwpoJ3t3yvemoMZC6U/exec'
-    this.http.post(url, postData)
+    this.http.post(url, postData, {
+      headers:
+        {
+          'Content-Type': 'text/plain;charset=utf-8'
+        }
+    })
+      .subscribe(res => {
+        console.log(res)
+      })
+  }
+
+  addRowAWSWay(postData: any) {
+    const url = 'https://hssyzjzatf.execute-api.us-west-2.amazonaws.com/default/hsk_booking_endpoint'
+    this.http.post(url, {data: postData}, {headers: {mode: 'no-cors'}})
       .subscribe(res => {
         console.log(res)
       })
@@ -28,7 +41,6 @@ export class SheetService {
       'entry.806708941': 'add by hsk landing',
       'entry.841251610': 'add by hsk landing'
     }
-    JSON.parse()
     this.http.post(url, data)
       .subscribe(res => {
         console.log(res)
