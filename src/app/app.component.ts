@@ -43,18 +43,22 @@ export class AppComponent implements OnInit {
       // this.metaService.updateTag()
     });
     this.getParamsToken()
+    // this.router.navigate(['home']);
+    if (window.location.pathname === '/') {
+      this.router.navigate(['home'])
+    }
   }
 
   public getParamsToken() {
     var params = new URLSearchParams(window.location.search);
     var token = params.get('token')
     if (token) {
-        localStorage.setItem('token', token)
-        if (window.location.search && !params.get('action')) {
-            //remove search at url
-            window.location.href = window.location.href.split("?")[0]
-        }
+      localStorage.setItem('token', token)
+      if (window.location.search && !params.get('action')) {
+        //remove search at url
+        window.location.href = window.location.href.split("?")[0]
+      }
     }
-}
+  }
 
 }

@@ -8,7 +8,6 @@ import {FaqModule} from './faq/faq.module'
 import {environment} from '../environments/environment';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), data: {
       seo: {
         title: 'Ponddy® HSK - Home',
@@ -99,7 +98,10 @@ const routes: Routes = [
         ]
       }
     }
-  }
+  },
+
+  {path: '**', redirectTo: '/home', pathMatch: 'full'},
+
 
   // { path: 'detail/:id', component: HeroDetailComponent }
 ];
