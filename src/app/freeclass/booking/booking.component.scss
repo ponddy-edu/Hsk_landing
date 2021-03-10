@@ -1,40 +1,48 @@
 .booking {
   background: #fbfcfc;
-  
+
   .container {
     padding: 35px 0;
-    
+
     .tab_title {
       display: inline-flex;
       border-bottom: 1px solid #576168;
       width: 100%;
-      
+      .wrap_h1{
+        &:nth-child(1){
+          padding-right: 16px;
+          border-right: 1px solid #576168;
+        }
+        &:nth-child(2){
+          padding-left: 16px;
+          border-left: 1px solid #576168;
+        }
+      }
       h1 {
         font-weight: bold;
         font-size: 32px;
         line-height: 48px;
-        padding-right: 16px;
         margin: 0;
         cursor: pointer;
         color: #576168;
-        &:nth-child(1) {
-          border-right: 1px solid #576168;
+        &:hover{
+          color: #93e2fa;
         }
-        
+
         &:nth-child(2) {
           padding-left: 16px;
         }
-        
+
         &.active {
           color: #6ACFED;
           border-bottom: 5px solid #6ACFED;
         }
       }
     }
-    
+
     .description {
       padding: 20px 0;
-      
+
       h2 {
         font-weight: bold;
         font-size: 16px;
@@ -42,7 +50,7 @@
         letter-spacing: 0.5px;
         color: #2D3942;
       }
-      
+
       p {
         font-size: 16px;
         line-height: 30px;
@@ -51,7 +59,7 @@
         font-weight: normal;
       }
     }
-    
+
     .schedule {
       h2 {
         font-weight: bold;
@@ -60,7 +68,7 @@
         letter-spacing: 0.5px;
         color: #2D3942;
       }
-      
+
       p {
         font-size: 16px;
         line-height: 30px;
@@ -68,7 +76,7 @@
         color: #2D3942;
         margin: 6px;
         font-weight: normal;
-  
+
       }
       .time{
         font-size: 14px;
@@ -80,8 +88,11 @@
     .info_table{
       padding: 0;
       margin-top: 36px;
+      img{
+        width: 100%;
+      }
     }
-  
+
     form {
       background-color: #FFFFFF;
       text-align: center;
@@ -91,7 +102,7 @@
       min-height: 780px;
       position: relative;
       margin: auto auto 16px auto;
-    
+
       h2 {
         font-weight: bold;
         font-size: 30px;
@@ -101,11 +112,11 @@
         color: #2D3942;
         margin-bottom: 20px;
       }
-    
+
       .test_date {
         max-width: 296px;
         margin: auto;
-      
+
         p {
           font-size: 16px;
           line-height: 22px;
@@ -113,7 +124,7 @@
           color: #576168;
           margin: 4px;
         }
-      
+
         button {
           padding: 13px 40px;
           background: #FFFFFF;
@@ -125,11 +136,11 @@
           line-height: 30px;
           text-align: center;
           margin-bottom: 16px;
-        
+
           &:nth-child(2n) {
             margin-right: 16px;
           }
-        
+
           &.active {
             background: #6ACFED;
             color: #FFFFFF;
@@ -137,13 +148,13 @@
           }
         }
       }
-    
+
       .form-field {
         display: inline-grid;
         width: 100%;
         max-width: 296px;
         margin-bottom: 16px;
-      
+
         label {
           font-size: 16px;
           line-height: 22px;
@@ -151,21 +162,21 @@
           text-align: left;
           margin-bottom: 4px;
         }
-      
+
         input {
           padding: 10px 12px;
           background: #FFFFFF;
           border: 1px solid #D5D7D9;
           box-sizing: border-box;
           border-radius: 4px;
-        
+
           &[placeholder] {
             font-size: 20px;
             line-height: 36px;
             letter-spacing: 1px;
           }
         }
-      
+
         mat-select {
           padding: 10px 12px;
           background: #FFFFFF;
@@ -173,33 +184,33 @@
           box-sizing: border-box;
           border-radius: 4px;
           min-height: 56px;
-        
+
           ::ng-deep {
             .mat-select-trigger {
               height: 2.2rem;
             }
-          
+
             .mat-select-placeholder {
               font-size: 20px;
               line-height: 36px;
               letter-spacing: 1px;
               color: #D5D7D9;
             }
-          
+
             .mat-select-value {
               text-align: left;
               font-size: 20px;
               line-height: 36px;
             }
           }
-        
+
         }
       }
-    
+
       .check_wrap {
         display: inline-flex;
         width: 296px;
-      
+
         mat-checkbox {
           width: 296px;
           //border: 2px solid #6ACFED;
@@ -207,7 +218,7 @@
           margin-left: 8px;
         }
       }
-    
+
       &.summary {
         .form-field {
           text-align: left;
@@ -216,15 +227,15 @@
           margin: auto;
           max-width: 350px;
           width: 100%;
-        
+
           .cell {
             display: table-cell;
             width: 40%;
-          
+
             &:nth-child(1) {
               width: 60%;
             }
-          
+
             label {
               font-weight: bold;
               font-size: 14px;
@@ -233,25 +244,25 @@
               text-align: left;
               margin-bottom: 4px;
             }
-          
+
             p {
               color: #2D3942;
               font-weight: normal;
             }
           }
         }
-      
+
         ::ng-deep.mat-checkbox-layout {
           white-space: normal;
         }
-      
+
         hr {
           max-width: 350px;
           border: 1px solid #EAEBEC;
         }
-      
+
       }
-    
+
       .btn_wrap {
         position: absolute;
         bottom: 48px;
@@ -259,7 +270,7 @@
         margin-right: auto;
         left: 0;
         right: 0;
-      
+
         p {
           margin-top: 16px;
           font-size: 16px;

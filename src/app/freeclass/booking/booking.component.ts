@@ -13,6 +13,7 @@ export class BookingComponent implements OnInit {
   userFormGroup: FormGroup;
   stripe: any
   stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
+  activeTab = 0
 
   constructor(private formBuilder: FormBuilder,
               public sheetService: SheetService) {
@@ -24,8 +25,8 @@ export class BookingComponent implements OnInit {
       Email: new FormControl('', Validators.required),
       Name: new FormControl('', Validators.required),
       Level: new FormControl('', Validators.required),
-      Phone: new FormControl('', Validators.required),
-      Age: new FormControl(''),
+      Phone: new FormControl(''),
+      Age: new FormControl('', Validators.required),
       Days: new FormControl('', Validators.required),
     });
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
