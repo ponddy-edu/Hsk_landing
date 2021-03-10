@@ -14,10 +14,11 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RecaptchaModule} from 'ng-recaptcha';
 import {DateCounterComponent} from './date-counter/date-counter.component';
+import {PaySuccessComponent} from './pay-success/pay-success.component';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, LearnMoreComponent,
-    AboutPonddyComponent, LoginComponent, DateCounterComponent
+    AboutPonddyComponent, LoginComponent, DateCounterComponent, PaySuccessComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +32,7 @@ import {DateCounterComponent} from './date-counter/date-counter.component';
     RecaptchaModule
   ],
   entryComponents: [
-    LoginComponent
+    LoginComponent, PaySuccessComponent
   ],
   exports: [HeaderComponent, FooterComponent, AboutPonddyComponent,
     LoginComponent, DateCounterComponent]

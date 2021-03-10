@@ -50,13 +50,13 @@ export class AppComponent implements OnInit {
   }
 
   public getParamsToken() {
-    var params = new URLSearchParams(window.location.search);
-    var token = params.get('token')
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token')
     if (token) {
       localStorage.setItem('token', token)
       if (window.location.search && !params.get('action')) {
-        //remove search at url
-        window.location.href = window.location.href.split("?")[0]
+        // remove search at url
+        window.location.href = window.location.href.split('?')[0]
       }
     }
   }

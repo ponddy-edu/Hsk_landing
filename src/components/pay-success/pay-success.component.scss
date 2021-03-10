@@ -1,0 +1,63 @@
+.scroll-content {
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -ms-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  opacity: 1;
+
+  &.fade-out {
+    opacity: 0;
+  }
+
+  .backdrop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: default;
+    z-index: 2;
+    opacity: 0;
+  }
+}
+::ng-deep mat-dialog-container{
+  position: relative;
+}
+.mat-dialog-title {
+  padding-top: 40px;
+}
+
+.wrapper {
+
+  p {
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #576168;
+    font-weight: normal;
+  }
+
+  .close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border-radius: 50%;
+    background: grey;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+
+    button {
+      color: #fff;
+      font-size: 1rem;
+      padding: 0;
+      background: none;
+      border: none;
+    }
+  }
+}
+
