@@ -6,19 +6,19 @@
   @media (max-width: 1024px) {
     height: auto;
   }
-  
+
   h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 42px;
     line-height: 62px;
     color: #FFFFFF;
-    
+
     &.smaller_title {
       font-size: 42px;
       line-height: 52px;
     }
-    
+
     @media (max-width: 991.98px) {
       font-size: 30px;
       line-height: 38px;
@@ -28,7 +28,7 @@
       }
     }
   }
-  
+
   .iconify_wrap {
     position: absolute;
     right: 0;
@@ -40,36 +40,36 @@
     display: inline-block;
     width: 32px;
     height: auto;
-    
+
     .iconify {
       color: #FFFFFF;
       font-size: 32px;
-      
+
       &:hover {
         opacity: 0.6;
       }
     }
   }
-  
+
   .background {
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     pointer-events: none;
-    
+
     .padding_space {
       height: 33%;
       width: 100%;
     }
-    
+
     .mask_space {
       height: 67%;
       width: 100%;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     }
   }
-  
+
   mdb-carousel {
     .carousel,
     ::ng-deep .carousel-inner {
@@ -79,20 +79,20 @@
         min-height: 0;
       }
     }
-    
+
     .w-100 {
       max-height: calc(100vh - 65px);
       overflow: hidden;
     }
-    
+
     ::ng-deep.carousel-control-prev {
       display: none;
     }
-    
+
     ::ng-deep.carousel-control-next {
       display: none;
     }
-    
+
     mdb-carousel-item {
       .container {
         position: absolute;
@@ -107,13 +107,13 @@
           top: auto;
         }
       }
-      
+
       img.d-block {
         height: auto;
         width: 100%;
       }
     }
-    
+
     ::ng-deep.carousel-indicators {
       position: absolute;
       bottom: 96px;
@@ -125,7 +125,7 @@
       @media (max-width: 991.98px) {
         display: none;
       }
-      
+
       li {
         opacity: 1;
         //margin-right: 8px;
@@ -134,7 +134,7 @@
         width: 8px;
         border: 8px solid transparent !important;
         background-color: rgba(255, 255, 255, 0.35);
-        
+
         &.active {
           background-color: #FFFFFF;
         }
@@ -152,12 +152,12 @@
   background-repeat: no-repeat;
   position: relative;
   @media (max-width: 991.98px) {
-    height: calc(33vh - 65px);
+    height: fit-content;
     background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/enrollTest/pic_header_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
+
   h1 {
     font-style: normal;
     font-weight: bold;
@@ -173,10 +173,12 @@
       line-height: 38px;
     }
   }
-  
-  .date_counter {
+
+  .date_counter_wrap {
     text-align: left;
-    margin-top: 24px;
+    margin-top: 12px;
+    display: flex;
+    align-items: baseline;
     span {
       font-size: 16px;
       line-height: 24px;
@@ -187,16 +189,17 @@
     .btn_focus-primary{
       color: #FFFFFF;
       font-weight: bold;
+      margin-top: 16px;
     }
   }
-  
+
   .w-100 {
     height: 100%;
   }
-  
+
   .background {
     height: 100%;
     width: 100%;
   }
-  
+
 }
