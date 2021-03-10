@@ -12,6 +12,7 @@ import {SheetService} from '../../../utils/sheet.service';
 export class BookingComponent implements OnInit {
   userFormGroup: FormGroup;
   stripe: any
+  stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
 
   constructor(private formBuilder: FormBuilder,
               public sheetService: SheetService) {
@@ -27,7 +28,7 @@ export class BookingComponent implements OnInit {
       Age: new FormControl(''),
       Days: new FormControl('', Validators.required),
     });
-    this.stripe = await loadStripe('prod_J5YX3Q04FrY4pJ');
+    this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
   }
 
   payment() {
@@ -35,14 +36,13 @@ export class BookingComponent implements OnInit {
       ...this.userFormGroup.getRawValue(),
       ...{Order_id: this.userFormGroup.get('Email')?.value + Date.now().toString()}
     }
-    const stripeKey = 'prod_J5YX3Q04FrY4pJ'
-    const stripPricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
+    const stripeKey = this.selectStripeKey()
     this.sheetService.addRowFreeClass(formData)
       .subscribe(res => {
         this.stripe.redirectToCheckout({
-          lineItems: [{price: stripeKey, quantity: 1}],
+          lineItems: [{price: this.stripePricing, quantity: 1}],
           mode: 'payment',
-          successUrl: window.location.href + '?action=pay' + '&plan=' + stripPricing,
+          successUrl: window.location.href + '?action=pay' + '&plan=' + this.stripePricing,
           cancelUrl: window.location.href,
         })
           .then((result: any) => {
@@ -54,5 +54,19 @@ export class BookingComponent implements OnInit {
             }
           });
       })
+  }
+
+  selectStripeKey() {
+    let stripePricing = ''
+    if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Adult') {
+      this.stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
+      this.stripePricing = 'price_1ITNQdHRhoOpWeKw6q5EQrKg'
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.stripePricing = 'price_1ITNQdHRhoOpWeKw7zJqZGIc'
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.stripePricing = 'price_1ITNQdHRhoOpWeKwSsUNinRj'
+    }
+    return stripePricing
   }
 }
