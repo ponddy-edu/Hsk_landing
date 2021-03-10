@@ -13,6 +13,7 @@ export class BookingComponent implements OnInit {
   userFormGroup: FormGroup;
   stripe: any
   activeTab = 0
+  pricingValue: number
 
   constructor(private formBuilder: FormBuilder,
               public sheetService: SheetService) {
@@ -70,5 +71,18 @@ export class BookingComponent implements OnInit {
       stripePricing = 'price_1ITNQdHRhoOpWeKwSsUNinRj'
     }
     return stripePricing
+  }
+
+
+  changePricing() {
+    if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Adult') {
+      this.pricingValue = 228
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
+      this.pricingValue = 320
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.pricingValue = 360
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.pricingValue = 400
+    }
   }
 }

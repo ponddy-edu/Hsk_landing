@@ -1,7 +1,7 @@
 <section class="booking">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-11 col-md-6">
         <div class="tab_title">
           <div class="wrap_h1">
             <h1 [class.active]="!activeTab" (click)="activeTab=0">HSK 1&2 </h1>
@@ -30,9 +30,9 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-11 col-md-6">
         <form [formGroup]="userFormGroup">
-          <h2> Enrollment Form</h2>
+          <h2> clientReferenceId</h2>
           <div class="form-field">
             <label>*Name</label>
             <input formControlName="Name" name="Name"
@@ -53,14 +53,14 @@
           </div>
           <div class="form-field">
             <label>*Please select the level of HSK test</label>
-            <mat-select placeholder="Please Select" formControlName="Level" name="Level">
+            <mat-select (selectionChange)="changePricing()" placeholder="Please Select" formControlName="Level" name="Level">
               <mat-option value="HSK 1 & 2">HSK 1 & 2</mat-option>
               <mat-option value="HSK 3">HSK 3</mat-option>
             </mat-select>
           </div>
           <div class="form-field">
             <label>Adult / Student</label>
-            <mat-select placeholder="Please Select" formControlName="Age" name="Age">
+            <mat-select (selectionChange)="changePricing()" placeholder="Please Select" formControlName="Age" name="Age">
               <mat-option value="Adult">Adult</mat-option>
               <mat-option value="Student">Student</mat-option>
             </mat-select>
@@ -73,9 +73,17 @@
               <mat-option value="・Sat. & Sun.">・Sat. & Sun.</mat-option>
             </mat-select>
           </div>
+          <div *ngIf="pricingValue" class="form-field">
+            <div class="form-pricing-field">
+              <label>Special price</label>
+              <p class="pricing_number"> ${{pricingValue}}</p>
+            </div>
+            <p  class="pricing_warn text-right"> (Before March 11, 2021)</p>
+          </div>
+
           <div class="btn_wrap">
             <button class="btn_focus-primary" (click)="payment()" [disabled]="userFormGroup.invalid">
-              Continue
+              Submit
             </button>
 
           </div>
