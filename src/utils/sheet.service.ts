@@ -43,5 +43,13 @@ export class SheetService {
         console.log(res)
       })
   }
-
+  addRowFreeClass(postData: any){
+    const url = 'https://script.google.com/macros/s/AKfycbx3nxyFNs7Hu2skYdcq-J8lWMMv8M_-UkIYGr6dQ20rneA6b3OemtkMFC7DQERRFqkxLQ/exec'
+    return this.http.post(url, postData, {
+      headers:
+        {
+          'Content-Type': 'text/plain;charset=utf-8'
+        }
+    })
+  }
 }

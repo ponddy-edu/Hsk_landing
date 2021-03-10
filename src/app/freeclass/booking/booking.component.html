@@ -56,21 +56,21 @@
           </div>
           <div class="form-field">
             <label>Adult / Student</label>
-            <mat-select placeholder="Please Select" formControlName="Role" name="Role">
+            <mat-select placeholder="Please Select" formControlName="Age" name="Age">
               <mat-option value="Adult">Adult</mat-option>
               <mat-option value="Student">Student</mat-option>
             </mat-select>
           </div>
           <div class="form-field">
             <label>*Please select the date you’d like to participate.</label>
-            <mat-select placeholder="Please Select" formControlName="Test_Date" name="Test_Date">
+            <mat-select placeholder="Please Select" formControlName="Days" name="Days">
               <mat-option value="・Mon. & Wed.">・Mon. & Wed.</mat-option>
               <mat-option value="・Tue. & Thu.">・Tue. & Thu.</mat-option>
               <mat-option value="・Sat. & Sun.">・Sat. & Sun.</mat-option>
             </mat-select>
           </div>
           <div class="btn_wrap">
-            <button class="btn_focus-primary" [disabled]="userFormGroup.invalid">
+            <button class="btn_focus-primary" (click)="payment()" [disabled]="userFormGroup.invalid">
               Continue
             </button>
 
