@@ -14,15 +14,12 @@ export class SheetService {
 
   addRow(postData: any) {
     const url = 'https://script.google.com/macros/s/AKfycbygYHynmMz9aSUYniI6v3xpwXrA5qOY-yoXnJwTF1Xarb8JXYwpoJ3t3yvemoMZC6U/exec'
-    this.http.post(url, postData, {
+    return this.http.post(url, postData, {
       headers:
         {
           'Content-Type': 'text/plain;charset=utf-8'
         }
     })
-      .subscribe(res => {
-        console.log(res)
-      })
   }
 
   addRowAWSWay(postData: any) {
