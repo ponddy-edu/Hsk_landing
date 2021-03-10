@@ -30,15 +30,15 @@ export class BookingComponent implements OnInit {
       Days: new FormControl('', Validators.required),
     });
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
+
   }
 
   payment() {
-    // const dat= new Date().toLocaleString()
     const orderID = this.userFormGroup.get('Email')?.value + Date.now().toString()
     const formData = {
       ...this.userFormGroup.getRawValue(),
       ...{Order_id: orderID},
-      ...{DateTime: new Date().toLocaleString()}
+      ...{Datetime: new Date().toLocaleString()}
     }
     const stripePricing = this.selectStripePricingKey()
     this.sheetService.addRowFreeClass(formData)
