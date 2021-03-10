@@ -1,6 +1,6 @@
 <section class="booking">
   <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="tab_title">
           <h1 [class.active]="true">HSK 1&2</h1>
@@ -13,19 +13,70 @@
             The course material is included with the purchase of the course. Personalized content are generated
             to support your continues learning after the class.</p>
         </div>
+        <div class="schedule">
+          <h2>Class schedule:</h2>
+          <p>・Mon. & Wed. PDT: 6pm / EDT: 9pm</p>
+          <p>・Tue. & Thu</p>
+          <p>・Sat. & Sun.</p>
+          <p>PDT: 6pm / EDT: 9pm</p>
+          <span class="time">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth: 9am +1day)</span>
+        </div>
+        <div class="info_table">
+          <img lazyLoad="/assets/image/freeclass/HSK 1&2.svg">
+        </div>
       </div>
-      <div class="schedule">
-        <h2>Class schedule:</h2>
-        <p>・Mon. & Wed.  PDT: 6pm / EDT: 9pm</p>
-        <p>・Tue. & Thu</p>
-        <p>・Sat. & Sun.</p>
-        <p>PDT: 6pm / EDT: 9pm</p>
-        <span class="time">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth: 9am +1day)</span>
+
+      <div class="col-md-6">
+        <form [formGroup]="userFormGroup">
+          <h2> Enrollment Form</h2>
+          <div class="form-field">
+            <label>*Name</label>
+            <input formControlName="Name" name="Name"
+                   type="text"
+                   value="" placeholder="Page">
+          </div>
+          <div class="form-field">
+            <label>*Email</label>
+            <input formControlName="Phone" name="Phone"
+                   type="tel"
+                   value="" placeholder="pageshih@ponddy-edu.com">
+          </div>
+          <div class="form-field">
+            <label>*Phone</label>
+            <input formControlName="Email" name="Email"
+                   type="email"
+                   value="" placeholder="Phone number">
+          </div>
+          <div class="form-field">
+            <label>*Please select the level of HSK test</label>
+            <mat-select placeholder="Please Select" formControlName="Level" name="Level">
+              <mat-option value="HSK 1 & 2">HSK 1 & 2</mat-option>
+              <mat-option value="HSK 3">HSK 3</mat-option>
+            </mat-select>
+          </div>
+          <div class="form-field">
+            <label>Adult / Student</label>
+            <mat-select placeholder="Please Select" formControlName="Role" name="Role">
+              <mat-option value="Adult">Adult</mat-option>
+              <mat-option value="Student">Student</mat-option>
+            </mat-select>
+          </div>
+          <div class="form-field">
+            <label>*Please select the date you’d like to participate.</label>
+            <mat-select placeholder="Please Select" formControlName="Test_Date" name="Test_Date">
+              <mat-option value="・Mon. & Wed.">・Mon. & Wed.</mat-option>
+              <mat-option value="・Tue. & Thu.">・Tue. & Thu.</mat-option>
+              <mat-option value="・Sat. & Sun.">・Sat. & Sun.</mat-option>
+            </mat-select>
+          </div>
+          <div class="btn_wrap">
+            <button class="btn_focus-primary" [disabled]="userFormGroup.invalid">
+              Continue
+            </button>
+
+          </div>
+        </form>
       </div>
-      <div class="info_table">
-        <img lazyLoad="/assets/image/freeclass/HSK 1&2.svg">
-      </div>
-      <div class="col-md-6"></div>
 
     </div>
   </div>
