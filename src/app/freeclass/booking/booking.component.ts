@@ -12,7 +12,6 @@ import {SheetService} from '../../../utils/sheet.service';
 export class BookingComponent implements OnInit {
   userFormGroup: FormGroup;
   stripe: any
-  stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
   activeTab = 0
 
   constructor(private formBuilder: FormBuilder,
@@ -33,17 +32,19 @@ export class BookingComponent implements OnInit {
   }
 
   payment() {
+    const orderID = this.userFormGroup.get('Email')?.value + Date.now().toString()
     const formData = {
       ...this.userFormGroup.getRawValue(),
-      ...{Order_id: this.userFormGroup.get('Email')?.value + Date.now().toString()}
+      ...{Order_id: orderID}
     }
-    const stripeKey = this.selectStripeKey()
+    const stripePricing = this.selectStripePricingKey()
     this.sheetService.addRowFreeClass(formData)
       .subscribe(res => {
         this.stripe.redirectToCheckout({
-          lineItems: [{price: this.stripePricing, quantity: 1}],
+          lineItems: [{price: stripePricing, quantity: 1}],
+          clientReferenceId: orderID,
           mode: 'payment',
-          successUrl: window.location.href + '?action=pay' + '&plan=' + this.stripePricing,
+          successUrl: window.location.href + '?action=pay' + '&plan=' + stripePricing,
           cancelUrl: window.location.href,
         })
           .then((result: any) => {
@@ -57,16 +58,16 @@ export class BookingComponent implements OnInit {
       })
   }
 
-  selectStripeKey() {
+  selectStripePricingKey() {
     let stripePricing = ''
     if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      this.stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
+      stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      this.stripePricing = 'price_1ITNQdHRhoOpWeKw6q5EQrKg'
+      stripePricing = 'price_1ITNQdHRhoOpWeKw6q5EQrKg'
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
-      this.stripePricing = 'price_1ITNQdHRhoOpWeKw7zJqZGIc'
+      stripePricing = 'price_1ITNQdHRhoOpWeKw7zJqZGIc'
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
-      this.stripePricing = 'price_1ITNQdHRhoOpWeKwSsUNinRj'
+      stripePricing = 'price_1ITNQdHRhoOpWeKwSsUNinRj'
     }
     return stripePricing
   }
