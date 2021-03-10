@@ -1,25 +1,25 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import { MatDialogRef } from '@angular/material/dialog';
+import {MatDialogRef} from '@angular/material/dialog';
 import {BehaviorSubject, of} from "rxjs";
 import {RecaptchaComponent} from "ng-recaptcha";
-import { AuthService } from 'src/utils/auth.service';
+import {AuthService} from 'src/utils/auth.service';
 import {catchError, filter, take, tap,} from "rxjs/operators";
-import { interval } from 'rxjs/internal/observable/interval';
+import {interval} from 'rxjs/internal/observable/interval';
 
 @Component({
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  email:string = ''
+  email: string = ''
   password = ''
   agree = ''
 
   error_message = ''
   success_message = ''
   $step = new BehaviorSubject<'start' | 'login' | 'register' | 'code' | 'success'>('start');
-  code:any = []
+  code: any = []
   socialLoginUrl = {fb: '', google: ''}
   $recaptcha_response = new BehaviorSubject<string>('');
 
@@ -60,10 +60,10 @@ export class LoginComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<LoginComponent>,
     public authService: AuthService,
-) {
-this.$step.next('start')
+  ) {
+    this.$step.next('start')
 
-}
+  }
 
   public dismiss(): void {
     this.dialogRef.close()
@@ -97,7 +97,7 @@ this.$step.next('start')
           }, 200)
         } else {
           setTimeout(() => {
-             // @ts-ignore
+            // @ts-ignore
             document.getElementById('email_register').focus();
           }, 200)
         }
@@ -111,7 +111,7 @@ this.$step.next('start')
   }
 
 
-  clickContinue(email:any) {
+  clickContinue(email: any) {
     this.authService.checkEmailExit(email)
       .pipe(catchError(err => {
         this.formStart.get('email')?.setErrors({'incorrect': true})
@@ -161,7 +161,7 @@ this.$step.next('start')
             this.isLoading = false
             throw err
           }))
-          .subscribe((res:any) => {
+          .subscribe((res: any) => {
             localStorage.setItem('token', res['token'])
             this.success_message = 'You have successfully verified the account.'
             this.isLoading = false
@@ -188,7 +188,7 @@ this.$step.next('start')
         this.isLoading = false
         throw err
       }))
-      .subscribe((res:any) => {
+      .subscribe((res: any) => {
         this.$step.next('code')
         this.isLoading = false
         setTimeout(
@@ -209,7 +209,7 @@ this.$step.next('start')
     this.captchaElem_login.execute()
 
     this.$recaptcha_response
-      .pipe(filter((res:any) => res && (res != '')),
+      .pipe(filter((res: any) => res && (res != '')),
         take(1))
       .subscribe($recaptcha_response => {
         this.authService.verify(this.email, codeString, this.$recaptcha_response.getValue())
@@ -247,7 +247,7 @@ this.$step.next('start')
       })
   }
 
-  clickSocialLogin(socialClass:any) {
+  clickSocialLogin(socialClass: any) {
     this.authService.socialLogin(socialClass)
   }
 
@@ -263,10 +263,14 @@ this.$step.next('start')
     if (!this.$recaptcha_response) {
       this.executeRecaptcha_code()
     }
-    this.authService.resendCode(this.email, this.$recaptcha_response.getValue())
-      .subscribe(res => {
-        this.startResendTimeLock()
+    this.$recaptcha_response
+      .subscribe(recaptcha => {
+        this.authService.resendCode(this.email, this.$recaptcha_response.getValue())
+          .subscribe(res => {
+            this.startResendTimeLock()
+          })
       })
+
   }
 
   startResendTimeLock() {
@@ -280,7 +284,7 @@ this.$step.next('start')
       })
   }
 
-  onDigitInput(event:any, index:any) {
+  onDigitInput(event: any, index: any) {
     let element;
 
     if (event.code === 'Backspace')
@@ -298,12 +302,12 @@ this.$step.next('start')
     this.code[index] = event.key
     element.focus();
 
-    if (this.code.length >=4) {
+    if (this.code.length >= 4) {
       this.executeRecaptcha_code()
     }
   }
 
-  onPaste(event:any) {
+  onPaste(event: any) {
     // @ts-ignore
     let clipboardData = event.clipboardData || window['clipboardData'];
     let clipText = clipboardData.getData('text')

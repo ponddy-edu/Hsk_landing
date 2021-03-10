@@ -33,10 +33,12 @@ export class BookingComponent implements OnInit {
   }
 
   payment() {
+    // const dat= new Date().toLocaleString()
     const orderID = this.userFormGroup.get('Email')?.value + Date.now().toString()
     const formData = {
       ...this.userFormGroup.getRawValue(),
-      ...{Order_id: orderID}
+      ...{Order_id: orderID},
+      ...{DateTime: new Date().toLocaleString()}
     }
     const stripePricing = this.selectStripePricingKey()
     this.sheetService.addRowFreeClass(formData)
@@ -66,7 +68,7 @@ export class BookingComponent implements OnInit {
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
       stripePricing = 'price_1ITNQdHRhoOpWeKw6q5EQrKg'
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
-      stripePricing = 'price_1ITNQdHRhoOpWeKw7zJqZGIc'
+      stripePricing = 'price_1ITWLnHRhoOpWeKwLLS2khUh'
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
       stripePricing = 'price_1ITNQdHRhoOpWeKwSsUNinRj'
     }
