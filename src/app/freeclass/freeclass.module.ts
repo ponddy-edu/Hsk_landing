@@ -10,6 +10,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {LandingComponent} from './landing/landing.component';
+import { BookingComponent } from './booking/booking.component';
+import {LazyLoadImageModule} from 'ng-lazyload-image';
 
 
 
@@ -18,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [FreeclassComponent, LandingComponent],
+  declarations: [FreeclassComponent, LandingComponent, BookingComponent],
   imports: [
     CommonModule,
     ShareModule,
@@ -29,6 +31,7 @@ const routes: Routes = [
     MatSelectModule,
     RouterModule.forChild(routes),
     MatCheckboxModule,
+    LazyLoadImageModule,
   ]
 })
 export class FreeclassModule { }

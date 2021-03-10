@@ -1,0 +1,83 @@
+.booking {
+  background: #fbfcfc;
+  
+  .container {
+    padding: 35px 0;
+    
+    .tab_title {
+      display: inline-flex;
+      border-bottom: 1px solid #576168;
+      width: 100%;
+      
+      h1 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        padding-right: 16px;
+        margin: 0;
+        cursor: pointer;
+        
+        &:nth-child(1) {
+          border-right: 1px solid #576168;
+        }
+        
+        &:nth-child(2) {
+          padding-left: 16px;
+        }
+        
+        &.active {
+          color: #6ACFED;
+          border-bottom: 5px solid #6ACFED;
+        }
+      }
+    }
+    
+    .description {
+      padding: 20px 0;
+      
+      h2 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #2D3942;
+      }
+      
+      p {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #576168;
+      }
+    }
+    
+    .schedule {
+      h2 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #2D3942;
+      }
+      
+      p {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #2D3942;
+        margin: 6px;
+      }
+      .time{
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #969CA0;
+      }
+    }
+    .info_table{
+      padding: 0;
+      margin-top: 36px;
+    }
+  }
+}
+
