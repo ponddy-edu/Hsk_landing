@@ -87,6 +87,19 @@ const routes: Routes = [
       }
     }
   },
+  {path: 'freeclass-2021q1a', loadChildren: () => import('./freeclass/freeclass.module').then(m => m.FreeclassModule), data: {
+      seo: {
+        title: 'Ponddy® HSK - Free class',
+        metaTags: [
+          { name: 'description', content: 'Ponddy® HSK is the first online HSK test center in the U.S.A. that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests.'},
+          { property: 'og:title', content: 'Ponddy® HSK - Home' },
+          { property: 'og:description', content: 'Ponddy® HSK is the first online HSK test center in the U.S.A. that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests.' },
+          { property: 'og:image', content: environment.appUrl + 'assets/image/homepage.png' },
+          { property: 'og:url', content: environment.appUrl + 'home' },
+        ]
+      }
+    }
+  }
 
   // { path: 'detail/:id', component: HeroDetailComponent }
 ];
