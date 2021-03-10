@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FreeclassComponent } from './freeclass.component';
 import {RouterModule, Routes} from '@angular/router';
-import {EnrollComponent} from '../enroll-test/enroll.component';
 import {ShareModule} from '../../components/share.module';
 import {MatStepperModule} from '@angular/material/stepper';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -15,7 +14,7 @@ import {LandingComponent} from './landing/landing.component';
 
 
 const routes: Routes = [
-  {path: '', component: EnrollComponent},
+  {path: '', component: FreeclassComponent},
 ];
 
 @NgModule({
