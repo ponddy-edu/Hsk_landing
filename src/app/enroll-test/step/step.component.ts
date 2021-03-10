@@ -1,8 +1,9 @@
 import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {MatStepper} from "@angular/material/stepper";
-import {Timestamp} from 'rxjs/internal-compatibility';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
+import {loadStripe} from '@stripe/stripe-js/pure';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-step',
@@ -18,11 +19,12 @@ export class StepComponent implements OnInit {
   testInfoFormGroup: FormGroup;
   summaryFormGroup: FormGroup;
   chooseTestLevel = 0
+  stripe: any
 
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService) {
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.userInfoFormGroup = this.formBuilder.group({
       Email: new FormControl('', Validators.required),
       Name: new FormControl('', Validators.required),
@@ -49,7 +51,7 @@ export class StepComponent implements OnInit {
     setTimeout(() => {
       // this.myStepper.selectedIndex = 3
     }, 1000)
-
+    this.stripe = await loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
   }
 
   payment() {
@@ -60,6 +62,21 @@ export class StepComponent implements OnInit {
       ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
     }
     this.sheetService.addRow(formData)
-
+      .subscribe(res => {
+        this.stripe.redirectToCheckout({
+          lineItems: [{price: environment.stripeKey, quantity: 1}],
+          mode: 'payment',
+          successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_product_enroll_test,
+          cancelUrl: window.location.href,
+        })
+          .then((result: any) => {
+            if (result.error) {
+              /*
+               * If `redirectToCheckout` fails due to a browser or network
+               * error, display the localized error message to your customer.
+               */
+            }
+          });
+      })
   }
 }
