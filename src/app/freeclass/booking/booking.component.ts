@@ -47,6 +47,7 @@ export class BookingComponent implements OnInit {
           lineItems: [{price: stripePricing, quantity: 1}],
           clientReferenceId: orderID,
           mode: 'payment',
+          customerEmail: this.userFormGroup.get('Email')?.value,
           successUrl: window.location.href + '?action=pay' + '&plan=' + stripePricing,
           cancelUrl: window.location.href,
         })
@@ -80,9 +81,9 @@ export class BookingComponent implements OnInit {
     if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Adult') {
       this.pricingValue = 228
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      this.pricingValue = 320
-    } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
       this.pricingValue = 360
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.pricingValue = 320
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
       this.pricingValue = 400
     }
