@@ -11,9 +11,9 @@ import {SheetService} from '../../../utils/sheet.service';
 })
 export class BookingComponent implements OnInit {
   userFormGroup: FormGroup;
-  stripe: any
-  activeTab = 0
-  pricingValue: number
+  stripe: any;
+  activeTab = 0;
+  pricingValue: number;
 
   pricingList = {
     adult1: {price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T'},
@@ -21,15 +21,19 @@ export class BookingComponent implements OnInit {
     student1: {price: 320, stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh'},
     student3: {price: 384, stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj'}
   }
+
+  infoTableList = {
+    hsk1: '/assets/image/freeclass/HSK 1&2.svg',
+    hsk3: '/assets/image/freeclass/HSK 3.svg'
+  }
   // info provided by Emily 3/11 at slack
   dateHsk12end = '2021-03-12T11:00:00+08:00'
   dateHsk3end = '2021-03-13T11:00:00+08:00'
-  dateCampaignEnd = '2021-03-18T11:00:00+08:00'
+  dateDiscountEnd = '2021-03-18T11:00:00+08:00'
 
   constructor(private formBuilder: FormBuilder,
               public sheetService: SheetService) {
-    this.checkHsk12EndTime()
-    this.checkHsk3EndTime()
+    this.checkNowPricing()
   }
 
   async ngOnInit() {
@@ -53,6 +57,7 @@ export class BookingComponent implements OnInit {
       ...{Datetime: new Date().toLocaleString()}
     }
     const stripePricing = this.selectStripePricingKey()
+
     this.sheetService.addRowFreeClass(formData)
       .subscribe(res => {
         this.stripe.redirectToCheckout({
@@ -77,13 +82,13 @@ export class BookingComponent implements OnInit {
   selectStripePricingKey() {
     let stripePricing = ''
     if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      stripePricing = 'price_1ITNQdHRhoOpWeKwhfz0kv7T'
+      stripePricing = this.pricingList.adult1.stripeKey
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      stripePricing = 'price_1ITNQdHRhoOpWeKw6q5EQrKg'
+      stripePricing = this.pricingList.adult3.stripeKey
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
-      stripePricing = 'price_1ITWLnHRhoOpWeKwLLS2khUh'
+      stripePricing = this.pricingList.student1.stripeKey
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
-      stripePricing = 'price_1ITNQdHRhoOpWeKwSsUNinRj'
+      stripePricing = this.pricingList.student3.stripeKey
     }
     return stripePricing
   }
@@ -94,33 +99,49 @@ export class BookingComponent implements OnInit {
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
       this.pricingValue = this.pricingList.student1.price
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      this.pricingValue = this.pricingList.adult1.price
-    } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
       this.pricingValue = this.pricingList.adult3.price
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.pricingValue = this.pricingList.student3.price
     }
   }
 
-  checkHsk12EndTime() {
-    const endDate = new Date(this.dateHsk12end).getTime()
-    const now = new Date().getTime();
-    const distance = endDate - now;
-    if (distance < 0) {
-      this.pricingList.adult1 = {price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
-      this.pricingList.adult3 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
-      this.pricingList.student1 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'}
-      this.pricingList.student3 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'}
+  checkNowPricing() {
+    const endDiscountDay = new Date(this.dateDiscountEnd).getTime()
+    const endHsk3DiscountDay = new Date(this.dateHsk3end).getTime()
+    const endHsk1DiscountDay = new Date(this.dateHsk12end).getTime()
+    const now = new Date('2021-03-12T12:00:00+08:00').getTime();
+
+    if (endDiscountDay - now < 0) {
+      this.endYellowDiscount()
+    } else if (endHsk3DiscountDay - now < 0) {
+      this.endHsk3RedDiscount()
+    } else if (endHsk1DiscountDay - now < 0) {
+      this.endHsk12RedDiscount()
     }
   }
 
-  checkHsk3EndTime() {
-    const endDate = new Date(this.dateHsk3end).getTime()
-    const now = new Date().getTime();
-    const distance = endDate - now;
-    if (distance < 0) {
-      this.pricingList.adult1 = {price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
-      this.pricingList.adult3 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
-      this.pricingList.student1 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'}
-      this.pricingList.student3 = {price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
-    }
+  endHsk12RedDiscount() {
+    this.pricingList.adult1 = {price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
+    this.pricingList.student1 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'}
+    this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original price.svg'
+  }
+
+  endHsk3RedDiscount() {
+    console.log('end3')
+    this.pricingList.adult1 = {price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
+    this.pricingList.student1 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'}
+    this.pricingList.adult3 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
+    this.pricingList.student3 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'}
+    this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
+  }
+
+  endYellowDiscount() {
+    this.pricingList.adult1 = {price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
+    this.pricingList.adult3 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+    this.pricingList.student1 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'}
+    this.pricingList.student3 = {price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
+    this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original price.svg'
+    this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
+
   }
 }
