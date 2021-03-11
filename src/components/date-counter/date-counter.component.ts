@@ -8,7 +8,7 @@ import {interval} from 'rxjs';
 })
 export class DateCounterComponent implements OnInit {
   @Input()
-  countDownDate: number
+  countDownDateString: string
 
 
   days: string
@@ -20,13 +20,13 @@ export class DateCounterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.countDownDate = new Date('Mar 22, 2021 15:37:25').getTime()
+    const countDownDate = new Date(this.countDownDateString).getTime()
 
     interval(1000)
       .subscribe(res => {
         const now = new Date().getTime();
         // Find the distance between now and the count down date
-        const distance = this.countDownDate - now;
+        const distance = countDownDate - now;
 
         // Time calculations for days, hours, minutes and seconds
         this.days = ('0' + Math.floor(distance / (1000 * 60 * 60 * 24))).slice(-2);
