@@ -79,13 +79,13 @@ export class BookingComponent implements OnInit {
 
   changePricing() {
     if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      this.pricingValue = 228
+      this.pricingValue = 288
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
-      this.pricingValue = 360
+      this.pricingValue = 320
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
       this.pricingValue = 320
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
-      this.pricingValue = 400
+      this.pricingValue = 384
     }
   }
 }
