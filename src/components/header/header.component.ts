@@ -2,10 +2,10 @@ import {Component, Input, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {DeviceService} from '../../utils/device.service';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {MatMenuTrigger} from '@angular/material/menu';
-import { LoginComponent } from '../login/login.component';
-import { MatDialog } from '@angular/material/dialog';
-import { MatExpansionPanel } from '@angular/material/expansion';
-import { AuthService } from 'src/utils/auth.service';
+import {LoginComponent} from '../login/login.component';
+import {MatDialog} from '@angular/material/dialog';
+import {MatExpansionPanel} from '@angular/material/expansion';
+import {AuthService} from 'src/utils/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   loginActive = "Login"
 
   @ViewChild('expansion')
-  expansionComponent:MatExpansionPanel
+  expansionComponent: MatExpansionPanel
 
 
   constructor(private deviceService: DeviceService,
@@ -37,8 +37,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.isMobile.subscribe()
-    const token = localStorage.getItem("token");
-    if(token){
+    const token = localStorage.getItem('token');
+    if (token) {
       this.loginActive = 'Logout'
     } else {
       this.loginActive = 'Login'
@@ -93,7 +93,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openLogin() {
-    this.dialog.open(LoginComponent,{maxWidth: "90vw",maxHeight:"150vw"})
+    this.dialog.open(LoginComponent, {maxWidth: "90vw", maxHeight: "150vw"})
     this.menuOpen = false;
     this.expansionComponent.close();
   }

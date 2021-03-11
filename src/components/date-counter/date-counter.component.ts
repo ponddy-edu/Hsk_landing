@@ -11,10 +11,10 @@ export class DateCounterComponent implements OnInit {
   countDownDate: number
 
 
-  days: number
-  hours: number
-  minutes: number
-  seconds: number
+  days: string
+  hours: string
+  minutes: string
+  seconds: string
 
   constructor() {
   }
@@ -29,10 +29,10 @@ export class DateCounterComponent implements OnInit {
         const distance = this.countDownDate - now;
 
         // Time calculations for days, hours, minutes and seconds
-        this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        this.days = ('0' + Math.floor(distance / (1000 * 60 * 60 * 24))).slice(-2);
+        this.hours = ('0' + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).slice(-2);
+        this.minutes = ('0' + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).slice(-2);
+        this.seconds = ('0' + Math.floor((distance % (1000 * 60)) / 1000)).slice(-2);
       })
 
 
