@@ -8,8 +8,8 @@
   background-repeat: no-repeat;
   position: relative;
   @media (max-width: 991.98px) {
-    height: calc(33vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/freeclass/pic_banner.svg");
+    height: fit-content;
+    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/freeclass/pic_header_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -42,10 +42,14 @@
       color: #D64059;
       font-weight: bold;
     }
-    .btn_focus-primary{
+    .btn_focus-primary {
       color: #FFFFFF;
       font-weight: bold;
       margin-top: 16px;
+      margin-left: 42px;
+      @media (max-width: 767px) {
+        margin: 36px 0 0;
+      }
     }
   }
 
