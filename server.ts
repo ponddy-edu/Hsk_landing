@@ -4,13 +4,13 @@
 import '@angular/localize/init';
 import 'zone.js/dist/zone-node';
 
-import { ngExpressEngine } from '@nguniversal/express-engine';
+import {ngExpressEngine} from '@nguniversal/express-engine';
 import * as express from 'express';
-import { join } from 'path';
+import {join} from 'path';
 
-import { AppServerModule } from './src/main.server';
-import { APP_BASE_HREF } from '@angular/common';
-import { existsSync } from 'fs';
+import {AppServerModule} from './src/main.server';
+import {APP_BASE_HREF} from '@angular/common';
+import {existsSync} from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -33,9 +33,25 @@ export function app(): express.Express {
     maxAge: '180000'
   }));
 
+
+  // when get '/' redirect to home
+  // server.get('/', (req, res, next) => {
+  //   // @ts-ignore
+  //   if (req.headers.host.match(/^www/) == null) {
+  //     res.redirect(req.headers.host + '/home');
+  //   } else {
+  //     next();
+  //   }
+  // });
   // All regular routes use the Universal engine
+  server.get('/', (req, res) => {
+    console.log('/ here')
+    res.redirect('/home')
+  });
+
+
   server.get('*', (req, res) => {
-    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+    res.render(indexHtml, {req, providers: [{provide: APP_BASE_HREF, useValue: req.baseUrl}]});
   });
 
   return server;
