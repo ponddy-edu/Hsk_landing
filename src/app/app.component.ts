@@ -44,15 +44,12 @@ export class AppComponent implements OnInit {
     });
     this.getParamsToken()
     // this.router.navigate(['home']);
-    // if (window.location.pathname === '/') {
-    //   this.router.navigate(['home'])
-    // }
+    if (window.location.pathname === '/') {
+      this.router.navigate(['home'])
+    }
   }
 
   public getParamsToken() {
-    if (!this.device.isBrowser) {
-      return
-    }
     const params = new URLSearchParams(window.location.search);
     const token = params.get('token')
     if (token) {
