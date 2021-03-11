@@ -16,12 +16,11 @@ export class LoginComponent implements OnInit {
   password = ''
   agree = ''
 
-  error_message = ''
-  success_message = ''
+  errorMessage = ''
+  successMessage = ''
   $step = new BehaviorSubject<'start' | 'login' | 'register' | 'code' | 'success'>('start');
   code: any = []
-  socialLoginUrl = {fb: '', google: ''}
-  $recaptcha_response = new BehaviorSubject<string>('');
+  $recaptchaResponse = new BehaviorSubject<string>('');
 
   formStart = new FormGroup({
     email: new FormControl('', Validators.required),
@@ -48,12 +47,12 @@ export class LoginComponent implements OnInit {
   isRememberMe = false
   isEmailExist = false
   isLoading = false
-  fade_out = false
+  fadeOut = false
 
   @ViewChild('captchaLogin')
-  captchaElem_login: RecaptchaComponent;
+  captchaElemLogin: RecaptchaComponent;
   @ViewChild('captchaCode')
-  captchaElem_code: RecaptchaComponent;
+  captchaElemCode: RecaptchaComponent;
 
   resendTimeLock = 0
 
@@ -72,7 +71,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-//-------------------------
 
   ionViewDidLoad() {
     this.isRememberMe = !!localStorage.getItem('login_remember')
@@ -88,8 +86,8 @@ export class LoginComponent implements OnInit {
       this.formLogin.get('password').markAsDirty()
     }
     this.$step.subscribe(step => {
-      this.error_message = ''
-      if (step == 'register') {
+      this.errorMessage = ''
+      if (step === 'register') {
         if (this.email) {
           setTimeout(() => {
             // @ts-ignore
@@ -104,10 +102,6 @@ export class LoginComponent implements OnInit {
       }
     })
 
-  }
-
-  ngOnDestroy(): void {
-    this.$step.unsubscribe()
   }
 
 
@@ -136,34 +130,34 @@ export class LoginComponent implements OnInit {
       localStorage.removeItem('email')
       localStorage.removeItem('password')
     }
-    this.error_message = ''
-    this.captchaElem_login.execute()
-    this.$recaptcha_response
-      .pipe(filter(res => !!(res && (res != ''))),
+    this.errorMessage = ''
+    this.captchaElemLogin.execute()
+    this.$recaptchaResponse
+      .pipe(filter(res => !!(res && (res !== ''))),
         take(1))
       .subscribe(res => {
         this.isLoading = true
-        this.authService.login(this.email, this.password, this.$recaptcha_response.getValue())
+        this.authService.login(this.email, this.password, this.$recaptchaResponse.getValue())
           .pipe(tap(res => {
             this.isLoading = false
           }))
           .pipe(catchError(err => {
             if (err.error.password) {
-              this.error_message = err.error.password[0]
+              this.errorMessage = err.error.password[0]
               this.formLogin.get('password')?.setErrors({'incorrect': true})
             }
             if (err.error.email) {
-              this.error_message = err.error.email[0]
+              this.errorMessage = err.error.email[0]
               this.formLogin.get('email')?.setErrors({'incorrect': true})
             }
             // this.formLogin.setValue()
-            this.captchaElem_login.reset()
+            this.captchaElemLogin.reset()
             this.isLoading = false
             throw err
           }))
           .subscribe((res: any) => {
             localStorage.setItem('token', res['token'])
-            this.success_message = 'You have successfully verified the account.'
+            this.successMessage = 'You have successfully verified the account.'
             this.isLoading = false
             this.$step.next('success')
             this.fadeOutAndDismiss()
@@ -200,48 +194,48 @@ export class LoginComponent implements OnInit {
   }
 
   verifyCode() {
-    this.error_message = ''
+    this.errorMessage = ''
     let codeString = ''
-    for (let char of this.code) {
+    for (const char of this.code) {
       codeString += char
     }
     // document.getElementById('code')
-    this.captchaElem_login.execute()
+    this.captchaElemLogin.execute()
 
-    this.$recaptcha_response
-      .pipe(filter((res: any) => res && (res != '')),
+    this.$recaptchaResponse
+      .pipe(filter((res: any) => res && (res !== '')),
         take(1))
-      .subscribe($recaptcha_response => {
-        this.authService.verify(this.email, codeString, this.$recaptcha_response.getValue())
+      .subscribe(recaptchaResponse => {
+        this.authService.verify(this.email, codeString, this.$recaptchaResponse.getValue())
           .pipe(catchError(err => {
-            this.error_message = err.error.detail
-            this.captchaElem_login.reset()
+            this.errorMessage = err.error.detail
+            this.captchaElemLogin.reset()
             throw err
           }))
           .subscribe(res => {
-            this.success_message = 'You have successfully verified the account.'
+            this.successMessage = 'You have successfully verified the account.'
             this.$step.next('success')
-            this.captchaElem_login.reset()
+            this.captchaElemLogin.reset()
             this.loginBackground()
           })
       })
   }
 
   loginBackground() {
-    this.captchaElem_login.execute()
-    this.$recaptcha_response
-      .pipe(filter((res: any) => res && (res != '')),
+    this.captchaElemLogin.execute()
+    this.$recaptchaResponse
+      .pipe(filter((res: any) => res && (res !== '')),
         take(1))
       .subscribe(res => {
-        this.authService.login(this.email, this.password, this.$recaptcha_response.getValue())
+        this.authService.login(this.email, this.password, this.$recaptchaResponse.getValue())
           .pipe(catchError(err => {
             this.$step.next('login')
             // this.formLogin.setValue()
-            this.captchaElem_login.reset()
+            this.captchaElemLogin.reset()
             throw err
           }))
-          .subscribe(res => {
-            localStorage.setItem('token', res['token'])
+          .subscribe((authRes: any) => {
+            localStorage.setItem('token', authRes.token)
             this.fadeOutAndDismiss()
           })
       })
@@ -251,8 +245,8 @@ export class LoginComponent implements OnInit {
     this.authService.socialLogin(socialClass)
   }
 
-  resolved_recaptcha(recaptcha_response: any) {
-    this.$recaptcha_response.next(recaptcha_response)
+  resolved_recaptcha(recaptchaResponse: any) {
+    this.$recaptchaResponse.next(recaptchaResponse)
   }
 
   forgotPassword() {
@@ -260,12 +254,12 @@ export class LoginComponent implements OnInit {
   }
 
   resendCode() {
-    if (!this.$recaptcha_response) {
+    if (!this.$recaptchaResponse) {
       this.executeRecaptcha_code()
     }
-    this.$recaptcha_response
+    this.$recaptchaResponse
       .subscribe(recaptcha => {
-        this.authService.resendCode(this.email, this.$recaptcha_response.getValue())
+        this.authService.resendCode(this.email, this.$recaptchaResponse.getValue())
           .subscribe(res => {
             this.startResendTimeLock()
           })
@@ -278,7 +272,7 @@ export class LoginComponent implements OnInit {
     const lock = interval(1000)
       .subscribe(res => {
         this.resendTimeLock -= 1
-        if (this.resendTimeLock == 0) {
+        if (this.resendTimeLock === 0) {
           lock.unsubscribe()
         }
       })
@@ -287,10 +281,11 @@ export class LoginComponent implements OnInit {
   onDigitInput(event: any, index: any) {
     let element;
 
-    if (event.code === 'Backspace')
+    if (event.code === 'Backspace') {
       element = event.srcElement.previousElementSibling;
+    }
 
-    var numbers = /^[0-9]+$/;
+    const numbers = /^[0-9]+$/;
     if (!event.key.match(numbers)) {
       return;
     }
@@ -309,10 +304,10 @@ export class LoginComponent implements OnInit {
 
   onPaste(event: any) {
     // @ts-ignore
-    let clipboardData = event.clipboardData || window['clipboardData'];
+    const clipboardData = event.clipboardData || window.clipboardData;
     let clipText = clipboardData.getData('text')
 
-    clipText = clipText.replace(/[\r\n]+/gm, "");
+    clipText = clipText.replace(/[\r\n]+/gm, '');
     clipText = (clipText.length > 4) ? clipText.substring(0, 4) : clipText
     for (let i = 0; i <= 3; i++) {
       this.code[i] = clipText[i]
@@ -323,14 +318,14 @@ export class LoginComponent implements OnInit {
   }
 
   executeRecaptcha_code() {
-    if (this.$recaptcha_response.getValue() || this.$recaptcha_response.getValue() === '') {
-      this.captchaElem_code.execute()
+    if (this.$recaptchaResponse.getValue() || this.$recaptchaResponse.getValue() === '') {
+      this.captchaElemCode.execute()
     }
   }
 
   fadeOutAndDismiss() {
     setTimeout(() => {
-      this.fade_out = true
+      this.fadeOut = true
     }, 4000)
     setTimeout(() => {
       this.dismiss()
