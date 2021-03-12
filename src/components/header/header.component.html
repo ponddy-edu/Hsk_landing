@@ -60,7 +60,11 @@
               FAQ
             </a>
           </li>
-
+          <li class="nav-item enroll" routerLink="/enrollTest">
+            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">
+              Enroll a Test
+            </a>
+          </li>
         </ul>
       </div>
       <div [class.login]="loginActive==='Login'" class="loginNo">
@@ -113,6 +117,11 @@
           <li class="nav-item" routerLink="/faq">
             <a i18n="header" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
               FAQ
+            </a>
+          </li>
+          <li class="nav-item enroll" routerLink="/enrollTest">
+            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">
+              Enroll a Test
             </a>
           </li>
           <li class="mobile action nav-item">

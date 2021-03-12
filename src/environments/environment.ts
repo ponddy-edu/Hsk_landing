@@ -5,5 +5,5 @@ export const environment = {
   authApiUrl: 'https://auth.ponddy.com',
   GAPI_CLIENT_ID: '216992628116-3c5j7d6qeufau4mvr7tp9m15bce28nvf.apps.googleusercontent.com',
   stripeKey: 'pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l',
-  stripe_product_enroll_test: 'price_1IQoidHRhoOpWeKwa2EUDldx'
+  stripe_product_enroll_test: 'price_1IQomRHRhoOpWeKwWHN5nFdy'
 };
