@@ -109,7 +109,8 @@ export class BookingComponent implements OnInit {
     const endDiscountDay = new Date(this.dateDiscountEnd).getTime()
     const endHsk3DiscountDay = new Date(this.dateHsk3end).getTime()
     const endHsk1DiscountDay = new Date(this.dateHsk12end).getTime()
-    const now = new Date('2021-03-12T12:00:00+08:00').getTime();
+    // const now = new Date('2021-03-12T12:00:00+08:00').getTime();
+    const now = new Date().getTime();
 
     if (endDiscountDay - now < 0) {
       this.endYellowDiscount()
