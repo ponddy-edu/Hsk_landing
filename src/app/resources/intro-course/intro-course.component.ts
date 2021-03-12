@@ -31,6 +31,7 @@ export class IntroCourseComponent implements OnInit {
   }
 
   tabItem = 'hsk12'
+  panelOpenState = false;
 
   checkTab(tabItem: string) {
     this.tabItem = 'hsk' + tabItem
