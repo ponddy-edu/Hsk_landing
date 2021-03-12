@@ -30,4 +30,9 @@ export class IntroCourseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  tabItem = 'hsk12'
+
+  checkTab(tabItem: string) {
+    this.tabItem = 'hsk' + tabItem
+  }
 }
