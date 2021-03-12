@@ -51,7 +51,7 @@ export class StepComponent implements OnInit {
     setTimeout(() => {
       // this.myStepper.selectedIndex = 3
     }, 1000)
-    this.stripe = await loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+    this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
   }
 
   payment() {
@@ -64,7 +64,7 @@ export class StepComponent implements OnInit {
     this.sheetService.addRow(formData)
       .subscribe(res => {
         this.stripe.redirectToCheckout({
-          lineItems: [{price: environment.stripeKey, quantity: 1}],
+          lineItems: [{price: environment.stripe_product_enroll_test, quantity: 1}],
           mode: 'payment',
           successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_product_enroll_test,
           cancelUrl: window.location.href,
