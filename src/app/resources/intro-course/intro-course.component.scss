@@ -209,3 +209,62 @@
     color: #F3A024;
   }
 }
+
+.faq {
+  padding: 64px 0;
+  @media (max-width: 767px) {
+    padding: 36px 0;
+  }
+  h1 {
+    margin-bottom: 40px;
+    font-weight: 900;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #2D3942;
+    font-family: Ponddy NotoRubik;
+    text-align: left;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #576168;
+    text-align: left;
+  }
+  .btn_focus-primary {
+    margin-top: 32px;
+    color: #FFFFFF!important;
+  }
+   ::ng-deepmat-expansion-panel {
+    font-family: Ponddy NotoRubik;
+    box-shadow: none;
+    padding: 24px 0;
+    margin: 0;
+    border-top: 1px solid #EAEBEC;
+    // border-bottom: 1px solid #EAEBEC;
+    border-radius: 0;
+    mat-expansion-panel-header {
+      padding: 0 10px;
+      &:hover {
+        background: none!important;
+      }
+    }
+    .mat-expansion-panel-body {
+      padding: 0 10px;
+    }
+    .border-bottom {
+      border-bottom: 1px solid #EAEBEC;
+    }
+    .mat-expansion-panel-content {
+      height: auto;
+    }
+  }
+}

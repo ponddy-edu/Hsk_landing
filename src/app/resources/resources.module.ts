@@ -16,7 +16,7 @@ import {DownloadComponent} from './download/download.component';
 import {SmartLearnComponent} from './smart-learn/smart-learn.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {IntroSmartComponent} from './intro-smart/intro-smart.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 
 const routes: Routes = [
   {
@@ -38,6 +38,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     IvyCarouselModule,
     LayoutModule,
+    MatExpansionModule,
   ]
 })
 export class ResourcesModule {
