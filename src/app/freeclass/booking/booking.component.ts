@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {environment} from '../../../environments/environment';
 import {loadStripe} from '@stripe/stripe-js/pure';
 import {SheetService} from '../../../utils/sheet.service';
 
