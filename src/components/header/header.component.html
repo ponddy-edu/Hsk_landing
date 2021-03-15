@@ -60,11 +60,11 @@
               FAQ
             </a>
           </li>
-<!--          <li class="nav-item enroll" routerLink="/enrollTest">-->
-<!--            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">-->
-<!--              Enroll a Test-->
-<!--            </a>-->
-<!--          </li>-->
+          <!--          <li class="nav-item enroll" routerLink="/enrollTest">-->
+          <!--            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">-->
+          <!--              Enroll a Test-->
+          <!--            </a>-->
+          <!--          </li>-->
         </ul>
       </div>
       <div [class.login]="loginActive==='Login'" class="loginNo">
@@ -104,26 +104,72 @@
               Ponddy
             </a>
           </li>
-          <li class="nav-item" routerLink="/tests/chinese">
-            <a [class.active]="actvieMenu==='tests'" i18n="header" data="navbar" class="nav-a text_menu">
-              Tests
-            </a>
+          <li class="nav-item">
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <div class="title">
+                      <a [class.active]="actvieMenu==='tests'" i18n="header" data="navbar" class="nav-a text_menu">
+                        Tests
+                      </a>
+                    </div>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="text">
+                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/tests/chinese">
+                    Chinese Tests
+                  </a>
+                  <br>
+                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/tests/instructions/1">
+                    Test Instructions
+                  </a>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
           </li>
-          <li class="nav-item" routerLink="/resources/course">
-            <a [class.active]="actvieMenu==='resources'" i18n="header" class="nav-a text_menu">
-              Resource
-            </a>
+          <li class="nav-item">
+            <mat-accordion>
+              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <div class="title">
+                      <a [class.active]="actvieMenu==='resources'" i18n="header" data="navbar" class="nav-a text_menu">
+                        Resource
+                      </a>
+                    </div>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="text">
+                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/course">
+                    Course
+                  </a>
+                  <br>
+                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/preparation">
+                    Preparation
+                  </a>
+                  <br>
+                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/smart">
+                    AI Chinese Tools
+                  </a>
+                  <br>
+                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/download">
+                    download
+                  </a>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
           </li>
           <li class="nav-item" routerLink="/faq">
             <a i18n="header" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
               FAQ
             </a>
           </li>
-<!--          <li class="nav-item enroll" routerLink="/enrollTest">-->
-<!--            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">-->
-<!--              Enroll a Test-->
-<!--            </a>-->
-<!--          </li>-->
+          <!--          <li class="nav-item enroll" routerLink="/enrollTest">-->
+          <!--            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">-->
+          <!--              Enroll a Test-->
+          <!--            </a>-->
+          <!--          </li>-->
           <li class="mobile action nav-item">
             <div [class.login]="loginActive==='Login'" class="loginNo">
               <a class="text_menu " (click)="openLogin()">
