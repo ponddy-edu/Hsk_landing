@@ -1,11 +1,11 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container" *ngIf="!(isMobile|async)">
+    <div class="container" *ngIf="!(deviceService.$mobile|async)">
       <a href="/" class="home-link ponddy-logo"> </a>
 
 
       <div class="collapse navbar-collapse">
-        <ul *ngIf="!(isMobile|async)" class="pd-nav-item navbar-nav mr-auto text-center">
+        <ul *ngIf="!(deviceService.$mobile |async)" class="pd-nav-item navbar-nav mr-auto text-center">
 
           <li class="nav-item nav-border-l nav-border-r">
             <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'" class="text_menu" data="navbar">
@@ -78,8 +78,8 @@
         </a>
       </div>
     </div>
-    <div class="container" *ngIf="isMobile|async">
-      <mat-expansion-panel #expansion *ngIf="isMobile|async" (expanded)="menuOpen" hideToggle>
+    <div class="container" *ngIf="deviceService.$mobile|async">
+      <mat-expansion-panel #expansion *ngIf="deviceService.$mobile|async"  hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <a href="/" class="home-link ponddy-logo">

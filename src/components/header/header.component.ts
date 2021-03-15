@@ -13,7 +13,6 @@ import {AuthService} from 'src/utils/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isMobile: Observable<boolean>
   @Input()
   actvieMenu = 'home'
 
@@ -22,21 +21,19 @@ export class HeaderComponent implements OnInit {
   isMatMenuOpen = false;
   // @ts-ignore
   prevButtonTrigger;
-  loginActive = "Login"
+  loginActive = 'Login'
 
   @ViewChild('expansion')
   expansionComponent: MatExpansionPanel
 
 
-  constructor(private deviceService: DeviceService,
+  constructor(public deviceService: DeviceService,
               private ren: Renderer2,
               public dialog: MatDialog,
-              public authService: AuthService,) {
-    this.isMobile = deviceService.$mobile
+              public authService: AuthService) {
   }
 
   ngOnInit(): void {
-    this.isMobile.subscribe()
     const token = localStorage.getItem('token');
     if (token) {
       this.loginActive = 'Logout'
@@ -93,7 +90,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openLogin() {
-    this.dialog.open(LoginComponent, {maxWidth: "90vw", maxHeight: "150vw"})
+    this.dialog.open(LoginComponent, {maxWidth: '90vw', maxHeight: '150vw'})
     this.menuOpen = false;
     this.expansionComponent.close();
   }
