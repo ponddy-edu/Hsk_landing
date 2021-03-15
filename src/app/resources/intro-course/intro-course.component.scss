@@ -101,9 +101,10 @@
         padding: 20px 24px 0 24px;
       }
       img {
-        padding: 0 36px 0 0;
-        max-height: 380px;
-        max-width: 272px;
+        margin: 0 36px 0 0;
+        padding: 0;
+        height: 380px;
+        width: 272px;
         @media (max-width: 767px) {
           min-width: 100%;
           padding: 0;
