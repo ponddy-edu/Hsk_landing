@@ -208,6 +208,9 @@
   }
   .btn_focus-secondary {
     color: #F3A024;
+    @media (max-width: 767px) {
+      padding: 10px 24px;
+    }
   }
 }
 
