@@ -132,6 +132,7 @@ export class BookingComponent implements OnInit {
     this.pricingList.student1 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'}
     this.pricingList.adult3 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
     this.pricingList.student3 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'}
+    this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original.svg'
     this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original.svg'
   }
 
