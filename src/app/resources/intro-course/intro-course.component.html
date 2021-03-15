@@ -17,7 +17,7 @@
 
       <div *ngIf="tabItem==='hsk12'" class="col-12 col-md-9 text-center tab-content">
         <div class="tab-top">
-          <img class="col-11 col-md-4" [useSrcset]="true" [lazyLoad]="pic_HSK12">
+          <img class="col-11 col-md-4" [lazyLoad]="(device.$mobile |async)?pic_HSK12.mobile:pic_HSK12.web">
           <div>
             <div>
               <div class="title">Description</div>
@@ -39,14 +39,14 @@
           <p i18n>Sign Up</p>
           <img src="/assets/image/icon/btn_orange_normal.svg">
         </div>
-        <img class="col-12 tab-img" [useSrcset]="true" [lazyLoad]="table_HSK12">
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK12.mobile:table_HSK12.web">
         <a class="btn_focus-primary text_btn">Sign Up</a>
         <div class="annotation">No worries. You’ll get a free trial before you commit.</div>
       </div>
 
       <div *ngIf="tabItem==='hsk3'" class="col-12 col-md-9 text-center tab-content">
         <div class="tab-top">
-          <img class="col-11 col-md-4" [useSrcset]="true" [lazyLoad]="pic_HSK3">
+          <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?pic_HSK3.mobile:pic_HSK3.web">
           <div>
             <div>
               <div class="title">Description</div>
@@ -70,14 +70,14 @@
           <p i18n>Sign Up</p>
           <img src="/assets/image/icon/btn_orange_normal.svg">
         </div>
-        <img class="col-12 tab-img" [useSrcset]="true" [lazyLoad]="table_HSK3">
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK3.mobile:table_HSK3.web">
         <a class="btn_focus-primary text_btn">Sign Up</a>
         <div class="annotation">No worries. You’ll get a free trial before you commit.</div>
       </div>
 
       <div *ngIf="tabItem==='hsk4'" class="col-12 col-md-9 text-center tab-content">
         <div class="tab-top">
-          <img class="col-11 col-md-4" [useSrcset]="true" [lazyLoad]="pic_HSK4">
+          <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?pic_HSK4.mobile:pic_HSK4.web">
           <div>
             <div>
               <div class="title">Description</div>
@@ -101,14 +101,14 @@
           <p i18n>Sign Up</p>
           <img src="/assets/image/icon/btn_orange_normal.svg">
         </div>
-        <img class="col-12 tab-img" [useSrcset]="true" [lazyLoad]="table_HSK4">
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4.mobile:table_HSK4.web">
         <a class="btn_focus-primary text_btn">Sign Up</a>
         <div class="annotation">No worries. You’ll get a free trial before you commit.</div>
       </div>
 
       <div *ngIf="tabItem==='hsk4plus'" class="col-12 col-md-9 text-center tab-content">
         <div class="tab-top">
-          <img class="col-11 col-md-4" [useSrcset]="true" [lazyLoad]="pic_HSK4plus">
+          <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?pic_HSK4plus.mobile:pic_HSK4plus.web">
           <div>
             <div class="text">
               As the official partner of HSK, Ponddy guarantees that all our courses are updated with any test and leveling changes of HSK. Stay tuned for more courses!
@@ -119,7 +119,7 @@
             <a class="btn_focus-primary text_btn">Sign Up</a>
           </div>
         </div>
-        <img class="col-12 tab-img" [useSrcset]="true" [lazyLoad]="table_HSK4plus">
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4plus.mobile:table_HSK4plus.web">
         <a class="btn_focus-primary text_btn">Sign Up</a>
         <div class="annotation">No worries. You’ll get a free trial before you commit.</div>
       </div>
