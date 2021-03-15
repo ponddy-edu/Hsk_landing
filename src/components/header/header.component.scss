@@ -137,22 +137,24 @@ mat-expansion-panel {
 }
 
 @media (max-width: 767px) {
-   ::ng-deep.mat-expansion-panel-content {
-    height: 145vw;
-    overflow-y: scroll!important;
-    .mobile.action.nav-item {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      left: 0;
-      height: 70px;
-      box-shadow: 0 0 8px rgb(45 57 66 / 40%);
-      z-index: 10;
-      background-color: #fff;
+  nav {
+     ::ng-deep.mat-expansion-panel-content {
+      height: 145vw;
+      overflow-y: scroll!important;
+      .mobile.action.nav-item {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        height: 70px;
+        box-shadow: 0 0 8px rgb(45 57 66 / 40%);
+        z-index: 10;
+        background-color: #fff;
+      }
     }
-  }
-   ::ng-deep.nav-item .mat-expansion-panel-content {
-    height: auto;
+     ::ng-deep.nav-item .mat-expansion-panel-content {
+      height: auto;
+    }
   }
   .navbar-nav {
     flex-direction: column;
