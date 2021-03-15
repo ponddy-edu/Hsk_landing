@@ -15,7 +15,7 @@ export class IntroTestComponent implements OnInit {
 
   panelOpenState = false;
 
-  actvieItem = 'registrationProcedure'
+  actvieItem = 'testRegulation'
   activeClass = 'procedureClass'
   procedureClass = "active";
   registrationClass = "";

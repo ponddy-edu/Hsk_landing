@@ -32,7 +32,7 @@ export class TabComponent implements OnInit {
         this.router.navigate(['./tests/chinese']);
         break
       case 1:
-        this.router.navigate(['./tests/instructions']);
+        this.router.navigate(['./tests/instructions/1']);
         break
     }
   }
