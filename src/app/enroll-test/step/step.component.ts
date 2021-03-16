@@ -65,6 +65,7 @@ export class StepComponent implements OnInit {
       .subscribe(res => {
         this.stripe.redirectToCheckout({
           lineItems: [{price: environment.stripe_product_enroll_test, quantity: 1}],
+          customerEmail: this.userInfoFormGroup.get('Email')?.value,
           mode: 'payment',
           successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_product_enroll_test,
           cancelUrl: window.location.href,

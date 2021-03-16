@@ -118,6 +118,14 @@
         box-sizing: border-box;
         border-radius: 4px;
         
+        &.ng-pristine.ng-invalid {
+          border: 1px solid #D5D7D9;
+        }
+        
+        &.ng-invalid {
+          border: 1px solid #EA4B65;
+        }
+        
         &[placeholder] {
           font-size: 20px;
           line-height: 36px;

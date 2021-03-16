@@ -45,14 +45,16 @@
               <div class="form-field">
                 <label>*Email</label>
                 <input formControlName="Email" name="Email"
+                       ngModel
+                       [email]="true"
                        type="email"
-                       value="" placeholder="pageshih@ponddy-edu.com">
+                       value="" placeholder="Email">
               </div>
               <div class="form-field">
                 <label>*Name</label>
                 <input formControlName="Name" name="Name"
                        type="text"
-                       value="" placeholder="Page">
+                       value="" placeholder="Name">
               </div>
               <div class="form-field">
                 <label>Chinese name</label>
@@ -63,21 +65,21 @@
               <div class="form-field">
                 <label>*Nationality</label>
                 <input formControlName="Nationality" name="Nationality" value="">
-<!--                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">-->
-<!--                  <mat-option value="option1">Option 1</mat-option>-->
-<!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
-<!--                  <mat-option value="option3">Option 3</mat-option>-->
-<!--                </mat-select>-->
+                <!--                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">-->
+                <!--                  <mat-option value="option1">Option 1</mat-option>-->
+                <!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
+                <!--                  <mat-option value="option3">Option 3</mat-option>-->
+                <!--                </mat-select>-->
               </div>
               <div class="form-field">
                 <label>*Mother tongue</label>
                 <input formControlName="Mother_Tongue" name="Mother_Tongue" value="">
 
-<!--                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">-->
-<!--                  <mat-option value="option1">Option 1</mat-option>-->
-<!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
-<!--                  <mat-option value="option3">Option 3</mat-option>-->
-<!--                </mat-select>-->
+                <!--                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">-->
+                <!--                  <mat-option value="option1">Option 1</mat-option>-->
+                <!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
+                <!--                  <mat-option value="option3">Option 3</mat-option>-->
+                <!--                </mat-select>-->
               </div>
               <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
@@ -104,11 +106,11 @@
               <div class="form-field">
                 <label>Belong to</label>
                 <input formControlName="Belong_To" name="Belong_To" value="">
-<!--                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">-->
-<!--                  <mat-option value="option1">Option 1</mat-option>-->
-<!--                  <mat-option value="option2">Option 2</mat-option>-->
-<!--                  <mat-option value="option3">Option 3</mat-option>-->
-<!--                </mat-select>-->
+                <!--                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">-->
+                <!--                  <mat-option value="option1">Option 1</mat-option>-->
+                <!--                  <mat-option value="option2">Option 2</mat-option>-->
+                <!--                  <mat-option value="option3">Option 3</mat-option>-->
+                <!--                </mat-select>-->
               </div>
               <div class="form-field">
                 <label>*How long have you been learning Chinese?</label>
@@ -224,16 +226,17 @@
                 I have read and agree to registration agreement.
               </mat-checkbox>
 
-              <div style="margin-top: 46px">
+              <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="summaryFormGroup.invalid" (click)="payment()">
                   Go to Payment
                 </button>
+                <p (click)="myStepper.selectedIndex = 2">Back</p>
               </div>
             </form>
-<!--            <div>-->
-<!--              <button mat-button matStepperPrevious>Back</button>-->
-<!--              <button mat-button (click)="stepper.reset()">Reset</button>-->
-<!--            </div>-->
+            <!--            <div>-->
+            <!--              <button mat-button matStepperPrevious>Back</button>-->
+            <!--              <button mat-button (click)="stepper.reset()">Reset</button>-->
+            <!--            </div>-->
           </mat-step>
         </mat-horizontal-stepper>
       </div>
