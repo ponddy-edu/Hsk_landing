@@ -13,13 +13,17 @@
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu"
+               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
           <li class="nav-item nav-border-r">
-            <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)" [class.active]="actvieMenu==='tests'" href="#" data="navbar"
-              class="nav-a text_menu">
+            <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger"
+               [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)"
+               (mouseleave)="buttonLeave(menuTrigger, button)" [class.active]="actvieMenu==='tests'" href="#"
+               data="navbar"
+               class="nav-a text_menu">
               Tests
             </a>
             <mat-menu #menu="matMenu">
@@ -32,8 +36,10 @@
             </mat-menu>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/resources/course" #buttonResource #menuTriggerResource="matMenuTrigger" [matMenuTriggerFor]="menuRsource" (mouseenter)="buttonEnter(menuTriggerResource)" (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)" [class.active]="actvieMenu==='resources'"
-              data="navbar" class="nav-a text_menu">
+            <a i18n="header" routerLink="/resources/course" #buttonResource #menuTriggerResource="matMenuTrigger"
+               [matMenuTriggerFor]="menuRsource" (mouseenter)="buttonEnter(menuTriggerResource)"
+               (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)" [class.active]="actvieMenu==='resources'"
+               data="navbar" class="nav-a text_menu">
               Resources
             </a>
             <mat-menu #menuRsource="matMenu">
@@ -44,7 +50,7 @@
                 <button mat-menu-item class="pd-menu-item" routerLink="/resources/preparation">
                   <a>Preparation</a>
                 </button>
-                <button mat-menu-item class="pd-menu-item"  routerLink="/resources/smart">
+                <button mat-menu-item class="pd-menu-item" routerLink="/resources/smart">
                   <a>AI Chinese Tools</a>
                 </button>
                 <button mat-menu-item class="pd-menu-item" routerLink="/resources/download">
@@ -56,15 +62,16 @@
             </mat-menu>
           </li>
           <li class="nav-item">
-            <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
+            <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar"
+               class="nav-a text_menu">
               FAQ
             </a>
           </li>
-          <!--          <li class="nav-item enroll" routerLink="/enrollTest">-->
-          <!--            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">-->
-          <!--              Enroll a Test-->
-          <!--            </a>-->
-          <!--          </li>-->
+          <li class="nav-item enroll" routerLink="/enrollTest">
+            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">
+              Enroll a Test
+            </a>
+          </li>
         </ul>
       </div>
       <div [class.login]="loginActive==='Login'" class="loginNo">
@@ -79,7 +86,7 @@
       </div>
     </div>
     <div class="container" *ngIf="deviceService.$mobile|async">
-      <mat-expansion-panel #expansion *ngIf="deviceService.$mobile|async"  hideToggle>
+      <mat-expansion-panel #expansion *ngIf="deviceService.$mobile|async" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             <a href="/" class="home-link ponddy-logo">
@@ -106,7 +113,7 @@
           </li>
           <li class="nav-item">
             <mat-accordion>
-              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <div class="title">
@@ -130,7 +137,7 @@
           </li>
           <li class="nav-item">
             <mat-accordion>
-              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <div class="title">
@@ -165,11 +172,11 @@
               FAQ
             </a>
           </li>
-          <!--          <li class="nav-item enroll" routerLink="/enrollTest">-->
-          <!--            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">-->
-          <!--              Enroll a Test-->
-          <!--            </a>-->
-          <!--          </li>-->
+          <li class="nav-item enroll" routerLink="/enrollTest">
+            <a i18n="header" [class.active]="actvieMenu==='enrollTest'" data="navbar" class="nav-a text_menu">
+              Enroll a Test
+            </a>
+          </li>
           <li class="mobile action nav-item">
             <div [class.login]="loginActive==='Login'" class="loginNo">
               <a class="text_menu " (click)="openLogin()">
@@ -183,8 +190,6 @@
             </div>
           </li>
         </ul>
-
-
       </mat-expansion-panel>
     </div>
 
