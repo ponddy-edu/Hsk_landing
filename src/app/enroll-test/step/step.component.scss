@@ -7,7 +7,7 @@
     
     ::ng-deep {
       mat-step-header {
-        pointer-events: none;
+        //pointer-events: none;
       }
       
       .mat-horizontal-content-container {
@@ -23,17 +23,32 @@
       
       .mat-step-header .mat-step-icon {
         background-color: #F4F4F5;
+        width: 36px;
+        height: 36px;
+        
+        .mat-step-icon-content {
+          background: #FFFFFF;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+        }
         
         &.mat-step-icon-selected {
-          background-color: #78D4B6;
+          .mat-step-icon-content {
+            background: #78D4B6;
+          }
         }
         
         &.mat-step-icon-state-done {
-          background-color: #78D4B6;
+          .mat-step-icon-content {
+            background: #78D4B6;
+          }
         }
         
         &.mat-step-icon-state-edit {
-          background-color: #78D4B6;
+          .mat-step-icon-content {
+            background: #78D4B6;
+          }
         }
       }
       
@@ -239,11 +254,13 @@
         cursor: pointer;
       }
     }
+    
     ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
       opacity: 0.03 !important;
       background-color: #6ACFED !important;
     }
-    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    
+    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
       background-color: #6ACFED;
     }
     
