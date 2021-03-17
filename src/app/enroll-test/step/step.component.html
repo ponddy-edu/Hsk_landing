@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-6 col-sm-8 col-12">
-        <mat-horizontal-stepper #stepper labelPosition="bottom">
+        <mat-horizontal-stepper [@.disabled]="true" #stepper labelPosition="bottom">
           <mat-step [stepControl]="testInfoFormGroup">
             <form [formGroup]="testInfoFormGroup">
               <ng-template matStepLabel>Step 1</ng-template>
@@ -85,7 +85,7 @@
                 <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
                   Continue
                 </button>
-                <p (click)="myStepper.selectedIndex = 0">Back</p>
+                <p (click)="myStepper.selectedIndex = 0">Previous</p>
               </div>
             </form>
             <div class="hint-text">
@@ -147,7 +147,7 @@
                 <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
                   Continue
                 </button>
-                <p (click)="myStepper.selectedIndex = 1">Back</p>
+                <p (click)="myStepper.selectedIndex = 1">Previous</p>
               </div>
             </form>
             <div class="hint-text">
@@ -229,11 +229,11 @@
                 <button class="btn_focus-primary" [disabled]="summaryFormGroup.invalid" (click)="payment()">
                   Go to Payment
                 </button>
-                <p (click)="myStepper.selectedIndex = 2">Back</p>
+                <p (click)="myStepper.selectedIndex = 2">Previous</p>
               </div>
             </form>
             <!--            <div>-->
-            <!--              <button mat-button matStepperPrevious>Back</button>-->
+            <!--              <button mat-button matStepperPrevious>Previous</button>-->
             <!--              <button mat-button (click)="stepper.reset()">Reset</button>-->
             <!--            </div>-->
           </mat-step>
