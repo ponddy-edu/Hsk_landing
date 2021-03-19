@@ -18,8 +18,12 @@
               Ponddy
             </a>
           </li>
-
-
+          <li class="nav-item nav-border-r ">
+            <a i18n="header" routerLink="/resources/course" [class.active]="actvieMenu==='courses'" class="nav-a text_menu"
+               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Courses
+            </a>
+          </li>
           <li class="nav-item nav-border-r">
             <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger"
                [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)"
@@ -38,12 +42,6 @@
               </span>
               </div>
             </mat-menu>
-          </li>
-          <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/resources/course" [class.active]="actvieMenu==='courses'" class="nav-a text_menu"
-               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Courses
-            </a>
           </li>
           <li class="nav-item nav-border-r ">
             <a i18n="header" routerLink="/resources/preparation" #buttonResource #menuTriggerResource="matMenuTrigger"
@@ -119,6 +117,11 @@
               Ponddy
             </a>
           </li>
+          <li class="nav-item" routerLink="/resources/course">
+            <a i18n="header" [class.active]="actvieMenu==='courses'" class="nav-a text_menu">
+              Course
+            </a>
+          </li>
           <li class="nav-item">
             <mat-accordion>
               <mat-expansion-panel>
@@ -142,11 +145,6 @@
                 </div>
               </mat-expansion-panel>
             </mat-accordion>
-          </li>
-          <li class="nav-item" routerLink="/resources/course">
-            <a i18n="header" [class.active]="actvieMenu==='courses'" class="nav-a text_menu">
-              Course
-            </a>
           </li>
           <li class="nav-item">
             <mat-accordion>
