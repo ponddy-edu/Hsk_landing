@@ -18,6 +18,8 @@
               Ponddy
             </a>
           </li>
+
+
           <li class="nav-item nav-border-r">
             <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger"
                [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)"
@@ -38,7 +40,13 @@
             </mat-menu>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/resources/course" #buttonResource #menuTriggerResource="matMenuTrigger"
+            <a i18n="header" routerLink="/resources/course" [class.active]="actvieMenu==='courses'" class="nav-a text_menu"
+               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Courses
+            </a>
+          </li>
+          <li class="nav-item nav-border-r ">
+            <a i18n="header" routerLink="/resources/preparation" #buttonResource #menuTriggerResource="matMenuTrigger"
                [matMenuTriggerFor]="menuRsource" (mouseenter)="buttonEnter(menuTriggerResource)"
                (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)" [class.active]="actvieMenu==='resources'"
                data="navbar" class="nav-a text_menu">
@@ -46,10 +54,8 @@
             </a>
             <mat-menu #menuRsource="matMenu">
               <div class="menu_wrap" (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTriggerResource, buttonResource)">
-                <span >
-                <button mat-menu-item class="pd-menu-item" routerLink="/resources/course">
-                  <a>Course</a>
-                </button>
+                <span>
+
                 <button mat-menu-item class="pd-menu-item" routerLink="/resources/preparation">
                   <a>Preparation</a>
                 </button>
@@ -137,6 +143,11 @@
               </mat-expansion-panel>
             </mat-accordion>
           </li>
+          <li class="nav-item" routerLink="/resources/course">
+            <a i18n="header" [class.active]="actvieMenu==='courses'" class="nav-a text_menu">
+              Course
+            </a>
+          </li>
           <li class="nav-item">
             <mat-accordion>
               <mat-expansion-panel>
@@ -150,10 +161,6 @@
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="text">
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/course">
-                    Course
-                  </a>
-                  <br>
                   <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/preparation">
                     Preparation
                   </a>
