@@ -1,13 +1,13 @@
 .landing {
   margin-top: 60px;
-  height: calc(100vh - 65px);
+  height: calc(70vh - 65px);
   box-sizing: border-box;
   background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/index_pic_web.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   @media (max-width: 991.98px) {
-    height: calc(100vh - 65px);
+    height: calc(70vh - 65px);
     background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/index_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
