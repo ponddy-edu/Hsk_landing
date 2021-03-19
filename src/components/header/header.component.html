@@ -13,31 +13,40 @@
             </a>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu"
+               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
           <li class="nav-item nav-border-r">
-            <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger" [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)" (mouseleave)="buttonLeave(menuTrigger, button)" [class.active]="actvieMenu==='tests'" href="#" data="navbar"
-              class="nav-a text_menu">
+            <a i18n="header" routerLink="/tests/chinese" #button #menuTrigger="matMenuTrigger"
+               [matMenuTriggerFor]="menu" (mouseenter)="buttonEnter(menuTrigger)"
+               (mouseleave)="buttonLeave(menuTrigger, button)" [class.active]="actvieMenu==='tests'" href="#"
+               data="navbar"
+               class="nav-a text_menu">
               Tests
             </a>
             <mat-menu #menu="matMenu">
-              <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTrigger, button)">
+              <div class="menu_wrap" (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTrigger, button)">
+                <span>
                 <button mat-menu-item class="pd-menu-item" routerLink="/tests/chinese">
                   <a>Chinese Tests</a></button>
                 <button mat-menu-item class="pd-menu-item" routerLink="/tests/instructions/1">
                   <a>Test Instructions</a></button>
               </span>
+              </div>
             </mat-menu>
           </li>
           <li class="nav-item nav-border-r ">
-            <a i18n="header" routerLink="/resources/course" #buttonResource #menuTriggerResource="matMenuTrigger" [matMenuTriggerFor]="menuRsource" (mouseenter)="buttonEnter(menuTriggerResource)" (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)" [class.active]="actvieMenu==='resources'"
-              data="navbar" class="nav-a text_menu">
+            <a i18n="header" routerLink="/resources/course" #buttonResource #menuTriggerResource="matMenuTrigger"
+               [matMenuTriggerFor]="menuRsource" (mouseenter)="buttonEnter(menuTriggerResource)"
+               (mouseleave)="buttonLeave(menuTriggerResource, buttonResource)" [class.active]="actvieMenu==='resources'"
+               data="navbar" class="nav-a text_menu">
               Resources
             </a>
             <mat-menu #menuRsource="matMenu">
-              <span (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTriggerResource, buttonResource)">
+              <div class="menu_wrap" (mouseenter)="menuEnter()" (mouseleave)="menuLeave(menuTriggerResource, buttonResource)">
+                <span >
                 <button mat-menu-item class="pd-menu-item" routerLink="/resources/course">
                   <a>Course</a>
                 </button>
@@ -50,13 +59,13 @@
                 <button mat-menu-item class="pd-menu-item" routerLink="/resources/download">
                   <a>Test Prep Resources</a>
                 </button>
-
-
               </span>
+              </div>
             </mat-menu>
           </li>
           <li class="nav-item">
-            <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
+            <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar"
+               class="nav-a text_menu">
               FAQ
             </a>
           </li>
