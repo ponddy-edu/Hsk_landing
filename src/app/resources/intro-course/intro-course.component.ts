@@ -30,16 +30,22 @@ export class IntroCourseComponent implements OnInit {
 
 
   table_HSK12 = {
-    mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile2/table_HSK12_p.svg',
-    web: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web2/table_HSK12_w.svg'
+    web: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/table_HSK12_w_01.svg',
+    mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/table_HSK12_p_01.svg',
+    webBottom: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/table_HSK12_w_02.svg',
+    mobileBottom: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/table_HSK12_p_02.svg',
   }
   table_HSK3 = {
-    mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile2/table_HSK3_p.svg',
-    web: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web2/table_HSK3_w.svg'
+    web: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/table_HSK3_w_01.svg',
+    mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/table_HSK3_p_01.svg',
+    webBottom: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/table_HSK3_w_02.svg',
+    mobileBottom: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/table_HSK3_p_02.svg',
   }
   table_HSK4 = {
-    mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile2/table_HSK4_p.svg',
-    web: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web2/table_HSK4_w.svg'
+    web: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/table_HSK4_w_01.svg',
+    mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/table_HSK4_p_01.svg',
+    webBottom: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/table_HSK4_w_02.svg',
+    mobileBottom: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/table_HSK4_p_02.svg',
   }
   table_HSK4plus = {
     mobile: 'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile2/table_HSK4plus_p.svg',
