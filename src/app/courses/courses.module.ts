@@ -13,7 +13,7 @@ import { ShareModule } from 'src/components/share.module';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 const routes: Routes = [
-  {path: 'courses', component: CoursesComponent, data: {tab: 0}},
+  {path: '', component: CoursesComponent},
 ];
 
 
