@@ -112,7 +112,7 @@ export class AuthService {
 
   forgotPassword(email:any) {
     email = email.toLowerCase()
-    const url = environment.authApiUrl + '/' + localStorage.getItem('lang') + '/auth/forgot/?email=' + encodeURI(email)
+    const url = environment.authApiUrl + '/zh-hant/auth/forgot/?email=' + encodeURI(email)
     window.open(url, '_blank')
   }
 
