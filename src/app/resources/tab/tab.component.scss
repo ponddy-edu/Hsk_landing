@@ -50,6 +50,10 @@
           -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
           mask: url("/assets/image/resources/icon/icon_smartLearning_normal.svg") no-repeat center;
         }
+        &.icon_download {
+          -webkit-mask: url("/assets/image/resources/icon/icon_TestPrep_normal.svg") no-repeat center;
+          mask: url("/assets/image/resources/icon/icon_TestPrep_normal.svg") no-repeat center;
+        }
         @media (max-width: 991.98px) {
           &.icon_course {
             -webkit-mask: url("/assets/image/resources/icon/icon_course_hover_p.svg") no-repeat center;
@@ -62,6 +66,10 @@
           &.icon_smart {
             -webkit-mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
             mask: url("/assets/image/resources/icon/icon_smartLearning_normal_p.svg") no-repeat center;
+          }
+          &.icon_download {
+            -webkit-mask: url("/assets/image/resources/icon/icon_TestPrep_normal.svg") no-repeat center;
+            mask: url("/assets/image/resources/icon/icon_TestPrep_normal.svg") no-repeat center;
           }
         }
       }
