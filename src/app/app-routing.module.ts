@@ -6,6 +6,7 @@ import {ResourcesModule} from './resources/resources.module';
 import {TestModule} from './test/test.module';
 import {FaqModule} from './faq/faq.module'
 import {environment} from '../environments/environment';
+import { CoursesModule } from './courses/courses.module';
 
 const routes: Routes = [
   {path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), data: {
@@ -33,6 +34,18 @@ const routes: Routes = [
         ]
       }
     }},
+  {path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule), data: {
+    seo: {
+      title: 'Ponddy® HSK - Courses',
+      metaTags: [
+        { name: 'description', content: 'Ponddy® HSK provides online HSK courses, HSK self-study guide and smart tools which helps building robust language knowleage and improve the learning experience along the way.'},
+        { property: 'og:title', content: 'Ponddy® HSK - Courses' },
+        { property: 'og:description', content: 'Ponddy® HSK provides online HSK courses, HSK self-study guide and smart tools which helps building robust language knowleage and improve the learning experience along the way.' },
+        { property: 'og:image', content: environment.appUrl + 'assets/image/homepage.png' },
+        { property: 'og:url', content: environment.appUrl + 'courses' },
+      ]
+    }
+  }},
   {
     path: 'resources', loadChildren: () => import('./resources/resources.module').then(m => m.ResourcesModule),
     data: {
@@ -99,6 +112,7 @@ const routes: Routes = [
       }
     }
   },
+  { path: 'courses', loadChildren: () => import('./courses/courses.module').then(m => m.CoursesModule) },
 
   {path: '**', redirectTo: '/home', pathMatch: 'full'},
 
@@ -115,6 +129,7 @@ const routes: Routes = [
     }),
     HomeModule,
     PonddyModule,
+    CoursesModule,
     TestModule,
     ResourcesModule,
     FaqModule
