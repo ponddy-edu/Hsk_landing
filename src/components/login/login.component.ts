@@ -66,6 +66,7 @@ export class LoginComponent implements OnInit {
 
   public dismiss(): void {
     this.dialogRef.close()
+    location.reload()
   }
 
   ngOnInit(): void {
