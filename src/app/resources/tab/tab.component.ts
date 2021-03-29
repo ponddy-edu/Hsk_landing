@@ -31,6 +31,9 @@ export class TabComponent implements OnInit {
       case 1:
         this.router.navigate(['./resources/smart']);
         break
+      case 2:
+        this.router.navigate(['./resources/download']);
+        break
     }
   }
 }
