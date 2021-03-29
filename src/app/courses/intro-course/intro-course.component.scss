@@ -1,0 +1,314 @@
+.intro_course {
+  padding: 64px 0;
+  background-color: #F4F0EB;
+  @media (max-width: 991.98px) {
+    padding: 24px 16px 36px;
+  }
+
+  ::ng-deep.mat-tab-body-wrapper {
+    width: 100%;
+  }
+
+  .mobile {
+    display: none;
+    @media (max-width: 991.98px) {
+      display: flex;
+    }
+  }
+
+  h1 {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2D3942;
+    @media (max-width: 991.98px) {
+      font-size: 24px;
+      line-height: 36px;
+      padding: 0 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .title-explain {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #2D3942;
+    @media (max-width: 991.98px) {
+      font-weight: normal;
+      font-size: 16px;
+      color: #576168;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    .title {
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: #FBFBFB;
+      border: 1px solid #D5D7D9;
+      box-sizing: border-box;
+      border-radius: 8px 8px 0px 0px;
+      width: 100%;
+      min-height: 66px;
+      font-weight: 700;
+      color: rgba(45, 57, 66, 0.7);
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        background: #6ACFED;
+        color: #FFFFFF;
+        font-size: 28px;
+        letter-spacing: 0.5px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+
+      &.active {
+        background: #6ACFED;
+        color: #FFFFFF;
+        font-size: 28px;
+        letter-spacing: 0.5px;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid #D5D7D9;
+    border-radius: 0px 0px 12px 12px;
+    padding: 40px 80px 55px 80px;
+    @media (max-width: 767px) {
+      padding: 20px 24px 20px 24px;
+      padding: 0;
+    }
+
+    .tab-top {
+      display: flex;
+      margin-bottom: 37px;
+      text-align: left;
+      @media (max-width: 767px) {
+        display: block;
+        margin-bottom: 16px;
+        padding: 20px 24px 0 24px;
+      }
+
+      img {
+        margin: 0 36px 0 0;
+        padding: 0;
+        height: 380px;
+        width: 272px;
+        @media (max-width: 767px) {
+          min-width: 100%;
+          padding: 0;
+        }
+      }
+
+      hr {
+        margin: 8px 0;
+        border-top: 1px solid #FFFFFF;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #2D3942;
+        margin-bottom: 8px;
+      }
+
+      .text {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #2D3942;
+      }
+
+      .free-trial-button {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: #F3A024;
+        margin: 24px 0 10px 0;
+      }
+
+      ul {
+        padding-inline-start: 20px;
+
+        li::marker {
+          font-size: 12px;
+          color: #576168;
+        }
+      }
+    }
+
+    .btn_general-primary {
+      margin: 0 0 30px 0;
+    }
+
+    .btn_focus-primary {
+      color: #FFFFFF !important;
+      margin: 0px 0 12px 0;
+    }
+
+    .tab-img {
+      margin: 30px 0;
+
+      @media (max-width: 767px) {
+        margin-top: 24px;
+        padding: 0 7px;
+      }
+    }
+
+    .annotation {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 1px;
+      color: #576168;
+      @media (max-width: 767px) {
+        padding: 0 25px 48px 25px;
+      }
+    }
+
+    .orange_text {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+      color: #F3A024;
+      margin-left: 39px;
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.free-trial {
+  padding: 85px 0 85px 0;
+  background-image: url('https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web2/pic_freeTrial_w.svg');
+  background-color: #ffc05c;
+  background-position: center;
+  @media (max-width: 767px) {
+    background-image: url('https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile2/pic_freeTrial_p.svg');
+    padding: 36px 0 60px 0;
+  }
+
+  .text {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1.2px #F3A024;
+    text-shadow: 0px 2px 10px rgba(77, 47, 0, 0.15);
+    margin-bottom: 37px;
+    @media (max-width: 767px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .btn_focus-secondary {
+    color: #F3A024;
+    @media (max-width: 767px) {
+      padding: 10px 24px;
+    }
+  }
+}
+
+.faq {
+  text-align: center;
+  padding: 64px 0;
+  @media (max-width: 767px) {
+    padding: 24px 0;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    font-weight: 900;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      margin-bottom: 16px;
+      line-height: 36px;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #2D3942;
+    font-family: Ponddy-NotoRubik;
+    text-align: left;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #576168;
+    text-align: left;
+  }
+
+  .btn_focus-primary {
+    margin-top: 32px;
+    color: #FFFFFF !important;
+  }
+
+  ::ng-deepmat-expansion-panel {
+    box-shadow: none;
+    padding: 24px 0;
+    margin: 0;
+    border-top: 1px solid #EAEBEC;
+    // border-bottom: 1px solid #EAEBEC;
+    border-radius: 0;
+
+    mat-expansion-panel-header {
+      padding: 0 10px;
+
+      &:hover {
+        background: none !important;
+      }
+    }
+
+    .mat-expansion-panel-body {
+      padding: 0 10px;
+    }
+
+    .border-bottom {
+      border-bottom: 1px solid #EAEBEC;
+    }
+
+    .mat-expansion-panel-content {
+      height: auto;
+    }
+  }
+}

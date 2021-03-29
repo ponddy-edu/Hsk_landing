@@ -1,0 +1,221 @@
+<section class="intro_course">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 text-center">
+        <h1>Ponddy Online HSK Courses</h1>
+        <p class="title-explain">
+          Ponddy Online HSK Courses is perfect for all students who aim to take HSK tests. Our experienced teachers use AI-powered learning platform and tools to supplement so that you can master everything you need to tackle the desired HSK level faster and easier.
+          Check out course descriptions and details below for the course that suits your need!
+        </p>
+      </div>
+      <div class="col-12 col-md-9 text-center tab">
+        <div class="title text_p-18" [class.active]="tabItem=='hsk12'" (click)="checkTab('12')">HSK 1-2</div>
+        <div class="title text_p-18" [class.active]="tabItem=='hsk3'" (click)="checkTab('3')">HSK 3</div>
+        <div class="title text_p-18" [class.active]="tabItem=='hsk4'" (click)="checkTab('4')">HSK 4</div>
+        <div class="title text_p-18" [class.active]="tabItem=='hsk4plus'" (click)="checkTab('4plus')">HSK 4+</div>
+      </div>
+
+      <div *ngIf="tabItem==='hsk12'" class="col-12 col-md-9 text-center tab-content">
+        <div class="tab-top">
+          <img class="col-11 col-md-4" [lazyLoad]="(device.$mobile |async)?pic_HSK12.mobile:pic_HSK12.web">
+          <div>
+            <div>
+              <div class="title">Description</div>
+              <div class="text">Students will learn basic Mandarin Chinese skills through simple conversations. Students are expected to achieve HSK 1&2 equivalent proficiency level after completing this course.</div>
+            </div>
+            <hr>
+            <div>
+              <div class="title">Can-do</div>
+              <div class="text">
+                <ul>
+                  <li>Understand and use simple Chinese vocabulary and sentences to fulfill basic social needs </li>
+                  <li>Have simple conversations on familiar and everyday topics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="learn_more orange_text mobile">
+          <p i18n>Sign Up</p>
+          <img src="/assets/image/icon/btn_orange_normal.svg">
+        </div>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK12.mobile:table_HSK12.web">
+        <a i18n class="btn_general-primary text_btn" href="https://s.ponddy.com/freeclass2021q1a" target="_blank">
+          Group Class Sign Up
+        </a>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK12.mobileBottom:table_HSK12.webBottom">
+        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+
+      </div>
+
+      <div *ngIf="tabItem==='hsk3'" class="col-12 col-md-9 text-center tab-content">
+        <div class="tab-top">
+          <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?pic_HSK3.mobile:pic_HSK3.web">
+          <div>
+            <div>
+              <div class="title">Description</div>
+              <div class="text">
+                Students will master more Mandarin Chinese expressions on multiple topics and situations to fulfill basic social and work communication needs. Students are expected to achieve HSK 3 equivalent proficiency level after completing this course.
+              </div>
+            </div>
+            <hr>
+            <div>
+              <div class="title">Can-do</div>
+              <div class="text">
+                <ul>
+                  <li>Interact with others to complete basic tasks related to day-to-day activities, study, and work.</li>
+                  <li>Present personal information, preference, and opinion on familiar and topics.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="learn_more orange_text mobile">
+          <p i18n>Sign Up</p>
+          <img src="/assets/image/icon/btn_orange_normal.svg">
+        </div>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK3.mobile:table_HSK3.web">
+        <a i18n class="btn_general-primary text_btn" href="https://s.ponddy.com/freeclass2021q1a" target="_blank">
+          Group Class Sign Up
+        </a>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK3.mobileBottom:table_HSK3.webBottom">
+        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+
+      </div>
+
+      <div *ngIf="tabItem==='hsk4'" class="col-12 col-md-9 text-center tab-content">
+        <div class="tab-top">
+          <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?pic_HSK4.mobile:pic_HSK4.web">
+          <div>
+            <div>
+              <div class="title">Description</div>
+              <div class="text">
+                Students will be able to explore broader topics and use Mandarin Chinese more smoothly in real life and communicate fluently with native speakers. Students are expected to achieve HSK 4 equivalent proficiency level after completing this course.
+              </div>
+            </div>
+            <hr>
+            <div>
+              <div class="title">Can-do</div>
+              <div class="text">
+                <ul>
+                  <li>Use coherent sentences to present facts and elaborate on preferences and opinions on topics including hobbies, plans, and lifestyles. </li>
+                  <li>Engage in simple conversations regarding personal needs, such as looking for help, making reservations, and arranging schedules.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="learn_more orange_text mobile">
+          <p i18n>Sign Up</p>
+          <img src="/assets/image/icon/btn_orange_normal.svg">
+        </div>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4.mobile:table_HSK4.web">
+        <a i18n class="btn_general-primary text_btn" href="https://s.ponddy.com/freeclass2021q1a" target="_blank">
+          Group Class Sign Up
+        </a>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4.mobileBottom:table_HSK4.webBottom">
+        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+
+      </div>
+
+      <div *ngIf="tabItem==='hsk4plus'" class="col-12 col-md-9 text-center tab-content">
+        <div class="tab-top">
+          <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?pic_HSK4plus.mobile:pic_HSK4plus.web">
+          <div>
+            <div class="text">
+              As the official partner of HSK, Ponddy guarantees that all our courses are updated with any test and leveling changes of HSK. Stay tuned for more courses!
+            </div>
+            <div class="free-trial-button">
+              Get a free trial class now.
+            </div>
+            <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+          </div>
+        </div>
+        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4plus.mobile:table_HSK4plus.web">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="free-trial">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-5 text-center">
+        <div class="text">
+          Not sure yet? Just get a free trial class!
+        </div>
+        <a class="btn_focus-secondary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 text-center">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-7 ">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" expanded="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <div class="title">
+                  1. What's the course format?
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text">
+              All classes will be lived online with Ponddy instructors. Teachers will conduct the class via Zoom and incorporate Ponddy's online interactive learning materials.
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <div class="title">
+                  2. What textbook do you use?
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text">
+              We use HSK-aligned learning material available on Ponddy's AI platforms. No additional textbook purchase is needed.
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <div class="title">
+                  3. Will there be homework after class?
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text">
+              Yes. Students will be guided to use the AI platform, Ponddy Reader, to complete and submit homework. The platform contains learning tools such as exercises and readings.
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="border-bottom">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <div class="title">
+                  4. What is the refund policy
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text">
+              Our goal is to help you excel in your learning goal and gain the skills needed to tackle HSK, after purchasing the course, you can still apply for a full refund within the first 2 sessions.
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+    <a class="btn_focus-primary text_btn" routerLink="/faq">More</a>
+  </div>
+</section>
