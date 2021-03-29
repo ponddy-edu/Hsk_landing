@@ -20,12 +20,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'course', pathMatch: 'full'
+    path: '', redirectTo: 'preparation', pathMatch: 'full'
   },
-  {path: 'course', component: ResourcesComponent, data: {tab: 0}},
-  {path: 'preparation', component: ResourcesComponent, data: {tab: 1}},
-  {path: 'smart', component: ResourcesComponent, data: {tab: 2}},
-  {path: 'download', component: ResourcesComponent, data: {tab: 3}}
+  {path: 'preparation', component: ResourcesComponent, data: {tab: 0}},
+  {path: 'smart', component: ResourcesComponent, data: {tab: 1}},
+  {path: 'download', component: ResourcesComponent, data: {tab: 2}}
 ];
 
 @NgModule({

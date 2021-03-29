@@ -22,10 +22,11 @@ export class ResourcesComponent implements OnInit, OnDestroy {
     // this.activatedRoute.data.subscribe(res => console.log(res))
     this.routeSubscribe = this.activatedRoute.url.subscribe((res) => {
       const tabIndex = this.activatedRoute.snapshot.data ? this.activatedRoute.snapshot.data.tab : 0;
-      tabIndex >= 1 ? this.activeHeaderTab = 'resources' : this.activeHeaderTab = 'courses'
-      if (tabIndex < 3) {
+      tabIndex >= 1 ? this.activeHeaderTab = 'resources' : this.activeHeaderTab = 'resources'
+      console.log(this.activeHeaderTab)
+      if (tabIndex < 2) {
         this.setTab(tabIndex)
-      } else if (tabIndex === 3) {
+      } else if (tabIndex === 2) {
         this.setDownloadRe(true)
       }
     });
@@ -37,7 +38,7 @@ export class ResourcesComponent implements OnInit, OnDestroy {
 
   setTab(tabIndex: number) {
     this.tab = tabIndex
-    if (tabIndex !== 3) {
+    if (tabIndex !== 2) {
       this.isDownloadPage = false
     }
   }

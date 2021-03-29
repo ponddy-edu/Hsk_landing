@@ -26,12 +26,9 @@ export class TabComponent implements OnInit {
   changeTab(tabIndex: any) {
     switch (tabIndex) {
       case 0:
-        this.router.navigate(['./resources/course']);
-        break
-      case 1:
         this.router.navigate(['./resources/preparation']);
         break
-      case 2:
+      case 1:
         this.router.navigate(['./resources/smart']);
         break
     }
