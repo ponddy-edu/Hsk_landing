@@ -7,7 +7,10 @@
             <h1 [class.active]="!activeTab" (click)="activeTab=0">HSK 1&2 </h1>
           </div>
           <div class="wrap_h1">
-            <h1 [class.active]="activeTab" (click)="activeTab=1">HSK 3</h1>
+            <h1 [class.active]="activeTab===1" (click)="activeTab=1">HSK 3</h1>
+          </div>
+          <div class="wrap_h1">
+            <h1 [class.active]="activeTab===2" (click)="activeTab=2">HSK 4</h1>
           </div>
         </div>
         <div class="description">
@@ -21,16 +24,23 @@
             You will be able to create personalized content to support your continued learning after the class.
           </p>
         </div>
-        <div class="info_table">
-          <img [lazyLoad]="activeTab?infoTableList.hsk3:infoTableList.hsk1">
-        </div>
-        <div class="schedule">
-          <h2>Class schedule:</h2>
-          <p>・Mon. & Wed.</p>
-          <p>・Tue. & Thu.</p>
-          <p>・Sat. & Sun.</p>
-          <p>PDT: 6pm / EDT: 9pm</p>
-          <span class="time">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth: 9am +1day)</span>
+        <ng-container *ngIf="activeTab==0||activeTab==1">
+          <div class="info_table">
+            <img [lazyLoad]="activeTab?infoTableList.hsk3:infoTableList.hsk1">
+          </div>
+          <div class="schedule">
+            <h2>Class schedule:</h2>
+            <p>・Mon. & Wed.</p>
+            <p>・Tue. & Thu.</p>
+            <p>・Sat. & Sun.</p>
+            <p>PDT: 6pm / EDT: 9pm</p>
+            <span class="time">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth: 9am +1day)</span>
+          </div>
+        </ng-container>
+        <div class="justify-content-center text-center" *ngIf="activeTab==2">
+          <button style="margin-top: 16px" class="btn_focus-primary text-center" routerLink="/courses">
+            Learn more
+          </button>
         </div>
 
       </div>
@@ -84,8 +94,8 @@
             <label> Coupon code</label>
             <input formControlName="Coupon" name="Coupon"
                    value="" placeholder="Coupon code"
-            (ngModelChange)="checkCouponDiscount($event)">
-            <label *ngIf="!userFormGroup.get('Coupon').valid" style="color: red">Invalid code</label>
+                   (ngModelChange)="checkCouponDiscount($event)">
+            <label *ngIf="!userFormGroup.get('Coupon')?.valid" style="color: red">Invalid code</label>
           </div>
           <div *ngIf="pricingValue" class="form-field">
             <div class="form-pricing-field">

@@ -36,7 +36,6 @@ export class BookingComponent implements OnInit {
   }
 
   async ngOnInit() {
-    // @ts-ignore
     this.userFormGroup = this.formBuilder.group({
       Email: new FormControl('', Validators.required),
       Name: new FormControl('', Validators.required),
@@ -44,6 +43,7 @@ export class BookingComponent implements OnInit {
       Phone: new FormControl(''),
       Age: new FormControl('', Validators.required),
       Days: new FormControl('', Validators.required),
+      // @ts-ignore
       Coupon: new FormControl('', this.checkCouponValid)
     });
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
@@ -129,7 +129,6 @@ export class BookingComponent implements OnInit {
   }
 
   endHsk3RedDiscount() {
-    console.log('end3')
     this.pricingList.adult1 = {price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
     this.pricingList.student1 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'}
     this.pricingList.adult3 = {price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
