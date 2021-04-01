@@ -53,7 +53,7 @@
           <div class="form-field">
             <label>Phone</label>
             <input formControlName="Phone" name="Phone"
-                   type="email"
+                   type="tel"
                    value="" placeholder="Phone number">
           </div>
           <div class="form-field">
@@ -79,6 +79,13 @@
               <mat-option value="・Tue. & Thu.">・Tue. & Thu.</mat-option>
               <mat-option value="・Sat. & Sun.">・Sat. & Sun.</mat-option>
             </mat-select>
+          </div>
+          <div class="form-field">
+            <label> Coupon code</label>
+            <input formControlName="Coupon" name="Coupon"
+                   value="" placeholder="Coupon code"
+            (ngModelChange)="checkCouponDiscount($event)">
+            <label *ngIf="!userFormGroup.get('Coupon').valid" style="color: red">Invalid code</label>
           </div>
           <div *ngIf="pricingValue" class="form-field">
             <div class="form-pricing-field">

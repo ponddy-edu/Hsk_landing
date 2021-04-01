@@ -36,6 +36,7 @@ export class BookingComponent implements OnInit {
   }
 
   async ngOnInit() {
+    // @ts-ignore
     this.userFormGroup = this.formBuilder.group({
       Email: new FormControl('', Validators.required),
       Name: new FormControl('', Validators.required),
@@ -43,6 +44,7 @@ export class BookingComponent implements OnInit {
       Phone: new FormControl(''),
       Age: new FormControl('', Validators.required),
       Days: new FormControl('', Validators.required),
+      Coupon: new FormControl('', this.checkCouponValid)
     });
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
 
@@ -143,6 +145,34 @@ export class BookingComponent implements OnInit {
     this.pricingList.student3 = {price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
     this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original price.svg'
     this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
+  }
 
+
+  checkCouponValid(couponControl: FormControl) {
+    const text = couponControl.value
+    if (text === '' || text === 'PONDDYCI') {
+      return null
+    } else {
+      return {
+        validateEmail: {
+          valid: false
+        }
+      };
+    }
+  }
+
+  checkCouponDiscount($event: any) {
+    if ($event === 'PONDDYCI') {
+      this.pricingList.adult1 = {price: 288, stripeKey: 'price_1IbK3qHRhoOpWeKw0Wf2RReQ'}
+      this.pricingList.adult3 = {price: 320, stripeKey: 'price_1IbK48HRhoOpWeKw4OB0k2kE'}
+      this.pricingList.student1 = {price: 320, stripeKey: 'price_1IbK4PHRhoOpWeKw3R95iE1c'}
+      this.pricingList.student3 = {price: 384, stripeKey: 'price_1IbK4yHRhoOpWeKwCmzv9aGZ'}
+    } else {
+      this.pricingList.adult1 = {price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
+      this.pricingList.adult3 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+      this.pricingList.student1 = {price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'}
+      this.pricingList.student3 = {price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
+    }
+    this.changePricing()
   }
 }
