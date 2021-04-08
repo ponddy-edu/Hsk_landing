@@ -1,29 +1,4 @@
-<section *ngIf="tab===0" class="landing">
-
-  <div class="view w-100">
-    <div class="background">
-      <div class="padding_space"></div>
-      <div class="mask_space">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-11  title">
-              <h1 i18n>Advance your Chinese skills and Get ready for HSK </h1>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 justify-content-center">
-              <div class="iconify_wrap" (click)="smoothScroll()">
-                <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section *ngIf="tab===1" class="landing landing__preparation test_intro">
+<section *ngIf="tab===0" class="landing landing__preparation test_intro">
 <!--  <div class="iconify_wrap" (click)="smoothScroll()">-->
 <!--    <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>-->
 <!--  </div>-->
@@ -51,10 +26,37 @@
   </div>
 </section>
 
-<section *ngIf="tab===2" class="landing test_intro landing__prepare">
+<section *ngIf="tab===1" class="landing test_intro landing__smart">
 <!--  <div class="iconify_wrap" (click)="smoothScroll()">-->
 <!--    <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>-->
 <!--  </div>-->
+  <div class="view w-100">
+    <div class="background">
+      <div class="padding_space"></div>
+      <div class="mask_space">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 title">
+              <h1 i18n> Advance your Chinese skills with Ponddy Smart Learning Widgets</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 justify-content-center">
+              <div class="iconify_wrap" (click)="smoothScroll()">
+                <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section *ngIf="tab===2" class="landing test_intro landing__prepare">
+  <!--  <div class="iconify_wrap" (click)="smoothScroll()">-->
+  <!--    <span class="iconify" data-inline="false" data-icon="bi:arrow-down-circle"></span>-->
+  <!--  </div>-->
   <div class="view w-100">
     <div class="background">
       <div class="padding_space"></div>
