@@ -27,7 +27,7 @@ export class ResourcesComponent implements OnInit, OnDestroy {
       if (tabIndex < 2) {
         this.setTab(tabIndex)
       } else if (tabIndex === 2) {
-        this.setDownloadRe(true)
+        this.setTab(tabIndex)
       }
     });
   }

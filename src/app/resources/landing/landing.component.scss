@@ -61,6 +61,9 @@
       height: 67%;
       width: 100%;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+      .title{
+        max-width: 824px;
+      }
     }
   }
   .container {
@@ -94,12 +97,12 @@
   }
 }
 
-.landing__smart {
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/index_pic_web.png");
+.landing__prepare {
+  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic.png");
   background-size: cover;
   @media (max-width: 991.98px) {
     height: calc(70vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/index_pic_phone.png");
+    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
