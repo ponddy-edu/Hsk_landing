@@ -97,13 +97,25 @@
                    (ngModelChange)="checkCouponDiscount($event)">
             <label *ngIf="!userFormGroup.get('Coupon')?.valid" style="color: red">Invalid code</label>
           </div>
-          <div *ngIf="pricingValue" class="form-field">
+          <div *ngIf="currentPriceMap?.price && currentPriceMap?.originPrice!==currentPriceMap?.price" class="form-field">
             <div class="form-pricing-field">
-              <label>Special price</label>
-              <p class="pricing_number"> ${{pricingValue}}</p>
+              <label>Discount:</label>
+
+              <p class="pricing_number">
+                <span>${{currentPriceMap.originPrice}} </span>🡲
+                ${{currentPriceMap.price}}
+              </p>
             </div>
           </div>
+          <div *ngIf="currentPriceMap?.price && currentPriceMap?.originPrice==currentPriceMap?.price" class="form-field">
+            <div class="form-pricing-field">
+              <label>Special price</label>
 
+              <p class="pricing_number">
+                ${{currentPriceMap.price}}
+              </p>
+            </div>
+          </div>
           <div class="btn_wrap">
             <button class="btn_focus-primary" (click)="payment()" [disabled]="userFormGroup.invalid">
               Submit
