@@ -1,0 +1,65 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hsk.ponddy.com/home</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/ponddy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/courses</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/tests/chinese</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/tests/instructions/1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/resources/preparation</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/resources/smart</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/resources/download</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hsk.ponddy.com/faq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+</urlset>
