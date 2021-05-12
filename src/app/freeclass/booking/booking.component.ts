@@ -155,7 +155,8 @@ export class BookingComponent implements OnInit {
 
   checkCouponValid(couponControl: FormControl) {
     const text = couponControl.value
-    if (text === '' || btoa(text.toLowerCase()) === 'OC9zZXNzaW9u' || btoa(text.toLowerCase()) === 'MTAvc2Vzc2lvbg==') {
+      // || btoa(text.toLowerCase()) === 'OC9zZXNzaW9u' || btoa(text.toLowerCase()) === 'MTAvc2Vzc2lvbg=='
+    if (text === '') {
       return null
     } else {
       return {
@@ -167,46 +168,49 @@ export class BookingComponent implements OnInit {
   }
 
   checkCouponDiscount($event: any) {
-    if (btoa($event.toLowerCase()) === 'OC9zZXNzaW9u') {
-      this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1IbK3qHRhoOpWeKw0Wf2RReQ'}
-      this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1IbK48HRhoOpWeKw4OB0k2kE'}
-      this.pricingList.student1 = {
-        ...this.pricingList.student1,
-        price: 320,
-        stripeKey: 'price_1IbK4PHRhoOpWeKw3R95iE1c'
-      }
-      this.pricingList.student3 = {
-        ...this.pricingList.student3,
-        price: 384,
-        stripeKey: 'price_1IbK4yHRhoOpWeKwCmzv9aGZ'
-      }
-    } else if (btoa($event.toLowerCase()) === 'MTAvc2Vzc2lvbg==') {
-      this.pricingList.adult1 = {...this.pricingList.adult1, price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
-      this.pricingList.student1 = {
-        ...this.pricingList.student1,
-        price: 400,
-        stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'
-      }
-      this.pricingList.adult3 = {...this.pricingList.adult3, price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
-      this.pricingList.student3 = {
-        ...this.pricingList.student3,
-        price: 480,
-        stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'
-      }
-    } else {
-      this.pricingList.adult1 = {...this.pricingList.adult1, price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
-      this.pricingList.adult3 = {...this.pricingList.adult3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
-      this.pricingList.student1 = {
-        ...this.pricingList.student1,
-        price: 480,
-        stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'
-      }
-      this.pricingList.student3 = {
-        ...this.pricingList.student3,
-        price: 576,
-        stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'
-      }
+
+    this.pricingList.adult1 = {...this.pricingList.adult1, price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
+    this.pricingList.adult3 = {...this.pricingList.adult3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+    this.pricingList.student1 = {
+      ...this.pricingList.student1,
+      price: 480,
+      stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'
     }
+    this.pricingList.student3 = {
+      ...this.pricingList.student3,
+      price: 576,
+      stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'
+    }
+
+    // if (btoa($event.toLowerCase()) === 'OC9zZXNzaW9u') {
+    //   this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1IbK3qHRhoOpWeKw0Wf2RReQ'}
+    //   this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1IbK48HRhoOpWeKw4OB0k2kE'}
+    //   this.pricingList.student1 = {
+    //     ...this.pricingList.student1,
+    //     price: 320,
+    //     stripeKey: 'price_1IbK4PHRhoOpWeKw3R95iE1c'
+    //   }
+    //   this.pricingList.student3 = {
+    //     ...this.pricingList.student3,
+    //     price: 384,
+    //     stripeKey: 'price_1IbK4yHRhoOpWeKwCmzv9aGZ'
+    //   }
+    // } else if (btoa($event.toLowerCase()) === 'MTAvc2Vzc2lvbg==') {
+    //   this.pricingList.adult1 = {...this.pricingList.adult1, price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
+    //   this.pricingList.student1 = {
+    //     ...this.pricingList.student1,
+    //     price: 400,
+    //     stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'
+    //   }
+    //   this.pricingList.adult3 = {...this.pricingList.adult3, price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
+    //   this.pricingList.student3 = {
+    //     ...this.pricingList.student3,
+    //     price: 480,
+    //     stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'
+    //   }
+    // } else {
+    //
+    // }
     // if ($event === 'PONDDYCI') {
     //   this.pricingList.adult1 = {price: 288, stripeKey: 'price_1IbK3qHRhoOpWeKw0Wf2RReQ'}
     //   this.pricingList.adult3 = {price: 320, stripeKey: 'price_1IbK48HRhoOpWeKw4OB0k2kE'}
