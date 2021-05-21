@@ -8,7 +8,7 @@
       </div>
       <carousel *ngIf="mobile" #course_carousel [freeScroll]="true"  [height]="260" [cellWidth]="260" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
-          <div class="square green_bg" routerLink="/resources/course">
+          <div class="square green_bg" routerLink="/courses">
             <div>
               <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Course.svg">
               <h2>HSK Course</h2>
@@ -28,7 +28,7 @@
           </div>
         </div>
       </carousel>
-      <div *ngIf="!mobile" class="col-md-3 square green_bg" routerLink="/resources/course">
+      <div *ngIf="!mobile" class="col-md-3 square green_bg" routerLink="/courses">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Course.svg">
           <h2>HSK Course</h2>
