@@ -6,6 +6,19 @@
   @media (max-width: 1024px) {
     height: auto;
   }
+  .learn_more {
+    display: flex;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+    align-items: center;
+    .orange_text {
+      color: #F3A024;
+    }
+  }
   h1 {
     font-style: normal;
     font-weight: bold;

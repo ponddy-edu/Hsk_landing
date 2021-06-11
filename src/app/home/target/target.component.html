@@ -2,11 +2,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-12 main_img_wrap">
-        <img class="main_img"
-             [lazyLoad]="picStudySmart"
-             [useSrcset]="true" >
+        <img class="main_img" *ngIf="device.isBrowser" [lazyLoad]="picStudySmart" [useSrcset]="true">
+        <img class="main_img" *ngIf="!device.isBrowser" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_StudySmart.png">
       </div>
-      <carousel *ngIf="mobile" #course_carousel [freeScroll]="true"  [height]="260" [cellWidth]="260" [dots]="false" [arrows]="false">
+      <carousel *ngIf="mobile && device.isBrowser" #course_carousel [freeScroll]="true"  [height]="260" [cellWidth]="260" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
           <div class="square green_bg" routerLink="/courses">
             <div>
@@ -44,6 +43,9 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg">
       </div>
+    </div>
+    <div class="col-md-6 col-12 main_img_wrap" *ngIf="!device.isBrowser">
+      <img class="main_img" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_PracticeWithEase.png">
     </div>
     <div class="row mobile-column-reverse">
       <div *ngIf="!mobile" class="col-md-3 square orange_bg" routerLink="/resources/download">
@@ -84,13 +86,14 @@
           </div>
         </div>
       </carousel>
-      <div class="col-md-6 col-12 main_img_wrap">
+      <div class="col-md-6 col-12 main_img_wrap" *ngIf="device.isBrowser">
         <img class="main_img" [useSrcset]="true" [lazyLoad]="picPractice">
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 col-12 main_img_wrap">
-        <img class="main_img" [useSrcset]="true" [lazyLoad]="picTest">
+        <img class="main_img" *ngIf="device.isBrowser" [useSrcset]="true" [lazyLoad]="picTest">
+        <img class="main_img" *ngIf="!device.isBrowser" src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_TestYourAbility.png">
       </div>
       <carousel *ngIf="mobile" [freeScroll]="true" #course_carousel  [height]="260" [cellWidth]="260" [dots]="false" [arrows]="false">
         <div class="carousel-cell">
