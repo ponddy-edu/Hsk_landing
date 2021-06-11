@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {CarouselComponent} from 'angular-responsive-carousel';
 import {SheetService} from '../../utils/sheet.service';
+import {DeviceService} from "../../utils/device.service";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import {SheetService} from '../../utils/sheet.service';
 export class HomeComponent implements OnInit {
 
 
-  constructor(public sheetService: SheetService) {
+  constructor(public device: DeviceService,) {
   }
 
   ngOnInit(): void {
