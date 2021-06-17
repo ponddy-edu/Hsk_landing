@@ -36,6 +36,7 @@
         "express": "^4.15.2",
         "google-spreadsheet": "^3.1.15",
         "googleapis": "^67.1.1",
+        "localstorage-polyfill": "^1.0.1",
         "ng-lazyload-image": "^9.1.0",
         "ng-recaptcha": "^7.0.1",
         "ngx-page-scroll": "^7.0.3",
