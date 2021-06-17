@@ -199,11 +199,11 @@
     </div>
   </nav>
 
-  <nav *ngIf="!device.isBrowser">
+  <nav *ngIf="!device.isBrowser" style="height: 0px;">
     <div class="container">
       <a href="/" class="home-link ponddy-logo"> </a>
       <div class="collapse navbar-collapse">
-        <ul *ngIf="(deviceService.$mobile |async)" class="pd-nav-item navbar-nav mr-auto text-center" style="display:flex;flex-direction: row;padding: 0;margin: 0;width: 100%">
+        <ul *ngIf="!(deviceService.$mobile |async)" class="pd-nav-item navbar-nav mr-auto text-center" style="display:flex;flex-direction: row;padding: 0;margin: 0;width: 100%">
 
           <li class="nav-item nav-border-l nav-border-r" style="display: inline;">
             <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'" class="text_menu" data="navbar">
@@ -227,14 +227,6 @@
               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Tests
             </a>
-            <ul class="menu_wrap" style="flex-direction:column;">
-              <li class="pd-menu-item" style="display: inline;">
-                <a routerLink="/tests/chinese">Chinese Tests</a>
-              </li>
-              <li class="pd-menu-item" style="display: inline;">
-                <a routerLink="/tests/instructions/1">Test Instructions</a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item nav-border-r " style="display: inline;">
             <a i18n="header" routerLink="/resources/preparation" [class.active]="actvieMenu==='resources'"class="nav-a text_menu"
