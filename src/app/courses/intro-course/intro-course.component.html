@@ -4,7 +4,9 @@
       <div class="col-12 col-md-6 text-center">
         <h1>Ponddy Online HSK Courses</h1>
         <p class="title-explain">
-          Ponddy Online HSK Courses is perfect for all students who aim to take HSK tests. Our experienced teachers use AI-powered learning platform and tools to supplement so that you can master everything you need to tackle the desired HSK level faster and easier.
+          Ponddy Online HSK Courses is perfect for all students who aim to take HSK tests. Our experienced teachers use
+          AI-powered learning platform and tools to supplement so that you can master everything you need to tackle the
+          desired HSK level faster and easier.
           Check out course descriptions and details below for the course that suits your need!
         </p>
       </div>
@@ -21,7 +23,8 @@
           <div>
             <div>
               <div class="title">Description</div>
-              <div class="text">Students will learn basic Mandarin Chinese skills through simple conversations. Students are expected to achieve HSK 1&2 equivalent proficiency level after completing this course.</div>
+              <div class="text">Students will learn basic Mandarin Chinese skills through simple conversations. Students
+                are expected to achieve HSK 1&2 equivalent proficiency level after completing this course.</div>
             </div>
             <hr>
             <div>
@@ -35,17 +38,125 @@
             </div>
           </div>
         </div>
-        <div class="learn_more orange_text mobile">
-          <p i18n>Sign Up</p>
+        <div class="learn_more orange_text mobile" style="padding-bottom: 24px;">
+          <span i18n>Sign Up</span>
           <img src="/assets/image/icon/btn_orange_normal.svg">
         </div>
-        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK12.mobile:table_HSK12.web">
+        <div class="table_display" *ngIf="!(device.$mobile |async)">
+          <table class="table">
+            <th class="table__th ponddy_base" colspan="6">
+              <div class="th_annotation">Course Details - HSK 1&2</div>
+              <div class="th_title">Group Class</div>
+            </th>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Details</td>
+              <td class="td_description td_border_top td_border_right" colspan="3">1-on-4 cost-effective option with
+                pre-designed material and fixed course schedule for optimal HSK preparation result</td>
+              <td class="td_title td_border_top td_border_right">Sessions</td>
+              <td class="td_description td_border_top">$12 per session for each learner (session price same for all
+                levels and ages)</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Format</td>
+              <td class="td_description td_border_top td_border_right">Group Class</td>
+              <td class="td_title td_border_top td_border_right">Class Size</td>
+              <td class="td_description td_border_top td_border_right">1-on-4</td>
+              <td class="td_title td_border_top td_border_right">Session Length</td>
+              <td class="td_description td_border_top">50 mins/session</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Price</td>
+              <td class="td_description td_border_top" colspan="5">
+                <div>
+                  <span class="text_orange">$432</span>
+                  <span class="text_gray">(36 sessions)</span>
+                  <span class="text_ponddy">HSK for Student (Age 18+)</span>
+                </div>
+                <div>
+                  <span class="text_orange">$480</span>
+                  <span class="text_gray">(40 sessions)</span>
+                  <span class="text_ponddy">HSK for Student (Age 12-18)</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Schedule</td>
+              <td class="td_description td_border_top" colspan="5">
+                <div class="text_ponddy">Next Available Course</div>
+                <div>· Week of July 12, 2021</div>
+                <div>· Week of July 26, 2021</div>
+                <div class="text_ponddy">Available schedule:</div>
+                <div>· Monday & Wednesday</div>
+                <div>· Tuesday & Thursday</div>
+                <div>PDT: 6pm / EDT: 9pm / Beijing Time: 9am +1day</div>
+                <div style="color: #969ca0;">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth:
+                  8am + 1day)</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="table_display" *ngIf="(device.$mobile |async)">
+          <table class="table">
+            <th class="table__th ponddy_base" colspan="6">
+              <div class="th_annotation">Course Details - HSK 1&2</div>
+              <div class="th_title">Group Class</div>
+            </th>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Details</td>
+              <td class="td_description td_border_top">1-on-4 cost-effective option with
+                pre-designed material and fixed course schedule for optimal HSK preparation result</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Sessions</td>
+              <td class="td_description td_border_top">$12 per session for each learner (session price same for all
+                levels and ages)</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Session Length</td>
+              <td class="td_description td_border_top">50 mins/session</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Format</td>
+              <td class="td_description td_border_top">Group Class</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Group Class</td>
+              <td class="td_description td_border_top">1-on-4</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">price</td>
+              <td class="td_description td_border_top">
+                <span class="text_orange">$432</span>
+                <span class="text_gray">(36 sessions)</span>
+                <div class="text_ponddy">HSK for Student (Age 18+)</div>
+                <span class="text_orange">$480</span>
+                <span class="text_gray">(40 sessions)</span>
+                <div class="text_ponddy">HSK for Student (Age 12-18)</div>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Schedule</td>
+              <td class="td_description td_border_top">
+                <div class="text_ponddy">Next Available Course</div>
+                <div>· Week of July 12, 2021</div>
+                <div>· Week of July 26, 2021</div>
+                <div class="text_ponddy">Available schedule:</div>
+                <div>· Monday & Wednesday</div>
+                <div>· Tuesday & Thursday</div>
+                <div>PDT: 6pm / EDT: 9pm / Beijing Time: 9am +1day</div>
+                <div style="color: #969ca0;">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth:
+                  8am + 1day)</div>
+              </td>
+            </tr>
+          </table>
+        </div>
         <p>For quality assurance, NO make-up classes for Group Class.</p>
         <a i18n class="btn_general-primary text_btn" href="https://s.ponddy.com/freeclass2021q1a" target="_blank">
           Group Class Sign Up
         </a>
         <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK12.mobileBottom:table_HSK12.webBottom">
-        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class
+          Sign Up</a>
 
       </div>
 
@@ -56,7 +167,9 @@
             <div>
               <div class="title">Description</div>
               <div class="text">
-                Students will master more Mandarin Chinese expressions on multiple topics and situations to fulfill basic social and work communication needs. Students are expected to achieve HSK 3 equivalent proficiency level after completing this course.
+                Students will master more Mandarin Chinese expressions on multiple topics and situations to fulfill
+                basic social and work communication needs. Students are expected to achieve HSK 3 equivalent proficiency
+                level after completing this course.
               </div>
             </div>
             <hr>
@@ -64,24 +177,135 @@
               <div class="title">Can-do</div>
               <div class="text">
                 <ul>
-                  <li>Interact with others to complete basic tasks related to day-to-day activities, study, and work.</li>
+                  <li>Interact with others to complete basic tasks related to day-to-day activities, study, and work.
+                  </li>
                   <li>Present personal information, preference, and opinion on familiar and topics.</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="learn_more orange_text mobile">
-          <p i18n>Sign Up</p>
+        <div class="learn_more orange_text mobile" style="padding-bottom: 24px;">
+          <span i18n>Sign Up</span>
           <img src="/assets/image/icon/btn_orange_normal.svg">
         </div>
-        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK3.mobile:table_HSK3.web">
+        <div class="table_display" *ngIf="!(device.$mobile |async)">
+          <table class="table">
+            <th class="table__th ponddy_base" colspan="6">
+              <div class="th_annotation">Course Details - HSK 3</div>
+              <div class="th_title">Group Class</div>
+            </th>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Details</td>
+              <td class="td_description td_border_top td_border_right" colspan="3">1-on-4 cost-effective option with
+                pre-designed material and fixed course schedule for optimal HSK preparation result</td>
+              <td class="td_title td_border_top td_border_right">Sessions</td>
+              <td class="td_description td_border_top">$12 per session for each learner (session price same for all
+                levels and ages)</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Format</td>
+              <td class="td_description td_border_top td_border_right">Group Class</td>
+              <td class="td_title td_border_top td_border_right">Class Size</td>
+              <td class="td_description td_border_top td_border_right">1-on-4</td>
+              <td class="td_title td_border_top td_border_right">Session Length</td>
+              <td class="td_description td_border_top">50 mins/session</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Price</td>
+              <td class="td_description td_border_top" colspan="5">
+                <div>
+                  <span class="text_orange">$432</span>
+                  <span class="text_gray">(36 sessions)</span>
+                  <span class="text_ponddy">HSK for Student (Age 18+)</span>
+                </div>
+                <div>
+                  <span class="text_orange">$480</span>
+                  <span class="text_gray">(40 sessions)</span>
+                  <span class="text_ponddy">HSK for Student (Age 12-18)</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Schedule</td>
+              <td class="td_description td_border_top" colspan="5">
+                <div class="text_ponddy">Next Available Course</div>
+                <div>· Week of July 12, 2021</div>
+                <div>· Week of July 26, 2021</div>
+                <div class="text_ponddy">Available schedule:</div>
+                <div>· Monday & Wednesday</div>
+                <div>· Tuesday & Thursday</div>
+                <div>PDT: 6pm / EDT: 9pm / Beijing Time: 9am +1day</div>
+                <div class="text_gray" style="color: #969ca0;">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth:
+                  8am + 1day)</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="table_display" *ngIf="(device.$mobile |async)">
+          <table class="table">
+            <th class="table__th ponddy_base" colspan="6">
+              <div class="th_annotation">Course Details - HSK 3</div>
+              <div class="th_title">Group Class</div>
+            </th>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Details</td>
+              <td class="td_description td_border_top">1-on-4 cost-effective option with
+                pre-designed material and fixed course schedule for optimal HSK preparation result</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Sessions</td>
+              <td class="td_description td_border_top">$12 per session for each learner (session price same for all
+                levels and ages)</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Session Length</td>
+              <td class="td_description td_border_top">50 mins/session</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Format</td>
+              <td class="td_description td_border_top">Group Class</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Group Class</td>
+              <td class="td_description td_border_top">1-on-4</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">price</td>
+              <td class="td_description td_border_top">
+                <span class="text_orange">$432</span>
+                <span class="text_gray">(36 sessions)</span>
+                <div class="text_ponddy">HSK for Student (Age 18+)</div>
+                <span class="text_orange">$480</span>
+                <span class="text_gray">(40 sessions)</span>
+                <div class="text_ponddy">HSK for Student (Age 12-18)</div>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Schedule</td>
+              <td class="td_description td_border_top">
+                <div class="text_ponddy">Next Available Course</div>
+                <div>· Week of July 12, 2021</div>
+                <div>· Week of July 26, 2021</div>
+                <div class="text_ponddy">Available schedule:</div>
+                <div>· Monday & Wednesday</div>
+                <div>· Tuesday & Thursday</div>
+                <div>PDT: 6pm / EDT: 9pm / Beijing Time: 9am +1day</div>
+                <div style="color: #969ca0;">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth:
+                  8am + 1day)</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
         <p>For quality assurance, NO make-up classes for Group Class.</p>
         <a i18n class="btn_general-primary text_btn" href="https://s.ponddy.com/freeclass2021q1a" target="_blank">
           Group Class Sign Up
         </a>
         <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK3.mobileBottom:table_HSK3.webBottom">
-        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class
+          Sign Up</a>
 
       </div>
 
@@ -92,7 +316,9 @@
             <div>
               <div class="title">Description</div>
               <div class="text">
-                Students will be able to explore broader topics and use Mandarin Chinese more smoothly in real life and communicate fluently with native speakers. Students are expected to achieve HSK 4 equivalent proficiency level after completing this course.
+                Students will be able to explore broader topics and use Mandarin Chinese more smoothly in real life and
+                communicate fluently with native speakers. Students are expected to achieve HSK 4 equivalent proficiency
+                level after completing this course.
               </div>
             </div>
             <hr>
@@ -100,24 +326,137 @@
               <div class="title">Can-do</div>
               <div class="text">
                 <ul>
-                  <li>Use coherent sentences to present facts and elaborate on preferences and opinions on topics including hobbies, plans, and lifestyles. </li>
-                  <li>Engage in simple conversations regarding personal needs, such as looking for help, making reservations, and arranging schedules.</li>
+                  <li>Use coherent sentences to present facts and elaborate on preferences and opinions on topics
+                    including hobbies, plans, and lifestyles. </li>
+                  <li>Engage in simple conversations regarding personal needs, such as looking for help, making
+                    reservations, and arranging schedules.</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="learn_more orange_text mobile">
-          <p i18n>Sign Up</p>
+        <div class="learn_more orange_text mobile" style="padding-bottom: 24px;">
+          <span i18n>Sign Up</span>
           <img src="/assets/image/icon/btn_orange_normal.svg">
         </div>
-        <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4.mobile:table_HSK4.web">
+        <div>
+          <table class="table" *ngIf="!(device.$mobile |async)">
+            <th class="table__th ponddy_base" colspan="6">
+              <div class="th_annotation">Course Details - HSK 4</div>
+              <div class="th_title">Group Class</div>
+            </th>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Details</td>
+              <td class="td_description td_border_top td_border_right" colspan="3">1-on-4 cost-effective option with
+                pre-designed material and fixed course schedule for optimal HSK preparation result</td>
+              <td class="td_title td_border_top td_border_right">Sessions</td>
+              <td class="td_description td_border_top">$12 per session for each learner (session price same for all
+                levels and ages)</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Format</td>
+              <td class="td_description td_border_top td_border_right">Group Class</td>
+              <td class="td_title td_border_top td_border_right">Class Size</td>
+              <td class="td_description td_border_top td_border_right">1-on-4</td>
+              <td class="td_title td_border_top td_border_right">Session Length</td>
+              <td class="td_description td_border_top">50 mins/session</td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Price</td>
+              <td class="td_description td_border_top">
+                <div>
+                  <span class="text_orange">$576</span>
+                  <span class="text_gray">(48 sessions)</span>
+                  <span class="text_ponddy">HSK for Student (Age 18+)</span>
+                </div>
+                <div>
+                  <span class="text_orange">$1152</span>
+                  <span class="text_gray">(96 sessions)</span>
+                  <span class="text_ponddy">HSK for Student (Age 12-18)</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="td_title td_border_top td_border_right">Schedule</td>
+              <td class="td_description td_border_top">
+                <div class="text_ponddy">Next Available Course</div>
+                <div>· Week of July 12, 2021</div>
+                <div>· Week of July 26, 2021</div>
+                <div class="text_ponddy">Available schedule:</div>
+                <div>· Monday & Wednesday</div>
+                <div>· Tuesday & Thursday</div>
+                <div>PDT: 6pm / EDT: 9pm / Beijing Time: 9am +1day</div>
+                <div style="color: #969ca0;">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth:
+                  8am + 1day)</div>
+              </td>
+            </tr>
+          </table>
+
+          <div class="table_display" *ngIf="(device.$mobile |async)">
+            <table class="table">
+              <th class="table__th ponddy_base" colspan="6">
+                <div class="th_annotation">Course Details - HSK 4</div>
+                <div class="th_title">Group Class</div>
+              </th>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">Details</td>
+                <td class="td_description td_border_top">1-on-4 cost-effective option with
+                  pre-designed material and fixed course schedule for optimal HSK preparation result</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">Sessions</td>
+                <td class="td_description td_border_top">$12 per session for each learner (session price same for all
+                  levels and ages)</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">Session Length</td>
+                <td class="td_description td_border_top">50 mins/session</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">Format</td>
+                <td class="td_description td_border_top">Group Class</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">Group Class</td>
+                <td class="td_description td_border_top">1-on-4</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">price</td>
+                <td class="td_description td_border_top">
+                  <div>
+                    <span class="text_orange">$576</span>
+                    <span class="text_gray">(48 sessions)</span>
+                    <div class="text_ponddy">HSK for Student (Age 18+)</div>
+                    <span class="text_orange">$1152</span>
+                    <span class="text_gray">(96 sessions)</span>
+                    <div class="text_ponddy">HSK for Student (Age 12-18)</div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <td class="td_title td_border_top td_border_right">Schedule</td>
+                <td class="td_description td_border_top">
+                  <div class="text_ponddy">Next Available Course</div>
+                  <div>· Week of July 12, 2021</div>
+                  <div>· Week of July 26, 2021</div>
+                  <div class="text_ponddy">Available schedule:</div>
+                  <div>· Monday & Wednesday</div>
+                  <div>· Tuesday & Thursday</div>
+                  <div>PDT: 6pm / EDT: 9pm / Beijing Time: 9am +1day</div>
+                  <div style="color: #969ca0;">(Beijing, Manila, Singapore, Kuala Lumpur, Bali, Perth:
+                    8am + 1day)</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
         <p>For quality assurance, NO make-up classes for Group Class.</p>
         <a i18n class="btn_general-primary text_btn" href="https://s.ponddy.com/freeclass2021q1a" target="_blank">
           Group Class Sign Up
         </a>
         <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4.mobileBottom:table_HSK4.webBottom">
-        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+        <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class
+          Sign Up</a>
 
       </div>
 
@@ -127,12 +466,14 @@
           <p>For quality assurance, NO make-up classes for Group Class.</p>
           <div>
             <div class="text">
-              As the official partner of HSK, Ponddy guarantees that all our courses are updated with any test and leveling changes of HSK. Stay tuned for more courses!
+              As the official partner of HSK, Ponddy guarantees that all our courses are updated with any test and
+              leveling changes of HSK. Stay tuned for more courses!
             </div>
             <div class="free-trial-button">
               Get a free trial class now.
             </div>
-            <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom Class Sign Up</a>
+            <a i18n class="btn_focus-primary text_btn" href="http://s.ponddy.com/hskassessment" target="_blank">Custom
+              Class Sign Up</a>
           </div>
         </div>
         <img class="col-12 tab-img" [lazyLoad]="(device.$mobile |async)?table_HSK4plus.mobile:table_HSK4plus.web">
@@ -175,7 +516,8 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="text">
-              All classes will be lived online with Ponddy instructors. Teachers will conduct the class via Zoom and incorporate Ponddy's online interactive learning materials.
+              All classes will be lived online with Ponddy instructors. Teachers will conduct the class via Zoom and
+              incorporate Ponddy's online interactive learning materials.
             </div>
           </mat-expansion-panel>
 
@@ -188,7 +530,8 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="text">
-              We use HSK-aligned learning material available on Ponddy's AI platforms. No additional textbook purchase is needed.
+              We use HSK-aligned learning material available on Ponddy's AI platforms. No additional textbook purchase
+              is needed.
             </div>
           </mat-expansion-panel>
 
@@ -201,7 +544,8 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="text">
-              Yes. Students will be guided to use the AI platform, Ponddy Reader, to complete and submit homework. The platform contains learning tools such as exercises and readings.
+              Yes. Students will be guided to use the AI platform, Ponddy Reader, to complete and submit homework. The
+              platform contains learning tools such as exercises and readings.
             </div>
           </mat-expansion-panel>
 
@@ -214,7 +558,8 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="text">
-              Our goal is to help you excel in your learning goal and gain the skills needed to tackle HSK, after purchasing the course, you can still apply for a full refund within the first 2 sessions.
+              Our goal is to help you excel in your learning goal and gain the skills needed to tackle HSK, after
+              purchasing the course, you can still apply for a full refund within the first 2 sessions.
             </div>
           </mat-expansion-panel>
         </mat-accordion>
