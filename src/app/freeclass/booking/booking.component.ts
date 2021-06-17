@@ -19,8 +19,10 @@ export class BookingComponent implements OnInit {
   pricingList = {
     adult1: {price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T', originPrice: 432},
     adult3: {price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg', originPrice: 480},
+    adult4: {price: 576, stripeKey: '', originPrice: 576},
     student1: {price: 320, stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh', originPrice: 480},
-    student3: {price: 384, stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj', originPrice: 576}
+    student3: {price: 384, stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj', originPrice: 576},
+    student4: {price: 1152, stripeKey: '', originPrice: 1152}
   }
 
   infoTableList = {
@@ -30,6 +32,7 @@ export class BookingComponent implements OnInit {
   // info provided by Emily 3/11 at slack
   dateHsk12end = '2021-03-12T11:00:00+08:00'
   dateHsk3end = '2021-03-13T11:00:00+08:00'
+  dateHsk4end = '2021-03-13T11:00:00+08:00'
   dateDiscountEnd = '2021-03-18T11:00:00+08:00'
 
   constructor(private formBuilder: FormBuilder,
@@ -88,10 +91,14 @@ export class BookingComponent implements OnInit {
       stripePricing = this.pricingList.adult1.stripeKey
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Adult') {
       stripePricing = this.pricingList.adult3.stripeKey
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 4' && this.userFormGroup.get('Age')?.value === 'Adult') {
+      stripePricing = this.pricingList.adult4.stripeKey
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 1 & 2' && this.userFormGroup.get('Age')?.value === 'Student') {
       stripePricing = this.pricingList.student1.stripeKey
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
       stripePricing = this.pricingList.student3.stripeKey
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 4' && this.userFormGroup.get('Age')?.value === 'Student') {
+      stripePricing = this.pricingList.student4.stripeKey
     }
     return stripePricing
   }
@@ -109,11 +116,18 @@ export class BookingComponent implements OnInit {
     } else if (this.userFormGroup.get('Level')?.value === 'HSK 3' && this.userFormGroup.get('Age')?.value === 'Student') {
       this.currentPriceMap = this.pricingList.student3
       this.pricingValue = this.pricingList.student3.price
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 4' && this.userFormGroup.get('Age')?.value === 'Adult') {
+      this.currentPriceMap = this.pricingList.adult4
+      this.pricingValue = this.pricingList.adult4.price
+    } else if (this.userFormGroup.get('Level')?.value === 'HSK 4' && this.userFormGroup.get('Age')?.value === 'Student') {
+      this.currentPriceMap = this.pricingList.student4
+      this.pricingValue = this.pricingList.student4.price
     }
   }
 
   checkNowPricing() {
     const endDiscountDay = new Date(this.dateDiscountEnd).getTime()
+    const endHsk4DiscountDay = new Date(this.dateHsk4end).getTime()
     const endHsk3DiscountDay = new Date(this.dateHsk3end).getTime()
     const endHsk1DiscountDay = new Date(this.dateHsk12end).getTime()
     // const now = new Date('2021-03-12T12:00:00+08:00').getTime();
@@ -121,6 +135,8 @@ export class BookingComponent implements OnInit {
 
     if (endDiscountDay - now < 0) {
       this.endYellowDiscount()
+    } else if (endHsk4DiscountDay - now < 0) {
+      this.endHsk4RedDiscount()
     } else if (endHsk3DiscountDay - now < 0) {
       this.endHsk3RedDiscount()
     } else if (endHsk1DiscountDay - now < 0) {
@@ -143,11 +159,25 @@ export class BookingComponent implements OnInit {
     this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
   }
 
+  endHsk4RedDiscount() {
+    this.pricingList.adult1 = {...this.pricingList.adult1, price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
+    this.pricingList.student1 = {...this.pricingList.student1, price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwfazVauP8'}
+    this.pricingList.adult3 = {...this.pricingList.adult3, price: 400, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
+    this.pricingList.student3 = {...this.pricingList.student3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'}
+    this.pricingList.adult4 = {...this.pricingList.adult4, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwftZrdlCZ'}
+    this.pricingList.student4 = {...this.pricingList.student4, price: 1152, stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'}
+    this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original price.svg'
+    this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
+    // this.infoTableList.hsk4 = '/assets/image/freeclass/HSK 4_original price.svg'
+  }
+
   endYellowDiscount() {
     this.pricingList.adult1 = {...this.pricingList.adult1, price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
     this.pricingList.adult3 = {...this.pricingList.adult3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+    this.pricingList.adult4 = {...this.pricingList.adult4, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
     this.pricingList.student1 = {...this.pricingList.student1, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'}
     this.pricingList.student3 = {...this.pricingList.student3, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
+    this.pricingList.student4 = {...this.pricingList.student4, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
     this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original price.svg'
     this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
   }
@@ -170,6 +200,7 @@ export class BookingComponent implements OnInit {
 
     this.pricingList.adult1 = {...this.pricingList.adult1, price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
     this.pricingList.adult3 = {...this.pricingList.adult3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+    this.pricingList.adult4 = {...this.pricingList.adult4, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
     this.pricingList.student1 = {
       ...this.pricingList.student1,
       price: 480,
@@ -179,6 +210,11 @@ export class BookingComponent implements OnInit {
       ...this.pricingList.student3,
       price: 576,
       stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'
+    }
+    this.pricingList.student4 = {
+      ...this.pricingList.student4,
+      price: 1152,
+      stripeKey: ''
     }
 
     // if ($event === 'PONDDYCI') {
