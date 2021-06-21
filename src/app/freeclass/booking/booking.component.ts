@@ -174,10 +174,10 @@ export class BookingComponent implements OnInit {
   endYellowDiscount() {
     this.pricingList.adult1 = {...this.pricingList.adult1, price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
     this.pricingList.adult3 = {...this.pricingList.adult3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
-    this.pricingList.adult4 = {...this.pricingList.adult4, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+    this.pricingList.adult4 = {...this.pricingList.adult4, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
     this.pricingList.student1 = {...this.pricingList.student1, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKw4hxuhBji'}
     this.pricingList.student3 = {...this.pricingList.student3, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
-    this.pricingList.student4 = {...this.pricingList.student4, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
+    this.pricingList.student4 = {...this.pricingList.student4, price: 1152, stripeKey: 'price_1ITNQdHRhoOpWeKwNQB8WlB1'}
     this.infoTableList.hsk1 = '/assets/image/freeclass/HSK 1&2_original price.svg'
     this.infoTableList.hsk3 = '/assets/image/freeclass/HSK 3_original price.svg'
   }
