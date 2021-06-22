@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
   expansionComponent: MatExpansionPanel
 
 
-  constructor(public deviceService: DeviceService,
+  constructor(public device: DeviceService,public deviceService: DeviceService,
               private ren: Renderer2,
               public dialog: MatDialog,
               public authService: AuthService) {

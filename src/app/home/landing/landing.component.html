@@ -135,14 +135,16 @@
 
   <div *ngIf="!device.isBrowser">
     <div class="view w-100">
-      <img class="d-block " [src]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_01.png'" alt="First slide">
-      <div class="mask waves-light" mdbWavesEffect></div>
+      <img class="d-block " style="width: 100%;" [src]="'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_01.png'" alt="First slide">
+      <div class="background">
+        <div style="width: 100%;height: 100%;position: absolute;top: 0;z-index: 1000;background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);"></div>
+      </div>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-11 col-md-9">
+          <div class="col-11 col-md-9" style="position: absolute;z-index: 1000;top: 10%;left: 10%;">
             <h1 i18n>Ponddy® HSK Smart Learning to Tackle the Chinese Proficiency Test</h1>
             <div class="learn_more orange_text">
-              <p i18n>Learn more</p>
+              <p i18n style="color:#F3A024">Learn more</p>
               <img src="/assets/image/icon/btn_orange_hover.svg">
             </div>
           </div>
@@ -156,13 +158,20 @@
   <div class="view w-100">
     <div class="">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style="display:flex;justify-content: center !important;">
           <div class="col-12 col-md-6 col-sm-10  text-center">
             <h1 i18n>Ponddy Online HSK Chinese Courses</h1>
             <div class="date_counter_wrap">
 <!--              <span>Limited time offer</span>-->
 <!--              <app-date-counter [countDownDateString]="'2021-03-18T11:00:00+08:00'"></app-date-counter>-->
-              <a class="btn_focus-primary" routerLink="/freeclass-2021q1a">View More</a>
+              <a class="btn_focus-primary" style="cursor: pointer;
+              display: inline-block;
+              padding: 12px 24px;
+              background: #ffc05c;
+              border-radius: 24px;
+              text-decoration: none;
+              align-items: center;
+              text-align: center;" routerLink="/freeclass-2021q1a">View More</a>
             </div>
           </div>
         </div>
