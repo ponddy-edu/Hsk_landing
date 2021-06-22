@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
@@ -55,16 +55,19 @@ export class StepComponent implements OnInit {
   }
 
   payment() {
+    const orderID = this.userInfoFormGroup.get('Email')?.value + Date.now().toString()
+
     const formData = {
       ...this.userInfoFormGroup.getRawValue(),
       ...this.userInfo2FormGroup.getRawValue(),
       ...{Test_Level: this.chooseTestLevel},
-      ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
+      ...{Booking_Id: orderID}
     }
     this.sheetService.addRow(formData)
       .subscribe(res => {
         this.stripe.redirectToCheckout({
           lineItems: [{price: environment.stripe_product_enroll_test, quantity: 1}],
+          clientReferenceId: orderID,
           customerEmail: this.userInfoFormGroup.get('Email')?.value,
           mode: 'payment',
           successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_product_enroll_test,
