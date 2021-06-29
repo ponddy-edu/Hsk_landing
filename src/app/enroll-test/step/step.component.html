@@ -21,7 +21,7 @@
                 <button [class.active]="chooseTestLevel==4" (click)="chooseTestLevel=4">HSK 4</button>
               </div>
 
-              <div class="btn_wrap">
+              <div class="btn_wrap absolute">
                 <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
                         matStepperNext>
                   Continue

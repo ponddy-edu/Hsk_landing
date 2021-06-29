@@ -254,8 +254,11 @@
     }
 
     .btn_wrap {
-      position: absolute;
-      bottom: 48px;
+      &.absolute{
+        position: absolute;
+        bottom: 48px;
+      }
+
       margin-top: 16px;
       margin-left: auto;
       margin-right: auto;

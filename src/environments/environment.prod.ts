@@ -6,5 +6,5 @@ export const environment = {
   apiUrl: 'auth.ponddy.com/api',
   redirectUri: 'https://reader.ponddy.com/app/',
   stripeKey: 'pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l',
-  stripe_product_enroll_test: 'price_1IQomRHRhoOpWeKwWHN5nFdy'
+  stripe_productId_test: 'price_1IQomRHRhoOpWeKwWHN5nFdy'
 };

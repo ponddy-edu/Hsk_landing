@@ -230,6 +230,7 @@ export class StepComponent implements OnInit {
       value: 'Other˙'
     }
   ]
+
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService) {
   }
 
@@ -237,7 +238,7 @@ export class StepComponent implements OnInit {
     this.userInfoFormGroup = this.formBuilder.group({
       Email: new FormControl('', Validators.required),
       Name: new FormControl('', Validators.required),
-      Chinese_Name: new FormControl('', Validators.required),
+      Chinese_Name: new FormControl(''),
       Nationality: new FormControl('United States'),
       Mother_Tongue: new FormControl('', Validators.required),
     });
@@ -270,13 +271,14 @@ export class StepComponent implements OnInit {
       ...{Test_Level: this.chooseTestLevel},
       ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
     }
+    const productId = this.getStripeProductIdByLevel()
     this.sheetService.addRow(formData)
       .subscribe(res => {
         this.stripe.redirectToCheckout({
-          lineItems: [{price: environment.stripe_product_enroll_test, quantity: 1}],
+          lineItems: [{price: productId, quantity: 1}],
           customerEmail: this.userInfoFormGroup.get('Email')?.value,
           mode: 'payment',
-          successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_product_enroll_test,
+          successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_productId_test,
           cancelUrl: window.location.href,
         })
           .then((result: any) => {
@@ -288,6 +290,16 @@ export class StepComponent implements OnInit {
             }
           });
       })
+  }
+
+  getStripeProductIdByLevel() {
+    if (this.chooseTestLevel === 2) {
+      return environment.stripe_productId_hsk2
+    } else if (this.chooseTestLevel === 4) {
+      return environment.stripe_productId_hsk4
+    } else {
+      return environment.stripe_productId_test
+    }
   }
 
   mockStripePay() {
