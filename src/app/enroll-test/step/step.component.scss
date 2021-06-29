@@ -144,7 +144,6 @@
 
       input {
         padding: 10px 12px;
-        background: #FFFFFF;
         border: 1px solid #D5D7D9;
         box-sizing: border-box;
         border-radius: 4px;
@@ -156,7 +155,9 @@
         &.ng-invalid {
           border: 1px solid #EA4B65;
         }
-
+        &.ng-valid{
+          border: 1px solid #2cc895;
+        }
         &[placeholder] {
           font-size: 20px;
           line-height: 36px;
@@ -171,7 +172,9 @@
         box-sizing: border-box;
         border-radius: 4px;
         min-height: 56px;
-
+        &.ng-valid{
+          border: 1px solid #2cc895;
+        }
         ::ng-deep {
           .mat-select-trigger {
             height: 2.2rem;

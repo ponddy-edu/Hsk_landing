@@ -10,7 +10,7 @@
 
               <div class="form-field test_date_info" style="margin-top: 20px">
                 <label>Test Dates</label>
-                <p >
+                <p>
                   July 23rd at 6 pm Pacific time (9 pm Eastern time)
                 </p>
 
@@ -56,22 +56,17 @@
               </div>
               <div class="form-field">
                 <label>*Nationality</label>
-                <input formControlName="Nationality" name="Nationality" value="">
-                <!--                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">-->
-                <!--                  <mat-option value="option1">Option 1</mat-option>-->
-                <!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
-                <!--                  <mat-option value="option3">Option 3</mat-option>-->
-                <!--                </mat-select>-->
+                <input formControlName="Nationality" name="Nationality"
+                       value="United States" disabled>
               </div>
               <div class="form-field">
                 <label>*Mother tongue</label>
-                <input formControlName="Mother_Tongue" name="Mother_Tongue" value="">
-
-                <!--                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">-->
-                <!--                  <mat-option value="option1">Option 1</mat-option>-->
-                <!--                  <mat-option value="option2">Option 2 (disabled)</mat-option>-->
-                <!--                  <mat-option value="option3">Option 3</mat-option>-->
-                <!--                </mat-select>-->
+                <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">
+                  <mat-option *ngFor="let motherTongue of motherTongueList"
+                              value="{{motherTongue.key}}">
+                    {{motherTongue.value}}
+                  </mat-option>
+                </mat-select>
               </div>
               <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
