@@ -7,28 +7,20 @@
             <form [formGroup]="testInfoFormGroup">
               <ng-template matStepLabel>Step 1</ng-template>
               <h2> Enrollment Form</h2>
-              <div class="test_date">
-                <p>*Please select the level of HSK test </p>
-                <button [class.active]="chooseTestLevel==1" (click)="chooseTestLevel=1">HSK 1</button>
+
+              <div class="form-field test_date_info" style="margin-top: 20px">
+                <label>Test Dates</label>
+                <p >
+                  July 23rd at 6 pm Pacific time (9 pm Eastern time)
+                </p>
+
+              </div>
+              <div class="test_level">
+                <p>*Please select the level you’d like to participate.</p>
                 <button [class.active]="chooseTestLevel==2" (click)="chooseTestLevel=2">HSK 2</button>
-                <button [class.active]="chooseTestLevel==3" (click)="chooseTestLevel=3">HSK 3</button>
                 <button [class.active]="chooseTestLevel==4" (click)="chooseTestLevel=4">HSK 4</button>
-                <button [class.active]="chooseTestLevel==5" (click)="chooseTestLevel=5">HSK 5</button>
-                <button [class.active]="chooseTestLevel==6" (click)="chooseTestLevel=6">HSK 6</button>
               </div>
-              <div class="form-field" style="margin-top: 20px">
-                <label>*Please select the date you’d like to participate.</label>
-                <mat-select placeholder="Please Select" formControlName="Test_Date" name="Test_Date">
-                  <mat-option value="Mar. 17, 2021">Mar. 17, 2021</mat-option>
-                  <mat-option value="Mar. 29, 2021">Mar. 29, 2021</mat-option>
-                  <mat-option value="Mar. 30, 2021">Mar. 30, 2021</mat-option>
-                  <mat-option value="Apr. 1, 2021">Apr. 1, 2021</mat-option>
-                  <mat-option value="Apr. 5, 2021">Apr. 5, 2021</mat-option>
-                  <mat-option value="Apr. 22, 2021">Apr. 22, 2021</mat-option>
 
-                </mat-select>
-
-              </div>
               <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
                         matStepperNext>
