@@ -22,6 +22,17 @@ export class SheetService {
     })
   }
 
+  addAsStripePay(postData: any) {
+    const url = 'https://script.google.com/macros/s/AKfycbyNzwQSV2agh1uHyrlmMSEQhZxtZ61EfnNEFDJlvBg-R5nmSO4/exec'
+    return this.http.post(url, postData, {
+      headers:
+        {
+          'Content-Type': 'text/plain;charset=utf-8'
+        }
+    })
+
+  }
+
   addRowAWSWay(postData: any) {
     const url = 'https://hssyzjzatf.execute-api.us-west-2.amazonaws.com/default/hsk_booking_endpoint'
     this.http.post(url, {data: postData}, {headers: {mode: 'no-cors'}})
@@ -43,7 +54,8 @@ export class SheetService {
         console.log(res)
       })
   }
-  addRowFreeClass(postData: any){
+
+  addRowFreeClass(postData: any) {
     const url = 'https://script.google.com/macros/s/AKfycbx3nxyFNs7Hu2skYdcq-J8lWMMv8M_-UkIYGr6dQ20rneA6b3OemtkMFC7DQERRFqkxLQ/exec'
     return this.http.post(url, postData, {
       headers:
