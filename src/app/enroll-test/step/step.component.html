@@ -9,7 +9,7 @@
               <h2> Enrollment Form</h2>
 
               <div class="form-field test_date_info" style="margin-top: 20px">
-                <label>Test Dates</label>
+                <label>Test Date</label>
                 <p>
                   July 23rd at 6 pm Pacific time (9 pm Eastern time)
                 </p>
@@ -20,13 +20,24 @@
                 <button [class.active]="chooseTestLevel==2" (click)="chooseTestLevel=2">HSK 2</button>
                 <button [class.active]="chooseTestLevel==4" (click)="chooseTestLevel=4">HSK 4</button>
               </div>
-
+              <div *ngIf="isPayedCountList" class="form-field">
+                <label *ngIf="chooseTestLevel===2">
+                  Available seats: {{ 10- isPayedCountList['level2']}}
+                </label>
+                <label *ngIf="chooseTestLevel===4">
+                  Available seats:  {{10 - isPayedCountList['level4']}}
+                </label>
+                <p *ngIf="(chooseTestLevel===2&&isPayedCountList['level2']>=10)
+                ||(chooseTestLevel===4&&isPayedCountList['level4'])"
+                class="alert_message">
+                  Currently there are no seats available.
+                </p>
+              </div>
               <div class="btn_wrap absolute">
                 <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
                         matStepperNext>
                   Continue
                 </button>
-
               </div>
             </form>
           </mat-step>

@@ -7,6 +7,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class SheetService {
+  userSheetUrl = 'https://script.google.com/macros/s/AKfycbyNzwQSV2agh1uHyrlmMSEQhZxtZ61EfnNEFDJlvBg-R5nmSO4/exec'
 
   constructor(private http: HttpClient) {
 
@@ -23,7 +24,7 @@ export class SheetService {
   }
 
   addAsStripePay(postData: any) {
-    const url = 'https://script.google.com/macros/s/AKfycbyNzwQSV2agh1uHyrlmMSEQhZxtZ61EfnNEFDJlvBg-R5nmSO4/exec'
+    const url = this.userSheetUrl
     return this.http.post(url, postData, {
       headers:
         {
@@ -63,5 +64,10 @@ export class SheetService {
           'Content-Type': 'text/plain;charset=utf-8'
         }
     })
+  }
+
+  getIsPayCount() {
+    const url = this.userSheetUrl
+    return this.http.get(url)
   }
 }

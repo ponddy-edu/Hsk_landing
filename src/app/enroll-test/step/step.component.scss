@@ -82,13 +82,13 @@
       label {
         font-weight: bold;
         letter-spacing: 0.5px;
-        color: #576168;
-        text-align: center!important;
+        color: #2D3942;
+        text-align: center !important;
       }
 
       p {
         letter-spacing: 0.5px;
-        color: #3B9FBE;
+        color: #2D3942;
       }
     }
 
@@ -102,6 +102,9 @@
         letter-spacing: 0.8px;
         color: #576168;
         margin: 4px;
+        text-align: left;
+        font-weight: normal;
+        margin-bottom: 10px;
       }
 
       button {
@@ -142,6 +145,15 @@
         margin-bottom: 4px;
       }
 
+      .alert_message {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+        color: #EA4B65;
+        margin-top: 10px;
+        text-align: left;
+      }
+
       input {
         padding: 10px 12px;
         border: 1px solid #D5D7D9;
@@ -155,9 +167,11 @@
         &.ng-invalid {
           border: 1px solid #EA4B65;
         }
-        &.ng-valid{
+
+        &.ng-valid {
           border: 1px solid #2cc895;
         }
+
         &[placeholder] {
           font-size: 20px;
           line-height: 36px;
@@ -172,9 +186,11 @@
         box-sizing: border-box;
         border-radius: 4px;
         min-height: 56px;
-        &.ng-valid{
+
+        &.ng-valid {
           border: 1px solid #2cc895;
         }
+
         ::ng-deep {
           .mat-select-trigger {
             height: 2.2rem;
@@ -254,7 +270,7 @@
     }
 
     .btn_wrap {
-      &.absolute{
+      &.absolute {
         position: absolute;
         bottom: 48px;
       }

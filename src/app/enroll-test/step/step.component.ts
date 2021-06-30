@@ -230,6 +230,7 @@ export class StepComponent implements OnInit {
       value: 'Other˙'
     }
   ]
+  isPayedCountList = {}
 
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService) {
   }
@@ -261,6 +262,11 @@ export class StepComponent implements OnInit {
     setTimeout(() => {
       // this.myStepper.selectedIndex = 3
     }, 1000)
+    this.sheetService.getIsPayCount()
+      .subscribe(respone => {
+        this.isPayedCountList = respone
+        console.log(this.isPayedCountList)
+      })
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
   }
 
