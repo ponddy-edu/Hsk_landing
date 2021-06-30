@@ -306,6 +306,9 @@ export class StepComponent implements OnInit {
   }
 
   getStripeProductIdByLevel() {
+    if (localStorage.getItem('backdoor')) {
+      return environment.stripe_productId_test
+    }
     if (this.chooseTestLevel === 2) {
       return environment.stripe_productId_hsk2
     } else if (this.chooseTestLevel === 4) {
