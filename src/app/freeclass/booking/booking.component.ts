@@ -20,7 +20,7 @@ export class BookingComponent implements OnInit {
     adult1: {price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T', originPrice: 432},
     adult3: {price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg', originPrice: 480},
     adult4: {price: 576, stripeKey: 'price_1J4iH2HRhoOpWeKwRP0t7YA', originPrice: 576},
-    student1: {price: 320, stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh', originPrice: 480},
+    student1: {price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw7zJqZGIc', originPrice: 480},
     student3: {price: 384, stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj', originPrice: 576},
     student4: {price: 1152, stripeKey: 'price_1J4iHjHRhoOpWeKwrca1fh7R', originPrice: 1152}
   }
