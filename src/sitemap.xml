@@ -36,6 +36,13 @@
   </url>
 
   <url>
+    <loc>https://hsk.ponddy.com/tests/enroll</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+
+  <url>
     <loc>https://hsk.ponddy.com/resources/preparation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
