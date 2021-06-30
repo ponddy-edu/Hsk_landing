@@ -10,9 +10,12 @@
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">1</div>
-                <div class="step_hr"></div>
+                <div *ngIf="web" class="step_hr"></div>
               </div>
-              <div class="step_description">Visit <span class="step_border">Ponddy HSK</span></div>
+              <div class="step_description">
+                <div *ngIf="mobile" class="step_hr"></div>
+                <div class="step_text">Visit <span class="step_border">Ponddy HSK</span></div>
+              </div>
             </div>
 
             <div class="col-md-3 col-12 step_item">
@@ -20,9 +23,12 @@
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">2</div>
-                <div class="step_hr"></div>
+                <div *ngIf="web" class="step_hr"></div>
               </div>
-              <div class="step_description">Login or Register </div>
+              <div class="step_description">
+                <div *ngIf="mobile" class="step_hr"></div>
+                <div class="step_text">Login or Register</div>
+              </div>
             </div>
 
             <div class="col-md-3 col-12 step_item">
@@ -30,9 +36,12 @@
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">3</div>
-                <div class="step_hr"></div>
+                <div *ngIf="web" class="step_hr"></div>
               </div>
-              <div class="step_description">Fill in the enrollment form</div>
+              <div class="step_description">
+                <div *ngIf="mobile" class="step_hr"></div>
+                <div class="step_text">Fill in the enrollment form</div>
+              </div>
             </div>
 
             <div class="col-md-3 col-12 step_item">
@@ -40,9 +49,12 @@
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">4</div>
-                <div class="step_hr"></div>
+                <div *ngIf="web" class="step_hr"></div>
               </div>
-              <div class="step_description">Submit the enrollment form & pay for test fee</div>
+              <div class="step_description">
+                <div *ngIf="mobile" class="step_hr"></div>
+                <div class="step_text">Submit the enrollment form & pay for test fee</div>
+              </div>
             </div>
 
           </div>
@@ -54,7 +66,7 @@
         <div class="row justify-content-center">
           <div class="">
 
-            <div *ngIf="web" class="table">
+            <div class="table">
               <div class="table__th ponddy_base">
                 <div>Test Information</div>
               </div>
@@ -80,7 +92,7 @@
 
               <div class="table__tr">
                 <div class="table__tb td_border_right">Test Date</div>
-                <div class="table__tb__description" style="width: auto;">
+                <div class="table__tb__description td_long">
                   <div>
                     2021 / 7 / 23 6pm PDT (9pm EDT)
                   </div>

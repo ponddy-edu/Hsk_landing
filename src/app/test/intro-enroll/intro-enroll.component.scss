@@ -17,6 +17,10 @@
       border-radius: 12px;
       padding: 60px 76px;
 
+      @media (max-width: 767px) {
+        padding: 24px 20px;
+      }
+
       h1 {
         font-weight: bold;
         font-size: 24px;
@@ -37,9 +41,17 @@
 
       .card_enroll {
         padding-bottom: 80px;
+        @media (max-width: 767px) {
+          padding-bottom: 32px;
+        }
 
         .step_area {
           display: flex;
+
+          @media (max-width: 767px) {
+            padding-top: 24px;
+            display: block;
+          }
 
           .step_item {
             padding-right: 16px;
@@ -48,6 +60,13 @@
             .step_img {
               padding-top: 24px;
               padding-bottom: 16px;
+
+              @media (max-width: 767px) {
+                position: absolute;
+                right: 39px;
+                top: 0;
+                padding: 0;
+              }
             }
 
             .step_title {
@@ -59,27 +78,47 @@
               line-height: 28px;
               letter-spacing: 1px;
               color: #2D3942;
+              @media (max-width: 767px) {
+                padding-bottom: 32px;
+              }
 
               .step_number {
                 color: #3B9FBE;
                 padding: 0 10px;
               }
 
-              .step_hr {
-                background: #D5D7D9;
-                height: 1px;
-                width: 100%;
 
+            }
+
+            .step_hr {
+              background: #D5D7D9;
+              height: 1px;
+              width: 100%;
+
+              @media (max-width: 767px) {
+                height: 64px;
+                width: 1px;
               }
             }
 
             .step_description {
-              font-weight: bold;
-              font-size: 16px;
-              line-height: 28px;
-              letter-spacing: 1px;
-              color: #3B9FBE;
+              @media (max-width: 767px) {
+                display: flex;
+              }
+
+              .step_text {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 1px;
+                color: #3B9FBE;
+
+                @media (max-width: 767px) {
+                  padding-left: 20px;
+                }
+              }
             }
+
 
             .step_border {
               border-bottom: 1px solid #3B9FBE;
@@ -101,6 +140,7 @@
 
           @media (max-width: 768px) {
             width: 100% !important;
+            margin-bottom: 24px;
           }
 
           &__th {
@@ -147,7 +187,7 @@
               font-weight: 700;
               font-size: 15px;
               line-height: 24px;
-              width: 45%;
+              width: 40%;
               letter-spacing: 0.5px;
             }
 
@@ -166,7 +206,7 @@
               color: #2D3942;
 
               @media (max-width: 768px) {
-                width: 80%;
+                width: 30%;
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: 0.5px;
@@ -176,7 +216,14 @@
               &.td_border_right {
                 border-right: 1px solid #D5D7D9;
               }
+              &.td_long {
+                width: auto;
+                @media (max-width: 768px) {
+                  width: 60%;
+                }
+              }
             }
+
           }
         }
 
