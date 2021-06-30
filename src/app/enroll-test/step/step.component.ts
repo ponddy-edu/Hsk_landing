@@ -258,7 +258,7 @@ export class StepComponent implements OnInit {
       Gender: new FormControl('', Validators.required),
     })
     this.testInfoFormGroup = this.formBuilder.group({
-      Test_Date: new FormControl(''),
+      Test_Date: new FormControl('July 23rd at 6 pm Pacific time'),
     });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
@@ -266,7 +266,7 @@ export class StepComponent implements OnInit {
     )
 
     setTimeout(() => {
-      // this.myStepper.selectedIndex = 3
+      // this.myStepper.selectedIndex = 4
     }, 1000)
     this.sheetService.getIsPayCount()
       .subscribe(respone => {
