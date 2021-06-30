@@ -152,8 +152,54 @@
               <p>The following with * are required to be filled out.</p>
             </div>
           </mat-step>
-          <mat-step>
+
+          <mat-step [stepControl]="userInfo3FormGroup">
             <ng-template matStepLabel>Step 4</ng-template>
+            <form [formGroup]="userInfo3FormGroup">
+              <ng-template matStepLabel>Step 2</ng-template>
+              <h2>Certificate</h2>
+              <div class="form-field">
+                <label>Certificate type</label>
+                <mat-select placeholder="Please Select"
+                            (ngModelChange)="changeCertificate_Type($event)"
+                            formControlName="Certificate_Type" name="Certificate_Type">
+                  <mat-option value="Student">Passport</mat-option>
+                  <mat-option value="In-service professionals">ID</mat-option>
+                  <mat-option value="Others">Others</mat-option>
+                </mat-select>
+              </div>
+              <div class="form-field">
+                <label>Other_Certificate</label>
+                <input formControlName="Other_Certificate" name="Other_Certificate"
+                       type="text"
+                       value="" placeholder="Other Certificate">
+              </div>
+              <div class="form-field">
+                <label>Certificate Number</label>
+                <input formControlName="Certificate_Number" name="Certificate_Number"
+                       type="text"
+                       value="" placeholder="Certificate Number">
+              </div>
+              <div class="form-field">
+                <label>Gender</label>
+                <mat-select placeholder="Please Select" formControlName="Gender" name="Gender">
+                  <mat-option value="Male">Male</mat-option>
+                  <mat-option value="Females">Female</mat-option>
+                </mat-select>
+              </div>
+              <div class="btn_wrap">
+                <button class="btn_focus-primary" [disabled]="userInfo3FormGroup.invalid" matStepperNext>
+                  Continue
+                </button>
+                <p (click)="myStepper.selectedIndex = 2">Previous</p>
+              </div>
+            </form>
+            <div class="hint-text">
+              <p>The following with * are required to be filled out.</p>
+            </div>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Step 5</ng-template>
             <form class="summary" [formGroup]="summaryFormGroup">
               <h2>Summary</h2>
 
@@ -227,7 +273,7 @@
                 <button class="btn_focus-primary" [disabled]="summaryFormGroup.invalid" (click)="payment()">
                   Go to Payment
                 </button>
-                <p (click)="myStepper.selectedIndex = 2">Previous</p>
+                <p (click)="myStepper.selectedIndex = 3">Previous</p>
               </div>
             </form>
             <!--            <div>-->

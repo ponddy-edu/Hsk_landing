@@ -16,6 +16,7 @@ export class StepComponent implements OnInit {
 
   userInfoFormGroup: FormGroup;
   userInfo2FormGroup: FormGroup;
+  userInfo3FormGroup: FormGroup;
   testInfoFormGroup: FormGroup;
   summaryFormGroup: FormGroup;
   chooseTestLevel = 0
@@ -250,7 +251,12 @@ export class StepComponent implements OnInit {
       Reason: new FormControl('', Validators.required),
       Known_From: new FormControl('', Validators.required),
     });
-
+    this.userInfo3FormGroup = this.formBuilder.group({
+      Certificate_Type: new FormControl('', Validators.required),
+      Other_Certificate: new FormControl(''),
+      Certificate_Number: new FormControl('', Validators.required),
+      Gender: new FormControl('', Validators.required),
+    })
     this.testInfoFormGroup = this.formBuilder.group({
       Test_Date: new FormControl(''),
     });
@@ -306,6 +312,15 @@ export class StepComponent implements OnInit {
     } else {
       return environment.stripe_productId_test
     }
+  }
+
+  changeCertificate_Type(type: any) {
+    if (type === 'Others') {
+      this.userInfo3FormGroup.controls['Other_Certificate'].setValidators([Validators.required])
+    } else {
+      this.userInfo3FormGroup.controls['Other_Certificate'].setValidators(null)
+    }
+    this.userInfo3FormGroup.controls['Other_Certificate'].updateValueAndValidity();
   }
 
   mockStripePay() {
