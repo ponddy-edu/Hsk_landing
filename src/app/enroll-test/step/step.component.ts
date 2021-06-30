@@ -280,6 +280,7 @@ export class StepComponent implements OnInit {
     const formData = {
       ...this.userInfoFormGroup.getRawValue(),
       ...this.userInfo2FormGroup.getRawValue(),
+      ...this.userInfo3FormGroup.getRawValue(),
       ...{Test_Level: this.chooseTestLevel},
       ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
     }
