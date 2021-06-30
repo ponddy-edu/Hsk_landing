@@ -27,6 +27,7 @@ export class TabComponent implements OnInit {
   }
 
   changeTab(tabIndex: any) {
+    console.log(tabIndex)
     switch (tabIndex) {
       case 0:
         this.router.navigate(['./tests/chinese']);
@@ -34,6 +35,9 @@ export class TabComponent implements OnInit {
       case 1:
         this.router.navigate(['./tests/instructions/1']);
         break
+      case 2:
+          this.router.navigate(['./tests/enroll']);
+          break
     }
   }
 }

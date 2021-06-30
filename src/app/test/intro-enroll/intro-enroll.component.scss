@@ -1,0 +1,190 @@
+.intro_enroll {
+  background-color: #FCFAF8;
+
+  .container {
+    padding-bottom: 60px;
+    padding-top: 64px;
+
+    @media (max-width: 767px) {
+      padding-bottom: 24px;
+      padding-top: 36px;
+    }
+
+    .card_area {
+      background: #FFFFFF;
+      border: 1px solid #D5D7D9;
+      box-sizing: border-box;
+      border-radius: 12px;
+      padding: 60px 76px;
+
+      h1 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+        color: #2D3942;
+        width: 100%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #969CA0;
+
+        @media (max-width: 767px) {
+          font-size: 24px;
+          line-height: 36px;
+          margin-bottom: 0;
+
+        }
+      }
+
+      .card_enroll {
+        padding-bottom: 80px;
+
+        .step_area {
+          display: flex;
+
+          .step_item {
+            padding-right: 16px;
+            text-align: left;
+
+            .step_img {
+              padding-top: 24px;
+              padding-bottom: 16px;
+            }
+
+            .step_title {
+              padding-bottom: 12px;
+              display: flex;
+              align-items: center;
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 28px;
+              letter-spacing: 1px;
+              color: #2D3942;
+
+              .step_number {
+                color: #3B9FBE;
+                padding: 0 10px;
+              }
+
+              .step_hr {
+                background: #D5D7D9;
+                height: 1px;
+                width: 100%;
+
+              }
+            }
+
+            .step_description {
+              font-weight: bold;
+              font-size: 16px;
+              line-height: 28px;
+              letter-spacing: 1px;
+              color: #3B9FBE;
+            }
+
+            .step_border {
+              border-bottom: 1px solid #3B9FBE;
+            }
+          }
+        }
+      }
+
+
+      .card_schedule {
+        .table {
+          display: inline-block;
+          width: 580px;
+          border: 1px solid #EAEBEC;
+          box-sizing: border-box;
+          border-radius: 12px;
+          margin-top: 13px;
+          margin-bottom: 36px;
+
+          @media (max-width: 768px) {
+            width: 100% !important;
+          }
+
+          &__th {
+            display: flex;
+            border-radius: 12px 12px 0px 0px;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            height: 66px;
+
+            &.ponddy_base {
+              background: #6ACFED;
+            }
+          }
+
+          &__tr {
+            background-color: #ffffff;
+            display: flex;
+            text-align: left;
+            padding: 10px 0;
+            border-bottom: 1px dashed #D5D7D9;
+
+            &__no {
+              border-bottom: none;
+              border-radius: 0 0 12px 12px;
+            }
+          }
+
+          &__tb {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: #2D3942;
+            width: 200px;
+            padding: 8px 10px 8px 24px;
+
+            @media (max-width: 768px) {
+              font-weight: 700;
+              font-size: 15px;
+              line-height: 24px;
+              width: 45%;
+              letter-spacing: 0.5px;
+            }
+
+            &.td_border_right {
+              border-right: 1px solid #576168;
+            }
+
+            &__description {
+              display: flex;
+              padding: 8px 24px 8px 20px;
+              width: 135px;
+              font-weight: normal;
+              font-size: 20px;
+              line-height: 28px;
+              letter-spacing: 1px;
+              color: #2D3942;
+
+              @media (max-width: 768px) {
+                width: 80%;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+              }
+
+
+              &.td_border_right {
+                border-right: 1px solid #D5D7D9;
+              }
+            }
+          }
+        }
+
+        .text_btn {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
