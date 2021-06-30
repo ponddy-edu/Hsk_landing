@@ -17,8 +17,8 @@ export class IntroTestComponent implements OnInit {
 
   actvieItem = 'testRegulation'
   activeClass = 'procedureClass'
-  procedureClass = "active";
-  registrationClass = "";
+  procedureClass = "";
+  registrationClass = "active";
   scoreClass = "";
   disciplineClass = "";
 
@@ -45,8 +45,8 @@ export class IntroTestComponent implements OnInit {
   menu_item(itemIndex: number) {
     switch (itemIndex) {
       case 1:
-        this.actvieItem = 'testRegulation'
-        this.activeClass = 'procedureClass'
+        this.actvieItem = 'registrationProcedure'
+        this.activeClass = 'registrationClass'
         this.procedureClass = "active";
         this.registrationClass = "";
         this.scoreClass = "";
@@ -54,8 +54,8 @@ export class IntroTestComponent implements OnInit {
 
         break
       case 2:
-        this.actvieItem = 'registrationProcedure'
-        this.activeClass = 'registrationClass'
+        this.actvieItem = 'testRegulation'
+        this.activeClass = 'procedureClass'
         this.procedureClass = "";
         this.registrationClass = "active";
         this.scoreClass = "";
