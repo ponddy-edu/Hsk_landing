@@ -202,7 +202,7 @@ export class BookingComponent implements OnInit {
 
     this.pricingList.adult1 = {...this.pricingList.adult1, price: 432, stripeKey: 'price_1ITNQdHRhoOpWeKwQh9IfFIa'}
     this.pricingList.adult3 = {...this.pricingList.adult3, price: 480, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
-    this.pricingList.adult4 = {...this.pricingList.adult4, price: 576, stripeKey: 'price_1ITNQdHRhoOpWeKwdyiQoif1'}
+    this.pricingList.adult4 = {...this.pricingList.adult4, price: 576, stripeKey: 'price_1J4iH2HRhoOpWeKwRP0t7YAb'}
     this.pricingList.student1 = {
       ...this.pricingList.student1,
       price: 480,
@@ -220,23 +220,23 @@ export class BookingComponent implements OnInit {
     }
 
     if (btoa($event.toLowerCase()) === 'OC9zZXNzaW9u') {
-      this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1IbK3qHRhoOpWeKw0Wf2RReQ'}
-      this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1IbK48HRhoOpWeKw4OB0k2kE'}
-      this.pricingList.adult4 = {...this.pricingList.adult4, price: 384, stripeKey: 'price_1J4iH2HRhoOpWeKwRP0t7YA'}
+      this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T'}
+      this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg'}
+      this.pricingList.adult4 = {...this.pricingList.adult4, price: 384, stripeKey: 'price_1J7j8lHRhoOpWeKwwzAaH4Ci'}
       this.pricingList.student1 = {
         ...this.pricingList.student1,
         price: 320,
-        stripeKey: 'price_1IbK4PHRhoOpWeKw3R95iE1c'
+        stripeKey: 'price_1ITNQdHRhoOpWeKw7zJqZGIc'
       }
       this.pricingList.student3 = {
         ...this.pricingList.student3,
         price: 384,
-        stripeKey: 'price_1IbK4yHRhoOpWeKwCmzv9aGZ'
+        stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj'
       }
       this.pricingList.student4 = {
         ...this.pricingList.student4,
         price: 768,
-        stripeKey: 'price_1J4iHjHRhoOpWeKwrca1fh7R'
+        stripeKey: 'price_1J7jIHHRhoOpWeKwHlZMn3kp'
       }
     } else if (btoa($event.toLowerCase()) === 'MTAvc2Vzc2lvbg==') {
       this.pricingList.adult1 = {...this.pricingList.adult1, price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
@@ -251,11 +251,11 @@ export class BookingComponent implements OnInit {
         price: 480,
         stripeKey: 'price_1ITNQdHRhoOpWeKwtQ3jYrWF'
       }
-      this.pricingList.adult4 = {...this.pricingList.adult4, price: 480, stripeKey: 'price_1J4iH2HRhoOpWeKwRP0t7YA'}
+      this.pricingList.adult4 = {...this.pricingList.adult4, price: 480, stripeKey: 'price_1J7jH6HRhoOpWeKwbrs0NgDG'}
       this.pricingList.student4 = {
         ...this.pricingList.student4,
         price: 960,
-        stripeKey: 'price_1J4iHjHRhoOpWeKwrca1fh7R'
+        stripeKey: 'price_1J7jIYHRhoOpWeKw70apdcEU'
       }
     } else {
 
