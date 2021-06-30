@@ -324,6 +324,13 @@ export class StepComponent implements OnInit {
     this.userInfo3FormGroup.controls['Other_Certificate'].updateValueAndValidity();
   }
 
+  getMotherTongueByKey(key: string) {
+    if (!key) {
+      return
+    }
+    return this.motherTongueList.filter(motherTongue => motherTongue.key === key)[0].value
+  }
+
   mockStripePay() {
     console.log('mockStripePay')
     const postData = {

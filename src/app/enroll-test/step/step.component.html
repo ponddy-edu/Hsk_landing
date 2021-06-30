@@ -220,7 +220,7 @@
                 </div>
                 <div class="cell">
                   <label>Mother tongue:</label>
-                  <p>{{userInfoFormGroup.get('Mother_Tongue')?.value}}</p>
+                  <p>{{getMotherTongueByKey(userInfoFormGroup.get('Mother_Tongue')?.value)}}</p>
                 </div>
               </div>
               <div class="form-field">
@@ -250,25 +250,23 @@
                   <label>Certificate Type</label>
                   <p>{{userInfo3FormGroup.get('Certificate_Type')?.value}}</p>
                 </div>
-              </div>
-              <div class="form-field">
                 <div class="cell">
                   <label>Other Certificate</label>
                   <p>{{userInfo3FormGroup.get('Other_Certificate')?.value}}</p>
                 </div>
               </div>
+
               <div class="form-field">
                 <div class="cell">
                   <label>Certificate Number</label>
                   <p>{{userInfo3FormGroup.get('Certificate_Number')?.value}}</p>
                 </div>
-              </div>
-              <div class="form-field">
                 <div class="cell">
                   <label>Gender</label>
                   <p>{{userInfo3FormGroup.get('Gender')?.value}}</p>
                 </div>
               </div>
+
               <div class="form-field">
                 <div class="cell">
                   <label>How long have you been learning Chinese: </label>
