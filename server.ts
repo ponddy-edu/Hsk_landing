@@ -11,9 +11,9 @@ import {join} from 'path';
 import {AppServerModule} from './src/main.server';
 import {APP_BASE_HREF} from '@angular/common';
 import {existsSync} from 'fs';
-import 'localstorage-polyfill'
+// import 'localstorage-polyfill'
 
-global['localStorage'] = localStorage;
+// global['localStorage'] = localStorage;
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -50,7 +50,7 @@ export function app(): express.Express {
   server.get('/', (req, res) => {
     // console.log('/ here')
     // console.log(req?.baseUrl)
-    // console.log(req.get('host'))
+    console.log(req.get('host'))
     res.redirect('/home')
   });
 
