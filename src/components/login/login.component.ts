@@ -327,9 +327,12 @@ export class LoginComponent implements OnInit {
   fadeOutAndDismiss() {
     setTimeout(() => {
       this.fadeOut = true
+      location.reload()
     }, 4000)
     setTimeout(() => {
       this.dismiss()
+      location.reload()
+
     }, 6000)
   }
 

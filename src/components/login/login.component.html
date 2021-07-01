@@ -153,7 +153,7 @@
               <p>By creating an account, you agree to the Terms of Service and acknowledge our Privacy Policy.</p>
             </div>
           </div>
-          <button class="btn_general-primary" type="submit" [disabled]="!formRegister.valid||isLoading">
+          <button class="btn_general-primary" type="submit" [disabled]="!formRegister?.valid||isLoading">
             <img *ngIf="isLoading" src="assets/image/login/loading_spinner.gif"/>
             Register
           </button>

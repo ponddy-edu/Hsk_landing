@@ -19,7 +19,7 @@ export class EnrollComponent implements OnInit {
 
 
     setTimeout(() => {
-      if (!this.auth.isLogin()) {
+      if (!localStorage.getItem('token')) {
         console.log('not login')
         this.openLoginDialog()
       }
