@@ -21,8 +21,8 @@ export class EnrollComponent implements OnInit {
       console.log('not login')
       this.openLoginDialog()
     }
+
     // let a = atob(localStorage.getItem('token'))
-    // console.log(a)
   }
 
   openLoginDialog() {

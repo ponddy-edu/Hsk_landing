@@ -22,13 +22,13 @@
               </div>
               <div *ngIf="isPayedCountList" class="form-field">
                 <label *ngIf="chooseTestLevel===2">
-                  Available seats: {{ 10- isPayedCountList['level2']}}
+                  Available seats: {{ 12- isPayedCountList['level2']}}
                 </label>
                 <label *ngIf="chooseTestLevel===4">
-                  Available seats:  {{10 - isPayedCountList['level4']}}
+                  Available seats:  {{12 - isPayedCountList['level4']}}
                 </label>
-                <p *ngIf="(chooseTestLevel===2&&isPayedCountList['level2']>=10)
-                ||(chooseTestLevel===4&&isPayedCountList['level4'])"
+                <p *ngIf="(chooseTestLevel===2&&isPayedCountList['level2']>=12)
+                ||(chooseTestLevel===4&&isPayedCountList['level4']>=12)"
                 class="alert_message">
                   Currently there are no seats available.
                 </p>
@@ -48,7 +48,7 @@
               <div class="form-field">
                 <label>*Email</label>
                 <input formControlName="Email" name="Email"
-                       ngModel
+                        [ngModel]="email"
                        [email]="true"
                        type="email"
                        value="" placeholder="Email">

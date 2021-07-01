@@ -232,13 +232,26 @@ export class StepComponent implements OnInit {
     }
   ]
   isPayedCountList = {}
+  email = ''
 
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService) {
   }
 
   async ngOnInit() {
+    let tokenSection
+    if (localStorage.getItem('token')) {
+      // @ts-ignore
+      tokenSection = localStorage.getItem('token').toString().split('.')[1]
+      this.email = JSON.parse(atob(tokenSection)).email.toString()
+      // @ts-ignore
+      console.log(JSON.parse(atob(tokenSection)).email)
+      // @ts-ignore
+    }
+
+
+
     this.userInfoFormGroup = this.formBuilder.group({
-      Email: new FormControl('', Validators.required),
+      Email: new FormControl(this.email, Validators.required),
       Name: new FormControl('', Validators.required),
       Chinese_Name: new FormControl(''),
       Nationality: new FormControl('United States'),
