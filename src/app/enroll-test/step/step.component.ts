@@ -240,11 +240,17 @@ export class StepComponent implements OnInit {
   async ngOnInit() {
     let tokenSection
     if (localStorage.getItem('token')) {
-      // @ts-ignore
-      tokenSection = localStorage.getItem('token').toString().split('.')[1]
-      this.email = JSON.parse(atob(tokenSection)).email.toString()
-      // @ts-ignore
-      console.log(JSON.parse(atob(tokenSection)).email)
+      try {
+        // @ts-ignore
+
+        tokenSection = localStorage.getItem('token').split('.')[1]
+        this.email = JSON.parse(atob(tokenSection)).email.toString()
+        // @ts-ignore
+        console.log(JSON.parse(atob(tokenSection)).email)
+      } catch (e) {
+        console.error(e)
+      }
+
       // @ts-ignore
     }
 
