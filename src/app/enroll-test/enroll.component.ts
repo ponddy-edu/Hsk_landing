@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../utils/auth.service";
 import {LoginComponent} from "../../components/login/login.component";
 import {MatDialog} from "@angular/material/dialog";
+import {DeviceService} from "../../utils/device.service";
 
 @Component({
   selector: 'app-enroll',
@@ -11,7 +12,8 @@ import {MatDialog} from "@angular/material/dialog";
 export class EnrollComponent implements OnInit {
 
   constructor(private auth: AuthService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,
+              public device: DeviceService) {
   }
 
   ngOnInit(): void {
@@ -19,7 +21,7 @@ export class EnrollComponent implements OnInit {
 
 
     setTimeout(() => {
-      if (!localStorage.getItem('token')) {
+      if (!localStorage.getItem('token') && this.device.isBrowser) {
         console.log('not login')
         this.openLoginDialog()
       }
