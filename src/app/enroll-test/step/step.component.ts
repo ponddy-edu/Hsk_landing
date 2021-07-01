@@ -250,7 +250,7 @@ export class StepComponent implements OnInit {
 
 
     this.userInfoFormGroup = this.formBuilder.group({
-      Email: new FormControl('', Validators.required),
+      Email: new FormControl(this.email, Validators.required),
       Name: new FormControl('', Validators.required),
       Chinese_Name: new FormControl(''),
       Nationality: new FormControl('United States'),
@@ -279,7 +279,6 @@ export class StepComponent implements OnInit {
 
     setTimeout(() => {
       // this.myStepper.selectedIndex = 4
-      this.userInfoFormGroup.controls['Email'].value = this.email
     }, 1000)
     this.sheetService.getIsPayCount()
       .subscribe(respone => {
