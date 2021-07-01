@@ -46,9 +46,11 @@ export function app(): express.Express {
   //     next();
   //   }
   // });
-  // All regular routes use the Universal engine
+  // All regular routes use the Universal engihttp://localhost:4000/home?token=aaane
   server.get('/', (req, res) => {
-    console.log('/ here')
+    // console.log('/ here')
+    // console.log(req?.baseUrl)
+    // console.log(req.get('host'))
     res.redirect('/home')
   });
 

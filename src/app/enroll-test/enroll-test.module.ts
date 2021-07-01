@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LandingComponent } from './landing/landing.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 const routes: Routes = [
   {path: '', component: EnrollComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatDialogModule,
     RouterModule.forChild(routes),
     MatCheckboxModule,
   ]
