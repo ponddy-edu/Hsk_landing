@@ -90,7 +90,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openLogin() {
-    this.dialog.open(LoginComponent, {maxWidth: '90vw', maxHeight: '150vw'})
+    this.dialog.open(LoginComponent, {maxWidth: '90vw', maxHeight: '100vh'})
     this.menuOpen = false;
     this.expansionComponent.close();
   }

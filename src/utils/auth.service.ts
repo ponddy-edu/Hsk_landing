@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from "@angular/common/http";
-import { tap } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {environment} from 'src/environments/environment';
+import {HttpClient} from "@angular/common/http";
+import {tap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,8 @@ export class AuthService {
 
   constructor(
     public http: HttpClient,
-  ) { }
+  ) {
+  }
 
   public checkEmailExit(email: string) {
     email = email.toLowerCase()
@@ -35,7 +36,7 @@ export class AuthService {
     };
 
     return this.http.post(url, body)
-      .pipe(tap((res:any) => {
+      .pipe(tap((res: any) => {
         localStorage.setItem('token', res['token'])
       }))
 
@@ -73,23 +74,23 @@ export class AuthService {
   }
 
 
-  socialLogin(socialClass:any) {
+  socialLogin(socialClass: any) {
     let url
     let language = 'en'
     // var backToPage = window.location.hash.split("#")[1];
-    switch (socialClass){
-        case 'fb':
-            url = `${environment.authApiUrl}/${language}/auth/social/facebook?client_id=${environment.clientId}&token=null&redirect_uri=${environment.appUrl}`;
-            break
-        case 'google':
-            url = `${environment.authApiUrl}/${language}/auth/social/google-oauth2?client_id=${environment.clientId}&token=null&redirect_uri=${environment.appUrl}`;
-            break
+    switch (socialClass) {
+      case 'fb':
+        url = `${environment.authApiUrl}/${language}/auth/social/facebook?client_id=${environment.clientId}&token=null&redirect_uri=${environment.appUrl}`;
+        break
+      case 'google':
+        url = `${environment.authApiUrl}/${language}/auth/social/google-oauth2?client_id=${environment.clientId}&token=null&redirect_uri=${environment.appUrl}`;
+        break
     }
     console.log(url)
     window.open(`${url}`, '_self')
   }
 
-  public resendCode(email:any, recaptcha_response:any) {
+  public resendCode(email: any, recaptcha_response: any) {
     email = email.toLowerCase()
     const endpoint = '/api/auth/auth/resend'
     const url = environment.authApiUrl + endpoint
@@ -110,12 +111,20 @@ export class AuthService {
     }, 500);
   }
 
-  forgotPassword(email:any) {
+  forgotPassword(email: any) {
     email = email.toLowerCase()
     const url = environment.authApiUrl + '/en/auth/forgot/?email=' + encodeURI(email)
     window.open(url, '_blank')
   }
 
+  public isLogin() {
+    if (localStorage.getItem('token')) {
+      return true
+    } else {
+      return false
+    }
+
+  }
 
 
 }
