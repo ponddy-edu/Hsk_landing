@@ -303,7 +303,7 @@ export class StepComponent implements OnInit {
           lineItems: [{price: productId, quantity: 1}],
           customerEmail: this.userInfoFormGroup.get('Email')?.value,
           mode: 'payment',
-          successUrl: window.location.href + '?action=pay' + '&plan=' + environment.stripe_productId_test,
+          successUrl: window.location.href + '?action=pay' + '&plan=' + productId,
           cancelUrl: window.location.href,
         })
           .then((result: any) => {

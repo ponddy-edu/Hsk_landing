@@ -3,6 +3,7 @@ import {AuthService} from "../../utils/auth.service";
 import {LoginComponent} from "../../components/login/login.component";
 import {MatDialog} from "@angular/material/dialog";
 import {DeviceService} from "../../utils/device.service";
+import {PaySuccessComponent} from "../../components/pay-success/pay-success.component";
 
 @Component({
   selector: 'app-enroll',
@@ -19,7 +20,7 @@ export class EnrollComponent implements OnInit {
   ngOnInit(): void {
     // this.auth.
 
-
+    this.checkActionPay()
     setTimeout(() => {
       if (!localStorage.getItem('token') && this.device.isBrowser) {
         console.log('not login')
@@ -27,6 +28,20 @@ export class EnrollComponent implements OnInit {
       }
     }, 1000)
     // let a = atob(localStorage.getItem('token'))
+  }
+
+  checkActionPay() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('action');
+    if (myParam === 'pay') {
+      this.dialog.open(PaySuccessComponent,
+        {
+          width: '90%', maxWidth: '450px',
+          data: {
+            mode: 'testEnroll'
+          }
+        })
+    }
   }
 
   openLoginDialog() {
