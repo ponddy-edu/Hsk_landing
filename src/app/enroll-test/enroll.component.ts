@@ -17,16 +17,19 @@ export class EnrollComponent implements OnInit {
   ngOnInit(): void {
     // this.auth.
 
-    if (!this.auth.isLogin()) {
-      console.log('not login')
-      this.openLoginDialog()
-    }
 
+    setTimeout(() => {
+      if (!this.auth.isLogin()) {
+        console.log('not login')
+        this.openLoginDialog()
+      }
+    }, 1000)
     // let a = atob(localStorage.getItem('token'))
   }
 
   openLoginDialog() {
-    this.dialog.open(LoginComponent, {maxWidth: '90vw', maxHeight: '100vh'})
+    const dialogRef = this.dialog.open(LoginComponent, {maxWidth: '90vw', maxHeight: '100vh'})
+
     // this.menuOpen = false;
     // this.expansionComponent.close();
   }
