@@ -4,7 +4,6 @@ import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
 import {loadStripe} from '@stripe/stripe-js/pure';
 import {environment} from '../../../environments/environment';
-
 @Component({
   selector: 'app-step',
   templateUrl: './step.component.html',
@@ -23,212 +22,284 @@ export class StepComponent implements OnInit {
   stripe: any
   motherTongueList = [
     {
-      key: '434',
+      key: 101,
+      value: 'Afrikaans'
+    },
+    {
+      key: 405,
+      value: 'Albanian'
+    },
+    {
+      key: 107,
+      value: 'Amharic'
+    },
+    {
+      key: 501,
+      value: 'Arabic'
+    },
+    {
+      key: 401,
+      value: 'Armenian'
+    },
+    {
+      key: 408,
+      value: 'Belarussian'
+    },
+    {
+      key: 305,
+      value: 'Bengali'
+    },
+    {
+      key: 407,
+      value: 'Bulgarian'
+    },
+    {
+      key: 307,
+      value: 'Burmese'
+    },
+    {
+      key: 410,
+      value: 'Catalan (Provencal)'
+    },
+    {
+      key: 315,
+      value: 'Chinese'
+    },
+    {
+      key: 413,
+      value: 'Czech'
+    },
+    {
+      key: 416,
+      value: 'Danish'
+    },
+    {
+      key: 419,
+      value: 'Dutch'
+    },
+    {
+      key: 422,
+      value: 'English'
+    },
+    {
+      key: 425,
+      value: 'Estonian'
+    },
+    {
+      key: 504,
+      value: 'Farsi (Persian)'
+    },
+    {
+      key: 428,
+      value: 'Finnish'
+    },
+    {
+      key: 434,
       value: 'French'
     },
     {
-      key: '437',
+      key: 437,
       value: 'German'
     },
     {
-      key: '438',
+      key: 438,
       value: 'Georgian'
     },
     {
-      key: '440',
+      key: 440,
       value: 'Greek'
     },
     {
-      key: '201',
+      key: 201,
       value: 'Guarani'
     },
     {
-      key: '507',
+      key: 507,
       value: 'Hebrew'
     },
     {
-      key: '323',
+      key: 323,
       value: 'Hindi'
     },
     {
-      key: '443',
+      key: 443,
       value: 'Hungarian (Magyar)'
     },
     {
-      key: '447',
+      key: 447,
       value: 'Icelandic'
     },
     {
-      key: '328',
+      key: 328,
       value: 'Indonesian'
     },
     {
-      key: '450',
+      key: 450,
       value: 'Italian'
     },
     {
-      key: '331',
+      key: 331,
       value: 'Japanese'
     },
     {
-      key: '339',
+      key: 339,
       value: 'Kazakh'
     },
     {
-      key: '310',
+      key: 310,
       value: 'Khmer (Kampuchean)'
     },
     {
-      key: '340',
+      key: 340,
       value: 'Korean'
     },
     {
-      key: '342',
+      key: 342,
       value: 'Kurdish'
     },
     {
-      key: '343',
+      key: 343,
       value: 'Lao'
     },
     {
-      key: '452',
+      key: 452,
       value: 'Latvian'
     },
     {
-      key: '453',
+      key: 453,
       value: 'Lithuanian'
     },
     {
-      key: '454',
+      key: 454,
       value: 'Macedonian'
     },
     {
-      key: '345',
+      key: 345,
       value: 'Malay'
     },
     {
-      key: '455',
+      key: 455,
       value: 'Maltese'
     },
     {
-      key: '607',
+      key: 607,
       value: 'Marshallese'
     },
     {
-      key: '341',
+      key: 341,
       value: 'Mongolian'
     },
     {
-      key: '351',
+      key: 351,
       value: 'Nepali'
     },
     {
-      key: '456',
+      key: 456,
       value: 'Norwegian'
     },
     {
-      key: '357',
+      key: 357,
       value: 'Pashto'
     },
     {
-      key: '459',
+      key: 459,
       value: 'Polish'
     },
     {
-      key: '461',
+      key: 461,
       value: 'Portuguese'
     },
     {
-      key: '464',
+      key: 464,
       value: 'Romanian'
     },
     {
-      key: '141',
+      key: 141,
       value: 'Ruanda'
     },
     {
-      key: '467',
+      key: 467,
       value: 'Russian'
     },
     {
-      key: '365',
+      key: 365,
       value: 'Samar-Leyte'
     },
     {
-      key: '616',
+      key: 616,
       value: 'Samoan'
     },
     {
-      key: '470',
+      key: 470,
       value: 'Serbo-Croatian'
     },
     {
-      key: '361',
+      key: 361,
       value: 'Sinhalese'
     },
     {
-      key: '473',
+      key: 473,
       value: 'Slovak'
     },
     {
-      key: '474',
+      key: 474,
       value: 'Slovene'
     },
     {
-      key: '173',
+      key: 173,
       value: 'Somali'
     },
     {
-      key: '478',
+      key: 478,
       value: 'Spanish'
     },
     {
-      key: '176',
+      key: 176,
       value: 'Swahili'
     },
     {
-      key: '481',
+      key: 481,
       value: 'Swedish'
     },
     {
-      key: '370',
+      key: 370,
       value: 'Tamil'
     },
     {
-      key: '376',
+      key: 376,
       value: 'Thai'
     },
     {
-      key: '622',
+      key: 622,
       value: 'Tongan'
     },
     {
-      key: '484',
+      key: 484,
       value: 'Turkish'
     },
     {
-      key: '483',
+      key: 483,
       value: 'Turkmen'
     },
     {
-      key: '487',
+      key: 487,
       value: 'Ukrainian'
     },
     {
-      key: '385',
+      key: 385,
       value: 'Urdu'
     },
     {
-      key: '495',
+      key: 495,
       value: 'Uzbek'
     },
     {
-      key: '388',
+      key: 388,
       value: 'Vietnamese'
     },
     {
-      key: '999',
-      value: 'Other˙'
+      key: 999,
+      value: 'Other'
     }
   ]
   isPayedCountList = {}
@@ -339,18 +410,18 @@ export class StepComponent implements OnInit {
 
   changeCertificate_Type(type: any) {
     if (type === 'Others') {
-      this.userInfo3FormGroup.controls['Other_Certificate'].setValidators([Validators.required])
+      this.userInfo3FormGroup.controls.Other_Certificate.setValidators([Validators.required])
     } else {
-      this.userInfo3FormGroup.controls['Other_Certificate'].setValidators(null)
+      this.userInfo3FormGroup.controls.Other_Certificate.setValidators(null)
     }
-    this.userInfo3FormGroup.controls['Other_Certificate'].updateValueAndValidity();
+    this.userInfo3FormGroup.controls.Other_Certificate.updateValueAndValidity();
   }
 
   getMotherTongueByKey(key: string) {
     if (!key) {
       return
     }
-    return this.motherTongueList.filter(motherTongue => motherTongue.key === key)[0].value
+    return this.motherTongueList.filter(motherTongue => motherTongue.key === Number.parseInt(key))[0].value
   }
 
   mockStripePay() {
