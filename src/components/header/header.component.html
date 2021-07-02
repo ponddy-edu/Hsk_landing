@@ -80,6 +80,11 @@
           </li> -->
         </ul>
       </div>
+      <div class="enroll">
+        <a class="text_menu" routerLink="/enrollTest">
+          <span>Enroll a test</span>
+        </a>
+      </div>
       <div [class.login]="loginActive==='Login'" class="loginNo">
         <a class="text_menu" (click)="openLogin()">
           <span>Log in</span>
@@ -189,6 +194,14 @@
             </a>
           </li> -->
           <li class="mobile action nav-item">
+            <div class="enroll">
+              <a class="text_menu" routerLink="/enrollTest">
+                <span>Enroll a test</span>
+              </a>
+            </div>
+          </li>
+
+          <li class="mobile action nav-item">
             <div [class.login]="loginActive==='Login'" class="loginNo">
               <a class="text_menu " (click)="openLogin()">
                 <span>Log in</span>
@@ -247,6 +260,11 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="enroll">
+        <a class="text_menu">
+          <span>Enroll a test</span>
+        </a>
       </div>
       <div [class.login]="loginActive==='Login'" class="loginNo">
         <a class="text_menu" (click)="openLogin()">
