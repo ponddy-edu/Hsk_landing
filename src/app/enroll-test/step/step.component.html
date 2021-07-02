@@ -66,6 +66,11 @@
                        value="" placeholder="Chinese name">
               </div>
               <div class="form-field">
+                <label>Phone (with country code)</label>
+                <input formControlName="Phone" name="Phone"
+                       value="" placeholder="Phone (with country code)">
+              </div>
+              <div class="form-field">
                 <label>*Nationality</label>
                 <input formControlName="Nationality" name="Nationality"
                        value="United States" disabled>
@@ -100,15 +105,15 @@
                 <input formControlName="Birth_Date" name="Birth_Date"
                        type="date">
               </div>
-              <div class="form-field">
-                <label>Belong to</label>
-                <!--                <input formControlName="Belong_To" name="Belong_To" value="">-->
-                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">
-                  <mat-option value="Student">Student</mat-option>
-                  <mat-option value="In-service professionals">In-service professionals</mat-option>
-                  <mat-option value="Others">Others</mat-option>
-                </mat-select>
-              </div>
+<!--              <div class="form-field">-->
+<!--                <label>Belong to</label>-->
+<!--                &lt;!&ndash;                <input formControlName="Belong_To" name="Belong_To" value="">&ndash;&gt;-->
+<!--                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">-->
+<!--                  <mat-option value="Student">Student</mat-option>-->
+<!--                  <mat-option value="In-service professionals">In-service professionals</mat-option>-->
+<!--                  <mat-option value="Others">Others</mat-option>-->
+<!--                </mat-select>-->
+<!--              </div>-->
               <div class="form-field">
                 <label>*How long have you been learning Chinese?</label>
                 <mat-select placeholder="Please Select" formControlName="Learning_For" name="Learning_For">
@@ -124,7 +129,7 @@
                 </mat-select>
               </div>
               <div class="form-field">
-                <label>Why do you want to learn Chinese?</label>
+                <label>*Why do you want to learn Chinese?</label>
                 <mat-select placeholder="Please Select" formControlName="Reason" name="Reason">
                   <mat-option value="For research">For research</mat-option>
                   <mat-option value="Just a hobbit">Just a hobbit</mat-option>
@@ -133,7 +138,7 @@
                 </mat-select>
               </div>
               <div class="form-field">
-                <label>How did you get to know us?</label>
+                <label>*How did you get to know us?</label>
                 <mat-select placeholder="Please Select" formControlName="Known_From" name="Known_From">
                   <mat-option value="From internet">From internet</mat-option>
                   <mat-option value="From teachers">From teachers</mat-option>
@@ -142,7 +147,7 @@
                 </mat-select>
               </div>
               <div class="btn_wrap">
-                <button class="btn_focus-primary" [disabled]="userInfoFormGroup.invalid" matStepperNext>
+                <button class="btn_focus-primary" [disabled]="userInfo2FormGroup.invalid" matStepperNext>
                   Continue
                 </button>
                 <p (click)="myStepper.selectedIndex = 1">Previous</p>
@@ -170,7 +175,7 @@
                 </mat-select>
               </div>
               <div class="form-field">
-                <label>Other Certificate</label>
+                <label>Other Certificate（government issued only）</label>
                 <input formControlName="Other_Certificate" name="Other_Certificate"
                        type="text"
                        value="" placeholder="Other Certificate">
@@ -229,6 +234,12 @@
                   <label>Email:</label>
                   <p>{{userInfoFormGroup.get('Email')?.value}}</p>
                 </div>
+              </div>
+              <div class="form-field">
+                <div class="cell">
+                  <label>Phone:</label>
+                  <p>{{userInfoFormGroup.get('Phone')?.value}}</p>
+                </div>
                 <div class="cell">
                   <label>Birth date:</label>
                   <p>{{userInfo2FormGroup.get('Birth_Date')?.value}}</p>
@@ -239,10 +250,10 @@
                   <label>Name: </label>
                   <p>{{userInfoFormGroup.get('Name')?.value}}</p>
                 </div>
-                <div class="cell">
-                  <label>Belong to:</label>
-                  <p>{{userInfo2FormGroup.get('Belong_To')?.value}}</p>
-                </div>
+<!--                <div class="cell">-->
+<!--                  <label>Belong to:</label>-->
+<!--                  <p>{{userInfo2FormGroup.get('Belong_To')?.value}}</p>-->
+<!--                </div>-->
               </div>
 
 
@@ -252,7 +263,7 @@
                   <p>{{userInfo3FormGroup.get('Certificate_Type')?.value}}</p>
                 </div>
                 <div class="cell">
-                  <label>Other Certificate（government issued only）</label>
+                  <label>Other Certificate</label>
                   <p>{{userInfo3FormGroup.get('Other_Certificate')?.value}}</p>
                 </div>
               </div>
