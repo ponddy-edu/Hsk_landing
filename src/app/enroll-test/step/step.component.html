@@ -54,7 +54,7 @@
                        value="" placeholder="Email">
               </div>
               <div class="form-field">
-                <label>*Name</label>
+                <label>*Name (the same as your Certificate)</label>
                 <input formControlName="Name" name="Name"
                        type="text"
                        value="" placeholder="Name">
@@ -163,13 +163,14 @@
                 <mat-select placeholder="Please Select"
                             (ngModelChange)="changeCertificate_Type($event)"
                             formControlName="Certificate_Type" name="Certificate_Type">
-                  <mat-option value="Student">Passport</mat-option>
-                  <mat-option value="In-service professionals">ID</mat-option>
+                  <mat-option value="Passport">Passport</mat-option>
+                  <mat-option value="ID">ID</mat-option>
+                  <mat-option value="ARC">ARC</mat-option>
                   <mat-option value="Others">Others</mat-option>
                 </mat-select>
               </div>
               <div class="form-field">
-                <label>Other_Certificate</label>
+                <label>Other Certificate</label>
                 <input formControlName="Other_Certificate" name="Other_Certificate"
                        type="text"
                        value="" placeholder="Other Certificate">
@@ -251,7 +252,7 @@
                   <p>{{userInfo3FormGroup.get('Certificate_Type')?.value}}</p>
                 </div>
                 <div class="cell">
-                  <label>Other Certificate</label>
+                  <label>Other Certificate（government issued only）</label>
                   <p>{{userInfo3FormGroup.get('Other_Certificate')?.value}}</p>
                 </div>
               </div>
