@@ -9,6 +9,7 @@ import {
 import {
   DeviceService
 } from '../../../utils/device.service';
+import {SheetService} from "../../../utils/sheet.service";
 
 @Component({
   selector: 'app-intro-enroll',
@@ -28,8 +29,10 @@ export class IntroEnrollComponent implements OnInit {
   courseCarousel: CarouselComponent;
   courseWidth: number
   courseHeight: number
+  isPayedCountList = {level2: 0, level4: 0}
 
-  constructor(public device: DeviceService) {
+  constructor(public device: DeviceService,
+              public sheetService: SheetService) {
     if (device.$mobile.getValue()) {
       this.courseWidth = 240
       this.courseHeight = 550
@@ -42,7 +45,13 @@ export class IntroEnrollComponent implements OnInit {
       this.web = true
     }
   }
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    this.sheetService.getIsPayCount()
+      .subscribe((respone: any) => {
+        this.isPayedCountList = respone
+      })
+  }
 
 
 }
