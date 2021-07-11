@@ -113,17 +113,20 @@
         <ul class="pd-nav-item navbar-nav mr-auto text-center">
 
           <li class="nav-item" routerLink="/home">
-            <a i18n="header" [class.active]="actvieMenu==='home'" class="nav-active text_menu" data="navbar">
+            <a i18n="header" [class.active]="actvieMenu==='home'"
+               class="nav-active text_menu ga_class_home" data="navbar">
               Home
             </a>
           </li>
           <li class="nav-item" routerLink="/ponddy">
-            <a i18n="header" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu">
+            <a i18n="header" [class.active]="actvieMenu==='ponddy'"
+               class="nav-a text_menu ga_class_ponddy">
               Ponddy
             </a>
           </li>
           <li class="nav-item" routerLink="/courses">
-            <a i18n="header" [class.active]="actvieMenu==='courses'" class="nav-a text_menu">
+            <a i18n="header" [class.active]="actvieMenu==='courses'"
+               class="nav-a text_menu ga_class_courses">
               Course
             </a>
           </li>
@@ -133,22 +136,26 @@
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <div class="title">
-                      <a [class.active]="actvieMenu==='tests'" i18n="header" data="navbar" class="nav-a text_menu">
+                      <a [class.active]="actvieMenu==='tests'" i18n="header" data="navbar"
+                         class="nav-a text_menu ga_class_tests">
                         Tests
                       </a>
                     </div>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="text">
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/tests/chinese">
+                  <a i18n="header" data="navbar" class="nav-a text_menu ga_class_tests_chinese"
+                     routerLink="/tests/chinese">
                     Chinese Tests
                   </a>
                   <br>
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/tests/instructions/1">
+                  <a i18n="header" data="navbar" class="nav-a text_menu ga_class_tests_instructions"
+                     routerLink="/tests/instructions/1">
                     Test Instructions
                   </a>
                   <br>
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/tests/enroll">
+                  <a i18n="header" data="navbar" class="nav-a text_menu ga_class_tests_enroll"
+                     routerLink="/tests/enroll">
                     Enroll a test
                   </a>
                 </div>
@@ -161,22 +168,26 @@
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <div class="title">
-                      <a [class.active]="actvieMenu==='resources'" i18n="header" data="navbar" class="nav-a text_menu">
+                      <a [class.active]="actvieMenu==='resources'" i18n="header" data="navbar"
+                         class="nav-a text_menu ga_class_resources">
                         Resource
                       </a>
                     </div>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="text">
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/preparation">
+                  <a i18n="header" data="navbar" class="nav-a text_menu ga_class_resources_preparation"
+                     routerLink="/resources/preparation">
                     Preparation
                   </a>
                   <br>
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/smart">
+                  <a i18n="header" data="navbar" class="nav-a text_menu ga_class_resources_smart"
+                     routerLink="/resources/smart">
                     AI Chinese Tools
                   </a>
                   <br>
-                  <a i18n="header" data="navbar" class="nav-a text_menu" routerLink="/resources/download">
+                  <a i18n="header" data="navbar" class="nav-a text_menu ga_class_resources_download"
+                     routerLink="/resources/download">
                     Test Prep Resource
                   </a>
                 </div>
@@ -184,7 +195,8 @@
             </mat-accordion>
           </li>
           <li class="nav-item" routerLink="/faq">
-            <a i18n="header" [class.active]="actvieMenu==='faq'" data="navbar" class="nav-a text_menu">
+            <a i18n="header" [class.active]="actvieMenu==='faq'" data="navbar"
+               class="nav-a text_menu ga_class_faq">
               FAQ
             </a>
           </li>
@@ -225,37 +237,42 @@
         <ul *ngIf="!(deviceService.$mobile |async)" class="pd-nav-item navbar-nav mr-auto text-center" style="display:flex;flex-direction: row;padding: 0;margin: 0;width: 100%">
 
           <li class="nav-item nav-border-l nav-border-r" style="display: inline;">
-            <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'" class="text_menu" data="navbar">
+            <a i18n="header" routerLink="/home" [class.active]="actvieMenu==='home'"
+               class="text_menu ga_class_home" data="navbar" >
               Home
             </a>
           </li>
           <li class="nav-item nav-border-r " style="display: inline;">
-            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'" class="nav-a text_menu"
+            <a i18n="header" routerLink="/ponddy" [class.active]="actvieMenu==='ponddy'"
+               class="nav-a text_menu ga_class_ponddy"
                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Ponddy
             </a>
           </li>
           <li class="nav-item nav-border-r " style="display: inline;">
-            <a i18n="header" routerLink="/courses" [class.active]="actvieMenu==='courses'" class="nav-a text_menu"
+            <a i18n="header" routerLink="/courses" [class.active]="actvieMenu==='courses'"
+               class="nav-a text_menu ga_class_courses"
                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Courses
             </a>
           </li>
           <li class="nav-item nav-border-r" style="display: inline;">
-            <a i18n="header" routerLink="/tests/chinese" [class.active]="actvieMenu==='tests'" class="nav-a text_menu"
+            <a i18n="header" routerLink="/tests/chinese" [class.active]="actvieMenu==='tests'"
+               class="nav-a text_menu ga_class_tests_chinese"
               role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Tests
             </a>
           </li>
           <li class="nav-item nav-border-r " style="display: inline;">
-            <a i18n="header" routerLink="/resources/preparation" [class.active]="actvieMenu==='resources'"class="nav-a text_menu"
+            <a i18n="header" routerLink="/resources/preparation" [class.active]="actvieMenu==='resources'"
+               class="nav-a text_menu ga_class_resources_preparation"
             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
               Resources
             </a>
           </li>
           <li class="nav-item" style="display: inline;">
             <a i18n="header" routerLink="/faq" [class.active]="actvieMenu==='faq'" data="navbar"
-               class="nav-a text_menu">
+               class="nav-a text_menu ga_class_resources_faq">
               FAQ
             </a>
           </li>
