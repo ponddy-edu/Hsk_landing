@@ -34,10 +34,16 @@
                 </p>
               </div>
               <div class="btn_wrap absolute">
-                <button class="btn_focus-primary" [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
+                <button class="btn_focus-primary"
+                        [disabled]="true"
                         matStepperNext>
                   Continue
                 </button>
+<!--                <button class="btn_focus-primary"-->
+<!--                        [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"-->
+<!--                        matStepperNext>-->
+<!--                  Continue-->
+<!--                </button>-->
               </div>
             </form>
           </mat-step>
