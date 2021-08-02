@@ -220,24 +220,24 @@ export class BookingComponent implements OnInit {
     }
 
     if (btoa($event.toLowerCase()) === 'OC9zZXNzaW9u') {
-      this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T'}
-      this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg'}
-      this.pricingList.adult4 = {...this.pricingList.adult4, price: 384, stripeKey: 'price_1J7j8lHRhoOpWeKwwzAaH4Ci'}
-      this.pricingList.student1 = {
-        ...this.pricingList.student1,
-        price: 320,
-        stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh'
-      }
-      this.pricingList.student3 = {
-        ...this.pricingList.student3,
-        price: 384,
-        stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj'
-      }
-      this.pricingList.student4 = {
-        ...this.pricingList.student4,
-        price: 768,
-        stripeKey: 'price_1J7jIHHRhoOpWeKwHlZMn3kp'
-      }
+      // this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T'}
+      // this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg'}
+      // this.pricingList.adult4 = {...this.pricingList.adult4, price: 384, stripeKey: 'price_1J7j8lHRhoOpWeKwwzAaH4Ci'}
+      // this.pricingList.student1 = {
+      //   ...this.pricingList.student1,
+      //   price: 320,
+      //   stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh'
+      // }
+      // this.pricingList.student3 = {
+      //   ...this.pricingList.student3,
+      //   price: 384,
+      //   stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj'
+      // }
+      // this.pricingList.student4 = {
+      //   ...this.pricingList.student4,
+      //   price: 768,
+      //   stripeKey: 'price_1J7jIHHRhoOpWeKwHlZMn3kp'
+      // }
     } else if (btoa($event.toLowerCase()) === 'MTAvc2Vzc2lvbg==') {
       this.pricingList.adult1 = {...this.pricingList.adult1, price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
       this.pricingList.student1 = {
