@@ -60,6 +60,7 @@
     .carousel,
      ::ng-deep .carousel-inner {
       height: auto;
+      min-height: 500px;
       @media (max-width: 1024px) {
         height: auto;
         min-height: 0;
