@@ -110,6 +110,16 @@
         height: auto;
         width: 100%;
       }
+      img.ng-lazyloading {
+        opacity: 0.5;
+      }
+      img.ng-lazyloaded {
+        animation: fadein 1s;
+      }
+      @keyframes fadein {
+        from { opacity:  0.5; }
+        to   { opacity: 1; }
+      }
     }
      ::ng-deep.carousel-indicators {
       position: absolute;

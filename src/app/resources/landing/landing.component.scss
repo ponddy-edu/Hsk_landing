@@ -2,67 +2,50 @@
   margin-top: 60px;
   height: calc(70vh - 65px);
   box-sizing: border-box;
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/index_pic_web.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media (max-width: 991.98px) {
-    height: calc(70vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/index_pic_phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  position: relative;
+  @media (max-width: 1024px) {
+    height: auto;
   }
   h1 {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 48px;
     line-height: 71px;
-    color: #FFFFFF;
+    color: #fff;
     @media (max-width: 991.98px) {
       font-size: 30px;
       line-height: 38px;
     }
   }
   h2 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 24px;
     line-height: 35px;
     letter-spacing: 1px;
-    color: #FFFFFF;
+    color: #fff;
     @media (max-width: 991.98px) {
       font-weight: normal;
     }
   }
-  .iconify_wrap {
-    //position: absolute;
-    //right: 0;
-    //bottom: 100px;
-    //left: calc(50% - 16px);
-    z-index: 15;
-    text-align: center;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    display: none;
-    margin: 36px auto 0;
-
-    @media (max-width: 992px) {
-      display: block;
-    }
-    .iconify {
-      color: #FFFFFF;
-      font-size: 32px;
-      &:hover {
-        opacity: 0.6;
-      }
+  p {
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    font-weight: 700;
+    @media (max-width: 991.98px) {
+      height: 24px;
+      left: 28px;
     }
   }
-  .w-100 {
-    height: 100%;
+  .title {
+    max-width: 824px;
   }
   .background {
     position: absolute;
     height: 100%;
     width: 100%;
+    top: 0;
+    pointer-events: none;
     .padding_space {
       height: 33%;
       width: 100%;
@@ -71,70 +54,77 @@
       height: 67%;
       width: 100%;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-      .title{
-        max-width: 824px;
+    }
+  }
+
+    .carousel,
+     ::ng-deep .carousel-inner {
+      height: auto;
+      @media (max-width: 1024px) {
+        height: auto;
+        min-height: 0;
       }
     }
-  }
-  .container {
-    padding-top: 15px;
-    @media (max-width: 992px) {
+    .w-100 {
+      max-height: calc(100vh - 65px);
+      overflow: hidden;
+    }
+     ::ng-deep.carousel-control-prev {
+      display: none;
+    }
+     ::ng-deep.carousel-control-next {
+      display: none;
+    }
+
+    .container {
       position: absolute;
-      bottom: 90px;
+      //top: 43vh;
+      bottom: 25vh;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      @media (max-width: 991.98px) {
+        bottom: 16vh;
+        top: auto;
+      }
     }
-  }
-}
-
-.landing__preparation {
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.svg");
-  background-size: cover;
-  @media (max-width: 991.98px) {
-    height: calc(70vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  h1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 62px;
-    color: #FFFFFF;
+    img.d-block {
+      height: auto;
+      width: 100%;
+    }
+    img.ng-lazyloading {
+      opacity: 0.5;
+    }
+    img.ng-lazyloaded {
+      animation: fadein 1s;
+    }
+    @keyframes fadein {
+      from { opacity:  0.5; }
+      to   { opacity: 1; }
+    }
+    ::ng-deep.carousel-indicators {
+    position: absolute;
+    bottom: 96px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
     @media (max-width: 991.98px) {
-      font-size: 32px;
-      line-height: 42px;
+      display: none;
     }
-  }
-}
-
-.landing__smart {
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/index_pic_web.png");
-  background-size: cover;
-  @media (max-width: 991.98px) {
-    height: calc(70vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/index_pic_phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  h1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 62px;
-    color: #FFFFFF;
-    @media (max-width: 991.98px) {
-      font-size: 32px;
-      line-height: 42px;
+    li {
+      opacity: 1;
+      //margin-right: 8px;
+      //margin-left: 8px;
+      height: 8px;
+      width: 8px;
+      border: 8px solid transparent !important;
+      background-color: rgba(255, 255, 255, 0.35);
+      &.active {
+        background-color: #FFFFFF;
+      }
     }
-  }
-}
-.landing__prepare{
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic.png");
-  background-size: cover;
-  @media (max-width: 991.98px) {
-    height: calc(70vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic_phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+    }
 }

@@ -2,15 +2,22 @@
   margin-top: 60px;
   height: calc(70vh - 65px);
   box-sizing: border-box;
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/web/index_pic_web.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
-  @media (max-width: 991.98px) {
-    height: calc(70vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/faq/mobile/index_pic_phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+  .learn_more {
+    display: flex;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+    align-items: center;
+    .orange_text {
+      color: #F3A024;
+    }
   }
   h1 {
     font-style: normal;
@@ -25,6 +32,9 @@
       text-align: left;
     }
   }
+  .title {
+    max-width: 824px;
+  }
   .iconify_wrap {
     position: absolute;
     right: 0;
@@ -35,8 +45,8 @@
     cursor: pointer;
     display: inline-block;
     width: 32px;
-    height: 32px;
-    .iconify {
+    height: auto;
+     ::ng-deep.iconify {
       color: #FFFFFF;
       font-size: 32px;
       &:hover {
@@ -44,8 +54,90 @@
       }
     }
   }
- 
-  .container {
-    padding-top: 15px;
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    .padding_space {
+      height: 33%;
+      width: 100%;
+    }
+    .mask_space {
+      height: 67%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+  }
+
+    .carousel,
+     ::ng-deep .carousel-inner {
+      height: auto;
+      @media (max-width: 1024px) {
+        height: auto;
+        min-height: 0;
+      }
+    }
+    .w-100 {
+      max-height: calc(100vh - 65px);
+      overflow: hidden;
+    }
+     ::ng-deep.carousel-control-prev {
+      display: none;
+    }
+     ::ng-deep.carousel-control-next {
+      display: none;
+    }
+
+    .container {
+      position: absolute;
+      //top: 43vh;
+      bottom: 25vh;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      @media (max-width: 991.98px) {
+        bottom: 16vh;
+        top: auto;
+      }
+    }
+    img.d-block {
+      height: auto;
+      width: 100%;
+    }
+    img.ng-lazyloading {
+      opacity: 0.5;
+    }
+    img.ng-lazyloaded {
+      animation: fadein 1s;
+    }
+    @keyframes fadein {
+      from { opacity:  0.5; }
+      to   { opacity: 1; }
+    }
+
+    ::ng-deep.carousel-indicators {
+    position: absolute;
+    bottom: 96px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+    li {
+      opacity: 1;
+      height: 8px;
+      width: 8px;
+      border: 8px solid transparent !important;
+      background-color: rgba(255, 255, 255, 0.35);
+      &.active {
+        background-color: #FFFFFF;
+      }
+    }
   }
 }

@@ -17,29 +17,43 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/m
   'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/index_pic_05_phone.png',
 ]
 
+const imageList_small = ['/assets/image/home/index_pic_01_small.png',
+                        '/assets/image/home/index_pic_02_small.png',
+                        '/assets/image/home/index_pic_03_small.png',
+                        '/assets/image/home/index_pic_04_small.png',
+                        '/assets/image/home/index_pic_05_small.png'
+                      ]
+const imagmeListMobile_small = ['/assets/image/home/index_pic_01_phone_small.png',
+                        '/assets/image/home/index_pic_02_phone_small.png',
+                        '/assets/image/home/index_pic_03_phone_small.png',
+                        '/assets/image/home/index_pic_04_phone_small.png',
+                        '/assets/image/home/index_pic_05_phone_small.png'
+                      ]
+
 @Component({
   selector: 'app-home-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  carouselImageList: any[]
   homeIcon = home;
   playIcon = play;
   arrowDownCircle = arrowDownCircle
+
+  carouselImageList: any[]
+  carouselImageList_small: any[]
 
   constructor(public device: DeviceService) {
     this.device.$mobile.subscribe(isMobile => {
       console.log(isMobile)
       if (isMobile) {
         this.carouselImageList = imagmeListMobile
+        this.carouselImageList_small = imagmeListMobile_small
       } else {
         this.carouselImageList = imageList
-
+        this.carouselImageList_small = imageList_small
       }
     })
-
-
   }
 
   ngOnInit(): void {

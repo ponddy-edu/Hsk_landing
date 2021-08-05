@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceService } from 'src/utils/device.service';
+
+const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png']
+const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/index_pic_phone.png']
+
+const imageList_small = ['/assets/image/home/59291481_s_small.png']
+const imagmeListMobile_small = ['/assets/image/home/59291481_s_phone_small.png']
 
 @Component({
   selector: 'app-landing',
@@ -6,8 +13,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+  carouselImageList: any[]
+  carouselImageList_small: any[]
 
-  constructor() { }
+  constructor(public device: DeviceService) {
+    this.device.$mobile.subscribe(isMobile => {
+      console.log(isMobile)
+      if (isMobile) {
+        this.carouselImageList = imagmeListMobile
+        this.carouselImageList_small = imagmeListMobile_small
+      } else {
+        this.carouselImageList = imageList
+        this.carouselImageList_small = imageList_small
+      }
+    })
+  }
 
   ngOnInit(): void {
   }
