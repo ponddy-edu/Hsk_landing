@@ -10,13 +10,13 @@ const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/resour
                           'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic_phone.png'
                          ]
 
-const imageList_small = ['/assets/image/resources/index_pic_web-preparation_small.png',
-                        '/assets/image/resources/index_pic_web-ai_small.png',
-                        '/assets/image/resources/prepare_test_pic_small.png'
+const imageList_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/web/index_pic_web-preparation_small.png',
+                        'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/web/index_pic_web-ai_small.png',
+                        'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/web/prepare_test_pic_small.png'
                       ]
-const imagmeListMobile_small = ['/assets/image/resources/index_pic_web-preparation_phone_small.png',
-                              '/assets/image/resources/index_pic_web-ai__phone_small.png',
-                              '/assets/image/resources/prepare_test_pic_phone_small.png'
+const imagmeListMobile_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_web-preparation_phone_small.png',
+                              'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_web-ai_phone_small.png',
+                              'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/mobile/prepare_test_pic_phone_small.png'
                             ]
 
 @Component({

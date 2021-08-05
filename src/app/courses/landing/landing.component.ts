@@ -4,8 +4,8 @@ import { DeviceService } from 'src/utils/device.service';
 const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/web/index_pic_web.png']
 const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/resources/course/mobile/index_pic_phone.png']
 
-const imageList_small = ['/assets/image/home/index_pic_web_courses_small.png']
-const imagmeListMobile_small = ['/assets/image/home/index_pic_phone_courses_small.png']
+const imageList_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/resources/course/web2/index_pic_web_courses_small.png']
+const imagmeListMobile_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/resources/course/mobile2/index_pic_phone_courses_small.png']
 
 @Component({
   selector: 'app-landing',
