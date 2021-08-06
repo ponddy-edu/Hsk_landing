@@ -4,7 +4,7 @@ const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/pic_
                    'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/index_pic_web.png',
                    'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/index_pic_web.png',
                   ]
-const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/index_pic_phone.png',
+const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/pic_HSK_Test_index1.png',
                           'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/mobile/index_pic_phone.png',
                           'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/mobile/index_pic_phone.png'
                          ]
