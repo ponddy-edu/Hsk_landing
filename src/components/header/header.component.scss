@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   .icon-bar {
     background-color: #3fb2d1;
     transition: all 0.3s;
@@ -18,11 +17,9 @@
     margin-top: 0px !important;
     display: block;
   }
-
   .icon-bar:nth-child(3) {
     margin-bottom: 0px !important;
   }
-
   .icon-text {
     font-family: proxima-nova, sans-serif;
     font-size: 12px;
@@ -37,17 +34,14 @@
     transform-origin: right;
     transform: rotate(-45deg);
   }
-
   .navbar-toggler .icon-bar:nth-child(2) {
     background-color: #fff;
   }
-
   .navbar-toggler .icon-bar:nth-child(3) {
     transform-origin: right;
     transform: rotate(45deg);
     margin-bottom: 0 !important;
   }
-
   .navbar-toggler .icon-text {
     visibility: hidden;
   }
@@ -55,7 +49,6 @@
 
 ::ng-deep.cdk-overlay-pane {
   //padding-top: 12px;
-
   .mat-menu-panel {
     min-width: 300px;
     background-color: transparent;
@@ -69,7 +62,6 @@
         background-color: #fff;
         border-radius: 6px;
       }
-
       button {
         &:nth-child(1) {
           border-radius: 6px 6px 0 0;
@@ -77,11 +69,9 @@
         &:nth-last-child(1) {
           border-radius: 0 0 6px 6px;
         }
-
       }
     }
   }
-
   .mat-menu-content:not(:empty) {
     padding: 0 !important;
   }
@@ -100,14 +90,12 @@
   a:focus {
     outline: unset;
   }
-
   .enroll {
     &:hover {
       a {
         border-bottom: solid 3px #F3A024;
       }
     }
-
     a {
       color: #F3A024 !important;
     }
@@ -116,24 +104,19 @@
 
 .pd-menu-item {
   border-bottom: 1px solid #EAEBEC;
-
   &:nth-last-child(1) {
     border-bottom: none;
   }
-
   &:hover {
     background: #FBFCFC;
-
     a {
       color: #6ACFED !important;
     }
   }
-
   &:focus {
     outline: unset;
     background: inherit;
   }
-
   a {
     cursor: pointer;
     font-size: 16px;
@@ -145,12 +128,10 @@
     font-weight: 700;
     height: 48px;
     font-family: Ponddy-NotoRubik;
-
     &.active {
       color: #3b9fbe !important;
       border: none !important;
     }
-
     &:after {
       content: url("/assets/image/icon/arrow.png");
       float: right;
@@ -161,10 +142,8 @@
 mat-expansion-panel {
   width: 100%;
   box-shadow: none !important;
-
   mat-expansion-panel-header {
     padding: 0;
-
     mat-panel-title {
       justify-content: space-between;
     }
@@ -178,10 +157,9 @@ mat-expansion-panel {
 
 @media (max-width: 767px) {
   nav {
-    ::ng-deep.mat-expansion-panel-content {
+     ::ng-deep.mat-expansion-panel-content {
       height: 145vw;
       overflow-y: scroll !important;
-
       .mobile.action.nav-item {
         position: fixed;
         bottom: 0;
@@ -193,12 +171,10 @@ mat-expansion-panel {
         background-color: #fff;
       }
     }
-
-    ::ng-deep.nav-item .mat-expansion-panel-content {
+     ::ng-deep.nav-item .mat-expansion-panel-content {
       height: auto;
     }
-
-    ::ng-deep.mat-expansion-indicator::after {
+     ::ng-deep.mat-expansion-indicator::after {
       display: inline-block;
       width: 0;
       height: 0;
@@ -215,7 +191,6 @@ mat-expansion-panel {
   }
   .navbar-nav {
     flex-direction: column;
-
     .nav-item {
       max-height: fit-content !important;
     }
@@ -233,7 +208,6 @@ mat-expansion-panel {
       height: 48px;
       padding: 13px 8px !important;
       margin: 4px 8px !important;
-
       &.active {
         color: #3b9fbe !important;
         border: none !important;
@@ -244,16 +218,18 @@ mat-expansion-panel {
     text-align: left;
   }
 }
-.enroll{
+
+.enroll {
   letter-spacing: 1px;
   display: block;
   text-align: center;
   margin-top: 10px;
   padding-right: 24px;
-  span{
+  span {
     color: #F3A024;
   }
 }
+
 .loginNo {
   display: none;
 }
@@ -262,5 +238,4 @@ mat-expansion-panel {
   display: block;
   color: #ffffff;
   text-align: center;
-  margin-top: 10px;
 }
