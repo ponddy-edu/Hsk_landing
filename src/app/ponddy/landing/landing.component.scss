@@ -2,33 +2,21 @@
   margin-top: 60px;
   height: calc(70vh - 65px);
   box-sizing: border-box;
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
-  @media (max-width: 991.98px) {
-    height: calc(70vh - 65px);
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/index_pic_phone.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .iconify_wrap {
-    position: absolute;
-    right: 0;
-    bottom: 40px;
-    left: calc(50% - 16px);
-    z-index: 15;
-    text-align: center;
-    cursor: pointer;
-    display: inline-block;
-    width: 32px;
+  @media (max-width: 1024px) {
     height: auto;
-    .iconify {
-      color: #FFFFFF;
-      font-size: 32px;
-      &:hover {
-        opacity: 0.6;
-      }
+  }
+  .learn_more {
+    display: flex;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+    align-items: center;
+    .orange_text {
+      color: #F3A024;
     }
   }
   h1 {
@@ -52,12 +40,113 @@
       font-weight: normal;
     }
   }
+  .title {
+    max-width: 824px;
+  }
+  .iconify_wrap {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    left: calc(50% - 16px);
+    z-index: 15;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: auto;
+     ::ng-deep.iconify {
+      color: #FFFFFF;
+      font-size: 32px;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    .padding_space {
+      height: 33%;
+      width: 100%;
+    }
+    .mask_space {
+      height: 67%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+  }
 
-  .container {
-    padding-top: 15px;
-    @media (max-width: 992px) {
+    .carousel,
+     ::ng-deep .carousel-inner {
+      height: auto;
+      min-height: 500px;
+      @media (max-width: 1024px) {
+        height: auto;
+        min-height: 0;
+      }
+    }
+    .w-100 {
+      max-height: calc(100vh - 65px);
+      overflow: hidden;
+    }
+     ::ng-deep.carousel-control-prev {
+      display: none;
+    }
+     ::ng-deep.carousel-control-next {
+      display: none;
+    }
+
+    .container {
       position: absolute;
-      bottom: 140px;
+      //top: 43vh;
+      bottom: 25vh;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      @media (max-width: 991.98px) {
+        bottom: 16vh;
+        top: auto;
+      }
+    }
+    img.d-block {
+      height: auto;
+      width: 100%;
+    }
+    img.ng-lazyloading {
+      opacity: 0.5;
+    }
+    img.ng-lazyloaded {
+      animation: fadein 1s;
+    }
+    @keyframes fadein {
+      from { opacity:  0.5; }
+      to   { opacity: 1; }
+    }
+
+    ::ng-deep.carousel-indicators {
+    position: absolute;
+    bottom: 96px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+    li {
+      opacity: 1;
+      height: 8px;
+      width: 8px;
+      border: 8px solid transparent !important;
+      background-color: rgba(255, 255, 255, 0.35);
+      &.active {
+        background-color: #FFFFFF;
+      }
     }
   }
 }

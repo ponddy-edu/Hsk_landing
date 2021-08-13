@@ -1,4 +1,23 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { DeviceService } from 'src/utils/device.service';
+
+const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/resources/index_pic_web-preparation.png',
+                   'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/index_pic_web.png',
+                   'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic.png',
+                  ]
+const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_phone.png',
+                          'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/index_pic_phone.png',
+                          'https://hsk-landing.s3-us-west-2.amazonaws.com/resources/download/prepare_test_pic_phone.png'
+                         ]
+
+const imageList_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/web/index_pic_web-preparation_small.png',
+                        'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/web/index_pic_web-ai_small.png',
+                        'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/web/prepare_test_pic_small.png'
+                      ]
+const imagmeListMobile_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_web-preparation_phone_small.png',
+                              'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/mobile/index_pic_web-ai_phone_small.png',
+                              'https://hsk-landing.s3.us-west-2.amazonaws.com/resources/preparation/mobile/prepare_test_pic_phone_small.png'
+                            ]
 
 @Component({
   selector: 'app-landing',
@@ -13,7 +32,21 @@ export class LandingComponent implements OnInit {
   background2 = 'url("https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png")'
   background3 = 'url("https://hsk-landing.s3-us-west-2.amazonaws.com/test/web/index_01.png")'
 
-  constructor() { }
+  carouselImageList: any[]
+  carouselImageList_small: any[]
+
+  constructor(public device: DeviceService) {
+    this.device.$mobile.subscribe(isMobile => {
+      console.log(isMobile)
+      if (isMobile) {
+        this.carouselImageList = imagmeListMobile
+        this.carouselImageList_small = imagmeListMobile_small
+      } else {
+        this.carouselImageList = imageList
+        this.carouselImageList_small = imageList_small
+      }
+    })
+  }
 
   ngOnInit(): void {
   }
