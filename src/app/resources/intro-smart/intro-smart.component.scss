@@ -57,9 +57,14 @@ section {
     img.round {
       border-radius: 12px 12px 0 0;
     }
-    .btn_focus-primary{
+
+    .btn_focus-primary {
       margin-top: 40px;
       font-weight: 700;
+
+      span {
+        margin: auto;
+      }
     }
   }
 
