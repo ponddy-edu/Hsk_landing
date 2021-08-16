@@ -348,7 +348,7 @@ export class StepComponent implements OnInit {
       Gender: new FormControl('', Validators.required),
     })
     this.testInfoFormGroup = this.formBuilder.group({
-      Test_Date: new FormControl('July 23rd at 6 pm Pacific time'),
+      Test_Date: new FormControl('Sep. 25th at 6 pm Pacific time'),
     });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
