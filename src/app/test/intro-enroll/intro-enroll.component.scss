@@ -131,7 +131,7 @@
       .card_schedule {
         .table {
           display: inline-block;
-          width: 580px;
+          width: 600px;
           border: 1px solid #EAEBEC;
           box-sizing: border-box;
           border-radius: 12px;
@@ -196,7 +196,7 @@
             }
 
             &__description {
-              display: flex;
+              // display: flex;
               padding: 8px 24px 8px 20px;
               width: 135px;
               font-weight: normal;
@@ -204,6 +204,30 @@
               line-height: 28px;
               letter-spacing: 1px;
               color: #2D3942;
+
+              &__color {
+                // color: #1b7892;
+                font-weight: bold;
+                font-size: 16px;
+                @media (max-width: 768px) {
+                  font-size: 14px;
+                }
+              }
+              &__color-no {
+                padding-top: 30px;
+                color: #969CA0;
+                font-size: 20px;
+                @media (max-width: 768px) {
+                  font-size: 16px;
+                }
+                .title {
+                  font-size: 16px;
+                  font-weight: bold;
+                  @media (max-width: 768px) {
+                    font-size: 14px;
+                  }
+                }
+              }
 
               @media (max-width: 768px) {
                 width: 30%;
