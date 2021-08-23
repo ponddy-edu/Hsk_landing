@@ -20,13 +20,13 @@ export class EnrollComponent implements OnInit {
   ngOnInit(): void {
     // this.auth.
 
-    // this.checkActionPay()
-    // setTimeout(() => {
-    //   if (!localStorage.getItem('token') && this.device.isBrowser) {
-    //     console.log('not login')
-    //     this.openLoginDialog()
-    //   }
-    // }, 1000)
+    this.checkActionPay()
+    setTimeout(() => {
+      if (!localStorage.getItem('token') && this.device.isBrowser) {
+        console.log('not login')
+        this.openLoginDialog()
+      }
+    }, 1000)
     // let a = atob(localStorage.getItem('token'))
   }
 
