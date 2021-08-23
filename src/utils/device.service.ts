@@ -34,7 +34,7 @@ export class DeviceService {
   }
 
   checkScreenSize(): void {
-    if (window.innerWidth <= 991.98) { // 768px portrait
+    if (window.innerWidth <= 1224) { // 768px portrait / 991.98
       this.$mobile.next(true);
     } else {
       this.$mobile.next(false)
