@@ -103,6 +103,17 @@
         }
       }
       .card_schedule {
+        .notice_red {
+          line-height: 14pt;
+          font-size: 12pt;
+          letter-spacing: 1px;
+          font-weight: 500;
+          margin-bottom: 16px;
+          color: #ea4b65;
+          @media (max-width: 768px) {
+            margin-bottom: 24px;
+          }
+        }
         .table {
           display: inline-block;
           width: 600px;
@@ -110,7 +121,7 @@
           box-sizing: border-box;
           border-radius: 12px;
           margin-top: 13px;
-          margin-bottom: 36px;
+          margin-bottom: 16px;
           @media (max-width: 768px) {
             width: 100% !important;
             margin-bottom: 24px;
@@ -179,6 +190,7 @@
                 &__rad {
                   color: #ea4b65;
                   font-size: 14px;
+                  font-weight: 500;
                 }
               }
               &__color-no {
