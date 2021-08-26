@@ -12,6 +12,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LandingComponent } from './landing/landing.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatMenuModule} from "@angular/material/menu";
 
 const routes: Routes = [
   {path: '', component: EnrollComponent},
@@ -19,17 +20,18 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [EnrollComponent, StepComponent, LandingComponent],
-  imports: [
-    CommonModule,
-    ShareModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDialogModule,
-    RouterModule.forChild(routes),
-    MatCheckboxModule,
-  ]
+    imports: [
+        CommonModule,
+        ShareModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatDialogModule,
+        RouterModule.forChild(routes),
+        MatCheckboxModule,
+        MatMenuModule,
+    ]
 })
 export class EnrollTestModule { }

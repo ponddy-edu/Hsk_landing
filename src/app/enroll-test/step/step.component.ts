@@ -4,6 +4,7 @@ import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
 import {loadStripe} from '@stripe/stripe-js/pure';
 import {environment} from '../../../environments/environment';
+
 @Component({
   selector: 'app-step',
   templateUrl: './step.component.html',
@@ -18,6 +19,8 @@ export class StepComponent implements OnInit {
   userInfo3FormGroup: FormGroup;
   testInfoFormGroup: FormGroup;
   summaryFormGroup: FormGroup;
+
+  testFormGroup: FormGroup;
   chooseTestLevel = 0
   stripe: any
   motherTongueList = [
@@ -309,12 +312,12 @@ export class StepComponent implements OnInit {
   }
 
   async ngOnInit() {
-    let tokenSection
+
     if (localStorage.getItem('token')) {
       try {
         // @ts-ignore
 
-        tokenSection = localStorage.getItem('token').split('.')[1]
+        const tokenSection = localStorage.getItem('token').split('.')[1]
         this.email = JSON.parse(atob(tokenSection)).email.toString()
         // @ts-ignore
         console.log(JSON.parse(atob(tokenSection)).email)
@@ -325,7 +328,9 @@ export class StepComponent implements OnInit {
       // @ts-ignore
     }
 
-
+    this.testFormGroup = this.formBuilder.group({
+      file: new FormControl('')
+    })
     this.userInfoFormGroup = this.formBuilder.group({
       Email: new FormControl(this.email, Validators.required),
       Name: new FormControl('', Validators.required),
@@ -346,6 +351,7 @@ export class StepComponent implements OnInit {
       Other_Certificate: new FormControl(''),
       Certificate_Number: new FormControl('', Validators.required),
       Gender: new FormControl('', Validators.required),
+      Picture: new FormControl('', Validators.required)
     })
     this.testInfoFormGroup = this.formBuilder.group({
       Test_Date: new FormControl('Sep. 24, 2021, 6PM PDT (9PM EDT)'),
@@ -356,7 +362,7 @@ export class StepComponent implements OnInit {
     )
 
     setTimeout(() => {
-      // this.myStepper.selectedIndex = 4
+      this.myStepper.selectedIndex = 3
     }, 1000)
     this.sheetService.getIsPayCount()
       .subscribe(respone => {
@@ -372,8 +378,11 @@ export class StepComponent implements OnInit {
       ...this.userInfo2FormGroup.getRawValue(),
       ...this.userInfo3FormGroup.getRawValue(),
       ...{Test_Level: this.chooseTestLevel},
-      ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()}
+      ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()},
+      mimetype: 'image/png',
+      filename: 'test.png'
     }
+    console.log()
     const productId = this.getStripeProductIdByLevel()
     this.sheetService.addRow(formData)
       .subscribe(res => {
@@ -636,5 +645,18 @@ export class StepComponent implements OnInit {
     }
     this.sheetService.addAsStripePay(postData)
       .subscribe(res => console.log)
+  }
+
+  handleUpload(event: any) {
+    console.log(event.target)
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const data = reader.result?.toString().split(',')[1]
+      console.log(reader.result);
+      // this.userInfo3FormGroup.controls['']
+      this.userInfo3FormGroup.controls.Picture.setValue(data)
+    };
   }
 }
