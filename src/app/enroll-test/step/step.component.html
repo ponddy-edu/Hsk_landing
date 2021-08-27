@@ -77,8 +77,13 @@
               </div>
               <div class="form-field">
                 <label>*Nationality</label>
-                <input formControlName="Nationality" name="Nationality"
-                       value="United States">
+
+                <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">
+                  <mat-option *ngFor="let nationality of nationalityList"
+                              value="{{nationality.key}}">
+                    {{nationality.value}}
+                  </mat-option>
+                </mat-select>
               </div>
               <div class="form-field">
                 <label>*Mother tongue</label>
@@ -199,7 +204,7 @@
                 </mat-select>
               </div>
               <div class="form-field">
-                <div class="flex text-left upload_menu_section" [matMenuTriggerFor]="uploadDetail">
+                <div class="flex text-left upload_menu_section" (click)="openDialog()">
                   <label>Upload Photo</label>
                   <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
                 </div>
@@ -208,29 +213,6 @@
                        type="file"
                        (change)="handleUpload($event)"
                        value="" placeholder="Upload Picture">
-                <mat-menu #uploadDetail>
-                  <div class="content">
-                    <h2>Candidates’ information</h2>
-                    <p>
-                      Please provide personal information according to the registration spreadsheet and provide an electronic photo followed the requirement below:
-                    </p>
-                    <ul>
-                      <li>a photo (6 months prior to the test date). Passport photo (landscape or life photo is not acceptable).</li>
-                      <li>a photo with a hat, turban, headband, or sunglasses is not acceptable(except for religious reasons).</li>
-                      <li>black-and-white or colored photos are both acceptable. (white background is preferred.</li>
-                    </ul>
-                  </div>
-                  <div class="content__note border_red">
-                    <div>
-                      <img [src]="'https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/icon_alert.svg'">
-                      <h3>Note: </h3>
-                    </div>
-                    <ul>
-                      <li>All the information should be provided before the registration deadline.</li>
-                      <li>A photo will be used for test sign-up, face recognition, and authentication. Any recognition or authentication failure caused by the photo which candidates provided, no test fee refund will be counted.</li>
-                    </ul>
-                  </div>
-                </mat-menu>
               </div>
               <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="userInfo3FormGroup.invalid" matStepperNext>
@@ -255,7 +237,7 @@
                 </div>
                 <div class="cell">
                   <label>Nationality:</label>
-                  <p>{{userInfoFormGroup.get('Nationality')?.value}}</p>
+                  <p>{{getNationalityByKey(userInfoFormGroup.get('Nationality')?.value)}}</p>
                 </div>
               </div>
               <div class="form-field">

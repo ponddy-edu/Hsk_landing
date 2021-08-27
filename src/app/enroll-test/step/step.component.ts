@@ -4,6 +4,8 @@ import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
 import {loadStripe} from '@stripe/stripe-js/pure';
 import {environment} from '../../../environments/environment';
+import {MatDialog} from '@angular/material/dialog';
+import {UploadImageInfoComponent} from './upload-image-info/upload-image-info.component';
 
 @Component({
   selector: 'app-step',
@@ -305,10 +307,561 @@ export class StepComponent implements OnInit {
       value: 'Other'
     }
   ]
+  nationalityList = [
+    {
+      key: 901,
+      value: 'ANGUILLA'
+    },
+    {
+      key: 902,
+      value: 'ANTIGUA'
+    },
+    {
+      key: 937,
+      value: 'ARGENTINA'
+    },
+    {
+      key: 950,
+      value: 'Aruba'
+    },
+    {
+      key: 801,
+      value: 'AUSTRALIA'
+    },
+    {
+      key: 903,
+      value: 'BARBADOS'
+    },
+    {
+      key: 908,
+      value: 'BELIZE'
+    },
+    {
+      key: 906,
+      value: 'BERMUDA'
+    },
+    {
+      key: 941,
+      value: 'BOLIVIA'
+    },
+    {
+      key: 825,
+      value: 'Bouvet Island'
+    },
+    {
+      key: 939,
+      value: 'BRAZIL'
+    },
+    {
+      key: 936,
+      value: 'BRITISHI VIRGIN ISLANDS'
+    },
+    {
+      key: 741,
+      value: 'BURKINA FASO'
+    },
+    {
+      key: 719,
+      value: 'CAMEROON'
+    },
+    {
+      key: 919,
+      value: 'CANADA'
+    },
+    {
+      key: 954,
+      value: 'Canary Islands'
+    },
+    {
+      key: 710,
+      value: 'CAPE VERDE'
+    },
+    {
+      key: 920,
+      value: 'CAYMAN ISLANDS'
+    },
+    {
+      key: 755,
+      value: 'CENTRAL AFRICA'
+    },
+    {
+      key: 753,
+      value: 'CHAD'
+    },
+    {
+      key: 949,
+      value: 'CHILE'
+    },
+    {
+      key: 830,
+      value: 'Christmas Island'
+    },
+    {
+      key: 828,
+      value: 'Cocos(Keeling) Islands'
+    },
+    {
+      key: 944,
+      value: 'COLOMBIA'
+    },
+    {
+      key: 910,
+      value: 'Commonwealth of Dominica'
+    },
+    {
+      key: 824,
+      value: 'Commonwealth of the Northern Marianas'
+    },
+    {
+      key: 913,
+      value: 'COSTA RICA'
+    },
+    {
+      key: 751,
+      value: 'COTE D’IVOIRE'
+    },
+    {
+      key: 914,
+      value: 'CUBA'
+    },
+    {
+      key: 713,
+      value: 'DJIBOUTI'
+    },
+    {
+      key: 942,
+      value: 'ECUADOR'
+    },
+    {
+      key: 927,
+      value: 'EL SALVADOR'
+    },
+    {
+      key: 708,
+      value: 'EQIATORIAL GUINCA'
+    },
+    {
+      key: 758,
+      value: 'ERITREA'
+    },
+    {
+      key: 951,
+      value: 'Falkland Islands(Malvinas)'
+    },
+    {
+      key: 805,
+      value: 'FIJI'
+    },
+    {
+      key: 943,
+      value: 'FRENCH GUIANA'
+    },
+    {
+      key: 804,
+      value: 'FRENCH POLYNESIA'
+    },
+    {
+      key: 827,
+      value: 'FRENCH SOUTHERN TERRITORIES'
+    },
+    {
+      key: 717,
+      value: 'GABON'
+    },
+    {
+      key: 716,
+      value: 'GHANA'
+    },
+    {
+      key: 912,
+      value: 'GREENLAND'
+    },
+    {
+      key: 911,
+      value: 'GRENADA'
+    },
+    {
+      key: 915,
+      value: 'GUADELOUPE'
+    },
+    {
+      key: 806,
+      value: 'GUAM'
+    },
+    {
+      key: 934,
+      value: 'GUATEMALA'
+    },
+    {
+      key: 714,
+      value: 'GUINEA'
+    },
+    {
+      key: 715,
+      value: 'GUINEA-BISSAU'
+    },
+    {
+      key: 945,
+      value: 'GUYANA'
+    },
+    {
+      key: 916,
+      value: 'HAITI'
+    },
+    {
+      key: 826,
+      value: 'Heard islands and Mc Donald Islands'
+    },
+    {
+      key: 918,
+      value: 'HONDURAS'
+    },
+    {
+      key: 819,
+      value: 'Independent State of Samoa'
+    },
+    {
+      key: 935,
+      value: 'JAMAICA'
+    },
+    {
+      key: 721,
+      value: 'KENYA'
+    },
+    {
+      key: 807,
+      value: 'KIRIBATI'
+    },
+    {
+      key: 722,
+      value: 'LESOTHO'
+    },
+    {
+      key: 723,
+      value: 'LIBERIA'
+    },
+    {
+      key: 724,
+      value: 'LIBYA'
+    },
+    {
+      key: 727,
+      value: 'MADAGASCAR'
+    },
+    {
+      key: 955,
+      value: 'madeira'
+    },
+    {
+      key: 728,
+      value: 'MALAWI'
+    },
+    {
+      key: 729,
+      value: 'MALI'
+    },
+    {
+      key: 822,
+      value: 'MARSHALL ISLANDS'
+    },
+    {
+      key: 921,
+      value: 'MARTINIQUE'
+    },
+    {
+      key: 731,
+      value: 'MAURITANIA'
+    },
+    {
+      key: 730,
+      value: 'MAURITIUS'
+    },
+    {
+      key: 756,
+      value: 'Mayotte'
+    },
+    {
+      key: 925,
+      value: 'MEXICO'
+    },
+    {
+      key: 823,
+      value: 'MICRONESIA'
+    },
+    {
+      key: 924,
+      value: 'MONTSERRAT'
+    },
+    {
+      key: 732,
+      value: 'MOROCCO'
+    },
+    {
+      key: 733,
+      value: 'MOZAMBIQUE'
+    },
+    {
+      key: 734,
+      value: 'NAMDIA'
+    },
+    {
+      key: 809,
+      value: 'NAURU'
+    },
+    {
+      key: 917,
+      value: 'NETHERLANDS ANTIKKES'
+    },
+    {
+      key: 820,
+      value: 'NEW CALEDONIA'
+    },
+    {
+      key: 821,
+      value: 'NEW ZEALAND'
+    },
+    {
+      key: 926,
+      value: 'NICAREGUA'
+    },
+    {
+      key: 735,
+      value: 'NIGER'
+    },
+    {
+      key: 736,
+      value: 'NIGERIA'
+    },
+    {
+      key: 810,
+      value: 'NIUE ISLAND'
+    },
+    {
+      key: 829,
+      value: 'Norfolk Island'
+    },
+    {
+      key: 999,
+      value: 'Other'
+    },
+    {
+      key: 813,
+      value: 'Palau'
+    },
+    {
+      key: 905,
+      value: 'PANAMA'
+    },
+    {
+      key: 802,
+      value: 'PAPUA NEW GUINEA'
+    },
+    {
+      key: 938,
+      value: 'PARAGUAY'
+    },
+    {
+      key: 940,
+      value: 'PERU'
+    },
+    {
+      key: 811,
+      value: 'PITCAIRN ISLAND'
+    },
+    {
+      key: 907,
+      value: 'PUERTO RICO'
+    },
+    {
+      key: 757,
+      value: 'Republic of South Sudan'
+    },
+    {
+      key: 725,
+      value: 'REUNION'
+    },
+    {
+      key: 726,
+      value: 'RWANDA'
+    },
+    {
+      key: 928,
+      value: 'SAINT KITTS AND NEVIS'
+    },
+    {
+      key: 742,
+      value: 'SAO TOME AND PRINCIP'
+    },
+    {
+      key: 956,
+      value: 'SATA Air Acores'
+    },
+    {
+      key: 739,
+      value: 'SENEGAL'
+    },
+    {
+      key: 740,
+      value: 'SEYCHELLES'
+    },
+    {
+      key: 738,
+      value: 'SIERRA LEONE'
+    },
+    {
+      key: 812,
+      value: 'SOLOMON ISLANDS'
+    },
+    {
+      key: 746,
+      value: 'SOMALIA'
+    },
+    {
+      key: 737,
+      value: 'SOUTH AFRICA'
+    },
+    {
+      key: 953,
+      value: 'South Georgia and South Sandwich Islands'
+    },
+    {
+      key: 743,
+      value: 'ST.HELENA,ASCENSION'
+    },
+    {
+      key: 929,
+      value: 'ST.LUCIA'
+    },
+    {
+      key: 930,
+      value: 'ST.PIERRE AND MIQUEL'
+    },
+    {
+      key: 931,
+      value: 'ST.VINCENT'
+    },
+    {
+      key: 946,
+      value: 'SURINAM'
+    },
+    {
+      key: 744,
+      value: 'SWAZILAND'
+    },
+    {
+      key: 747,
+      value: 'TANZANIA'
+    },
+    {
+      key: 904,
+      value: 'THE BAHAMAS'
+    },
+    {
+      key: 720,
+      value: 'THE COMOROS'
+    },
+    {
+      key: 808,
+      value: 'THE COOK ISLANDS'
+    },
+    {
+      key: 754,
+      value: 'THE DEMOCRATIC REPUBLIC OF CONGO'
+    },
+    {
+      key: 909,
+      value: 'THE DOMINICAN REPUBLIC'
+    },
+    {
+      key: 711,
+      value: 'THE GAMAIA'
+    },
+    {
+      key: 712,
+      value: 'THE REPUBLIC OF CONGO'
+    },
+    {
+      key: 745,
+      value: 'THE SUDAN'
+    },
+    {
+      key: 709,
+      value: 'TOGO'
+    },
+    {
+      key: 816,
+      value: 'TOKELAU ISLANDS'
+    },
+    {
+      key: 814,
+      value: 'TONGA'
+    },
+    {
+      key: 933,
+      value: 'TRINIDAD AND TOBAGO'
+    },
+    {
+      key: 748,
+      value: 'TUNISIA'
+    },
+    {
+      key: 932,
+      value: 'TURKS AND CAICOS ISL'
+    },
+    {
+      key: 815,
+      value: 'TUYALU'
+    },
+    {
+      key: 922,
+      value: 'U.S.A'
+    },
+    {
+      key: 749,
+      value: 'UGANDA'
+    },
+    {
+      key: 952,
+      value: 'United States Minor Outlying Islands'
+    },
+    {
+      key: 948,
+      value: 'URUGUAY'
+    },
+    {
+      key: 818,
+      value: 'VANUATU'
+    },
+    {
+      key: 947,
+      value: 'VENEZUELA'
+    },
+    {
+      key: 923,
+      value: 'VIRGIN ISLANDS OF TH'
+    },
+    {
+      key: 817,
+      value: 'WALLIS AND FUTUNA'
+    },
+    {
+      key: 750,
+      value: 'WESTERN SAHARA'
+    },
+    {
+      key: 752,
+      value: 'ZAMBIA'
+    },
+    {
+      key: 718,
+      value: 'ZIMBABWE'
+    }
+  ]
   isPayedCountList = {}
   email = ''
 
-  constructor(private formBuilder: FormBuilder, public sheetService: SheetService) {
+  constructor(private formBuilder: FormBuilder, public sheetService: SheetService,
+              public dialog: MatDialog) {
   }
 
   async ngOnInit() {
@@ -336,7 +889,7 @@ export class StepComponent implements OnInit {
       Name: new FormControl('', Validators.required),
       Phone: new FormControl(''),
       Chinese_Name: new FormControl(''),
-      Nationality: new FormControl('United States'),
+      Nationality: new FormControl('', Validators.required),
       Mother_Tongue: new FormControl('', Validators.required),
     });
     this.userInfo2FormGroup = this.formBuilder.group({
@@ -362,7 +915,7 @@ export class StepComponent implements OnInit {
     )
 
     setTimeout(() => {
-      this.myStepper.selectedIndex = 3
+      // this.myStepper.selectedIndex = 3
     }, 1000)
     this.sheetService.getIsPayCount()
       .subscribe(respone => {
@@ -432,7 +985,12 @@ export class StepComponent implements OnInit {
     }
     return this.motherTongueList.filter(motherTongue => motherTongue.key === Number.parseInt(key))[0].value
   }
-
+  getNationalityByKey(key: string) {
+    if (!key) {
+      return
+    }
+    return this.nationalityList.filter(motherTongue => motherTongue.key === Number.parseInt(key))[0].value
+  }
   mockStripePay() {
     console.log('mockStripePay')
     const postData = {
@@ -658,5 +1216,11 @@ export class StepComponent implements OnInit {
       // this.userInfo3FormGroup.controls['']
       this.userInfo3FormGroup.controls.Picture.setValue(data)
     };
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(UploadImageInfoComponent, {
+      maxWidth: '800px',
+    })
   }
 }

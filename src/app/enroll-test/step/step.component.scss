@@ -327,7 +327,7 @@
 ::ng-deep .mat-menu-content {
   box-shadow: 0 0 8px rgb(0 0 0 / 10%);
   border: 1px solid #eaebec !important;
-  max-width: 500px;
+  max-width: 640px;
   background: #fff;
 
   .content {
@@ -462,5 +462,5 @@
 }
 
 ::ng-deep .mat-menu-panel {
-  max-width: 500px !important;
+  max-width: 640px !important;
 }
