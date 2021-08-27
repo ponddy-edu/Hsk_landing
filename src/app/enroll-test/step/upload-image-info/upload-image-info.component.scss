@@ -1,0 +1,142 @@
+::ng-deep.mat-dialog-container {
+  padding: 0;
+
+}
+
+::ng-deep.cdk-overlay-pane {
+  @media (max-width: 992px) {
+    overflow-y: scroll;
+  }
+
+}
+
+.content {
+  background: #FBFBFB;
+  border: 0.5px solid #EAEBEC;
+  box-sizing: border-box;
+  border-top: none;
+  text-align: left;
+  padding: 24px 40px;
+  @media (max-width: 767px) {
+    padding: 20px !important;
+    margin-top: 59px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: #2D3942;
+    @media (max-width: 767px) {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  p {
+    font-family: Ponddy NotoRubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #2D3942;
+    margin-bottom: 20px;
+    @media (max-width: 767px) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      word-wrap: break-word;
+    }
+  }
+
+  ul,
+  ol {
+    padding-inline-start: 20px;
+
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      letter-spacing: 1px;
+      color: #2D3942;
+    }
+  }
+
+  &__alert {
+    border-top: 1px solid #D64059;
+    border-bottom: 1px solid #D64059;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+    }
+
+    p {
+      color: #D64059;
+      margin: 0;
+      text-align: left;
+    }
+
+    img {
+      margin: 10px 14px 0 5px;
+      @media (max-width: 767px) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  &__note {
+    padding: 24px 40px;
+
+    &.border_red {
+      border-top: 1px solid #D64059;
+      border-bottom: 1px solid #D64059;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #D64059;
+        margin: 0;
+        padding-left: 16px;
+      }
+    }
+
+    ol {
+      padding-inline-start: 20px;
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 1px;
+      }
+    }
+
+    ul {
+      padding-inline-start: 20px;
+
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 1px;
+        color: #D64059;
+      }
+    }
+  }
+}
