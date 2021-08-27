@@ -319,6 +319,12 @@
                   <p>{{userInfo2FormGroup.get('Known_From')?.value}}</p>
                 </div>
               </div>
+              <div *ngIf="previewImgPath" class="form-field">
+                <div class="cell">
+                  <label>Photo</label>
+                  <img style="max-width: 100%" [src]="previewImgPath">
+                </div>
+              </div>
 
               <hr>
 
