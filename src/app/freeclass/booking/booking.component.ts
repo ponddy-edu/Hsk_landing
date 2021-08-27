@@ -35,6 +35,12 @@ export class BookingComponent implements OnInit {
   dateHsk3end = '2021-03-13T11:00:00+08:00'
   dateHsk4end = '2021-03-13T11:00:00+08:00'
   dateDiscountEnd = '2021-03-18T11:00:00+08:00'
+  date8sessionStart = '2021-08-25T10:00:00+08:00'
+  date10sessionStart = '2021-08-25T10:00:00+08:00'
+  date8sessionEnd = '2021-08-26T10:00:00+08:00'
+  date10sessionEnd = '2021-08-31T10:00:00+08:00'
+  state8session = false
+  state10session = false
 
   constructor(private formBuilder: FormBuilder,
               public sheetService: SheetService) {
@@ -134,6 +140,18 @@ export class BookingComponent implements OnInit {
     // const now = new Date('2021-03-12T12:00:00+08:00').getTime();
     const now = new Date().getTime();
 
+    const start8session = new Date(this.date8sessionStart).getTime()
+    const end8session = new Date(this.date8sessionEnd).getTime()
+    const start10session = new Date(this.date10sessionStart).getTime()
+    const end10session = new Date(this.date10sessionEnd).getTime()
+
+    if (end8session - now > 0 && now - start8session > 0) {
+      this.state8session = true
+    }
+    if (end10session - now > 0 && now - start10session > 0) {
+      this.state10session = true
+    }
+
     if (endDiscountDay - now < 0) {
       this.endYellowDiscount()
     } else if (endHsk4DiscountDay - now < 0) {
@@ -219,26 +237,26 @@ export class BookingComponent implements OnInit {
       stripeKey: 'price_1J4iHjHRhoOpWeKwrca1fh7R'
     }
 
-    if (btoa($event.toLowerCase()) === 'OC9zZXNzaW9u') {
-      // this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T'}
-      // this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg'}
-      // this.pricingList.adult4 = {...this.pricingList.adult4, price: 384, stripeKey: 'price_1J7j8lHRhoOpWeKwwzAaH4Ci'}
-      // this.pricingList.student1 = {
-      //   ...this.pricingList.student1,
-      //   price: 320,
-      //   stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh'
-      // }
-      // this.pricingList.student3 = {
-      //   ...this.pricingList.student3,
-      //   price: 384,
-      //   stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj'
-      // }
-      // this.pricingList.student4 = {
-      //   ...this.pricingList.student4,
-      //   price: 768,
-      //   stripeKey: 'price_1J7jIHHRhoOpWeKwHlZMn3kp'
-      // }
-    } else if (btoa($event.toLowerCase()) === 'MTAvc2Vzc2lvbg==') {
+    if (btoa($event.toLowerCase()) === 'OC9zZXNzaW9u' && this.state8session === true) {
+      this.pricingList.adult1 = {...this.pricingList.adult1, price: 288, stripeKey: 'price_1ITNQdHRhoOpWeKwhfz0kv7T'}
+      this.pricingList.adult3 = {...this.pricingList.adult3, price: 320, stripeKey: 'price_1ITNQdHRhoOpWeKw6q5EQrKg'}
+      this.pricingList.adult4 = {...this.pricingList.adult4, price: 384, stripeKey: 'price_1J7j8lHRhoOpWeKwwzAaH4Ci'}
+      this.pricingList.student1 = {
+        ...this.pricingList.student1,
+        price: 320,
+        stripeKey: 'price_1ITWLnHRhoOpWeKwLLS2khUh'
+      }
+      this.pricingList.student3 = {
+        ...this.pricingList.student3,
+        price: 384,
+        stripeKey: 'price_1ITNQdHRhoOpWeKwSsUNinRj'
+      }
+      this.pricingList.student4 = {
+        ...this.pricingList.student4,
+        price: 768,
+        stripeKey: 'price_1J7jIHHRhoOpWeKwHlZMn3kp'
+      }
+    } else if (btoa($event.toLowerCase()) === 'MTAvc2Vzc2lvbg==' && this.state10session === true) {
       this.pricingList.adult1 = {...this.pricingList.adult1, price: 360, stripeKey: 'price_1ITNQdHRhoOpWeKwK2Mwvcye'}
       this.pricingList.student1 = {
         ...this.pricingList.student1,
