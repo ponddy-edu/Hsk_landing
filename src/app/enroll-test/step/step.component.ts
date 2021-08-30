@@ -28,9 +28,11 @@ export class StepComponent implements OnInit {
   stripe: any
   motherTongueList = SlectList.motherTongueList
   nationalityList = SlectList.nationalityList
+  zoneUS = SlectList.zoneUS
   isPayedCountList = {}
   email = ''
-  previewImgPath: string
+  certificateImgPath: string
+  candidatesImgPath: string
 
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService,
               public dialog: MatDialog) {
@@ -63,6 +65,7 @@ export class StepComponent implements OnInit {
       Chinese_Name: new FormControl(''),
       Nationality: new FormControl('', Validators.required),
       Mother_Tongue: new FormControl('', Validators.required),
+      Time_Zone: new FormControl('')
     });
     this.userInfo2FormGroup = this.formBuilder.group({
       Birth_Date: new FormControl('', Validators.required),
@@ -70,13 +73,14 @@ export class StepComponent implements OnInit {
       Learning_For: new FormControl('', Validators.required),
       Reason: new FormControl('', Validators.required),
       Known_From: new FormControl('', Validators.required),
+      Candidates_Picture: new FormControl('', Validators.required)
     });
     this.userInfo3FormGroup = this.formBuilder.group({
       Certificate_Type: new FormControl('', Validators.required),
       Other_Certificate: new FormControl(''),
       Certificate_Number: new FormControl('', Validators.required),
       Gender: new FormControl('', Validators.required),
-      Picture: new FormControl('', Validators.required)
+      Certificate_Picture: new FormControl('', Validators.required)
     })
     this.testInfoFormGroup = this.formBuilder.group({
       Test_Date: new FormControl('Sep. 24, 2021, 6PM PDT (9PM EDT)'),
@@ -163,6 +167,13 @@ export class StepComponent implements OnInit {
       return
     }
     return this.nationalityList.filter(motherTongue => motherTongue.key === Number.parseInt(key))[0].value
+  }
+
+  getZoneByKey(key: string) {
+    if (!key) {
+      return
+    }
+    return this.zoneUS.filter(zone => zone.key === key)[0].value
   }
 
   mockStripePay() {
@@ -379,23 +390,30 @@ export class StepComponent implements OnInit {
       .subscribe(res => console.log)
   }
 
-  handleUpload(event: any) {
+  handleUpload(event: any, mode: string) {
     console.log(event.target)
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
       const data = reader.result?.toString().split(',')[1]
-      this.previewImgPath = reader.result as string;
-      // this.userInfo3FormGroup.controls['']
-      this.userInfo3FormGroup.controls.Picture.setValue(data)
+      if (mode === 'Candidates') {
+        console.log('Candidates')
+        this.candidatesImgPath = reader.result as string;
+        this.userInfo2FormGroup.controls.Candidates_Picture.setValue(data)
+      } else if (mode === 'Certificate') {
+        console.log('Certificate')
+        this.certificateImgPath = reader.result as string;
+        this.userInfo3FormGroup.controls.Certificate_Picture.setValue(data)
+      }
     };
 
   }
 
-  openDialog() {
+  openDialog(mode: string) {
     const dialogRef = this.dialog.open(UploadImageInfoComponent, {
       maxWidth: '800px',
+      data: mode
     })
   }
 
@@ -403,7 +421,7 @@ export class StepComponent implements OnInit {
     const file = (e.target).files[0];
     const reader = new FileReader();
     reader.onload = () => {
-      this.previewImgPath = reader.result as string;
+      this.certificateImgPath = reader.result as string;
     }
     reader.readAsDataURL(file)
   }

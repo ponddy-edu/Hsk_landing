@@ -77,7 +77,6 @@
               </div>
               <div class="form-field">
                 <label>*Nationality</label>
-
                 <mat-select placeholder="Please Select" formControlName="Nationality" name="Nationality">
                   <mat-option *ngFor="let nationality of nationalityList"
                               value="{{nationality.key}}">
@@ -85,6 +84,17 @@
                   </mat-option>
                 </mat-select>
               </div>
+              <div class="form-field">
+                <label>Time zone</label>
+
+                <mat-select placeholder="Please Select" formControlName="Time_Zone" name="Time_Zone">
+                  <mat-option *ngFor="let zone of zoneUS"
+                              value="{{zone.key}}">
+                    {{zone.value}}
+                  </mat-option>
+                </mat-select>
+              </div>
+
               <div class="form-field">
                 <label>*Mother tongue</label>
                 <mat-select placeholder="Please Select" formControlName="Mother_Tongue" name="Mother_Tongue">
@@ -115,15 +125,17 @@
                 <input formControlName="Birth_Date" name="Birth_Date"
                        type="date">
               </div>
-<!--              <div class="form-field">-->
-<!--                <label>Belong to</label>-->
-<!--                &lt;!&ndash;                <input formControlName="Belong_To" name="Belong_To" value="">&ndash;&gt;-->
-<!--                <mat-select placeholder="Please Select" formControlName="Belong_To" name="Belong_To">-->
-<!--                  <mat-option value="Student">Student</mat-option>-->
-<!--                  <mat-option value="In-service professionals">In-service professionals</mat-option>-->
-<!--                  <mat-option value="Others">Others</mat-option>-->
-<!--                </mat-select>-->
-<!--              </div>-->
+
+              <div class="form-field">
+                <div class="flex text-left upload_menu_section" (click)="openDialog('Candidates')">
+                  <label>*Candidates’ Photo</label>
+                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
+                </div>
+                <input formControlName="Candidates_Picture" name="Candidates_Picture"
+                       type="file"
+                       (change)="handleUpload($event,'Candidates')"
+                       value="" placeholder="Upload Picture">
+              </div>
               <div class="form-field">
                 <label>*How long have you been learning Chinese?</label>
                 <mat-select placeholder="Please Select" formControlName="Learning_For" name="Learning_For">
@@ -197,23 +209,23 @@
                        value="" placeholder="Certificate Number">
               </div>
               <div class="form-field">
+                <div class="flex text-left upload_menu_section" (click)="openDialog('Certificate')">
+                  <label>Upload Certificate Photo</label>
+                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
+                </div>
+                <input formControlName="Certificate_Picture" name="Certificate_Picture"
+                       type="file"
+                       (change)="handleUpload($event,'Certificate')"
+                       value="" placeholder="Upload Picture">
+              </div>
+              <div class="form-field">
                 <label>Gender</label>
                 <mat-select placeholder="Please Select" formControlName="Gender" name="Gender">
                   <mat-option value="Male">Male</mat-option>
                   <mat-option value="Females">Female</mat-option>
                 </mat-select>
               </div>
-              <div class="form-field">
-                <div class="flex text-left upload_menu_section" (click)="openDialog()">
-                  <label>Upload Photo</label>
-                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
-                </div>
 
-                <input formControlName="Picture" name="Picture"
-                       type="file"
-                       (change)="handleUpload($event)"
-                       value="" placeholder="Upload Picture">
-              </div>
               <div class="btn_wrap">
                 <button class="btn_focus-primary" [disabled]="userInfo3FormGroup.invalid" matStepperNext>
                   Continue
@@ -236,8 +248,16 @@
                   <p>HSK {{chooseTestLevel}}</p>
                 </div>
                 <div class="cell">
+                </div>
+              </div>
+              <div class="form-field">
+                <div class="cell">
                   <label>Nationality:</label>
                   <p>{{getNationalityByKey(userInfoFormGroup.get('Nationality')?.value)}}</p>
+                </div>
+                <div class="cell">
+                  <label>Time Zone:</label>
+                  <p> {{getZoneByKey(userInfoFormGroup.get('Time_Zone')?.value)}}</p>
                 </div>
               </div>
               <div class="form-field">
@@ -271,12 +291,7 @@
                   <label>Name: </label>
                   <p>{{userInfoFormGroup.get('Name')?.value}}</p>
                 </div>
-<!--                <div class="cell">-->
-<!--                  <label>Belong to:</label>-->
-<!--                  <p>{{userInfo2FormGroup.get('Belong_To')?.value}}</p>-->
-<!--                </div>-->
               </div>
-
 
               <div class="form-field">
                 <div class="cell">
@@ -319,10 +334,10 @@
                   <p>{{userInfo2FormGroup.get('Known_From')?.value}}</p>
                 </div>
               </div>
-              <div *ngIf="previewImgPath" class="form-field">
+              <div *ngIf="certificateImgPath" class="form-field">
                 <div class="cell">
-                  <label>Photo</label>
-                  <img style="max-width: 100%" [src]="previewImgPath">
+                  <label>Certificate Photo</label>
+                  <img style="max-width: 100%" [src]="certificateImgPath">
                 </div>
               </div>
 

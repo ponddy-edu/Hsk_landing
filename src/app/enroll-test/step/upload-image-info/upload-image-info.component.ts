@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {DeviceService} from "../../../../utils/device.service";
 
 @Component({
   selector: 'app-upload-image-info',
@@ -8,11 +9,19 @@ import {MatDialogRef} from "@angular/material/dialog";
 })
 export class UploadImageInfoComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<UploadImageInfoComponent>) { }
+  constructor(public dialogRef: MatDialogRef<UploadImageInfoComponent>,
+              public device: DeviceService,
+              @Inject(MAT_DIALOG_DATA) public data: string) {
+  }
 
   ngOnInit(): void {
+    console.log(this.data)
   }
-  close(){
-    this.dialogRef.close()
+
+  close() {
+    if (this.device.$mobile.getValue()) {
+      this.dialogRef.close()
+    }
+
   }
 }

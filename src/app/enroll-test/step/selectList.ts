@@ -1251,5 +1251,12 @@ export abstract class SlectList {
       value: 'ZIMBABWE'
     }
   ]
-
+  public static zoneUS = [{key: 'UTC -10', value: 'HST (UTC -10)'},
+    {key: 'UTC -9', value: 'HDT (UTC -9)'},
+    {key: 'UTC -8', value: 'AKDT (UTC -8)'},
+    {key: 'UTC -7', value: 'PDT & MST (UTC -7)'},
+    {key: 'UTC -6', value: 'MDT (UTC -6)'},
+    {key: 'UTC -5', value: 'CDT (UTC -5)'},
+    {key: 'UTC -4', value: 'EDT (UTC -4)'}
+  ]
 }

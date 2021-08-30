@@ -1,8 +1,9 @@
-<div (click)="close()">
-  <div class="content" >
+<div (click)="close()" *ngIf="data==='Candidates'">
+  <div class="content">
     <h2>Candidates’ information</h2>
     <p>
-      Please provide personal information according to the registration spreadsheet and provide an electronic photo followed the requirement below:
+      Please provide personal information according to the registration spreadsheet and provide an electronic photo
+      followed the requirement below:
     </p>
     <ul>
       <li>a photo (6 months prior to the test date). Passport photo (landscape or life photo is not acceptable).</li>
@@ -17,8 +18,17 @@
     </div>
     <ul>
       <li>All the information should be provided before the registration deadline.</li>
-      <li>A photo will be used for test sign-up, face recognition, and authentication. Any recognition or authentication failure caused by the photo which candidates provided, no test fee refund will be counted.</li>
+      <li>A photo will be used for test sign-up, face recognition, and authentication. Any recognition or authentication
+        failure caused by the photo which candidates provided, no test fee refund will be counted.
+      </li>
     </ul>
   </div>
 </div>
-
+<div (click)="close()" *ngIf="data==='Certificate'">
+  <div class="content">
+    <p>
+      Please upload the copy of your passport biodata page; if you are not a U.S. citizen, <br>
+      please upload the copy of your U.S. visa.
+    </p>
+  </div>
+</div>
