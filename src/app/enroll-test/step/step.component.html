@@ -340,7 +340,12 @@
                   <img style="max-width: 100%" [src]="certificateImgPath">
                 </div>
               </div>
-
+              <div *ngIf="candidatesImgPath" class="form-field">
+                <div class="cell">
+                  <label>Candidates Photo</label>
+                  <img style="max-width: 100%" [src]="candidatesImgPath">
+                </div>
+              </div>
               <hr>
 
               <mat-checkbox formControlName="agree">
