@@ -132,6 +132,7 @@
                   <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
                 </div>
                 <input formControlName="Candidates_Picture" name="Candidates_Picture"
+                       accept="image/png, image/jpeg"
                        type="file"
                        (change)="handleUpload($event,'Candidates')"
                        value="" placeholder="Upload Picture">
@@ -214,6 +215,7 @@
                   <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
                 </div>
                 <input formControlName="Certificate_Picture" name="Certificate_Picture"
+                       accept="image/png, image/jpeg"
                        type="file"
                        (change)="handleUpload($event,'Certificate')"
                        value="" placeholder="Upload Picture">
