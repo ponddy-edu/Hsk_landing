@@ -14,7 +14,7 @@ export class SheetService {
   }
 
   addRow(postData: any) {
-    const url = 'https://script.google.com/macros/s/AKfycbw3m3F1i57rfYxbjjDLBonjpZiaEEMY8E1vNMyEulHc1vC7WdoCcmgpc33EhILrucNI/exec'
+    const url = 'https://script.google.com/macros/s/AKfycbzeKTZhwgBQC9U4o8WDpQK34bjogVyeTmNsSh1N2E6Zs_XuNMbqguc7ANynJ-jodUmr/exec'
 
     return this.http.post(url, postData, {
       headers:
