@@ -83,7 +83,7 @@ export class StepComponent implements OnInit {
       Certificate_Picture: new FormControl('', Validators.required)
     })
     this.testInfoFormGroup = this.formBuilder.group({
-      Test_Date: new FormControl('Sep. 24, 2021, 6PM PDT (9PM EDT)'),
+      Test_Date: new FormControl('Oct. 29, 2021, 6PM PDT (9PM EDT)'),
     });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
