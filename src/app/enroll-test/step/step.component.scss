@@ -118,10 +118,7 @@
         line-height: 30px;
         text-align: center;
         margin-bottom: 16px;
-
-        &:nth-child(2n) {
-          margin-right: 16px;
-        }
+        margin: 4px;
 
         &.active {
           background: #6ACFED;
