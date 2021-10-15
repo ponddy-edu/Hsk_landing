@@ -2,13 +2,13 @@
   margin-top: 60px;
   height: calc(33vh - 65px);
   box-sizing: border-box;
-  background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/enrollTest/pic_header.png");
+  background-image: url("https://d1442rljwt9063.cloudfront.net/enrollTest/pic_header.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   @media (max-width: 991.98px) {
     height: calc(33vh - 65px);
-    background-image: url("https://hsk-landing.s3-us-west-2.amazonaws.com/enrollTest/pic_header_phone.png");
+    background-image: url("https://d1442rljwt9063.cloudfront.net/enrollTest/pic_header_phone.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -42,7 +42,7 @@
       line-height: 38px;
     }
   }
- 
+
   .container {
     padding-top: 15px;
     @media (max-width: 992px) {

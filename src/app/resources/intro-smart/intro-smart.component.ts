@@ -8,10 +8,10 @@ import {Subscription} from "rxjs";
   styleUrls: ['./intro-smart.component.scss']
 })
 export class IntroSmartComponent implements OnInit {
-  picDailyWord = `https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/pic_dailyWord_phone.png 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/pic_dailyWord.png 1100w`
-  picDigestWord = `https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/mobile/pic_digest_phone.png 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/resources/smart/web/pic_digest.png 1100w`
+  picDailyWord = `https://d1442rljwt9063.cloudfront.net/resources/smart/mobile/pic_dailyWord_phone.png 767w,
+  https://d1442rljwt9063.cloudfront.net/resources/smart/web/pic_dailyWord.png 1100w`
+  picDigestWord = `https://d1442rljwt9063.cloudfront.net/resources/smart/mobile/pic_digest_phone.png 767w,
+  https://d1442rljwt9063.cloudfront.net/resources/smart/web/pic_digest.png 1100w`
 
 
   mobile = true

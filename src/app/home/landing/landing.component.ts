@@ -4,30 +4,30 @@ import home from '@iconify/icons-mdi/home';
 import arrowDownCircle from '@iconify/icons-mdi/arrow-down-circle'
 import play from '@iconify/icons-mdi/play-circle'
 // import home from '@iconify/icons-mdi/arrow';
-const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_01.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_02.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_03.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_04.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/index_pic_05.png',
+const imageList = ['https://d1442rljwt9063.cloudfront.net/home/index_pic_01.png',
+  'https://d1442rljwt9063.cloudfront.net/home/index_pic_02.png',
+  'https://d1442rljwt9063.cloudfront.net/home/index_pic_03.png',
+  'https://d1442rljwt9063.cloudfront.net/home/index_pic_04.png',
+  'https://d1442rljwt9063.cloudfront.net/home/index_pic_05.png',
 ]
-const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/index_pic_01_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/index_pic_02_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/index_pic_03_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/index_pic_04_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/index_pic_05_phone.png',
+const imagmeListMobile = ['https://d1442rljwt9063.cloudfront.net/home/mobile/index_pic_01_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/index_pic_02_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/index_pic_03_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/index_pic_04_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/index_pic_05_phone.png',
 ]
 
-const imageList_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_01_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_01_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_01_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_01_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_01_small.png'
+const imageList_small = ['https://d1442rljwt9063.cloudfront.net/home/index_pic_01_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_01_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_01_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_01_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_01_small.png'
                       ]
-const imagmeListMobile_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_01_phone_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_02_phone_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_03_phone_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_04_phone_small.png',
-                        'https://hsk-landing.s3.us-west-2.amazonaws.com/home/index_pic_05_phone_small.png'
+const imagmeListMobile_small = ['https://d1442rljwt9063.cloudfront.net/home/index_pic_01_phone_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_02_phone_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_03_phone_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_04_phone_small.png',
+                        'https://d1442rljwt9063.cloudfront.net/home/index_pic_05_phone_small.png'
                       ]
 
 @Component({

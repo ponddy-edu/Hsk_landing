@@ -10,8 +10,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./intro-test.component.scss']
 })
 export class IntroTestComponent implements OnInit {
-  picRegistration = `https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/mobile/pic_Registration+Procedure_phone.png 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/test/instructions/web/pic_Registration+Procedure_web.png 1100w`
+  picRegistration = `https://d1442rljwt9063.cloudfront.net/test/instructions/mobile/pic_Registration+Procedure_phone.png 767w,
+  https://d1442rljwt9063.cloudfront.net/test/instructions/web/pic_Registration+Procedure_web.png 1100w`
 
   panelOpenState = false;
 

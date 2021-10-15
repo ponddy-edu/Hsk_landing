@@ -3,27 +3,27 @@ import {CarouselComponent} from 'angular-responsive-carousel';
 import {DeviceService} from '../../utils/device.service';
 
 
-const imageListBlue = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_2_web.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_1_web.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/logo_3_web.png',
+const imageListBlue = ['https://d1442rljwt9063.cloudfront.net/home/logo_2_web.png',
+  'https://d1442rljwt9063.cloudfront.net/home/logo_1_web.png',
+  'https://d1442rljwt9063.cloudfront.net/home/logo_3_web.png',
 ]
-const imagmeListMobileBlue = ['https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_1_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_2_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_3_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_4_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/logo_5_phone.png',
+const imagmeListMobileBlue = ['https://d1442rljwt9063.cloudfront.net/home/mobile/logo_1_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/logo_2_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/logo_3_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/logo_4_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/logo_5_phone.png',
 ]
 
-const imageListOrange = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_1.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_2.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_3.png',
+const imageListOrange = ['https://d1442rljwt9063.cloudfront.net/ponddy/logo_1.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/logo_2.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/logo_3.png',
 ]
-const imagmeListMobileOrange = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_1_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_2_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_3_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_4_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_5_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_6_phone.png',
+const imagmeListMobileOrange = ['https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_1_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_2_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_3_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_4_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_5_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_6_phone.png',
 ]
 
 
