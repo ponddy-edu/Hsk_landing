@@ -3,7 +3,7 @@
   <div *ngIf="$step.getValue()==='start'" class="wrapper">
     <header>
       <div justify-content-center>
-        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" alt=""/>
       </div>
       <div justify-content-center>
         <h1>Sign in or register</h1>
@@ -37,12 +37,12 @@
         <h1>or</h1>
       </div>
       <div class="socal_login desktop">
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')"><img src="/assets/image/login/icon_FB.png">Continue with Facebook</button>
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')"><img src="/assets/image/login/icon_google.png">Continue with Google</button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')"><img src="/assets/image/login/icon_FB.png" alt="">Continue with Facebook</button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')"><img src="/assets/image/login/icon_google.png" alt="">Continue with Google</button>
       </div>
       <div class="socal_login mobile">
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')">Continue with<img src="assets/image/login/icon_FB.png"></button>
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')">Continue with<img src="assets/image/login/icon_google.png"></button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')">Continue with<img src="assets/image/login/icon_FB.png" alt=""></button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')">Continue with<img src="assets/image/login/icon_google.png" alt=""></button>
       </div>
 
     </footer>
@@ -53,7 +53,7 @@
   <div [hidden]="$step.getValue()!=='login'" class="wrapper">
     <header>
       <div justify-content-center>
-        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg"  alt=""/>
       </div>
       <div justify-content-center>
         <h1>Log in to access content</h1>
@@ -90,7 +90,7 @@
             </re-captcha>
           </div>
           <button class="btn_general-primary" [disabled]="formLogin.invalid||isLoading" (click)="login()">
-            <img *ngIf="isLoading" src="assets/image/loading_spinner.gif"/>Login</button>
+            <img *ngIf="isLoading" src="assets/image/loading_spinner.gif" alt=""/>Login</button>
           <p class="not_account">
             Don’t have a Ponddy account? <a (click)="$step.next('register')">Create one</a>
           </p>
@@ -105,12 +105,12 @@
         <h1>or</h1>
       </div>
       <div class="socal_login desktop">
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')"><img src="assets/image/login/icon_FB.png">Continue with Facebook</button>
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')"><img src="assets/image/login/icon_google.png">Continue with Google</button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')"><img src="assets/image/login/icon_FB.png" alt="">Continue with Facebook</button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')"><img src="assets/image/login/icon_google.png" alt="">Continue with Google</button>
       </div>
       <div class="socal_login mobile">
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')">Continue with<img src="assets/image/login/icon_FB.png"></button>
-        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')">Continue with<img src="assets/image/login/icon_google.png"></button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('fb')">Continue with<img src="assets/image/login/icon_FB.png" alt=""></button>
+        <button class="btn_blue-secondary" (click)="clickSocialLogin('google')">Continue with<img src="assets/image/login/icon_google.png" alt=""></button>
       </div>
 
     </footer>
@@ -121,7 +121,7 @@
   <div *ngIf="$step.getValue()==='register'" class="wrapper">
     <header>
       <div justify-content-center>
-        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg"  alt=""/>
       </div>
       <div justify-content-center>
         <h1>Create your account</h1>
@@ -154,7 +154,7 @@
             </div>
           </div>
           <button class="btn_general-primary" type="submit" [disabled]="!formRegister?.valid||isLoading">
-            <img *ngIf="isLoading" src="assets/image/login/loading_spinner.gif"/>
+            <img *ngIf="isLoading" src="assets/image/login/loading_spinner.gif" alt=""/>
             Register
           </button>
           <p class="not_account">
@@ -171,7 +171,7 @@
   <div *ngIf="$step.getValue()==='code'" class="wrapper identity">
     <header>
       <div justify-content-center>
-        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg"  alt=""/>
       </div>
       <div justify-content-center>
         <h1>Verify your identity</h1>
@@ -220,7 +220,7 @@
   <div *ngIf="$step.getValue()==='success'" class="wrapper identity">
     <header>
       <div justify-content-center>
-        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg" />
+        <img class="logo" src="https://ponddychinese-resources.s3-us-west-2.amazonaws.com/logos/tutors/TutorsLanding_140x32.svg"  alt=""/>
       </div>
       <div justify-content-center>
         <h1>Verified</h1>
@@ -235,7 +235,7 @@
           </div>
 
           <div justify-content-center>
-            <img style="margin-top: 83px;width: 213px;" src="assets/image/login/icon_success.svg">
+            <img style="margin-top: 83px;width: 213px;" src="assets/image/login/icon_success.svg" alt="">
           </div>
         </form>
 

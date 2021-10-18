@@ -129,7 +129,7 @@
               <div class="form-field">
                 <div class="flex text-left upload_menu_section" (click)="openDialog('Candidates')">
                   <label>*Candidates’ Photo</label>
-                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
+                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" alt="">
                 </div>
                 <input formControlName="Candidates_Picture" name="Candidates_Picture"
                        accept="image/png, image/jpeg"
@@ -212,7 +212,7 @@
               <div class="form-field">
                 <div class="flex text-left upload_menu_section" (click)="openDialog('Certificate')">
                   <label>Upload Certificate Photo</label>
-                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
+                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" alt="">
                 </div>
                 <input formControlName="Certificate_Picture" name="Certificate_Picture"
                        accept="image/png, image/jpeg"
@@ -339,13 +339,13 @@
               <div *ngIf="certificateImgPath" class="form-field">
                 <div class="cell">
                   <label>Certificate Photo</label>
-                  <img style="max-width: 100%" [src]="certificateImgPath">
+                  <img style="max-width: 100%" [src]="certificateImgPath" alt="">
                 </div>
               </div>
               <div *ngIf="candidatesImgPath" class="form-field">
                 <div class="cell">
                   <label>Candidates Photo</label>
-                  <img style="max-width: 100%" [src]="candidatesImgPath">
+                  <img style="max-width: 100%" [src]="candidatesImgPath" alt="">
                 </div>
               </div>
               <hr>
