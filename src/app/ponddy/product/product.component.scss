@@ -1,5 +1,4 @@
 .product {
-  //padding: 64px 0;
   position: relative;
   @media (max-width: 767px) {
     padding: 0 20px 32px;
@@ -30,7 +29,6 @@
   mat-card {
     width: 450px;
     height: 690px;
-    //position: absolute;
     margin-top: 110px;
     background: #FFFFFF;
     border: 1px solid #EAEBEC;

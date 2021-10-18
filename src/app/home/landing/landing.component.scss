@@ -76,10 +76,8 @@
   mdb-carousel {
     .carousel,
      ::ng-deep .carousel-inner {
-      // height: auto;
       min-height: 500px;
       @media (max-width: 1024px) {
-        // height: auto;
       }
     }
     .w-100 {
@@ -134,8 +132,6 @@
       }
       li {
         opacity: 1;
-        //margin-right: 8px;
-        //margin-left: 8px;
         height: 8px;
         width: 8px;
         border: 8px solid transparent !important;

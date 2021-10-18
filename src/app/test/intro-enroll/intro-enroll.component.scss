@@ -172,7 +172,6 @@
               border-right: 1px solid #576168;
             }
             &__description {
-              // display: flex;
               padding: 8px 24px 8px 20px;
               width: 135px;
               font-weight: normal;
@@ -181,7 +180,6 @@
               letter-spacing: 1px;
               color: #2D3942;
               &__color {
-                // color: #1b7892;
                 font-weight: bold;
                 font-size: 16px;
                 @media (max-width: 768px) {
