@@ -1,7 +1,7 @@
 <section class="target carousel_section">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 col-12 main_img_wrap">
+      <div class="col-md-12 col-lg-6 main_img_wrap">
         <img class="main_img" *ngIf="device.isBrowser" [lazyLoad]="picStudySmart" [useSrcset]="true" alt="">
         <img class="main_img" *ngIf="!device.isBrowser" src="https://d1442rljwt9063.cloudfront.net/home/target_StudySmart.png" alt="">
       </div>
@@ -27,7 +27,7 @@
           </div>
         </div>
       </carousel>
-      <div *ngIf="!mobile" class="col-md-3 square green_bg" routerLink="/courses">
+      <div *ngIf="!mobile" class="col-md-12 col-lg-3 square green_bg" routerLink="/courses">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Course.svg" alt="">
           <h2>HSK Course</h2>
@@ -35,7 +35,7 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg" alt="">
       </div>
-      <div *ngIf="!mobile" class="col-md-3 square white_bg" routerLink="/resources/preparation">
+      <div *ngIf="!mobile" class="col-md-12 col-lg-3 square white_bg" routerLink="/resources/preparation">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_HSK_Self_Study.svg" alt="">
           <h2>HSK Self Study</h2>
@@ -44,11 +44,13 @@
         <img class="right_arrow" src="/assets/image/home/arrow_square_gray.svg" alt="">
       </div>
     </div>
+
+
     <div class="col-md-6 col-12 main_img_wrap" *ngIf="!device.isBrowser">
       <img class="main_img" src="https://d1442rljwt9063.cloudfront.net/home/target_PracticeWithEase.png">
     </div>
     <div class="row mobile-column-reverse">
-      <div *ngIf="!mobile" class="col-md-3 square orange_bg" routerLink="/resources/download">
+      <div *ngIf="!mobile" class="col-md-12 col-lg-3 square orange_bg" routerLink="/resources/download">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_TestPrepResources.svg" alt="">
           <h2>Test Prep Resources</h2>
@@ -56,7 +58,7 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg">
       </div>
-      <div *ngIf="!mobile" class="col-md-3 square white_bg" routerLink="/resources/smart">
+      <div *ngIf="!mobile" class="col-md-12 col-lg-3 square white_bg" routerLink="/resources/smart">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_AIChineseTools.svg" alt="">
           <h2>AI Chinese Tools</h2>
@@ -86,12 +88,14 @@
           </div>
         </div>
       </carousel>
-      <div class="col-md-6 col-12 main_img_wrap" *ngIf="device.isBrowser">
+      <div class="col-md-12 col-lg-6  main_img_wrap" *ngIf="device.isBrowser">
         <img class="main_img" [useSrcset]="true" [lazyLoad]="picPractice" alt="">
       </div>
     </div>
+
+
     <div class="row">
-      <div class="col-md-6 col-12 main_img_wrap">
+      <div class="col-md-12 col-lg-6  main_img_wrap">
         <img class="main_img" *ngIf="device.isBrowser" [useSrcset]="true" [lazyLoad]="picTest" alt="">
         <img class="main_img" *ngIf="!device.isBrowser" src="https://d1442rljwt9063.cloudfront.net/home/target_TestYourAbility.png" alt="">
       </div>
@@ -118,7 +122,7 @@
           </div>
         </div>
       </carousel>
-      <div *ngIf="!mobile" class="col-md-3 square blue_bg" routerLink="/tests/chinese">
+      <div *ngIf="!mobile" class="col-md-12 col-lg-3 square blue_bg" routerLink="/tests/chinese">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_ChineseTests.svg" alt="">
           <h2>Chinese Tests</h2>
@@ -127,7 +131,7 @@
         </div>
         <img class="right_arrow" src="/assets/image/home/arrow_square_white.svg" alt="">
       </div>
-      <div *ngIf="!mobile" class="col-md-3 square white_bg" routerLink="/tests/instructions/1">
+      <div *ngIf="!mobile" class="col-md-12 col-lg-3 square white_bg" routerLink="/tests/instructions/1">
         <div>
           <img class="icon_course" lazyLoad="/assets/image/home/icon_TestInstructions.svg" alt="">
           <h2>Test Instructions</h2>
