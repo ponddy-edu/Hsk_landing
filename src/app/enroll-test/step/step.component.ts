@@ -29,7 +29,7 @@ export class StepComponent implements OnInit {
   motherTongueList = SlectList.motherTongueList
   nationalityList = SlectList.nationalityList
   zoneUS = SlectList.zoneUS
-  isPayedCountList = {level2: 0, level4: 0, level3: 0, level5: 0}
+  isPayedCountList = {}
   email = ''
   certificateImgPath: string
   candidatesImgPath: string
