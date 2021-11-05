@@ -23,13 +23,16 @@
         letter-spacing: 0.5px;
         color: #2D3942;
         width: 100%;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #969CA0;
         @media (max-width: 767px) {
           font-size: 24px;
           line-height: 36px;
           margin-bottom: 0;
         }
+      }
+      .test-takers {
+        border-bottom: 1px solid #969CA0;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
       }
       .card_enroll {
         padding-bottom: 80px;
