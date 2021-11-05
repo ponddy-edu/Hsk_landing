@@ -1,4 +1,4 @@
-FROM node as builder
+FROM node:12.16.1-alpine as builder
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
@@ -11,7 +11,7 @@ COPY ./ /usr/src/app
 RUN npm run build:ssr
 
 
-FROM node:alpine
+FROM node:12.16.1-alpine
 WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/dist ./dist
