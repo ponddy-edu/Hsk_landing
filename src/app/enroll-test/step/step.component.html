@@ -11,24 +11,38 @@
               <div class="form-field test_date_info" style="margin-top: 20px">
                 <label>Test Date</label>
                 <p>
-                  Oct. 29, 2021, 6PM PDT (9PM EDT)
+                  Dec. 10, 2021
                 </p>
 
               </div>
               <div class="test_level">
                 <p>*Please select the level you’d like to participate.</p>
                 <button [class.active]="chooseTestLevel==2" (click)="chooseTestLevel=2">HSK 2</button>
+                <button [class.active]="chooseTestLevel==3" (click)="chooseTestLevel=3">HSK 3</button>
                 <button [class.active]="chooseTestLevel==4" (click)="chooseTestLevel=4">HSK 4</button>
+                <button [class.active]="chooseTestLevel==5" (click)="chooseTestLevel=5">HSK 5</button>
               </div>
-              <div *ngIf="isPayedCountList" class="form-field">
+              <div *ngIf="isPayedCountList" class="form-field" style="padding-top: 12px;">
                 <label *ngIf="chooseTestLevel===2">
-                  Available seats: {{ 12- isPayedCountList['level2']}}
+                  <div><span>Test Time</span>: 4PM PDT (7PM EDT)</div>
+                  <div><span>Available seats</span>:  {{12 - isPayedCountList['level2']}}</div>
+                </label>
+                <label *ngIf="chooseTestLevel===3">
+                  <div><span>Test Time</span>: 8:30PM PDT (11:30PM EDT)</div>
+                  <div><span>Available seats</span>: {{ 12- isPayedCountList['level3']}}</div>
                 </label>
                 <label *ngIf="chooseTestLevel===4">
-                  Available seats:  {{12 - isPayedCountList['level4']}}
+                  <div><span>Test Time</span>: 4PM PDT (7PM EDT)</div>
+                  <div><span>Available seats</span>:  {{12 - isPayedCountList['level4']}}</div>
+                </label>
+                <label *ngIf="chooseTestLevel===5">
+                  <div><span>Test Time</span>: 8:30PM PDT (11:30PM EDT)</div>
+                  <div><span>Available seats</span>:  {{12 - isPayedCountList['level5']}}</div>
                 </label>
                 <p *ngIf="(chooseTestLevel===2&&isPayedCountList['level2']>=12)
-                ||(chooseTestLevel===4&&isPayedCountList['level4']>=12)"
+                ||(chooseTestLevel===3&&isPayedCountList['level3']>=12)
+                ||(chooseTestLevel===4&&isPayedCountList['level4']>=12)
+                ||(chooseTestLevel===5&&isPayedCountList['level5']>=12)"
                 class="alert_message">
                   Currently there are no seats available.
                 </p>

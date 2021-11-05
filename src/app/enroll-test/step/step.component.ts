@@ -29,7 +29,7 @@ export class StepComponent implements OnInit {
   motherTongueList = SlectList.motherTongueList
   nationalityList = SlectList.nationalityList
   zoneUS = SlectList.zoneUS
-  isPayedCountList = {}
+  isPayedCountList = {level2: 0, level4: 0, level3: 0, level5: 0}
   email = ''
   certificateImgPath: string
   candidatesImgPath: string
@@ -141,6 +141,10 @@ export class StepComponent implements OnInit {
       return environment.stripe_productId_hsk2
     } else if (this.chooseTestLevel === 4) {
       return environment.stripe_productId_hsk4
+    } else if (this.chooseTestLevel === 3) {
+      return environment.stripe_productId_hsk3
+    } else if (this.chooseTestLevel === 5) {
+      return environment.stripe_productId_hsk5
     } else {
       return environment.stripe_productId_test
     }
