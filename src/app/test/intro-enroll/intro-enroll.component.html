@@ -63,6 +63,8 @@
 
       <div class="card_schedule">
         <h1>Schedule & Enrollment</h1>
+
+        <!-- HSK2、HSK4 -->
         <div class="row justify-content-center">
           <div class="">
 
@@ -93,25 +95,25 @@
               <div class="table__tr">
                 <div class="table__tb td_border_right">Test Date</div>
                 <div class="table__tb__description td_long">
-                  <!-- <div class="text-center">
+                  <div class="text-center">
                     <div class="table__tb__description__color">
                       Available now
                     </div>
                     <div>
-                      Oct. 29, 2021, 6PM PDT (9PM EDT)
+                      Dec. 10, 2021, 4PM PDT (7PM EDT)
                     </div>
                     <div class="table__tb__description__color__rad">
-                      closing date: Oct. 16 (5AM EDT)
+                      closing date: Nov. 28 (5AM EDT)
                     </div>
-                  </div> -->
-                  <div class="text-center table__tb__description__color-no">
+                  </div>
+                  <!-- <div class="text-center table__tb__description__color-no">
                     <div class="title">
                       Scheduled
                     </div>
                     <div>
                       <div>Dec. 10, 2021, 6PM PDT (9PM EDT)</div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
@@ -126,11 +128,84 @@
               </div>
             </div>
           </div>
-          <!-- <div class="notice_red">
+          <div class="notice_red">
             Notice: registration deadline is 14 days prior to the test date
-          </div> -->
+          </div>
           <div>
-            <button routerLink="/enrollTest" class="btn_focus-primary text_btn" disabled>Enroll a test</button>
+            <button routerLink="/enrollTest" class="btn_focus-primary text_btn">Enroll a test</button>
+          </div>
+
+        </div>
+<br><br>
+        <!-- HSK3、HSK5 -->
+        <div class="row justify-content-center">
+          <div class="">
+
+            <div class="table">
+              <div class="table__th ponddy_base">
+                <div>Test Information</div>
+              </div>
+              <div class="table__tr">
+                <div class="table__tb td_border_right">HSK Level</div>
+                <div class="table__tb__description td_border_right">
+                  <div>HSK 3</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>HSK 5</div>
+                </div>
+              </div>
+
+              <div class="table__tr">
+                <div class="table__tb td_border_right">Test Fee</div>
+                <div class="table__tb__description td_border_right">
+                  <div>USD $52</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>USD $78</div>
+                </div>
+              </div>
+
+              <div class="table__tr">
+                <div class="table__tb td_border_right">Test Date</div>
+                <div class="table__tb__description td_long">
+                  <div class="text-center">
+                    <div class="table__tb__description__color">
+                      Available now
+                    </div>
+                    <div>
+                      Dec. 10, 2021, 8:30PM PDT (11:30PM EDT)
+                    </div>
+                    <div class="table__tb__description__color__rad">
+                      closing date: Nov. 28 (5AM EDT)
+                    </div>
+                  </div>
+                  <!-- <div class="text-center table__tb__description__color-no">
+                    <div class="title">
+                      Scheduled
+                    </div>
+                    <div>
+                      <div>Dec. 10, 2021, 8:30PM PDT</div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+
+              <div class="table__tr table__tr__no">
+                <div class="table__tb td_border_right">Available seats</div>
+                <div class="table__tb__description td_border_right">
+                  <div>{{ 12- isPayedCountList['level3']}} seats</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>{{ 12- isPayedCountList['level5']}} seats</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notice_red">
+            Notice: registration deadline is 14 days prior to the test date
+          </div>
+          <div>
+            <button routerLink="/enrollTest" class="btn_focus-primary text_btn">Enroll a test</button>
           </div>
 
         </div>
