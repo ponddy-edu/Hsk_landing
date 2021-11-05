@@ -67,7 +67,7 @@
 
         <!-- HSK2、HSK4 -->
         <div class="row justify-content-center">
-          <div class="">
+          <div class="" style="padding: 0;">
 
             <div class="table">
               <div class="table__th ponddy_base">
@@ -78,8 +78,14 @@
                 <div class="table__tb__description td_border_right">
                   <div>HSK 2</div>
                 </div>
-                <div class="table__tb__description">
+                <div class="table__tb__description td_border_right">
+                  <div>HSK 3</div>
+                </div>
+                <div class="table__tb__description td_border_right">
                   <div>HSK 4</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>HSK 5</div>
                 </div>
               </div>
 
@@ -88,8 +94,14 @@
                 <div class="table__tb__description td_border_right">
                   <div>USD $39</div>
                 </div>
-                <div class="table__tb__description">
+                <div class="table__tb__description td_border_right">
+                  <div>USD $52</div>
+                </div>
+                <div class="table__tb__description td_border_right">
                   <div>USD $65</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>USD $78</div>
                 </div>
               </div>
 
@@ -101,7 +113,7 @@
                       Available now
                     </div>
                     <div>
-                      Dec. 10, 2021, 4PM PDT (7PM EDT)
+                      Dec. 10, 2021
                     </div>
                     <div class="table__tb__description__color__rad">
                       closing date: Nov. 28 (5AM EDT)
@@ -118,13 +130,39 @@
                 </div>
               </div>
 
+              <div class="table__tr">
+                <div class="table__tb td_border_right">Test Time</div>
+                <div class="table__tb__description test_time td_border_right">
+                  <div>4PM PDT</div>
+                  <div>(7PM EDT)</div>
+                </div>
+                <div class="table__tb__description test_time td_border_right">
+                  <div>8:30PM PDT</div>
+                  <div>(11:30PM EDT)</div>
+                </div>
+                <div class="table__tb__description test_time td_border_right">
+                  <div>4PM PDT</div>
+                  <div>(7PM EDT)</div>
+                </div>
+                <div class="table__tb__description test_time">
+                  <div>8:30PM PDT</div>
+                  <div>(11:30PM EDT)</div>
+                </div>
+              </div>
+
               <div class="table__tr table__tr__no">
                 <div class="table__tb td_border_right">Available seats</div>
                 <div class="table__tb__description td_border_right">
                   <div>{{ 12- isPayedCountList['level2']}} seats</div>
                 </div>
-                <div class="table__tb__description">
+                <div class="table__tb__description td_border_right">
+                  <div>{{ 12- isPayedCountList['level3']}} seats</div>
+                </div>
+                <div class="table__tb__description td_border_right">
                   <div>{{ 12- isPayedCountList['level4']}} seats</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>{{ 12- isPayedCountList['level5']}} seats</div>
                 </div>
               </div>
             </div>
@@ -139,7 +177,7 @@
         </div>
 <br><br>
         <!-- HSK3、HSK5 -->
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
           <div class="">
 
             <div class="table">
@@ -180,14 +218,6 @@
                       closing date: Nov. 28 (5AM EDT)
                     </div>
                   </div>
-                  <!-- <div class="text-center table__tb__description__color-no">
-                    <div class="title">
-                      Scheduled
-                    </div>
-                    <div>
-                      <div>Dec. 10, 2021, 8:30PM PDT</div>
-                    </div>
-                  </div> -->
                 </div>
               </div>
 
@@ -209,7 +239,7 @@
             <button routerLink="/enrollTest" class="btn_focus-primary text_btn">Enroll a test</button>
           </div>
 
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
