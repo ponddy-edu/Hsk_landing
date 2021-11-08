@@ -30,7 +30,7 @@ export class StepComponent implements OnInit {
   motherTongueList = SlectList.motherTongueList
   nationalityList = SlectList.nationalityList
   zoneUS = SlectList.zoneUS
-  isPayedCountList = {}
+  isPayedCountList = {level2: 0, level4: 0, level3: 0, level5: 0}
   email = ''
   certificateImgPath: string
   candidatesImgPath: string
@@ -95,10 +95,9 @@ export class StepComponent implements OnInit {
       // this.myStepper.selectedIndex = 3
     }, 1000)
     this.sheetService.getIsPayCount()
-      .subscribe(respone => {
+      .subscribe((respone: any) => {
         this.isPayedCountList = respone
-        console.log(this.isPayedCountList)
-      })
+    })
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
   }
 
