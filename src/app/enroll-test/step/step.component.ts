@@ -25,6 +25,7 @@ export class StepComponent implements OnInit {
 
   testFormGroup: FormGroup;
   chooseTestLevel = 0
+  date_time = ''
   stripe: any
   motherTongueList = SlectList.motherTongueList
   nationalityList = SlectList.nationalityList
@@ -82,9 +83,6 @@ export class StepComponent implements OnInit {
       Gender: new FormControl('', Validators.required),
       Certificate_Picture: new FormControl('', Validators.required)
     })
-    this.testInfoFormGroup = this.formBuilder.group({
-      Test_Date: new FormControl('Oct. 29, 2021, 6PM PDT (9PM EDT)'),
-    });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
       }
@@ -107,6 +105,7 @@ export class StepComponent implements OnInit {
       ...this.userInfo2FormGroup.getRawValue(),
       ...this.userInfo3FormGroup.getRawValue(),
       ...{Test_Level: this.chooseTestLevel},
+      ...{Test_Date: 'Dec. 10, 2021, '+ this.date_time},
       ...{Booking_Id: this.userInfoFormGroup.get('Email')?.value + Date.now().toString()},
       mimetype: 'image/png',
       filename: 'test.png'
@@ -400,6 +399,9 @@ export class StepComponent implements OnInit {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
+      this.testInfoFormGroup = this.formBuilder.group({
+        Test_Date: new FormControl('Dec. 10, 2021, '+ this.date_time),
+      });
       const data = reader.result?.toString().split(',')[1]
       if (mode === 'Candidates') {
         console.log('Candidates')
