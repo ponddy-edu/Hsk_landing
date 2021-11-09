@@ -160,17 +160,18 @@
             font-weight: bold;
             font-size: 20px;
             line-height: 30px;
-            letter-spacing: 1px;
+            letter-spacing: .8px;
             color: #2D3942;
             min-width: 200px;
-            padding: 8px 10px 8px 24px;
+            width: 200px;
+            padding: 8px 10px 8px 16px;
             @media (max-width: 768px) {
               font-weight: 700;
               font-size: 15px;
               line-height: 24px;
               min-width: 87px;
               letter-spacing: 0.5px;
-              padding: 8px 10px;
+              padding: 8px;
             }
             &.td_border_right {
               border-right: 1px solid #576168;
@@ -183,14 +184,17 @@
               line-height: 28px;
               letter-spacing: 1px;
               color: #2D3942;
+
               &.test_time {
-                padding: 8px 0 8px 16px;
-                font-size: 15px;
-                width: 137px;
+                // padding: 8px 0 8px 16px;
+                font-size: 18px;
+                // width: 137px;
+                letter-spacing: .5px;
+                word-break: break-all;
                 @media (max-width: 768px) {
-                  padding: 8px 5px 8px 5px;
-                  width: 100%;
-                  font-size: 12px;
+                  // padding: 8px 5px 8px 5px;
+                  // width: 100%;
+                  font-size: 15px;
                 }
               }
               &__color {
@@ -203,6 +207,17 @@
                   color: #ea4b65;
                   font-size: 14px;
                   font-weight: 500;
+                  @media (max-width: 768px) {
+                    font-size: 12px;
+                  }
+                }
+                &__gray {
+                  color: #969CA0;
+                  font-size: 14px;
+                  font-weight: 500;
+                  @media (max-width: 768px) {
+                    font-size: 12px;
+                  }
                 }
               }
               &__color-no {
@@ -225,7 +240,7 @@
                 font-size: 15px;
                 line-height: 24px;
                 letter-spacing: 0.5px;
-                padding: 8px;
+                padding: 5px;
               }
               &.td_border_right {
                 border-right: 1px solid #D5D7D9;
@@ -234,6 +249,7 @@
                 width: 540px;
                 @media (max-width: 768px) {
                   min-width: 56px;
+                  width: 428px;
                 }
               }
             }
