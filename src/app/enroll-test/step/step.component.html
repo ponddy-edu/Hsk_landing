@@ -21,9 +21,9 @@
               <div class="test_level">
                 <p>*Please select the level you’d like to participate.</p>
                 <button [class.active]="chooseTestLevel==2" (click)="[chooseTestLevel=2,date_time='5PM PDT (Dec 10 8PM EST)']">HSK 2</button>
-                <button [class.active]="chooseTestLevel==3" (click)="[chooseTestLevel=3,date_time='9:30PM PDT (Dec 11 12:30PM EDT)']">HSK 3</button>
+                <button [class.active]="chooseTestLevel==3" (click)="[chooseTestLevel=3,date_time='9:30PM PDT (Dec 11 12:30AM EDT)']">HSK 3</button>
                 <button [class.active]="chooseTestLevel==4" (click)="[chooseTestLevel=4,date_time='5PM PDT (Dec 10 8PM EST)']">HSK 4</button>
-                <button [class.active]="chooseTestLevel==5" (click)="[chooseTestLevel=5,date_time='9:30PM PDT (Dec 11 12:30PM EDT)']">HSK 5</button>
+                <button [class.active]="chooseTestLevel==5" (click)="[chooseTestLevel=5,date_time='9:30PM PDT (Dec 11 12:30AM EDT)']">HSK 5</button>
               </div>
               <div *ngIf="isPayedCountList" class="form-field" style="padding-top: 12px;">
                 <label *ngIf="chooseTestLevel===2">
