@@ -1,6 +1,9 @@
 <section class="step">
   <div class="container">
     <div class="row justify-content-center">
+      <div *ngIf="loading_page" class="loading_bg">
+        <div class="loading"></div>
+      </div>
       <div class="col-lg-6 col-md-6 col-sm-8 col-12">
         <mat-horizontal-stepper [@.disabled]="true" #stepper labelPosition="bottom">
           <mat-step [stepControl]="testInfoFormGroup">

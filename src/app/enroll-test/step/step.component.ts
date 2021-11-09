@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewChecked, Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
@@ -7,6 +7,7 @@ import {environment} from '../../../environments/environment';
 import {MatDialog} from '@angular/material/dialog';
 import {UploadImageInfoComponent} from './upload-image-info/upload-image-info.component';
 import {SlectList} from "./selectList";
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-step',
@@ -35,8 +36,10 @@ export class StepComponent implements OnInit {
   certificateImgPath: string
   candidatesImgPath: string
 
+  loading_page = false
+
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,@Inject(DOCUMENT) private document: Document) {
   }
 
   async ngOnInit() {
@@ -102,6 +105,8 @@ export class StepComponent implements OnInit {
   }
 
   payment() {
+    this.loading_page = true
+    this.document.body.classList.add('scroll_no');
     const formData = {
       ...this.userInfoFormGroup.getRawValue(),
       ...this.userInfo2FormGroup.getRawValue(),
