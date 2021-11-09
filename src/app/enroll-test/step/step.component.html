@@ -141,7 +141,7 @@
 
               <div class="form-field">
                 <div class="flex text-left upload_menu_section" (click)="openDialog('Candidates')">
-                  <label>*Candidates’ Photo</label>
+                  <label>*Photo</label>
                   <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" alt="">
                 </div>
                 <input formControlName="Candidates_Picture" name="Candidates_Picture"
@@ -357,7 +357,7 @@
               </div>
               <div *ngIf="candidatesImgPath" class="form-field">
                 <div class="cell">
-                  <label>Candidates Photo</label>
+                  <label>Photo</label>
                   <img style="max-width: 100%" [src]="candidatesImgPath" alt="">
                 </div>
               </div>
