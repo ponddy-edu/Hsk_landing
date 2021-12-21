@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewChecked, Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatStepper} from '@angular/material/stepper';
 import {SheetService} from '../../../utils/sheet.service';
@@ -7,6 +7,7 @@ import {environment} from '../../../environments/environment';
 import {MatDialog} from '@angular/material/dialog';
 import {UploadImageInfoComponent} from './upload-image-info/upload-image-info.component';
 import {SlectList} from "./selectList";
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-step',
@@ -25,17 +26,20 @@ export class StepComponent implements OnInit {
 
   testFormGroup: FormGroup;
   chooseTestLevel = 0
+  date_time = ''
   stripe: any
   motherTongueList = SlectList.motherTongueList
   nationalityList = SlectList.nationalityList
   zoneUS = SlectList.zoneUS
-  isPayedCountList = {}
+  isPayedCountList = {level2: 0, level4: 0, level3: 0, level5: 0}
   email = ''
   certificateImgPath: string
   candidatesImgPath: string
 
+  loading_page = false
+
   constructor(private formBuilder: FormBuilder, public sheetService: SheetService,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,@Inject(DOCUMENT) private document: Document) {
   }
 
   async ngOnInit() {
@@ -83,7 +87,7 @@ export class StepComponent implements OnInit {
       Certificate_Picture: new FormControl('', Validators.required)
     })
     this.testInfoFormGroup = this.formBuilder.group({
-      Test_Date: new FormControl('Sep. 24, 2021, 6PM PDT (9PM EDT)'),
+      // Test_Date: new FormControl('Dec. 10, 2021, '+ this.date_time),
     });
     this.summaryFormGroup = this.formBuilder.group({
         agree: new FormControl('', Validators.required)
@@ -94,14 +98,15 @@ export class StepComponent implements OnInit {
       // this.myStepper.selectedIndex = 3
     }, 1000)
     this.sheetService.getIsPayCount()
-      .subscribe(respone => {
+      .subscribe((respone: any) => {
         this.isPayedCountList = respone
-        console.log(this.isPayedCountList)
-      })
+    })
     this.stripe = await loadStripe('pk_live_Pz4r4nqTVPSZC1Puk1lOBL0l');
   }
 
   payment() {
+    this.loading_page = true
+    this.document.body.classList.add('scroll_no');
     const formData = {
       ...this.userInfoFormGroup.getRawValue(),
       ...this.userInfo2FormGroup.getRawValue(),
@@ -141,6 +146,10 @@ export class StepComponent implements OnInit {
       return environment.stripe_productId_hsk2
     } else if (this.chooseTestLevel === 4) {
       return environment.stripe_productId_hsk4
+    } else if (this.chooseTestLevel === 3) {
+      return environment.stripe_productId_hsk3
+    } else if (this.chooseTestLevel === 5) {
+      return environment.stripe_productId_hsk5
     } else {
       return environment.stripe_productId_test
     }
@@ -396,6 +405,9 @@ export class StepComponent implements OnInit {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
+      this.testInfoFormGroup = this.formBuilder.group({
+        Test_Date: new FormControl('Dec. 10, 2021, '+ this.date_time),
+      });
       const data = reader.result?.toString().split(',')[1]
       if (mode === 'Candidates') {
         console.log('Candidates')

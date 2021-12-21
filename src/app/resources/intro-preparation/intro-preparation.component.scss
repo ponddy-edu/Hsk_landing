@@ -329,22 +329,7 @@
       letter-spacing: 1px;
     }
   }
-  //::ng-deep .carousel-container {
-  //    margin: 36px 72px 80px -36px;
-  //    width: 780px!important;
-  //    @media (max-width: 767px) {
-  //        width: 320px!important;
-  //    }
-  //}
-  //
-  //::ng-deep .carousel-cells {
-  //    width: 300px!important;
-  //    .preparation_mid__distribution__img {
-  //        margin: 36px 36px 80px 0;
-  //    }
-  //}
   .carousel-cell {
-    //padding: 0 24px 0 16px;
     padding: 24px 36px 24px 0;
     img{
       width: 170px;
@@ -355,24 +340,24 @@
 }
 
 .other {
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/web/pic_11.png");
+  background: url("https://d1442rljwt9063.cloudfront.net/resources/preparation/web/pic_11.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   height: 540px;
   @media (max-width: 767px) {
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/resources/preparation/mobile/pic_11_phone.png");
+    background: url("https://d1442rljwt9063.cloudfront.net/resources/preparation/mobile/pic_11_phone.png");
     height: 386px;
     background-size: 100% auto;
     background-position: center top;
   }
-  
+
   .container {
     padding-top: 180px;
     @media (max-width: 767px) {
       padding-top: 110px;
     }
-    
+
     h1 {
       font-weight: 900;
       font-size: 36px;
@@ -387,7 +372,7 @@
         font-weight: 900;
       }
     }
-    
+
     h2 {
       font-size: 16px;
       line-height: 24px;
@@ -402,7 +387,7 @@
         line-height: 28px;
       }
     }
-    
+
     .btn_focus-primary {
       border: none;
       letter-spacing: 1px;

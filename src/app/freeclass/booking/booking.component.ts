@@ -35,10 +35,10 @@ export class BookingComponent implements OnInit {
   dateHsk3end = '2021-03-13T11:00:00+08:00'
   dateHsk4end = '2021-03-13T11:00:00+08:00'
   dateDiscountEnd = '2021-03-18T11:00:00+08:00'
-  date8sessionStart = '2021-08-25T10:00:00+08:00'
-  date10sessionStart = '2021-08-25T10:00:00+08:00'
-  date8sessionEnd = '2021-08-26T10:00:00+08:00'
-  date10sessionEnd = '2021-08-31T10:00:00+08:00'
+  date8sessionStart = '2021-09-30T10:00:00+08:00'
+  date10sessionStart = '2021-09-30T10:00:00+08:00'
+  date8sessionEnd = '2021-10-01T10:00:00+08:00'
+  date10sessionEnd = '2021-10-01T10:00:00+08:00'
   state8session = false
   state10session = false
 

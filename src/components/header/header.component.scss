@@ -1,8 +1,3 @@
-// .navbar {
-//   // height: 100vh;
-//   display: flex;
-//   align-items: flex-start;
-// }
 .navbar-toggler {
   border: none;
   padding: 0;
@@ -138,7 +133,6 @@
       border: none !important;
     }
     &:after {
-      content: url("/assets/image/icon/arrow.png");
       float: right;
     }
   }

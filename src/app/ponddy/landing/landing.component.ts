@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceService } from 'src/utils/device.service';
 
-const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/59291481_s.png']
-const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/index_pic_phone.png']
+const imageList = ['https://d1442rljwt9063.cloudfront.net/ponddy/59291481_s.png']
+const imagmeListMobile = ['https://d1442rljwt9063.cloudfront.net/ponddy/mobile/index_pic_phone.png']
 
-const imageList_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/ponddy/59291481_s_small.png']
-const imagmeListMobile_small = ['https://hsk-landing.s3.us-west-2.amazonaws.com/ponddy/59291481_s_phone_small.png']
+const imageList_small = ['https://d1442rljwt9063.cloudfront.net/ponddy/59291481_s_small.png']
+const imagmeListMobile_small = ['https://d1442rljwt9063.cloudfront.net/ponddy/59291481_s_phone_small.png']
 
 @Component({
   selector: 'app-landing',

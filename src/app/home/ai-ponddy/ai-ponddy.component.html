@@ -1,9 +1,9 @@
 <section class="ai_ponddy"  *ngIf="device.isBrowser">
   <img [lazyLoad]="(device.$mobile | async)?
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_AISmartLearning_p.png':
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/home/pic_AISmartLearning.png'">
+  'https://d1442rljwt9063.cloudfront.net/home/mobile/pic_AISmartLearning_p.png':
+  'https://d1442rljwt9063.cloudfront.net/home/pic_AISmartLearning.png'" alt="">
 </section>
 
 <section class="ai_ponddy"  *ngIf="!device.isBrowser">
-  <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/home/pic_AISmartLearning.png">
+  <img src="https://d1442rljwt9063.cloudfront.net/home/pic_AISmartLearning.png" alt="">
 </section>

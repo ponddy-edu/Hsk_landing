@@ -1,6 +1,9 @@
 <section class="step">
   <div class="container">
     <div class="row justify-content-center">
+      <div *ngIf="loading_page" class="loading_bg">
+        <div class="loading"></div>
+      </div>
       <div class="col-lg-6 col-md-6 col-sm-8 col-12">
         <mat-horizontal-stepper [@.disabled]="true" #stepper labelPosition="bottom">
           <mat-step [stepControl]="testInfoFormGroup">
@@ -11,39 +14,48 @@
               <div class="form-field test_date_info" style="margin-top: 20px">
                 <label>Test Date</label>
                 <p>
-                  Sep. 24, 2021, 6PM PDT (9PM EDT)
+                  Dec. 10, 2021
                 </p>
 
               </div>
               <div class="test_level">
                 <p>*Please select the level you’d like to participate.</p>
-                <button [class.active]="chooseTestLevel==2" (click)="chooseTestLevel=2">HSK 2</button>
-                <button [class.active]="chooseTestLevel==4" (click)="chooseTestLevel=4">HSK 4</button>
+                <button [class.active]="chooseTestLevel==2" (click)="[chooseTestLevel=2,date_time='5PM PDT (Dec 10 8PM EST)']">HSK 2</button>
+                <button [class.active]="chooseTestLevel==3" (click)="[chooseTestLevel=3,date_time='9:30PM PDT (Dec 11 12:30AM EDT)']">HSK 3</button>
+                <button [class.active]="chooseTestLevel==4" (click)="[chooseTestLevel=4,date_time='5PM PDT (Dec 10 8PM EST)']">HSK 4</button>
+                <button [class.active]="chooseTestLevel==5" (click)="[chooseTestLevel=5,date_time='9:30PM PDT (Dec 11 12:30AM EDT)']">HSK 5</button>
               </div>
-              <div *ngIf="isPayedCountList" class="form-field">
+              <div *ngIf="isPayedCountList" class="form-field" style="padding-top: 12px;">
                 <label *ngIf="chooseTestLevel===2">
-                  Available seats: {{ 12- isPayedCountList['level2']}}
+                  <div><span>Test Time</span>: 5PM PST (Dec 10 8PM EST)</div>
+                  <div><span>Available seats</span>:  {{12 - isPayedCountList['level2']}}</div>
+                </label>
+                <label *ngIf="chooseTestLevel===3">
+                  <div><span>Test Time</span>: 9:30PM PST (Dec 11 12:30AM EST)</div>
+                  <div><span>Available seats</span>: {{ 12- isPayedCountList['level3']}}</div>
                 </label>
                 <label *ngIf="chooseTestLevel===4">
-                  Available seats:  {{12 - isPayedCountList['level4']}}
+                  <div><span>Test Time</span>: 5PM PST (Dec 10 8PM EST)</div>
+                  <div><span>Available seats</span>:  {{12 - isPayedCountList['level4']}}</div>
+                </label>
+                <label *ngIf="chooseTestLevel===5">
+                  <div><span>Test Time</span>: 9:30PM PST (Dec 11 12:30AM EST)</div>
+                  <div><span>Available seats</span>:  {{12 - isPayedCountList['level5']}}</div>
                 </label>
                 <p *ngIf="(chooseTestLevel===2&&isPayedCountList['level2']>=12)
-                ||(chooseTestLevel===4&&isPayedCountList['level4']>=12)"
+                ||(chooseTestLevel===3&&isPayedCountList['level3']>=12)
+                ||(chooseTestLevel===4&&isPayedCountList['level4']>=12)
+                ||(chooseTestLevel===5&&isPayedCountList['level5']>=12)"
                 class="alert_message">
                   Currently there are no seats available.
                 </p>
               </div>
               <div class="btn_wrap absolute">
-                <button class="btn_focus-primary"
-                        [disabled]="true"
-                        matStepperNext>
-                  Continue
-                </button>
-<!--                <button class="btn_focus-primary"-->
-<!--                        [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"-->
-<!--                        matStepperNext>-->
-<!--                  Continue-->
-<!--                </button>-->
+               <button class="btn_focus-primary"
+                       [disabled]="testInfoFormGroup.invalid || chooseTestLevel==0"
+                       matStepperNext>
+                 Continue
+               </button>
               </div>
             </form>
           </mat-step>
@@ -129,8 +141,8 @@
 
               <div class="form-field">
                 <div class="flex text-left upload_menu_section" (click)="openDialog('Candidates')">
-                  <label>*Candidates’ Photo</label>
-                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
+                  <label>*Photo</label>
+                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" alt="">
                 </div>
                 <input formControlName="Candidates_Picture" name="Candidates_Picture"
                        accept="image/png, image/jpeg"
@@ -213,7 +225,7 @@
               <div class="form-field">
                 <div class="flex text-left upload_menu_section" (click)="openDialog('Certificate')">
                   <label>Upload Certificate Photo</label>
-                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" >
+                  <img class="icon_prompt" src="/assets/image/icon/icon_prompt.svg" alt="">
                 </div>
                 <input formControlName="Certificate_Picture" name="Certificate_Picture"
                        accept="image/png, image/jpeg"
@@ -340,13 +352,13 @@
               <div *ngIf="certificateImgPath" class="form-field">
                 <div class="cell">
                   <label>Certificate Photo</label>
-                  <img style="max-width: 100%" [src]="certificateImgPath">
+                  <img style="max-width: 100%" [src]="certificateImgPath" alt="">
                 </div>
               </div>
               <div *ngIf="candidatesImgPath" class="form-field">
                 <div class="cell">
-                  <label>Candidates Photo</label>
-                  <img style="max-width: 100%" [src]="candidatesImgPath">
+                  <label>Photo</label>
+                  <img style="max-width: 100%" [src]="candidatesImgPath" alt="">
                 </div>
               </div>
               <hr>

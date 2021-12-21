@@ -29,7 +29,7 @@ export class IntroEnrollComponent implements OnInit {
   courseCarousel: CarouselComponent;
   courseWidth: number
   courseHeight: number
-  isPayedCountList = {level2: 0, level4: 0}
+  isPayedCountList = {level2: 0, level4: 0, level3: 0, level5: 0}
 
   constructor(public device: DeviceService,
               public sheetService: SheetService) {

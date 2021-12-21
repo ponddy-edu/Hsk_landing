@@ -8,4 +8,6 @@ export const environment = {
   stripe_productId_test: 'price_1IQomRHRhoOpWeKwWHN5nFdy',
   stripe_productId_hsk2: 'price_1JRSorHRhoOpWeKwMqbN6Cqj',
   stripe_productId_hsk4: 'price_1JRSoIHRhoOpWeKwh5xu1PsQ',
+  stripe_productId_hsk3: 'price_1JrwM3HRhoOpWeKwzPBS1flk',
+  stripe_productId_hsk5: 'price_1JrwRvHRhoOpWeKwSLosvjW0',
 };

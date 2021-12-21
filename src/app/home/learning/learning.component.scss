@@ -97,25 +97,25 @@ $pd_cover: rgba(45, 57, 66, 0.5);
 
 
 .learning {
-  background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/BKG_smartLearning+.png");
+  background: url("https://d1442rljwt9063.cloudfront.net/home/BKG_smartLearning+.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  
+
   height: 618px;
   @media (max-width: 767px) {
-    background: url("https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/BKG_smartLearning.png");
+    background: url("https://d1442rljwt9063.cloudfront.net/home/mobile/BKG_smartLearning.png");
     height: 418px;
     background-size: 100% auto;
     background-position: center top;
   }
-  
+
   .container {
     padding-top: 376px;
     @media (max-width: 767px) {
       padding-top: 208px;
     }
-    
+
     h1 {
       font-weight: 900;
       font-size: 36px;
@@ -129,7 +129,7 @@ $pd_cover: rgba(45, 57, 66, 0.5);
         font-weight: 700;
       }
     }
-    
+
     h2 {
       font-size: 24px;
       line-height: 40px;
@@ -158,6 +158,6 @@ $pd_cover: rgba(45, 57, 66, 0.5);
       }
     }
   }
-  
-  
+
+
 }

@@ -1,5 +1,44 @@
 .step {
-  padding: 30px 0 120px;
+  .loading_bg {
+    background-color: rgba(128,128,128,0.3);
+    height: 70pc;
+    margin-top: -30px;
+    position: fixed;
+    width: 100%;
+    z-index: 10002;
+    top: 0;
+
+    .loading {
+      border: 5px solid #f3f3f3;
+      -webkit-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+      border-top: 5px solid #555;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 45%;
+      left: 47%;
+      z-index: 1000;
+      @media (max-width: 767px) {
+        top: 40%;
+        left: 45%;
+      }
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  padding: 30px 0 30px;
   background-color: #fcfaf8;
 
   mat-horizontal-stepper {
@@ -78,6 +117,7 @@
 
     .test_date_info {
       text-align: center;
+      padding-top: 10px;
 
       label {
         font-weight: bold;
@@ -93,18 +133,17 @@
     }
 
     .test_level {
-      max-width: 296px;
+      max-width: 400px;
       margin: auto;
 
       p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
-        letter-spacing: 0.8px;
-        color: #576168;
-        margin: 4px;
-        text-align: left;
+        letter-spacing: 0.7px;
+        color: #ea4b65;
+        margin: 0px;
+        text-align: center;
         font-weight: normal;
-        margin-bottom: 10px;
       }
 
       button {
@@ -118,10 +157,7 @@
         line-height: 30px;
         text-align: center;
         margin-bottom: 16px;
-
-        &:nth-child(2n) {
-          margin-right: 16px;
-        }
+        margin: 4px;
 
         &.active {
           background: #6ACFED;
@@ -134,8 +170,8 @@
     .form-field {
       display: inline-grid;
       width: 100%;
-      max-width: 296px;
-      margin-bottom: 16px;
+      max-width: 350px;
+      padding: 10px 0;
 
       label {
         font-size: 16px;
@@ -143,6 +179,12 @@
         color: #576168;
         text-align: left;
         margin-bottom: 4px;
+        div {
+          letter-spacing: .5px;
+          span {
+            font-weight: 400;
+          }
+        }
       }
 
       .alert_message {
@@ -219,7 +261,6 @@
 
       mat-checkbox {
         width: 296px;
-        //border: 2px solid #6ACFED;
         line-height: 24px;
         margin-left: 8px;
       }

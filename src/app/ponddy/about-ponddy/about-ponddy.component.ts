@@ -2,15 +2,15 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {DeviceService} from '../../../utils/device.service';
 import {CarouselComponent} from 'angular-responsive-carousel';
 
-const imageList = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_1.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_2.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_3.png',
+const imageList = ['https://d1442rljwt9063.cloudfront.net/ponddy/logo_1.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/logo_2.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/logo_3.png',
 ]
-const imagmeListMobile = ['https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_1_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_2_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_3_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_4_phone.png',
-  'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/mobile/logo_5_phone.png',
+const imagmeListMobile = ['https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_1_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_2_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_3_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_4_phone.png',
+  'https://d1442rljwt9063.cloudfront.net/ponddy/mobile/logo_5_phone.png',
 ]
 
 @Component({

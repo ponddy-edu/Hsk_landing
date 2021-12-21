@@ -22,21 +22,21 @@
       <div *ngIf="device.isBrowser" class="col-md-8" [ngClass]='colClass'>
         <carousel [height]="height" #course_carousel [cellWidth]="'100%'" [dots]="false" [arrows]="false">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
-            <img class="d-block w-100" [src]="carouselImage" [alt]="'slide_'+i">
+            <img class="d-block w-100" [src]="carouselImage" [alt]="'slide_'+i" alt="">
           </div>
         </carousel>
       </div>
       <div *ngIf="!device.isBrowser" class="col-md-8" style="text-align: center;" [ngClass]='colClass'>
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_1.png" width="70%">
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_2.png" width="70%">
-          <img src="https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/logo_3.png" width="70%">
+          <img src="https://d1442rljwt9063.cloudfront.net/ponddy/logo_1.png" width="70%" alt="">
+          <img src="https://d1442rljwt9063.cloudfront.net/ponddy/logo_2.png" width="70%" alt="">
+          <img src="https://d1442rljwt9063.cloudfront.net/ponddy/logo_3.png" width="70%" alt="">
       </div>
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow right">
         <span class="course_img-right" [class.disable]="disableClass=='right'" (click)="courseNext()"></span>
       </div>
       <div *ngIf="device.$mobile.getValue()" class="col-10 justify-content-center arrow">
-        <img style="margin-right: 32px" class="left" [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'" (click)="coursePrev()">
-        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img style="margin-right: 32px" class="left" [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'" (click)="coursePrev()" alt="">
+        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()" alt="">
       </div>
     </div>
   </div>

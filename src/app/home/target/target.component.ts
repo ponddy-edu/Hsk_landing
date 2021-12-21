@@ -7,33 +7,44 @@ import {DeviceService} from '../../../utils/device.service';
   styleUrls: ['./target.component.scss']
 })
 export class TargetComponent implements OnInit {
-  picStudySmart = `https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_StudySmart_P.png 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_StudySmart.png 1100w`
+  picStudySmart = `https://d1442rljwt9063.cloudfront.net/home/mobile/pic_StudySmart_P.png 767w,
+  https://d1442rljwt9063.cloudfront.net/home/target_StudySmart.png 1100w`
 
-  picTest = `https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_TestYourAbility_P.png 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_TestYourAbility.png 1100w`
+  picTest = `https://d1442rljwt9063.cloudfront.net/home/mobile/pic_TestYourAbility_P.png 767w,
+  https://d1442rljwt9063.cloudfront.net/home/target_TestYourAbility.png 1100w`
 
-  picPractice = `https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_PracticeWithEase_P.png 767w,
-  https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_PracticeWithEase.png 1100w,`
+  picPractice = `https://d1442rljwt9063.cloudfront.net/home/mobile/pic_PracticeWithEase_P.png 767w,
+  https://d1442rljwt9063.cloudfront.net/home/target_PracticeWithEase.png 1100w,`
 
   mobile = true
+  mobile_carousel = false
 
   constructor(public device: DeviceService) {
     if (device.$mobile.getValue()) {
-      this.mobile = true
-      this.picStudySmart = 'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_StudySmart_P.png '
-      this.picTest = 'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_TestYourAbility_P.png'
-      this.picPractice = 'https://hsk-landing.s3-us-west-2.amazonaws.com/home/mobile/pic_PracticeWithEase_P.png'
+      // this.mobile = true
+      this.picStudySmart = 'https://d1442rljwt9063.cloudfront.net/home/mobile/pic_StudySmart_P.png '
+      this.picTest = 'https://d1442rljwt9063.cloudfront.net/home/mobile/pic_TestYourAbility_P.png'
+      this.picPractice = 'https://d1442rljwt9063.cloudfront.net/home/mobile/pic_PracticeWithEase_P.png'
+
     } else {
-      this.mobile = false
-      this.picStudySmart = 'https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_StudySmart.png'
-      this.picTest = ' https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_TestYourAbility.png'
-      this.picPractice = 'https://hsk-landing.s3-us-west-2.amazonaws.com/home/target_PracticeWithEase.png'
+      // this.mobile = false
+      this.picStudySmart = 'https://d1442rljwt9063.cloudfront.net/home/target_StudySmart.png'
+      this.picTest = ' https://d1442rljwt9063.cloudfront.net/home/target_TestYourAbility.png'
+      this.picPractice = 'https://d1442rljwt9063.cloudfront.net/home/target_PracticeWithEase.png'
 
     }
   }
 
   ngOnInit(): void {
+    if(window.innerWidth <= 767) {
+      this.mobile = true
+      console.log('false')
+      console.log(window.innerWidth )
+    } else {
+      this.mobile = false
+      console.log('true')
+      console.log(window.innerWidth )
+    }
   }
 
 }

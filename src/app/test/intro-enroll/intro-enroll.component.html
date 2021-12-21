@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
           <div class="step_area">
             <div class="col-md-3 col-12 step_item">
-              <img class="step_img" src="/assets/image/test/icon_web.svg">
+              <img class="step_img" src="/assets/image/test/icon_web.svg" alt="">
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">1</div>
@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-md-3 col-12 step_item">
-              <img class="step_img" src="/assets/image/test/icon_login.svg">
+              <img class="step_img" src="/assets/image/test/icon_login.svg" alt="">
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">2</div>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-md-3 col-12 step_item">
-              <img class="step_img" src="/assets/image/test/icon_form.svg">
+              <img class="step_img" src="/assets/image/test/icon_form.svg" alt="">
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">3</div>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="col-md-3 col-12 step_item">
-              <img class="step_img" src="/assets/image/test/icon_payment.svg">
+              <img class="step_img" src="/assets/image/test/icon_payment.svg" alt="">
               <div class="step_title">
                 <div>Step</div>
                 <div class="step_number">4</div>
@@ -63,8 +63,10 @@
 
       <div class="card_schedule">
         <h1>Schedule & Enrollment</h1>
+        <div class="test-takers">( For test-takers in the USA only.  Valid ID and IP will be verified. )</div>
+
         <div class="row justify-content-center">
-          <div class="">
+          <div class="" style="padding: 0;">
 
             <div class="table">
               <div class="table__th ponddy_base">
@@ -75,8 +77,14 @@
                 <div class="table__tb__description td_border_right">
                   <div>HSK 2</div>
                 </div>
-                <div class="table__tb__description">
+                <div class="table__tb__description td_border_right">
+                  <div>HSK 3</div>
+                </div>
+                <div class="table__tb__description td_border_right">
                   <div>HSK 4</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>HSK 5</div>
                 </div>
               </div>
 
@@ -85,32 +93,75 @@
                 <div class="table__tb__description td_border_right">
                   <div>USD $39</div>
                 </div>
-                <div class="table__tb__description">
+                <div class="table__tb__description td_border_right">
+                  <div>USD $52</div>
+                </div>
+                <div class="table__tb__description td_border_right">
                   <div>USD $65</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>USD $78</div>
                 </div>
               </div>
 
               <div class="table__tr">
-                <div class="table__tb td_border_right">Test Date</div>
+                <div class="table__tb td_border_right">
+                  <div>Test Date (PST)</div>
+                  <div class="table__tb__description__color__rad">Available now</div>
+                </div>
+                <div class="table__tb__description td_border_right test_time">
+                  <div>Dec. 10</div>
+                  <div>5PM</div>
+                </div>
+                <div class="table__tb__description td_border_right test_time">
+                  <div>Dec. 10</div>
+                  <div>9:30PM</div>
+                </div>
+                <div class="table__tb__description td_border_right test_time">
+                  <div>Dec. 10</div>
+                  <div>5PM</div>
+                </div>
+                <div class="table__tb__description test_time">
+                  <div>Dec. 10</div>
+                  <div>9:30PM</div>
+                </div>
+              </div>
+
+              <div class="table__tr">
+                <div class="table__tb td_border_right">
+                  <div>Test Date (EST)</div>
+                  <div class="table__tb__description__color__rad">Available now</div>
+                </div>
+                <div class="table__tb__description td_border_right test_time">
+                  <div>Dec. 10</div>
+                  <div>8PM</div>
+                </div>
+                <div class="table__tb__description td_border_right test_time">
+                  <div>Dec. 11</div>
+                  <div>12:30AM</div>
+                </div>
+                <div class="table__tb__description td_border_right test_time">
+                  <div>Dec. 10</div>
+                  <div>8PM</div>
+                </div>
+                <div class="table__tb__description test_time">
+                  <div>Dec. 11</div>
+                  <div>12:30AM</div>
+                </div>
+              </div>
+
+              <div class="table__tr">
+                <div class="table__tb td_border_right">Registration deadline</div>
                 <div class="table__tb__description td_long">
                   <div class="text-center">
-                    <div class="table__tb__description__color">
-                      Available now
+                    <div>
+                      Nov. 28
                     </div>
                     <div>
-                      Sep. 24, 2021, 6PM PDT (9PM EDT)
+                      ( 2AM PST / 5AM EST )
                     </div>
-                    <div class="table__tb__description__color__rad">
-                      closing date: Sep. 11 (5AM EDT)
-                    </div>
-                  </div>
-                  <div class="text-center table__tb__description__color-no">
-                    <div class="title">
-                      Scheduled
-                    </div>
-                    <div>
-                      <div>Oct. 29, 2021, 6PM PDT (9PM EDT)</div>
-                      <div>Dec. 10, 2021, 6PM PDT (9PM EDT)</div>
+                    <div class="table__tb__description__color__gray">
+                      Notice: registration deadline is 14 days prior to the test date
                     </div>
                   </div>
                 </div>
@@ -121,18 +172,21 @@
                 <div class="table__tb__description td_border_right">
                   <div>{{ 12- isPayedCountList['level2']}} seats</div>
                 </div>
-                <div class="table__tb__description">
+                <div class="table__tb__description td_border_right">
+                  <div>{{ 12- isPayedCountList['level3']}} seats</div>
+                </div>
+                <div class="table__tb__description td_border_right">
                   <div>{{ 12- isPayedCountList['level4']}} seats</div>
+                </div>
+                <div class="table__tb__description">
+                  <div>{{ 12- isPayedCountList['level5']}} seats</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="notice_red">
-            Notice: registration deadline is 14 days prior to the test date</div>
           <div>
-            <button routerLink="/enrollTest" class="btn_focus-primary text_btn" [disabled]="true">Enroll a test</button>
+            <button routerLink="/enrollTest" class="btn_focus-primary text_btn" disabled>Enroll a test</button>
           </div>
-
         </div>
       </div>
     </div>

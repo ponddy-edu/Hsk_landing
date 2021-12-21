@@ -7,7 +7,7 @@
           Ponddy® HSK is the first online HSK test center in the U.S.A. that offers at-home online testing services for HSK, HSKK, YCT, and BCT official Chinese language tests. Ponddy® courses are designed by our expert-teaching team and are fully accredited by
           ACS Western Association of Schools and Colleges of the United States.
         </p>
-        <img [lazyLoad]="'https://hsk-landing.s3-us-west-2.amazonaws.com/ponddy/ponddy_HSK_pic_web.svg'">
+        <img [lazyLoad]="'https://d1442rljwt9063.cloudfront.net/ponddy/ponddy_HSK_pic_web.svg'" alt="">
       </div>
     </div>
   </div>
@@ -25,27 +25,27 @@
         </p>
         <div class="learn_more orange_text">
           <p i18n>Read more</p>
-          <img src="/assets/image/icon/btn_orange_hover.svg">
+          <img src="/assets/image/icon/btn_orange_hover.svg" alt="">
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow">
-        <img class="left" src="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()">
+        <img class="left" src="/assets/image/icon/btn_normal_left.svg" (click)="coursePrev()" alt="">
       </div>
       <div *ngIf="device.isBrowser" class="col-md-9">
         <carousel #course_carousel [height]="carouselHeight" [cellWidth]="'100%'" [dots]="false" [arrows]="false" [lightDOM]="true">
           <div class="carousel-cell" *ngFor="let carouselImage of carouselImageList;let i = index">
-            <img class="d-block w-100" [src]="carouselImage" [alt]="'slide_'+i">
+            <img class="d-block w-100" [src]="carouselImage" [alt]="'slide_'+i" alt="">
           </div>
         </carousel>
       </div>
       <div *ngIf="!device.$mobile.getValue()" class="col-md-1 arrow">
-        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()" alt="">
       </div>
       <div *ngIf="device.$mobile.getValue()" class="col-10 justify-content-center arrow">
-        <img style="margin-right: 32px" class="left" [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'" (click)="coursePrev()">
-        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()">
+        <img style="margin-right: 32px" class="left" [lazyLoad]="'/assets/image/icon/btn_normal_left.svg'" (click)="coursePrev()" alt="">
+        <img class="right" [lazyLoad]="'/assets/image/icon/btn_normal_right.svg'" (click)="courseNext()" alt="">
       </div>
     </div>
   </div>

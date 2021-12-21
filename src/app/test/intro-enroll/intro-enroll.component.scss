@@ -23,13 +23,16 @@
         letter-spacing: 0.5px;
         color: #2D3942;
         width: 100%;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #969CA0;
         @media (max-width: 767px) {
           font-size: 24px;
           line-height: 36px;
           margin-bottom: 0;
         }
+      }
+      .test-takers {
+        border-bottom: 1px solid #969CA0;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
       }
       .card_enroll {
         padding-bottom: 80px;
@@ -116,7 +119,7 @@
         }
         .table {
           display: inline-block;
-          width: 600px;
+          max-width: 742px;
           border: 1px solid #EAEBEC;
           box-sizing: border-box;
           border-radius: 12px;
@@ -157,31 +160,44 @@
             font-weight: bold;
             font-size: 20px;
             line-height: 30px;
-            letter-spacing: 1px;
+            letter-spacing: .8px;
             color: #2D3942;
+            min-width: 200px;
             width: 200px;
-            padding: 8px 10px 8px 24px;
+            padding: 8px 10px 8px 16px;
             @media (max-width: 768px) {
               font-weight: 700;
               font-size: 15px;
               line-height: 24px;
-              width: 40%;
+              min-width: 87px;
               letter-spacing: 0.5px;
+              padding: 8px;
             }
             &.td_border_right {
               border-right: 1px solid #576168;
             }
             &__description {
-              // display: flex;
-              padding: 8px 24px 8px 20px;
+              padding: 8px 16px 8px 20px;
               width: 135px;
               font-weight: normal;
-              font-size: 20px;
+              font-size: 18px;
               line-height: 28px;
               letter-spacing: 1px;
               color: #2D3942;
+
+              &.test_time {
+                // padding: 8px 0 8px 16px;
+                font-size: 18px;
+                // width: 137px;
+                letter-spacing: .5px;
+                word-break: break-all;
+                @media (max-width: 768px) {
+                  // padding: 8px 5px 8px 5px;
+                  // width: 100%;
+                  font-size: 15px;
+                }
+              }
               &__color {
-                // color: #1b7892;
                 font-weight: bold;
                 font-size: 16px;
                 @media (max-width: 768px) {
@@ -191,10 +207,21 @@
                   color: #ea4b65;
                   font-size: 14px;
                   font-weight: 500;
+                  @media (max-width: 768px) {
+                    font-size: 12px;
+                  }
+                }
+                &__gray {
+                  color: #969CA0;
+                  font-size: 14px;
+                  font-weight: 500;
+                  @media (max-width: 768px) {
+                    font-size: 12px;
+                  }
                 }
               }
               &__color-no {
-                padding-top: 30px;
+                // padding-top: 30px;
                 color: #969CA0;
                 font-size: 20px;
                 @media (max-width: 768px) {
@@ -210,17 +237,19 @@
               }
               @media (max-width: 768px) {
                 width: 30%;
-                font-size: 16px;
+                font-size: 15px;
                 line-height: 24px;
                 letter-spacing: 0.5px;
+                padding: 5px;
               }
               &.td_border_right {
                 border-right: 1px solid #D5D7D9;
               }
               &.td_long {
-                width: auto;
+                width: 540px;
                 @media (max-width: 768px) {
-                  width: 60%;
+                  min-width: 56px;
+                  width: 428px;
                 }
               }
             }
