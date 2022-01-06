@@ -265,6 +265,7 @@
         font-size: 16px;
         line-height: 30px;
         letter-spacing: 0.5px;
+        margin: 0 0 0 12px;
         p {
           height: auto;
         }
@@ -348,7 +349,7 @@
   @media (max-width: 767px) {
     background: url("https://d1442rljwt9063.cloudfront.net/resources/preparation/mobile/pic_11_phone.png");
     height: 386px;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center top;
   }
 
