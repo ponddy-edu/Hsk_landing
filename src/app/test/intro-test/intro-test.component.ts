@@ -89,4 +89,13 @@ export class IntroTestComponent implements OnInit {
       });
     }, 100)
   }
+  scrollTop() {
+    setTimeout(() => {
+      this.pageScrollService.scroll({
+        document: this.document,
+        scrollTarget: '#test-intro',
+        duration: 500,
+      });
+    }, 100)
+  }
 }

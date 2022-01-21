@@ -255,7 +255,7 @@
       letter-spacing: 1px;
       color: #2D3942;
       margin: 0 24px;
-      width: 690px;
+      width: 710px;
       p {
         height: 120px;
       }
@@ -265,6 +265,7 @@
         font-size: 16px;
         line-height: 30px;
         letter-spacing: 0.5px;
+        margin: 0 0 0 12px;
         p {
           height: auto;
         }
@@ -277,7 +278,7 @@
       }
       img {
         margin: 36px 0 80px -50px;
-        width: 690px;
+        width: 710px;
         @media (max-width: 767px) {
           width: 320px;
           margin: 8px 0 36px -30px;
@@ -291,7 +292,7 @@
       }
     }
     .text_width {
-      width: 690px;
+      width: 710px;
       @media (max-width: 767px) {
         width: 286px!important;
       }
@@ -348,7 +349,7 @@
   @media (max-width: 767px) {
     background: url("https://d1442rljwt9063.cloudfront.net/resources/preparation/mobile/pic_11_phone.png");
     height: 386px;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center top;
   }
 
