@@ -1,5 +1,4 @@
-User-agent：*
+User-agent: *
+Allow: /
 
-Disallow：*
-
-Allow：
+Sitemap: https://hsk.ponddy.com/sitemap.xml
