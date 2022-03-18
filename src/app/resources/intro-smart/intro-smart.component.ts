@@ -39,4 +39,8 @@ export class IntroSmartComponent implements OnInit {
   ngOnDestroy(): void {
     this.widthSubscribe.unsubscribe()
   }
+
+  appDictionary() {
+    window.open('https://chinese.ponddy.com/products/app-dictionary/')
+  }
 }
