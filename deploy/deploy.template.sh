@@ -17,10 +17,10 @@ envsubst '${PROJECT_NAME}' < deploy/docker-compose.yml > /composes/${PROJECT_NAM
 
 # Run docker compose
 cd /composes
-echo -n "" > files.args
-ls -1 | grep .yml | grep -v \~ | while read f
-do
-    echo -n " -f $f" >> files.args
-done
-docker-compose $(cat files.args) down
-docker-compose $(cat files.args) up -d
+# echo -n "" > files.args
+# ls -1 | grep .yml | grep -v \~ | while read f
+# do
+#     echo -n " -f $f" >> files.args
+# done
+docker-compose -f hsk-landing.yml down
+docker-compose -f hsk-landing.yml up -d
