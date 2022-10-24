@@ -58,8 +58,8 @@
           <h1>Test Regulation</h1>
           <mat-accordion>
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" expanded="true">
-              <mat-expansion-panel-header>
-                <mat-panel-title  (click)="scrollTop()">
+              <mat-expansion-panel-header (click)="scrollTop()">
+                <mat-panel-title>
                   <div class="title">
                     <h2>I. Equipment and test environment requirements</h2>
                   </div>
@@ -138,8 +138,8 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title (click)="scrollTop()">
+              <mat-expansion-panel-header (click)="scrollTop()">
+                <mat-panel-title>
                   <div class="title">
                     <h2>II. Registration</h2>
                   </div>
@@ -171,8 +171,8 @@
             </mat-expansion-panel>
 
             <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title (click)="scrollTop()">
+              <mat-expansion-panel-header (click)="scrollTop()">
+                <mat-panel-title>
                   <div class="title">
                     <h2>III. Preparation before the test</h2>
                   </div>
