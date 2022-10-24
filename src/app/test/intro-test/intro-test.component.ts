@@ -96,6 +96,6 @@ export class IntroTestComponent implements OnInit {
         scrollTarget: '#test-intro',
         duration: 500,
       });
-    }, 100)
+    }, 170)
   }
 }
