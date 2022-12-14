@@ -33,7 +33,7 @@
         "@visurel/iconify-angular": "^10.1.2",
         "angular-bootstrap-md": "^10.1.1",
         "angular-responsive-carousel": "^2.0.2",
-        "express": "^4.15.2",
+        "express": "^4.17.3",
         "google-spreadsheet": "^3.1.15",
         "googleapis": "^67.1.1",
         "ng-lazyload-image": "^9.1.0",
